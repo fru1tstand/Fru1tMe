@@ -1,0 +1,5 @@
+./apache_custom.log
+./apache_error.log
+./buildpath
+./.project
+./.settings/
