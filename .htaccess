@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^\.internal\/.+ - [L,NC]
+
+RewriteRule ^([^.]+)/([^.]+)/([^.]+)($|\/) /index.php?page=$1&op1=$2&op2=$3 [L,QSA]
+RewriteRule ^([^.]+)/([^.]+)($|\/) /index.php?page=$1&op1=$2 [L,QSA]
+RewriteRule ^([^.]+)($|/) /index.php?page=$1 [L,QSA]
