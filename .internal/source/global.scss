@@ -31,6 +31,6 @@ body, html {
 #global-console {
 	@include fullscreen-child();
 	padding-left: 2px;
-	overflow: auto;
+	overflow: visible;
 	> div:before { content: '> '; color: #999; }
 }

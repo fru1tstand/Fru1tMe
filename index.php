@@ -14,87 +14,10 @@
 				<div class="blue">This is some info text</div>
 				<div class="green">This text is successful in life</div>
 				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				<div>This is just regular entry text</div>
-				
+
 			</div>
 		</div>
 		
-		<script src="/.internal/js/Console.js"></script>
+		<script src="/.internal/js/global.js"></script>
 	</body>
 </html>

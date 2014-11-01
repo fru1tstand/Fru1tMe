@@ -30,7 +30,7 @@ body, html {
   width: 100%;
   height: 100%;
   padding-left: 2px;
-  overflow: auto; }
+  overflow: visible; }
   #global-console > div:before {
     content: '> ';
     color: #999; }
