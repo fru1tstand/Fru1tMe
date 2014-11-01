@@ -32,7 +32,7 @@
 		//Create console entry and append to console
 		var entry = document.createElement('div');
 		var gConsole = document.getElementById('global-console');
-		entry.innerHTML = message;
+		entry.innerHTML = escapeHtml(message);
 		entry.classList.add("entry");
 		entry.classList.add(LOG_LEVEL.getClass(logLevel));
 		gConsole.appendChild(entry);
@@ -55,6 +55,20 @@
 		gConsole.style.marginTop = calcConsoleMargin + "px";
 	}
 	
+	/**
+	 * Credit: bjornd
+	 * http://stackoverflow.com/questions/6234773/can-i-escape-html-special-chars-in-javascript
+	 */
+	function escapeHtml(unsafe) {
+	    return unsafe
+	         .replace(/&/g, "&amp;")
+	         .replace(/</g, "&lt;")
+	         .replace(/>/g, "&gt;")
+	         .replace(/"/g, "&quot;")
+	         .replace(/'/g, "&#039;");
+	 }
+
 	window.log = log;
+	window.escapeHtml = escapeHtml;
 	window.LOG_LEVEL = LOG_LEVEL;
 } (this, document));
