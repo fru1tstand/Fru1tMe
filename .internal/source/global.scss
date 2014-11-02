@@ -1,36 +1,64 @@
 @CHARSET "UTF-8";
-@mixin fullscreen() { top: 0; right: 0; bottom: 0; left: 0; position: fixed; }
-@mixin fullscreen-child { width: 100%; height: 100%; }
-$theme-white-text: #DDD;
-$theme-red-text: #F00;
-$theme-blue-text: #99F;
-$theme-green-text: #0F0;
 
-body, html {
-	padding: 0; margin: 0;
-	color: $theme-white-text;
+$font-family: Optima,Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+$theme-text-white: #DDD;
+$theme-text-red: #F00;
+$theme-text-blue: #99F;
+$theme-text-green: #0F0;
+$theme-text-console-default: #999;
+
+@mixin animation($parameters...) {
+	-webkit-animation: $parameters;
+	-moz-animation: $parameters;
+	animation: $parameters;
 }
+@mixin keyframe($name) {
+	@-webkit-keyframes #{$name} { @content; }
+	@-moz-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; }
+}
+
+/*********************************************************Extendables*/
+.noselect { -webkit-touch-callout: none; -webkit-user-select: none; 
+	-moz-user-select: none; -ms-user-select: none; user-select: none; }
+.fullscreen { @extend .page-minimums; top: 0; right: 0; bottom: 0; left: 0; 
+	position: fixed; }
+.fullscreen-child { width: 100%; height: 100%; }
+.page-minimums { min-width: 1000px; min-height: 600px; }
+
+/****************************************************************Root*/
+body, html {
+	@extend .page-minimums;
+	padding: 0; margin: 0;
+	height: 100%;
+	color: $theme-text-white;
+	font-family: $font-family;
+}
+
 #background { 
-	@include fullscreen();
+	@extend .fullscreen;
 	z-index: -1;
-	background-color: #000; 
-	
+	background-color: #000;
 	* { background: transparent; }
 }
 
+/*************************************************************Console*/
 .console {
 	font-size: 12px;
 	font-family: monospace;
-	color: #999;
+	color: $theme-text-console-default;
 	
-	.red { color: $theme-red-text; }
-	.blue { color: $theme-blue-text; }
-	.green { color: $theme-green-text; }
-	div {}
+	.red { color: $theme-text-red; }
+	.blue { color: $theme-text-blue; }
+	.green { color: $theme-text-green; }
 }
 #global-console {
-	@include fullscreen-child();
+	@extend .fullscreen-child;
+	@extend .noselect;
+	cursor: default;
 	padding-left: 2px;
 	overflow: visible;
-	> div:before { content: '> '; color: #999; }
+	> div:before { content: '> '; color: $theme-text-console-default; }
 }
+
+@import 'nojs';
