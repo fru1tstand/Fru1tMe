@@ -36,7 +36,7 @@ body, html {
   #background * {
     background: transparent; }
 
-/*************************************************************Console*/
+/*********************************************************_console.scss*/
 .console {
   font-size: 12px;
   font-family: monospace;
@@ -52,15 +52,48 @@ body, html {
   cursor: default;
   padding-left: 2px;
   overflow: visible; }
+  #global-console div {
+    -webkit-animation: console-entry-fadein 0.5s ease-in;
+    -moz-animation: console-entry-fadein 0.5s ease-in;
+    animation: console-entry-fadein 0.5s ease-in; }
   #global-console > div:before {
     content: '> ';
     color: #999; }
 
+/********************************************************Animations*/
+@-webkit-keyframes console-entry-fadein {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 rgba(255, 255, 255, 0); }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 white; }
+  100% {
+    text-shadow: 0 0 rgba(255, 255, 255, 0); } }
+@-moz-keyframes console-entry-fadein {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 rgba(255, 255, 255, 0); }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 white; }
+  100% {
+    text-shadow: 0 0 rgba(255, 255, 255, 0); } }
+@keyframes console-entry-fadein {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 rgba(255, 255, 255, 0); }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 white; }
+  100% {
+    text-shadow: 0 0 rgba(255, 255, 255, 0); } }
 /**************************************************************_nojs.scss*/
 #nojs {
   color: #99F;
   background-color: #EEE;
-  font-size: 0; }
+  font-size: 0;
+  z-index: 9999999999; }
 
 /***************************************************************Graphics*/
 #nojs_graphic {
@@ -100,8 +133,7 @@ body, html {
   height: 100px;
   width: 50px;
   background-color: #666;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px; }
+  border-radius: 0 0 10px 10px; }
 
 #nojs_socket {
   width: 250px;

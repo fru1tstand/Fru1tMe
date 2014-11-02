@@ -72,3 +72,17 @@
 	window.escapeHtml = escapeHtml;
 	window.LOG_LEVEL = LOG_LEVEL;
 } (this, document));
+
+/**
+ * Main window first loads
+ * Binds and stuff
+ */
+(function(window, document, undefined) {
+	//Remove the noscripts
+	var noscriptTags = document.getElementsByTagName("noscript");
+	for (var k in noscriptTags) {
+		if (!noscriptTags.hasOwnProperty(k)) continue;
+		noscriptTags[k].parentElement.removeChild(noscriptTags[k]);
+	}
+	log("Javascript enabled! Removed noscript from flow.")
+} (this, document));

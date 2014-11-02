@@ -42,23 +42,5 @@ body, html {
 	* { background: transparent; }
 }
 
-/*************************************************************Console*/
-.console {
-	font-size: 12px;
-	font-family: monospace;
-	color: $theme-text-console-default;
-	
-	.red { color: $theme-text-red; }
-	.blue { color: $theme-text-blue; }
-	.green { color: $theme-text-green; }
-}
-#global-console {
-	@extend .fullscreen-child;
-	@extend .noselect;
-	cursor: default;
-	padding-left: 2px;
-	overflow: visible;
-	> div:before { content: '> '; color: $theme-text-console-default; }
-}
-
+@import 'console';
 @import 'nojs';

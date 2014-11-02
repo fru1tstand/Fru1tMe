@@ -1,0 +1,28 @@
+/*********************************************************_console.scss*/
+$console-entry-fadein: console-entry-fadein;
+
+.console {
+	font-size: 12px;
+	font-family: monospace;
+	color: $theme-text-console-default;
+	
+	.red { color: $theme-text-red; }
+	.blue { color: $theme-text-blue; }
+	.green { color: $theme-text-green; }
+}
+#global-console {
+	@extend .fullscreen-child;
+	@extend .noselect;
+	cursor: default;
+	padding-left: 2px;
+	overflow: visible;
+	div { @include animation($console-entry-fadein 0.5s ease-in); }
+	> div:before { content: '> '; color: $theme-text-console-default; }
+}
+
+/********************************************************Animations*/
+@include keyframe($console-entry-fadein) {
+	0% { opacity: 0; text-shadow: 0 0 rgba(255, 255, 255, 0); }
+	50% { opacity: 1; text-shadow: 0 0 rgba(255, 255, 255, 1); }
+	100% { text-shadow: 0 0 rgba(255, 255, 255, 0); }
+}
