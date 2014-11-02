@@ -7,8 +7,8 @@
 	</head>
 	
 	<body>
+		<noscript>
 		<div id="nojs">
-			<noscript>
 			<div id="nojs_graphic">
 				<div>
 					<div id="nojs_plug_cord"></div>
@@ -34,8 +34,8 @@
 					<h3>Enable it to see why!</h3>
 				</div>
 			</div>
-			</noscript>
 		</div>
+		</noscript>
 		
 		<div id="background">
 			<div id="global-console" class="console"></div>

@@ -1,12 +1,14 @@
 /**************************************************************_nojs.scss*/
 $media-height-tiny: 800px;
 $plug-color: #666;
+$nojs-fadeout: nojs-fadeout;
 
 #nojs {
 	@extend .fullscreen-child;
 	color: $theme-text-blue;
 	background-color: #EEE;
 	font-size: 0;
+	z-index: 9999999999;
 }
 
 /***************************************************************Graphics*/
@@ -38,8 +40,7 @@ $plug-color: #666;
 	height: 100px;
 	width: 50px;
 	background-color: $plug-color;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-radius: 0 0 10px 10px;
 }
 #nojs_socket {
 	width: 250px;
