@@ -183,18 +183,22 @@ body, html {
       border-bottom: 3px solid #99F; }
 
 /******************************************************_navigation.scss*/
+#global-nav-toggle {
+  display: none; }
+
 @media (min-width: 1000px) and (min-height: 600px) {
   #global-nav-toggle {
+    display: block;
     position: absolute;
     top: 50%;
+    right: -150px;
     margin-top: -100px;
     width: 200px;
     height: 200px;
-    background-color: #999;
     border-radius: 100px;
-    right: -165px;
     cursor: pointer;
     overflow: visible;
+    background-color: #999;
     -webkit-transition: right 0.2s ease-in-out;
     -moz-transition: right 0.2s ease-in-out;
     transition: right 0.2s ease-in-out; }
@@ -202,32 +206,31 @@ body, html {
   .global-nav-item {
     position: absolute;
     font-size: 32px;
-    margin-top: -25px;
+    top: 50%;
     width: 150px;
-    height: 50px;
-    line-height: 50px;
+    height: 100px;
+    line-height: 100px;
     right: -150px;
-    -webkit-transition: right 0.3s ease-in-out;
-    -moz-transition: right 0.3s ease-in-out;
-    transition: right 0.3s ease-in-out; }
+    -webkit-transition: right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29);
+    -moz-transition: right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29);
+    transition: right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29); }
+    .global-nav-item:hover {
+      background-color: #999; }
 
   .global-nav-item:nth-of-type(2) {
-    top: 8.33333%; }
+    margin-top: -350px; }
 
   .global-nav-item:nth-of-type(3) {
-    top: 25%; }
+    margin-top: -262.13203px; }
 
   .global-nav-item:nth-of-type(4) {
-    top: 41.66667%; }
+    margin-top: -50px; }
 
   .global-nav-item:nth-of-type(5) {
-    top: 58.33333%; }
+    margin-top: 162.13203px; }
 
   .global-nav-item:nth-of-type(6) {
-    top: 75%; }
-
-  .global-nav-item:nth-of-type(7) {
-    top: 91.66667%; }
+    margin-top: 250px; }
 
   #global-nav {
     top: 0;
@@ -235,23 +238,22 @@ body, html {
     bottom: 0;
     width: 0;
     position: fixed;
-    z-index: 999999; }
+    z-index: 999999;
+    border-left: 1px solid #FFF; }
     #global-nav:hover {
-      width: 400px; }
+      width: 450px; }
       #global-nav:hover #global-nav-toggle {
         background-color: #FFF;
         right: -100px; }
       #global-nav:hover .global-nav-item:nth-of-type(2) {
-        right: 50px; }
+        right: 0.0px; }
       #global-nav:hover .global-nav-item:nth-of-type(3) {
-        right: 178px; }
+        right: 212.13203px; }
       #global-nav:hover .global-nav-item:nth-of-type(4) {
-        right: 242px; }
+        right: 300px; }
       #global-nav:hover .global-nav-item:nth-of-type(5) {
-        right: 242px; }
+        right: 212.13203px; }
       #global-nav:hover .global-nav-item:nth-of-type(6) {
-        right: 178px; }
-      #global-nav:hover .global-nav-item:nth-of-type(7) {
-        right: 50px; } }
+        right: 0.0px; } }
 
 /*# sourceMappingURL=global.css.map */

@@ -1,46 +1,62 @@
 /******************************************************_navigation.scss*/
-$nav-size-minimized: 35px;
-$nav-size-maximized: 400px;
+$nav-size-minimized: 50px;
+$nav-size-radius: 300px;
+$nav-toggle-padding-left: 0px;
+$nav-toggle-padding-right: 0px;
 
 $nav-size-toggle: 200px;
 $nav-size-item-width: 150px;
-$nav-size-item-height: 50px;
+$nav-size-item-height: 100px;
 
-$nav-arc-depth: 200px;
-
-$nav-items-count: 6;
+$nav-items-count: 5;
 $nav-items-offset: 1;
+
+$nav-items-angle: pi() / ($nav-items-count - 1);
+$nav-items-start-angle: pi() / 2;
+
+#global-nav-toggle {
+	display: none;
+}
+
 
 @media (min-width: $page-min-width) and (min-height: $page-min-height) {
 	#global-nav-toggle {
+		display: block; 
 		position: absolute;
 		top: 50%;
+		right: - ($nav-size-toggle - $nav-size-minimized);
 		margin-top: - $nav-size-toggle / 2;
 		width: $nav-size-toggle;
 		height: $nav-size-toggle;
-		background-color: #999;
 		border-radius: $nav-size-toggle / 2;
-		right: - ($nav-size-toggle - $nav-size-minimized);
 		cursor: pointer;
 		overflow: visible;
+		background-color: #999;
 		@include transition(right 0.2s ease-in-out);
 	}
 	.global-nav-item {
 		position: absolute;
 		font-size: 32px;
-		margin-top: - ($nav-size-item-height / 2);
+		top: 50%;
 		width: $nav-size-item-width;
 		height: $nav-size-item-height;
 		line-height: $nav-size-item-height;
 		right: -$nav-size-item-width;
-		@include transition(right 0.3s ease-in-out);
+		@include transition(right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29));
+		
+		&:hover {
+			background-color: #999;
+		}
 	}
 	
-	$nav-item-v-offset: 100% / $nav-items-count;
 	@for $i from 1 through $nav-items-count {
 		$nthChild: $i + $nav-items-offset;
 		.global-nav-item:nth-of-type(#{$nthChild}) {
-			top: (($i - 1) * $nav-item-v-offset) + ($nav-item-v-offset / 2);
+			margin-top: $nav-size-radius 
+					- ($nav-size-radius * sin($nav-items-start-angle 
+					- ($i - 1) * $nav-items-angle))
+					- ($nav-size-radius)
+					- ($nav-size-item-height / 2);
 		}
 	}
 	
@@ -49,25 +65,23 @@ $nav-items-offset: 1;
 		width: 0;
 		position: fixed;
 		z-index: 999999;
-		
+		border-left: 1px solid #FFF;
 		&:hover {
-			width: $nav-size-maximized;
+			width: $nav-toggle-padding-left 
+				+ $nav-toggle-padding-right
+				+ $nav-size-radius
+				+ $nav-size-item-width;
 			#global-nav-toggle {
 				background-color: #FFF;
-				right: - $nav-size-toggle / 2;
+				right: - $nav-size-toggle / 2 + $nav-toggle-padding-right;
 			}
-			
-			$mean: ($nav-items-count + 1) / 2;
-			$diff: ($nav-items-count - 1) / 2;
-
 			@for $i from 1 through $nav-items-count {
 				$nthChild: $i + $nav-items-offset;
 				.global-nav-item:nth-of-type(#{$nthChild}) {
-					right: $nav-size-maximized
-							- $nav-size-item-width
-							- ((abs($i - $mean) / $diff) 
-								* (abs($i - $mean) / $diff) 
-								* $nav-arc-depth);
+					right: $nav-size-radius * cos($nav-items-start-angle 
+							- ($i - 1) * $nav-items-angle)
+							- $nav-toggle-padding-left
+							+ $nav-toggle-padding-right;
 				}
 			}
 		}

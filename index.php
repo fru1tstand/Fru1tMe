@@ -40,9 +40,8 @@
 		<div id="global-nav">
 			<div id="global-nav-toggle"></div>
 			<div class="global-nav-item">Home</div>
-			<div class="global-nav-item">MIDI</div>
-			<div class="global-nav-item">Other</div>
-			<div class="global-nav-item">Other</div>
+			<div class="global-nav-item">Music</div>
+			<div class="global-nav-item">Personal</div>
 			<div class="global-nav-item">Other</div>
 			<div class="global-nav-item">Other</div>
 			
