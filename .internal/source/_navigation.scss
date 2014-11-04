@@ -1,0 +1,75 @@
+/******************************************************_navigation.scss*/
+$nav-size-minimized: 35px;
+$nav-size-maximized: 400px;
+
+$nav-size-toggle: 200px;
+$nav-size-item-width: 150px;
+$nav-size-item-height: 50px;
+
+$nav-arc-depth: 200px;
+
+$nav-items-count: 6;
+$nav-items-offset: 1;
+
+@media (min-width: $page-min-width) and (min-height: $page-min-height) {
+	#global-nav-toggle {
+		position: absolute;
+		top: 50%;
+		margin-top: - $nav-size-toggle / 2;
+		width: $nav-size-toggle;
+		height: $nav-size-toggle;
+		background-color: #999;
+		border-radius: $nav-size-toggle / 2;
+		right: - ($nav-size-toggle - $nav-size-minimized);
+		cursor: pointer;
+		overflow: visible;
+		@include transition(right 0.2s ease-in-out);
+	}
+	.global-nav-item {
+		position: absolute;
+		font-size: 32px;
+		margin-top: - ($nav-size-item-height / 2);
+		width: $nav-size-item-width;
+		height: $nav-size-item-height;
+		line-height: $nav-size-item-height;
+		right: -$nav-size-item-width;
+		@include transition(right 0.3s ease-in-out);
+	}
+	
+	$nav-item-v-offset: 100% / $nav-items-count;
+	@for $i from 1 through $nav-items-count {
+		$nthChild: $i + $nav-items-offset;
+		.global-nav-item:nth-of-type(#{$nthChild}) {
+			top: (($i - 1) * $nav-item-v-offset) + ($nav-item-v-offset / 2);
+		}
+	}
+	
+	#global-nav {
+		@include anchor(0, 0, 0, -1);
+		width: 0;
+		position: fixed;
+		z-index: 999999;
+		
+		&:hover {
+			width: $nav-size-maximized;
+			#global-nav-toggle {
+				background-color: #FFF;
+				right: - $nav-size-toggle / 2;
+			}
+			
+			$mean: ($nav-items-count + 1) / 2;
+			$diff: ($nav-items-count - 1) / 2;
+
+			@for $i from 1 through $nav-items-count {
+				$nthChild: $i + $nav-items-offset;
+				.global-nav-item:nth-of-type(#{$nthChild}) {
+					right: $nav-size-maximized
+							- $nav-size-item-width
+							- ((abs($i - $mean) / $diff) 
+								* (abs($i - $mean) / $diff) 
+								* $nav-arc-depth);
+				}
+			}
+		}
+	}
+}

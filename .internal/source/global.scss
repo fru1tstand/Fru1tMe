@@ -7,10 +7,34 @@ $theme-text-blue: #99F;
 $theme-text-green: #0F0;
 $theme-text-console-default: #999;
 
-@mixin animation($parameters...) {
+$page-min-height: 600px;
+$page-min-width: 1000px;
+
+@mixin anchor($top: null, $right:null, $bottom:null, $left:null) {
+	@if ($top != -1) { top: $top; }
+	@if ($left != null) {
+		@if ($right != -1) { right: $right; }
+		@if ($bottom != -1) { bottom: $bottom; }
+		@if ($left != -1) { left: $left; }
+	} @elseif ($bottom != null) {
+		@if ($right != -1) { left: $right; right: $right; }
+		@if ($bottom != -1) { bottom: $bottom; }
+	} @elseif ($right != null) {
+		@if ($top != -1) { bottom: $top; }
+		@if ($right != -1) { left: $right; right: $right; }
+	} @else {
+		right: $top; bottom: $top; left: $top;
+	}
+}
+@mixin animation($parameters) {
 	-webkit-animation: $parameters;
 	-moz-animation: $parameters;
 	animation: $parameters;
+}
+@mixin transition($params) {
+	-webkit-transition: $params;
+	-moz-transition: $params;
+	transition: $params;
 }
 @mixin keyframe($name) {
 	@-webkit-keyframes #{$name} { @content; }
@@ -21,10 +45,10 @@ $theme-text-console-default: #999;
 /*********************************************************Extendables*/
 .noselect { -webkit-touch-callout: none; -webkit-user-select: none; 
 	-moz-user-select: none; -ms-user-select: none; user-select: none; }
-.fullscreen { @extend .page-minimums; top: 0; right: 0; bottom: 0; left: 0; 
+.fullscreen { @extend .page-minimums; @include anchor(0);
 	position: fixed; }
 .fullscreen-child { width: 100%; height: 100%; }
-.page-minimums { min-width: 1000px; min-height: 600px; }
+.page-minimums { min-width: $page-min-width; min-height: $page-min-height; }
 
 /****************************************************************Root*/
 body, html {
@@ -44,3 +68,4 @@ body, html {
 
 @import 'console';
 @import 'nojs';
+@import 'navigation';

@@ -37,6 +37,86 @@
 		</div>
 		</noscript>
 		
+		<div id="global-nav">
+			<div id="global-nav-toggle"></div>
+			<div class="global-nav-item">Home</div>
+			<div class="global-nav-item">MIDI</div>
+			<div class="global-nav-item">Other</div>
+			<div class="global-nav-item">Other</div>
+			<div class="global-nav-item">Other</div>
+			<div class="global-nav-item">Other</div>
+			
+		</div>
+		
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		aasdf<br />
+		
+		
 		<div id="background">
 			<div id="global-console" class="console"></div>
 		</div>

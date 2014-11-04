@@ -64,30 +64,39 @@ body, html {
 @-webkit-keyframes console-entry-fadein {
   0% {
     opacity: 0;
-    text-shadow: 0 0 rgba(255, 255, 255, 0); }
+    text-shadow: 0 0 rgba(255, 255, 255, 0);
+    background-color: transparent; }
   50% {
     opacity: 1;
-    text-shadow: 0 0 white; }
+    text-shadow: 0 0 white;
+    background-color: #333; }
   100% {
-    text-shadow: 0 0 rgba(255, 255, 255, 0); } }
+    text-shadow: 0 0 rgba(255, 255, 255, 0);
+    background-color: transparent; } }
 @-moz-keyframes console-entry-fadein {
   0% {
     opacity: 0;
-    text-shadow: 0 0 rgba(255, 255, 255, 0); }
+    text-shadow: 0 0 rgba(255, 255, 255, 0);
+    background-color: transparent; }
   50% {
     opacity: 1;
-    text-shadow: 0 0 white; }
+    text-shadow: 0 0 white;
+    background-color: #333; }
   100% {
-    text-shadow: 0 0 rgba(255, 255, 255, 0); } }
+    text-shadow: 0 0 rgba(255, 255, 255, 0);
+    background-color: transparent; } }
 @keyframes console-entry-fadein {
   0% {
     opacity: 0;
-    text-shadow: 0 0 rgba(255, 255, 255, 0); }
+    text-shadow: 0 0 rgba(255, 255, 255, 0);
+    background-color: transparent; }
   50% {
     opacity: 1;
-    text-shadow: 0 0 white; }
+    text-shadow: 0 0 white;
+    background-color: #333; }
   100% {
-    text-shadow: 0 0 rgba(255, 255, 255, 0); } }
+    text-shadow: 0 0 rgba(255, 255, 255, 0);
+    background-color: transparent; } }
 /**************************************************************_nojs.scss*/
 #nojs {
   color: #99F;
@@ -172,5 +181,77 @@ body, html {
     width: 500px; }
     #nojs_text > div > h1 {
       border-bottom: 3px solid #99F; }
+
+/******************************************************_navigation.scss*/
+@media (min-width: 1000px) and (min-height: 600px) {
+  #global-nav-toggle {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: #999;
+    border-radius: 100px;
+    right: -165px;
+    cursor: pointer;
+    overflow: visible;
+    -webkit-transition: right 0.2s ease-in-out;
+    -moz-transition: right 0.2s ease-in-out;
+    transition: right 0.2s ease-in-out; }
+
+  .global-nav-item {
+    position: absolute;
+    font-size: 32px;
+    margin-top: -25px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    right: -150px;
+    -webkit-transition: right 0.3s ease-in-out;
+    -moz-transition: right 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out; }
+
+  .global-nav-item:nth-of-type(2) {
+    top: 8.33333%; }
+
+  .global-nav-item:nth-of-type(3) {
+    top: 25%; }
+
+  .global-nav-item:nth-of-type(4) {
+    top: 41.66667%; }
+
+  .global-nav-item:nth-of-type(5) {
+    top: 58.33333%; }
+
+  .global-nav-item:nth-of-type(6) {
+    top: 75%; }
+
+  .global-nav-item:nth-of-type(7) {
+    top: 91.66667%; }
+
+  #global-nav {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    position: fixed;
+    z-index: 999999; }
+    #global-nav:hover {
+      width: 400px; }
+      #global-nav:hover #global-nav-toggle {
+        background-color: #FFF;
+        right: -100px; }
+      #global-nav:hover .global-nav-item:nth-of-type(2) {
+        right: 50px; }
+      #global-nav:hover .global-nav-item:nth-of-type(3) {
+        right: 178px; }
+      #global-nav:hover .global-nav-item:nth-of-type(4) {
+        right: 242px; }
+      #global-nav:hover .global-nav-item:nth-of-type(5) {
+        right: 242px; }
+      #global-nav:hover .global-nav-item:nth-of-type(6) {
+        right: 178px; }
+      #global-nav:hover .global-nav-item:nth-of-type(7) {
+        right: 50px; } }
 
 /*# sourceMappingURL=global.css.map */
