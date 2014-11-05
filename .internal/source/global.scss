@@ -1,5 +1,6 @@
 @CHARSET "UTF-8";
 
+/** Global vars */
 $font-family: Optima,Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
 $theme-text-white: #DDD;
 $theme-text-red: #F00;
@@ -10,6 +11,24 @@ $theme-text-console-default: #999;
 $page-min-height: 600px;
 $page-min-width: 1000px;
 
+/** Nav vars */
+$nav-size-minimized: 50px;
+$nav-size-radius: 300px;
+$nav-toggle-padding-left: 100px;
+$nav-toggle-padding-right: 20px;
+
+$nav-size-toggle: 200px;
+$nav-size-item-width: 150px;
+$nav-size-item-height: 100px;
+$nav-gradient-offset: 200px;
+
+$nav-items-count: 5;
+$nav-items-offset: 0;
+
+$nav-items-angle: pi() / ($nav-items-count - 1);
+$nav-items-start-angle: pi() / 2;
+
+@import 'compass';
 @mixin anchor($top: null, $right:null, $bottom:null, $left:null) {
 	@if ($top != -1) { top: $top; }
 	@if ($left != null) {
@@ -49,6 +68,10 @@ $page-min-width: 1000px;
 	position: fixed; }
 .fullscreen-child { width: 100%; height: 100%; }
 .page-minimums { min-width: $page-min-width; min-height: $page-min-height; }
+.container { min-width: $page-min-width; width: 80%; margin: 0px auto; }
+.backgrounded { 
+	background-color: #000;
+}
 
 /****************************************************************Root*/
 body, html {

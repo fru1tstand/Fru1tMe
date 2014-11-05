@@ -1,3 +1,12 @@
+<?php 
+	include("/.internal/php/engine.php");
+	
+	if (Page::getBodyOnlyRequest()) {
+		include(Page::getPageLocation(Page::getPageRequest()));
+		exit();
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -45,7 +54,8 @@
 			<a href="#" class="global-nav-item">Personal</a>
 			<a href="#" class="global-nav-item">Other</a>
 		</div>
-
+		
+		<?php include(Page::getPageLocation(Page::getPageRequest())); ?>
 		
 		<div id="background">
 			<div id="global-console" class="console"></div>

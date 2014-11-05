@@ -10,6 +10,17 @@
  */
 
 /**
+ * Utility methods
+ */
+(function(window, document, undefined) {
+	function longTextAbbr(text) {
+		return text.substr(0, 200) + "...";
+	}
+	
+	window.longTextAbbr = longTextAbbr;
+} (this, document));
+
+/**
  * Console
  * Provides basic interaction to the global console
  */
@@ -53,6 +64,8 @@
 		var calcConsoleMargin = gConsole.offsetHeight - textHeight;
 		if (calcConsoleMargin > 0) return;
 		gConsole.style.marginTop = calcConsoleMargin + "px";
+		
+		return entry;
 	}
 	
 	/**
@@ -74,15 +87,45 @@
 } (this, document));
 
 /**
+ * Nav specific
+ */
+(function(window, document, undefined) {
+	function navForceOpen() {
+		log("Forcing navigation circle open");
+		document.getElementById("global-nav").classList.add("hover");
+	}
+	function navForceClose() {
+		log("Disabling forced open navigation");
+		document.getElementById("global-nav").classList.remove("hover");
+	}
+	function navPeek(duration) {
+		log("Peeking navigation circle...");
+		navForceOpen();
+		log("Set peek duration for " + duration + "ms");
+		setTimeout(navForceClose, duration);
+	}
+	
+	window.navForceOpen = navForceOpen;
+	window.navForceClose = navForceClose;
+	window.navPeek = navPeek;
+} (this, document));
+
+/**
  * Main window first loads
  * Binds and stuff
  */
 (function(window, document, undefined) {
 	//Remove the noscripts
+	log("Javascript enabled! Removing noscript from flow.")
 	var noscriptTags = document.getElementsByTagName("noscript");
 	for (var k in noscriptTags) {
 		if (!noscriptTags.hasOwnProperty(k)) continue;
+		log("Found and removed " 
+				+ longTextAbbr(noscriptTags[k].innerHTML));
 		noscriptTags[k].parentElement.removeChild(noscriptTags[k]);
 	}
-	log("Javascript enabled! Removed noscript from flow.")
+	
+	window.onload = function() {
+		navPeek(2000);       
+	};
 } (this, document));

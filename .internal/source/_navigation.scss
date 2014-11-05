@@ -1,19 +1,4 @@
 /******************************************************_navigation.scss*/
-$nav-size-minimized: 50px;
-$nav-size-radius: 300px;
-$nav-toggle-padding-left: 100px;
-$nav-toggle-padding-right: 20px;
-
-$nav-size-toggle: 200px;
-$nav-size-item-width: 150px;
-$nav-size-item-height: 100px;
-
-$nav-items-count: 5;
-$nav-items-offset: 0;
-
-$nav-items-angle: pi() / ($nav-items-count - 1);
-$nav-items-start-angle: pi() / 2;
-
 #global-nav {
 	border-bottom: 1px solid #333;
 	text-align: right;
@@ -26,8 +11,9 @@ $nav-items-start-angle: pi() / 2;
 	text-align: center;
 	text-decoration: none;
 	color: #FFF;
-	padding-top: 40px;
+	height: $nav-size-item-height;
 	width: $nav-size-item-width;
+	line-height: $nav-size-item-height;
 	font-size: 24px;
 	&:hover { color: #999; }
 }
@@ -52,9 +38,6 @@ $nav-items-start-angle: pi() / 2;
 		position: absolute;
 		padding: 0;
 		font-size: 32px;
-		width: $nav-size-item-width;
-		height: $nav-size-item-height;
-		line-height: $nav-size-item-height;
 		top: 50%;
 		right: -$nav-size-item-width;
 		@include transition(right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29));
@@ -79,6 +62,9 @@ $nav-items-start-angle: pi() / 2;
 		z-index: 999999;
 		border-bottom: none;
 		border-left: 1px solid #333;
+		@include filter-gradient(#000000, #222222, horizontal);
+		@include background-image(linear-gradient(left, #000000 0%, #222222 100%));
+		@include transition(width 0.2s ease-in-out);
 		&:hover, &.hover {
 			width: $nav-toggle-padding-left 
 				+ $nav-toggle-padding-right

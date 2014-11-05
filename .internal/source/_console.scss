@@ -13,11 +13,16 @@ $console-entry-fadein: console-entry-fadein;
 #global-console {
 	@extend .fullscreen-child;
 	@extend .noselect;
+	padding-top: $nav-size-item-height;
 	cursor: default;
 	padding-left: 2px;
 	overflow: visible;
 	div { @include animation($console-entry-fadein 0.5s ease-in); }
 	> div:before { content: '> '; color: $theme-text-console-default; }
+}
+
+@media (min-width: $page-min-width) and (min-height: $page-min-height + $nav-size-item-height) {
+	#global-console { padding: 0; }
 }
 
 /********************************************************Animations*/
