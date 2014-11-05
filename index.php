@@ -39,82 +39,13 @@
 		
 		<div id="global-nav">
 			<div id="global-nav-toggle"></div>
-			<div class="global-nav-item">Home</div>
-			<div class="global-nav-item">Music</div>
-			<div class="global-nav-item">Personal</div>
-			<div class="global-nav-item">Other</div>
-			<div class="global-nav-item">Other</div>
-			
+			<a href="#" class="global-nav-item">Home</a>
+			<a href="#" class="global-nav-item">Music</a>
+			<a href="#" class="global-nav-item">Games</a>
+			<a href="#" class="global-nav-item">Personal</a>
+			<a href="#" class="global-nav-item">Other</a>
 		</div>
-		
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		aasdf<br />
-		
+
 		
 		<div id="background">
 			<div id="global-console" class="console"></div>

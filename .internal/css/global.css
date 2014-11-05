@@ -183,10 +183,25 @@ body, html {
       border-bottom: 3px solid #99F; }
 
 /******************************************************_navigation.scss*/
+#global-nav {
+  border-bottom: 1px solid #333;
+  text-align: right; }
+
 #global-nav-toggle {
   display: none; }
 
-@media (min-width: 1000px) and (min-height: 600px) {
+.global-nav-item {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  padding-top: 40px;
+  width: 150px;
+  font-size: 24px; }
+  .global-nav-item:hover {
+    color: #999; }
+
+@media (min-width: 1000px) and (min-height: 700px) {
   #global-nav-toggle {
     display: block;
     position: absolute;
@@ -205,31 +220,30 @@ body, html {
 
   .global-nav-item {
     position: absolute;
+    padding: 0;
     font-size: 32px;
-    top: 50%;
     width: 150px;
     height: 100px;
     line-height: 100px;
+    top: 50%;
     right: -150px;
     -webkit-transition: right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29);
     -moz-transition: right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29);
     transition: right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29); }
-    .global-nav-item:hover {
-      background-color: #999; }
 
-  .global-nav-item:nth-of-type(2) {
+  .global-nav-item:nth-of-type(1) {
     margin-top: -350px; }
 
-  .global-nav-item:nth-of-type(3) {
+  .global-nav-item:nth-of-type(2) {
     margin-top: -262.13203px; }
 
-  .global-nav-item:nth-of-type(4) {
+  .global-nav-item:nth-of-type(3) {
     margin-top: -50px; }
 
-  .global-nav-item:nth-of-type(5) {
+  .global-nav-item:nth-of-type(4) {
     margin-top: 162.13203px; }
 
-  .global-nav-item:nth-of-type(6) {
+  .global-nav-item:nth-of-type(5) {
     margin-top: 250px; }
 
   #global-nav {
@@ -238,22 +252,24 @@ body, html {
     bottom: 0;
     width: 0;
     position: fixed;
+    height: auto;
     z-index: 999999;
-    border-left: 1px solid #FFF; }
-    #global-nav:hover {
-      width: 450px; }
-      #global-nav:hover #global-nav-toggle {
+    border-bottom: none;
+    border-left: 1px solid #333; }
+    #global-nav:hover, #global-nav.hover {
+      width: 570px; }
+      #global-nav:hover #global-nav-toggle, #global-nav.hover #global-nav-toggle {
         background-color: #FFF;
-        right: -100px; }
-      #global-nav:hover .global-nav-item:nth-of-type(2) {
-        right: 0.0px; }
-      #global-nav:hover .global-nav-item:nth-of-type(3) {
-        right: 212.13203px; }
-      #global-nav:hover .global-nav-item:nth-of-type(4) {
-        right: 300px; }
-      #global-nav:hover .global-nav-item:nth-of-type(5) {
-        right: 212.13203px; }
-      #global-nav:hover .global-nav-item:nth-of-type(6) {
-        right: 0.0px; } }
+        right: -80px; }
+      #global-nav:hover .global-nav-item:nth-of-type(1), #global-nav.hover .global-nav-item:nth-of-type(1) {
+        right: 20.0px; }
+      #global-nav:hover .global-nav-item:nth-of-type(2), #global-nav.hover .global-nav-item:nth-of-type(2) {
+        right: 232.13203px; }
+      #global-nav:hover .global-nav-item:nth-of-type(3), #global-nav.hover .global-nav-item:nth-of-type(3) {
+        right: 320px; }
+      #global-nav:hover .global-nav-item:nth-of-type(4), #global-nav.hover .global-nav-item:nth-of-type(4) {
+        right: 232.13203px; }
+      #global-nav:hover .global-nav-item:nth-of-type(5), #global-nav.hover .global-nav-item:nth-of-type(5) {
+        right: 20.0px; } }
 
 /*# sourceMappingURL=global.css.map */

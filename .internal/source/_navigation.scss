@@ -1,25 +1,39 @@
 /******************************************************_navigation.scss*/
 $nav-size-minimized: 50px;
 $nav-size-radius: 300px;
-$nav-toggle-padding-left: 0px;
-$nav-toggle-padding-right: 0px;
+$nav-toggle-padding-left: 100px;
+$nav-toggle-padding-right: 20px;
 
 $nav-size-toggle: 200px;
 $nav-size-item-width: 150px;
 $nav-size-item-height: 100px;
 
 $nav-items-count: 5;
-$nav-items-offset: 1;
+$nav-items-offset: 0;
 
 $nav-items-angle: pi() / ($nav-items-count - 1);
 $nav-items-start-angle: pi() / 2;
 
+#global-nav {
+	border-bottom: 1px solid #333;
+	text-align: right;
+}
 #global-nav-toggle {
 	display: none;
 }
+.global-nav-item {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	color: #FFF;
+	padding-top: 40px;
+	width: $nav-size-item-width;
+	font-size: 24px;
+	&:hover { color: #999; }
+}
 
 
-@media (min-width: $page-min-width) and (min-height: $page-min-height) {
+@media (min-width: $page-min-width) and (min-height: $page-min-height + $nav-size-item-height) {
 	#global-nav-toggle {
 		display: block; 
 		position: absolute;
@@ -36,17 +50,14 @@ $nav-items-start-angle: pi() / 2;
 	}
 	.global-nav-item {
 		position: absolute;
+		padding: 0;
 		font-size: 32px;
-		top: 50%;
 		width: $nav-size-item-width;
 		height: $nav-size-item-height;
 		line-height: $nav-size-item-height;
+		top: 50%;
 		right: -$nav-size-item-width;
 		@include transition(right 0.3s cubic-bezier(0.8, -0.18, 0.32, 1.29));
-		
-		&:hover {
-			background-color: #999;
-		}
 	}
 	
 	@for $i from 1 through $nav-items-count {
@@ -64,9 +75,11 @@ $nav-items-start-angle: pi() / 2;
 		@include anchor(0, 0, 0, -1);
 		width: 0;
 		position: fixed;
+		height: auto;
 		z-index: 999999;
-		border-left: 1px solid #FFF;
-		&:hover {
+		border-bottom: none;
+		border-left: 1px solid #333;
+		&:hover, &.hover {
 			width: $nav-toggle-padding-left 
 				+ $nav-toggle-padding-right
 				+ $nav-size-radius
@@ -80,7 +93,6 @@ $nav-items-start-angle: pi() / 2;
 				.global-nav-item:nth-of-type(#{$nthChild}) {
 					right: $nav-size-radius * cos($nav-items-start-angle 
 							- ($i - 1) * $nav-items-angle)
-							- $nav-toggle-padding-left
 							+ $nav-toggle-padding-right;
 				}
 			}
