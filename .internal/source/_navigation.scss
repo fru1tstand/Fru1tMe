@@ -60,11 +60,12 @@
 		position: fixed;
 		height: auto;
 		z-index: 999999;
-		border-bottom: none;
-		border-left: 1px solid #333;
-		@include filter-gradient(#000000, #222222, horizontal);
-		@include background-image(linear-gradient(left, #000000 0%, #222222 100%));
-		@include transition(width 0.2s ease-in-out);
+		border: none;
+		background: transparent;
+		@include filter-gradient(rgba(0, 0, 0, 0.3), #222222, horizontal);
+		@include background-image(radial-gradient(circle at 100% 50%, #FFF 0%, rgba(0, 0, 0, 0) 85%));
+		@include transition(width 0.2s ease-in-out 0.1s);
+		
 		&:hover, &.hover {
 			width: $nav-toggle-padding-left 
 				+ $nav-toggle-padding-right

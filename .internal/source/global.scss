@@ -50,7 +50,7 @@ $nav-items-start-angle: pi() / 2;
 	-moz-animation: $parameters;
 	animation: $parameters;
 }
-@mixin transition($params) {
+@mixin transition($params...) {
 	-webkit-transition: $params;
 	-moz-transition: $params;
 	transition: $params;
@@ -66,7 +66,7 @@ $nav-items-start-angle: pi() / 2;
 	-moz-user-select: none; -ms-user-select: none; user-select: none; }
 .fullscreen { @extend .page-minimums; @include anchor(0);
 	position: fixed; }
-.fullscreen-child { width: 100%; height: 100%; }
+.fullscreen-child { @include anchor(0); position: absolute; }
 .page-minimums { min-width: $page-min-width; min-height: $page-min-height; }
 .container { min-width: $page-min-width; width: 80%; margin: 0px auto; }
 .backgrounded { 
@@ -88,7 +88,11 @@ body, html {
 	background-color: #000;
 	* { background: transparent; }
 }
+#global-content {
+	height: 100%;
+}
 
 @import 'console';
 @import 'nojs';
 @import 'navigation';
+@import 'home';
