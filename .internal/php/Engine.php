@@ -3,10 +3,11 @@
  * "Enums"
  */
 class FILE_LOCATION {
-	const PAGES = "/.internal/pages/";
+	const PAGES = ".internal/pages/";
 }
 class PAGE_ALIAS {
 	const HOME = "home.php";
+	const MIDI = "midi.php";
 }
 
 class Page {
@@ -44,15 +45,20 @@ class Page {
 	}
 	
 	/**
-	 * Returns the file location for the page 
+	 * @return string The file location for the page 
 	 */
 	public static function getPageLocation($pageAlias) {
 		$pageLocation = FILE_LOCATION::PAGES . PAGE_ALIAS::HOME;
 		$refClass = new ReflectionClass("PAGE_ALIAS");
+		$pageAlias = strtoupper($pageAlias);
 		if ($refClass->hasConstant($pageAlias)) 
 			$pageLocation = FILE_LOCATION::PAGES . $refClass->getConstant($pageAlias);
+		return $pageLocation;
 	}
 	
+	/**
+	 * @return string The requested page through GET
+	 */
 	public static function getPageRequest() {
 		return self::getSafeGet(self::GET_PAGE);
 	}

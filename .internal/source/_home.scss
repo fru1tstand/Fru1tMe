@@ -1,0 +1,24 @@
+/******************************************_home.scss*/
+.home-window {
+	height: 50%;
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+}
+#home-text-window {
+	@extend .home-window;
+	border: 1px solid #FF0;
+}
+#home-render-window {
+	@extend .home-window;
+	border: 1px solid #00F;
+}
+#home-input-window {
+	@extend .home-window;
+	padding: 0;
+	background-color: #000;
+	color: #999;
+	border: 1px solid #0FF;
+	resize: none;
+	margin-top: -0.5px;
+}

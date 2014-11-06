@@ -13,16 +13,32 @@ $console-entry-fadein: console-entry-fadein;
 #global-console {
 	@extend .fullscreen-child;
 	@extend .noselect;
-	padding-top: $nav-size-item-height;
 	cursor: default;
 	padding-left: 2px;
 	overflow: visible;
+	@include transition(top 0.2s ease-in-out, right 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out);
+	
+	
 	div { @include animation($console-entry-fadein 0.5s ease-in); }
 	> div:before { content: '> '; color: $theme-text-console-default; }
+	
+	&.anchor-windowed { border: 1px solid #0F0; }
+	&.anchor-lower-left { @extend .anchor-windowed; @include anchor(50%, 50%, 0, 0); }
+	&.anchor-lower-right { @extend .anchor-windowed; @include anchor(50%, 0, 0, 50%); }
+	&.anchor-upper-left { @extend .anchor-windowed; @include anchor(0, 50%, 50%, 0); }
+	&.anchor-upper-right { @extend .anchor-windowed; @include anchor(0, 0, 50%, 50%); }
+}
+#global-console.fullscreen {
+	padding-top: $nav-size-item-height;
 }
 
 @media (min-width: $page-min-width) and (min-height: $page-min-height + $nav-size-item-height) {
-	#global-console { padding: 0; }
+	#global-console { 
+		padding: 0; 
+		&.fullscreen {
+			padding: 0;
+		}
+	}
 }
 
 /********************************************************Animations*/

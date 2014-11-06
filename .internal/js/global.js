@@ -1,9 +1,9 @@
 /**
  * Written with love by Kodlee Yin.
  * 
- * Please don't take this, call it your own, and sell it. That would make me very sad.
- * Instead, take it, build upon it, and redestribute it for others to see and learn
- * and make the world a better place :)
+ * Hi! Feel free to copy/paste/modify/redistribute all you like.
+ * Just please leave it free and open so that others may learn and
+ * make the world a better place :)
  * 
  * Copyleft Fru1tMe, 2014
  * Changelog available at https://github.com/fru1tstand/Fru1tMe
@@ -21,8 +21,9 @@
 } (this, document));
 
 /**
- * Console
+ * Console, Background
  * Provides basic interaction to the global console
+ * Provides methods to manipulate the page's background
  */
 (function(window, document, undefined) {
 	var LOG_LEVEL = Object.freeze({
@@ -38,17 +39,37 @@
 			return this.NORMAL;
 		}
 	});
+	var CONSOLE_POSITION = Object.freeze({
+		FULLSCREEN: "anchor-fullscreen",
+		TOP_LEFT: "anchor-upper-left",
+		TOP_RIGHT: "anchor-upper-right",
+		BOTTOM_LEFT: "anchor-lower-left",
+		BOTTOM_RIGHT: "anchor-lower-right",
+		
+		getClass: function(consolePosition) {
+			if (consolePosition == this.TOP_LEFT) return this.TOP_LEFT;
+			if (consolePosition == this.TOP_RIGHT) return this.TOP_RIGHT;
+			if (consolePosition == this.BOTTOM_LEFT) return this.BOTTOM_LEFT;
+			if (consolePosition == this.BOTTOM_RIGHT) return this.BOTTOM_RIGHT;
+			return this.FULLSCREEN;
+		}
+	});
 	
+	window.LOG_LEVEL = LOG_LEVEL;
+	window.CONSOLE_POSITION = CONSOLE_POSITION;
+	
+	/**
+	 * Adds a log message to the console with the passed LOG_LEVEL
+	 */
 	function log(message, logLevel) {
 		//Create console entry and append to console
 		var entry = document.createElement('div');
 		var gConsole = document.getElementById('global-console');
 		entry.innerHTML = escapeHtml(message);
-		entry.classList.add("entry");
 		entry.classList.add(LOG_LEVEL.getClass(logLevel));
 		gConsole.appendChild(entry);
 		
-		//Truncate console if needed
+		//Truncate console entries if needed
 		var textHeight = 0;
 		var consoleEntries = gConsole.getElementsByTagName('div');
 		for (var key = consoleEntries.length; key >= 0; key--) {
@@ -62,11 +83,11 @@
 		
 		//Have the bottom flush when enough entries exist
 		var calcConsoleMargin = gConsole.offsetHeight - textHeight;
-		if (calcConsoleMargin > 0) return;
-		gConsole.style.marginTop = calcConsoleMargin + "px";
+		if (calcConsoleMargin < 0) gConsole.style.marginTop = calcConsoleMargin + "px";
 		
+		//We allow the caller to have the entry so that it may manipulate the content later
 		return entry;
-	}
+	}	window.log = log;
 	
 	/**
 	 * Credit: bjornd
@@ -80,14 +101,29 @@
 	         .replace(/"/g, "&quot;")
 	         .replace(/'/g, "&#039;");
 	 }
+	
+	function resizeConsole(position) {
+		var consoleClass = CONSOLE_POSITION.getClass(position);
+		log("Re-anchoring console to \"" + consoleClass + "\"");
+		
+		var console = document.getElementById('global-console');
+		console.classList.remove(CONSOLE_POSITION.TOP_LEFT);
+		console.classList.remove(CONSOLE_POSITION.TOP_RIGHT);
+		console.classList.remove(CONSOLE_POSITION.BOTTOM_LEFT);
+		console.classList.remove(CONSOLE_POSITION.BOTTOM_RIGHT);
+		
+		console.classList.add(consoleClass);
+	}
 
-	window.log = log;
+	
+
 	window.escapeHtml = escapeHtml;
-	window.LOG_LEVEL = LOG_LEVEL;
+	window.resizeConsole = resizeConsole;
 } (this, document));
 
 /**
  * Nav specific
+ * Ajax
  */
 (function(window, document, undefined) {
 	function navForceOpen() {
@@ -125,7 +161,8 @@
 		noscriptTags[k].parentElement.removeChild(noscriptTags[k]);
 	}
 	
-	window.onload = function() {
-		navPeek(2000);       
-	};
+	deferExecution(function() {
+		navPeek(2000);
+	});
+	window.onload = deferExecute;
 } (this, document));

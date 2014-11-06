@@ -1,5 +1,5 @@
 <?php 
-	include("/.internal/php/engine.php");
+	include(".internal/php/Engine.php");
 	
 	if (Page::getBodyOnlyRequest()) {
 		include(Page::getPageLocation(Page::getPageRequest()));
@@ -13,6 +13,7 @@
 		<title>Fru1tMe</title>
 		<meta charset="UTF-8" />
 		<link href="/.internal/css/global.css" rel="stylesheet" type="text/css" />
+		<script src="/.internal/js/preload.js"></script>
 	</head>
 	
 	<body>
@@ -48,14 +49,16 @@
 		
 		<div id="global-nav">
 			<div id="global-nav-toggle"></div>
-			<a href="#" class="global-nav-item">Home</a>
-			<a href="#" class="global-nav-item">Music</a>
+			<a href="/home" class="global-nav-item default-ajax-link">Home</a>
+			<a href="/midi" class="global-nav-item">Music</a>
 			<a href="#" class="global-nav-item">Games</a>
 			<a href="#" class="global-nav-item">Personal</a>
 			<a href="#" class="global-nav-item">Other</a>
 		</div>
 		
-		<?php include(Page::getPageLocation(Page::getPageRequest())); ?>
+		<div id="global-content">
+			<?php include(Page::getPageLocation(Page::getPageRequest())); ?>
+		</div>
 		
 		<div id="background">
 			<div id="global-console" class="console"></div>
