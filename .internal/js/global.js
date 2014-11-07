@@ -87,7 +87,14 @@
 		
 		//We allow the caller to have the entry so that it may manipulate the content later
 		return entry;
-	}	window.log = log;
+	}
+	window.log = log;
+	//Handle pre-method loggings
+	var preLogs = getTempLogList();
+	for (var i = 0; i < preLogs.length; i++) {
+		log(preLogs[i]);
+	}
+	
 	
 	/**
 	 * Credit: bjornd
@@ -114,8 +121,6 @@
 		
 		console.classList.add(consoleClass);
 	}
-
-	
 
 	window.escapeHtml = escapeHtml;
 	window.resizeConsole = resizeConsole;
@@ -164,5 +169,5 @@
 	deferExecution(function() {
 		navPeek(2000);
 	});
-	window.onload = deferExecute;
+	window.onload = function() deferExecute();
 } (this, document));

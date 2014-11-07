@@ -11,6 +11,7 @@
 		logList.push(s);
 	}
 	function getTempLogList() {
+		window.getTempLogList = undefined;
 		return logList;
 	}
 	window.log = log;
@@ -20,14 +21,22 @@
 	 * Deferred execution
 	 */
 	var fnList = [];
+	var hasExecuted = false;
 	function deferExecution(fn) {
-		log("Deferring execution of " + fn)
-		fnList.push(fn);
+		if (hasExecuted) {
+			window.log("Deferral of " + fn + " was called, however execution already occured. Executing NOW.")
+			fn();
+		} else {
+			window.log("Deferring execution of " + fn)
+			fnList.push(fn);
+		}
 	}
 	function execute() {
+		window.log("Executing deferred calls")
 		for (var i = 0; i < fnList.length; i++) {
 			fnList[i]();
 		}
+		this.fnList = null;
 	}
 	window.deferExecution = deferExecution;
 	window.deferExecute = execute;
