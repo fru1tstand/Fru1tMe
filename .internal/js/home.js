@@ -1,4 +1,6 @@
 (function(window, document, undefined) {
+	var batterySaver = true;
+	
 	var resizeLogElement = null,
 		resizeLogTimer = null;
 	
@@ -62,7 +64,11 @@
 		}
 		
 		lastFrameTime = currentFrameTime;
-		requestAnimationFrame(drawFrame);
+		if (batterySaver) {
+			setTimeout(drawFrame, 2000);
+		} else {
+			requestAnimationFrame(drawFrame);
+		}
 	}
 	
 	function Color() {
