@@ -1,8 +1,11 @@
 (function(window, document, undefined) {
+	var resizeLogElement = null,
+		resizeLogTimer = null;
+	
 	var ballSize = 6,
 		ballPadding = 2,
-		ballRows = 10,
-		ballCols = 10;
+		ballRows = 25,
+		ballCols = 15;
 	
 	var canvas = document.getElementById("home-render-window"),
 		ctx = canvas.getContext("2d");
@@ -12,11 +15,26 @@
 	var lastFrameTime = 0,
 		currentFrameTime = 0,
 		deltaFrameTime = 0,
-		drawOffsetX = canvas.width / 2,
+		drawOffsetX = canvas.width / 2 - 200,
 		drawOffsetY = canvas.height / 2,
 		ballSpacing = ballSize * 2 + ballPadding;
 	var xPos = 0,
 		yPos = 0;
+	
+	function resize() {
+		if (resizeLogElement == null) resizeLogElement = log("");
+		if (resizeLogTimer != null) clearTimeout(resizeLogTimer);
+		resizeLogTimer = setTimeout(function() {
+			resizeLogElement = null;
+			resizeLogTimer = null;
+		}, 5000);
+		resizeLogElement.innerHTML = "Resizing canvas to (" +
+				canvas.clientWidth + ", " + canvas.clientHeight + ")";
+		canvas.height = canvas.clientHeight;
+		canvas.width = canvas.clientWidth;
+		drawOffsetX = canvas.width / 2 - 200;
+		drawOffsetY = canvas.height / 2;
+	}
 	function drawFrame() {
 		currentFrameTime = Date.now();
 		deltaFrameTime = currentFrameTime - lastFrameTime;
@@ -32,10 +50,10 @@
 		for (var j = 0; j < ballRows; j++) {
 			for (var i = 0; i < ballCols; i++) {
 				ctx.beginPath();
-				ctx.arc(100 + ballSpacing * (i - ballCols / 2) * Math.sin(xPos)
+				ctx.arc(drawOffsetX + ballSpacing * (i - ballCols / 2) * Math.sin(xPos)
 							+ ballSpacing * j
 							+ 150 * Math.cos(yPos * 2), 
-						100 + ballSpacing * (i - ballCols / 2) * Math.cos(xPos)
+						drawOffsetY + ballSpacing * (i - ballCols / 2) * Math.cos(xPos)
 							+ ballSpacing * j
 							+ 200 * Math.sin(yPos), 
 						ballSize, 0, 2 * Math.PI);
@@ -98,13 +116,9 @@
 		var rnd = Math.random() * .1;
 		return (rnd == 0) ? .001 : rnd;
 	}
-	
-	deferExecution(function() {
-		resizeConsole(CONSOLE_POSITION.BOTTOM_RIGHT);
-	});
 	deferExecution(function() {
 		lastFrameTime = Date.now();
 		drawFrame();
 	});
-	
+	window.onresize = resize;
 } (this, document));

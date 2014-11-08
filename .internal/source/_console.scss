@@ -28,17 +28,9 @@ $console-entry-fadein: console-entry-fadein;
 	&.anchor-upper-left { @extend .anchor-windowed; @include anchor(0, 50%, 50%, 0); }
 	&.anchor-upper-right { @extend .anchor-windowed; @include anchor(0, 0, 50%, 50%); }
 }
-#global-console.fullscreen {
-	padding-top: $nav-size-item-height;
-}
 
 @media (min-width: $page-min-width) and (min-height: $page-min-height + $nav-size-item-height) {
-	#global-console { 
-		padding: 0; 
-		&.fullscreen {
-			padding: 0;
-		}
-	}
+
 }
 
 /********************************************************Animations*/

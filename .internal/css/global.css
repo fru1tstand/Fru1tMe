@@ -33,7 +33,13 @@
   margin: 0px auto; }
 
 .backgrounded {
-  background-color: #000; }
+  background-color: #000;
+  opacity: 0.9;
+  -webkit-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear; }
+  .backgrounded:hover {
+    opacity: 1; }
 
 /****************************************************************Root*/
 body, html {
@@ -101,14 +107,6 @@ body, html {
     bottom: 50%;
     left: 50%; }
 
-#global-console.fullscreen {
-  padding-top: 100px; }
-
-@media (min-width: 1000px) and (min-height: 700px) {
-  #global-console {
-    padding: 0; }
-    #global-console.fullscreen {
-      padding: 0; } }
 /********************************************************Animations*/
 @-webkit-keyframes console-entry-fadein {
   0% {
@@ -329,24 +327,14 @@ body, html {
       #global-nav:hover .global-nav-item:nth-of-type(5), #global-nav.hover .global-nav-item:nth-of-type(5) {
         right: 20.0px; } }
 /******************************************_home.scss*/
-.home-window, #home-text-window, #home-render-window, #home-input-window {
-  height: 50%;
+.home-window, #home-text-window, #home-render-window {
+  height: 100%;
   width: 50%;
   box-sizing: border-box;
   float: left; }
 
-#home-text-window {
-  border: 1px solid #FF0; }
-
 #home-render-window {
-  border: 1px solid #00F; }
-
-#home-input-window {
-  padding: 0;
-  background-color: #000;
-  color: #999;
-  border: 1px solid #0FF;
-  resize: none;
-  margin-top: -0.5px; }
+  border: 1px solid #00F;
+  height: 100%; }
 
 /*# sourceMappingURL=global.css.map */

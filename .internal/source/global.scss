@@ -71,6 +71,9 @@ $nav-items-start-angle: pi() / 2;
 .container { min-width: $page-min-width; width: 80%; margin: 0px auto; }
 .backgrounded { 
 	background-color: #000;
+	opacity: 0.9;
+	@include transition(opacity 0.1s linear);
+	&:hover { opacity: 1; }
 }
 
 /****************************************************************Root*/
