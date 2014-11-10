@@ -8,6 +8,7 @@ class FILE_LOCATION {
 class PAGE_ALIAS {
 	const HOME = "home.php";
 	const MIDI = "midi.php";
+	const PERSONAL = "personal.php";
 }
 
 class Page {
@@ -48,12 +49,14 @@ class Page {
 	 * @return string The file location for the page 
 	 */
 	public static function getPageLocation($pageAlias) {
-		$pageLocation = FILE_LOCATION::PAGES . PAGE_ALIAS::HOME;
+		//Search constants first
 		$refClass = new ReflectionClass("PAGE_ALIAS");
 		$pageAlias = strtoupper($pageAlias);
 		if ($refClass->hasConstant($pageAlias)) 
-			$pageLocation = FILE_LOCATION::PAGES . $refClass->getConstant($pageAlias);
-		return $pageLocation;
+			return FILE_LOCATION::PAGES . $refClass->getConstant($pageAlias);
+		
+		//All else failed, return home
+		return FILE_LOCATION::PAGES . PAGE_ALIAS::HOME;
 	}
 	
 	/**
