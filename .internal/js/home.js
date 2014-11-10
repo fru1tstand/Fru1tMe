@@ -1,13 +1,16 @@
 (function(window, document, undefined) {
-	var batterySaver = true;
+	var batterySaver = false;
 	
 	var resizeLogElement = null,
 		resizeLogTimer = null;
 	
 	var ballSize = 6,
 		ballPadding = 2,
-		ballRows = 25,
-		ballCols = 15;
+		ballRows = 50,
+		ballCols = 35,
+		waveHeight = 20,
+		wavesPerRow = 1,
+		wavesPerCol = 1;
 	
 	var canvas = document.getElementById("home-render-window"),
 		ctx = canvas.getContext("2d");
@@ -20,8 +23,10 @@
 		drawOffsetX = canvas.width / 2 - 200,
 		drawOffsetY = canvas.height / 2,
 		ballSpacing = ballSize * 2 + ballPadding;
+	
 	var xPos = 0,
-		yPos = 0;
+		yPos = 0,
+		zPos = 0;
 	
 	function resize() {
 		if (resizeLogElement == null) resizeLogElement = log("");
@@ -41,10 +46,12 @@
 		currentFrameTime = Date.now();
 		deltaFrameTime = currentFrameTime - lastFrameTime;
 		
-		xPos += deltaFrameTime / 1000;
+		xPos += deltaFrameTime / 3151;
 		yPos += deltaFrameTime / 1333;
+		zPos += deltaFrameTime / 642;
 		xPos %= 2 * Math.PI;
 		yPos %= 2 * Math.PI;
+		zPos %= 2 * Math.PI;
 		
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		ctx.fillStyle = getColor(deltaFrameTime);
@@ -52,12 +59,18 @@
 		for (var j = 0; j < ballRows; j++) {
 			for (var i = 0; i < ballCols; i++) {
 				ctx.beginPath();
-				ctx.arc(drawOffsetX + ballSpacing * (i - ballCols / 2) * Math.sin(xPos)
-							+ ballSpacing * j
-							+ 150 * Math.cos(yPos * 2), 
-						drawOffsetY + ballSpacing * (i - ballCols / 2) * Math.cos(xPos)
-							+ ballSpacing * j
-							+ 200 * Math.sin(yPos), 
+				ctx.arc(drawOffsetX 
+							+ ballSpacing * (i - ballCols / 2) * Math.sin(xPos)
+							+ waveHeight * Math.sin(i / ballCols * 2 * Math.PI * wavesPerRow + zPos)
+							+ waveHeight * Math.sin(j / ballCols * 2 * Math.PI * wavesPerCol + zPos)
+							+ ballSpacing * j,
+							//+ 150 * Math.cos(yPos * 2), 
+						drawOffsetY 
+							+ ballSpacing * (i - ballCols / 2) * Math.cos(xPos)
+							+ waveHeight * Math.cos(i / ballCols * 2 * Math.PI * wavesPerRow  + zPos)
+							+ waveHeight * Math.cos(j / ballCols * 2 * Math.PI * wavesPerCol  + zPos)
+							+ ballSpacing * j,
+							//+ 200 * Math.sin(yPos), 
 						ballSize, 0, 2 * Math.PI);
 				ctx.fill();
 			}

@@ -47,13 +47,13 @@ $nav-items-start-angle: pi() / 2;
 }
 @mixin animation($parameters) {
 	-webkit-animation: $parameters;
-	-moz-animation: $parameters;
+	-moz-animation: $parameters; 
 	animation: $parameters;
 }
 @mixin transition($params...) {
 	-webkit-transition: $params;
 	-moz-transition: $params;
-	transition: $params;
+	transition: $params; 
 }
 @mixin keyframe($name) {
 	@-webkit-keyframes #{$name} { @content; }
