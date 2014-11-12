@@ -7,6 +7,7 @@ $theme-text-red: #F00;
 $theme-text-blue: #99F;
 $theme-text-green: #0F0;
 $theme-text-console-default: #999;
+$theme-background-green: #0F0;
 
 $page-min-height: 600px;
 $page-min-width: 1000px;
@@ -77,6 +78,7 @@ $nav-items-start-angle: pi() / 2;
 }
 
 @import 'root';
+@import 'fruitme-style';
 
 @import 'console';
 @import 'nojs';

@@ -52,7 +52,7 @@
 			<a href="/home" class="global-nav-item default-ajax-link">Home</a>
 			<a href="/midi" class="global-nav-item">Music</a>
 			<a href="#" class="global-nav-item">Games</a>
-			<a href="#" class="global-nav-item">Personal</a>
+			<a href="/personal" class="global-nav-item">Personal</a>
 			<a href="#" class="global-nav-item">Other</a>
 		</div>
 		

@@ -57,7 +57,7 @@ body, html {
   #background * {
     background: transparent; }
 
-h1, h2, h3, h4, h5, h6, p, .spacer {
+h1, h2, h3, h4, h5, h6, p, .spacer, a {
   margin: 0;
   padding: 0; }
 
@@ -76,6 +76,35 @@ p {
 
 .spacer.page-bottom {
   padding-bottom: 20px; }
+
+/************************************************Fru1tme Stylessss**/
+.menu a {
+  font-size: 28px;
+  color: #000;
+  background-color: #0F0;
+  font-size: 34px;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: bold;
+  height: 48px;
+  display: block;
+  text-align: right;
+  width: 160px;
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out; }
+  .menu a span {
+    margin: 18px -22px 0 0;
+    padding: 0;
+    display: block;
+    -webkit-transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out;
+    -moz-transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out;
+    transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out; }
+  .menu a:hover {
+    width: 50%; }
+    .menu a:hover span {
+      margin: 18px 0 0 0;
+      padding-right: 20px; }
 
 /*********************************************************_console.scss*/
 .console {

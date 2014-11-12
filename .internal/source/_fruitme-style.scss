@@ -1,0 +1,35 @@
+/************************************************Fru1tme Stylessss**/
+.menu {
+	
+	a {
+		font-size: 28px;
+		color: #000;
+		background-color: $theme-background-green;
+		font-size: 34px;
+		overflow: hidden;
+		text-decoration: none;
+		font-weight: bold;
+		height: 48px;
+		
+		display: block;
+		text-align: right;
+		width: 160px;
+		
+		@include transition(width 0.2s ease-in-out);
+		
+		span {
+			margin: 18px -22px 0 0;
+			padding: 0;
+			display: block;
+			@include transition(margin 0.2s ease-in-out, padding 0.2s ease-in-out);
+		}
+		
+		&:hover {
+			width: 50%;
+			span { 
+				margin: 18px 0 0 0;
+				padding-right: 20px;
+			}
+		}
+	}
+}
