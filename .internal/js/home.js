@@ -1,5 +1,5 @@
 (function(window, document, undefined) {
-	var batterySaver = false;
+	var batterySaver = true;
 	
 	var resizeLogElement = null,
 		resizeLogTimer = null;
@@ -20,8 +20,8 @@
 	var lastFrameTime = 0,
 		currentFrameTime = 0,
 		deltaFrameTime = 0,
-		drawOffsetX = canvas.width / 2 - 200,
-		drawOffsetY = canvas.height / 2,
+		drawOffsetX = canvas.width / 2 - 300,
+		drawOffsetY = canvas.height / 2 - 200,
 		ballSpacing = ballSize * 2 + ballPadding;
 	
 	var xPos = 0,
@@ -46,7 +46,7 @@
 		currentFrameTime = Date.now();
 		deltaFrameTime = currentFrameTime - lastFrameTime;
 		
-		xPos += deltaFrameTime / 3151;
+		xPos += deltaFrameTime / 6143;
 		yPos += deltaFrameTime / 1333;
 		zPos += deltaFrameTime / 642;
 		xPos %= 2 * Math.PI;
@@ -78,7 +78,7 @@
 		
 		lastFrameTime = currentFrameTime;
 		if (batterySaver) {
-			setTimeout(drawFrame, 2000);
+			setTimeout(drawFrame, 4000);
 		} else {
 			requestAnimationFrame(drawFrame);
 		}
@@ -135,9 +135,10 @@
 		var rnd = Math.random() * .1;
 		return (rnd == 0) ? .001 : rnd;
 	}
+	
 	deferExecution(function() {
 		lastFrameTime = Date.now();
 		drawFrame();
 	});
-	window.onresize = resize;
+	window.resize = resize;
 } (this, document));
