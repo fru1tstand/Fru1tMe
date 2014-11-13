@@ -15,7 +15,7 @@ body, html {
 	* { background: transparent; }
 }
 
-h1, h2, h3, h4, h5, h6, p, .spacer, a {
+h1, h2, h3, h4, h5, h6, p, .spacer, a, ul, ol, li {
 	margin: 0; padding: 0;
 }
 p {
@@ -29,9 +29,6 @@ p {
 .spacer {
 	width: 0;
 }
-.spacer.page-top {
-	padding-top: 20px;
-}
-.spacer.page-bottom {
-	padding-bottom: 20px;
+.spacer.page {
+	height: 20px;
 }

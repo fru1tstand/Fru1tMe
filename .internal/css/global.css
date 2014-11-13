@@ -48,7 +48,7 @@ body, html {
   margin: 0;
   height: 100%;
   color: #DDD;
-  font-family: Optima, Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-family: Optima, Calibri, Candara, Segoe, Segoe UI, Arial, sans-serif;
   font-size: 16px; }
 
 #background {
@@ -57,7 +57,7 @@ body, html {
   #background * {
     background: transparent; }
 
-h1, h2, h3, h4, h5, h6, p, .spacer, a {
+h1, h2, h3, h4, h5, h6, p, .spacer, a, ul, ol, li {
   margin: 0;
   padding: 0; }
 
@@ -71,40 +71,38 @@ p {
 .spacer {
   width: 0; }
 
-.spacer.page-top {
-  padding-top: 20px; }
-
-.spacer.page-bottom {
-  padding-bottom: 20px; }
+.spacer.page {
+  height: 20px; }
 
 /************************************************Fru1tme Stylessss**/
-.menu a {
-  font-size: 28px;
-  color: #000;
-  background-color: #0F0;
-  font-size: 34px;
-  overflow: hidden;
-  text-decoration: none;
-  font-weight: bold;
-  height: 48px;
-  display: block;
-  text-align: right;
-  width: 160px;
-  -webkit-transition: width 0.2s ease-in-out;
-  -moz-transition: width 0.2s ease-in-out;
-  transition: width 0.2s ease-in-out; }
-  .menu a span {
-    margin: 18px -22px 0 0;
-    padding: 0;
-    display: block;
-    -webkit-transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out;
-    -moz-transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out;
-    transition: margin 0.2s ease-in-out, padding 0.2s ease-in-out; }
-  .menu a:hover {
-    width: 50%; }
+.menu {
+  font-family: Calibri, Optima, Arial, sans-serif;
+  list-style: none; }
+  .menu li {
+    margin-bottom: 1px;
+    height: 32px; }
+  .menu a {
+    background-color: #0F0;
+    overflow: hidden;
+    display: inline-block;
+    height: 32px; }
+    .menu a span {
+      font-size: 28px;
+      text-decoration: none;
+      color: #000;
+      margin: 7px 0 0 0;
+      font-weight: bold;
+      padding: 0 0 0 100px;
+      display: inline-block;
+      -webkit-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
+      -moz-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
+      transition: padding 0.2s ease-in-out, margin 0.2s ease-in; }
     .menu a:hover span {
-      margin: 18px 0 0 0;
-      padding-right: 20px; }
+      padding: 0 20px 0 250px;
+      margin: 0 0 0 0; }
+
+.spacer.menu {
+  height: 12px; }
 
 /*********************************************************_console.scss*/
 .console {

@@ -1,6 +1,6 @@
 <div class="backgrounded">
 	<div class="container">
-		<div class="spacer page-bottom"></div>
+		<div class="spacer page"></div>
 		<h1 class="page-title">Fru1tMe</h1>
 		<p>
 			Hi!
