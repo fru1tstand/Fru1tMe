@@ -1,15 +1,12 @@
-<?php
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
 /**
  * "Enums"
  */
-class FILE_LOCATION {
-	const PAGES = ".internal/pages/";
-}
 class PAGE_ALIAS {
-	const HOME = "home.php";
-	const MIDI = "midi.php";
-	const ABOUT = "about.php";
-	const CHANGELOG = "about/changelog.php";
+	const HOME = "/home.php";
+	const MIDI = "/midi.php";
+	const ABOUT = "/about.php";
+	const CHANGELOG = "/about/changelog.php";
 }
 
 class Page {
@@ -54,10 +51,10 @@ class Page {
 		$refClass = new ReflectionClass("PAGE_ALIAS");
 		$pageAlias = strtoupper($pageAlias);
 		if ($refClass->hasConstant($pageAlias)) 
-			return FILE_LOCATION::PAGES . $refClass->getConstant($pageAlias);
+			return PATH_INTERNAL_PAGE . $refClass->getConstant($pageAlias);
 		
 		//All else failed, return home
-		return FILE_LOCATION::PAGES . PAGE_ALIAS::HOME;
+		return PATH_INTERNAL_PAGE . PAGE_ALIAS::HOME;
 	}
 	
 	/**
@@ -67,6 +64,4 @@ class Page {
 		return self::getSafeGet(self::GET_PAGE);
 	}
 }
-
-
 ?>
