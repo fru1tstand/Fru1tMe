@@ -66,12 +66,23 @@ p {
 
 .page-title {
   padding-bottom: 20px; }
+  .page-title .accent {
+    color: #F70; }
+
+a {
+  text-decoration: none;
+  color: #0F0; }
+  a:hover {
+    color: #F70; }
 
 /****************************************************************Spaaaaace*/
 .spacer {
   width: 0; }
 
 .spacer.page {
+  height: 20px; }
+
+.spacer.content {
   height: 20px; }
 
 /************************************************Fru1tme Stylessss**/
@@ -88,7 +99,6 @@ p {
     height: 32px; }
     .menu a span {
       font-size: 28px;
-      text-decoration: none;
       color: #000;
       margin: 7px 0 0 0;
       font-weight: bold;
@@ -380,5 +390,13 @@ p {
 
 .spacer.home-intro-text {
   height: 10px; }
+
+.git-list dd {
+  font-style: italic; }
+.git-list dt {
+  border-top: 1px solid #999;
+  font-weight: bold;
+  padding-left: 20px;
+  padding: 10px; }
 
 /*# sourceMappingURL=global.css.map */

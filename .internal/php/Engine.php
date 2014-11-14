@@ -8,7 +8,8 @@ class FILE_LOCATION {
 class PAGE_ALIAS {
 	const HOME = "home.php";
 	const MIDI = "midi.php";
-	const PERSONAL = "personal.php";
+	const ABOUT = "about.php";
+	const CHANGELOG = "about/changelog.php";
 }
 
 class Page {

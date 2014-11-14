@@ -51,8 +51,8 @@
 			<div id="global-nav-toggle"></div>
 			<a href="/home" class="global-nav-item default-ajax-link">Home</a>
 			<a href="/midi" class="global-nav-item">Music</a>
-			<a href="#" class="global-nav-item">Games</a>
-			<a href="/personal" class="global-nav-item">Personal</a>
+			<a href="#" class="global-nav-item">Projects</a>
+			<a href="/about" class="global-nav-item">About</a>
 			<a href="#" class="global-nav-item">Other</a>
 		</div>
 		
