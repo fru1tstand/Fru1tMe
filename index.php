@@ -1,5 +1,5 @@
 <?php 
-	include(".internal/php/Engine.php");
+	include(".internal/php/Page.php");
 	
 	if (Page::getBodyOnlyRequest()) {
 		include(Page::getPageLocation(Page::getPageRequest()));
