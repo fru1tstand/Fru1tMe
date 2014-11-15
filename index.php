@@ -1,10 +1,10 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
-	import::Page();
-	
-	if (Page::getBodyOnlyRequest()) {
-		include(Page::getPageLocation(Page::getPageRequest()));
-		exit();
-	}
+import::Page();
+
+if (Page::getBodyOnlyRequest()) {
+	include(Page::getPageLocation(Page::getPageRequest()));
+	exit();
+}
 ?>
 
 <!DOCTYPE html>

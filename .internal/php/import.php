@@ -10,6 +10,9 @@ class import {
 	public static function Page() {
 		require_once PATH_INTERNAL_PHP . "/Page.php";
 	}
+	public static function SQL() {
+		require_once PATH_INTERNAL_PHP . '/SQL.php';
+	}
 }
 
 ?>
