@@ -96,20 +96,16 @@ a {
     background-color: #0F0;
     overflow: hidden;
     display: inline-block;
-    height: 32px; }
-    .menu a span {
-      font-size: 28px;
-      color: #000;
-      margin: 7px 0 0 0;
-      font-weight: bold;
-      padding: 0 0 0 100px;
-      display: inline-block;
-      -webkit-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
-      -moz-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
-      transition: padding 0.2s ease-in-out, margin 0.2s ease-in; }
-    .menu a:hover span {
-      padding: 0 20px 0 250px;
-      margin: 0 0 0 0; }
+    height: 32px;
+    font-size: 28px;
+    color: #000;
+    font-weight: bold;
+    padding: 0 10px 0 100px;
+    -webkit-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
+    -moz-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
+    transition: padding 0.2s ease-in-out, margin 0.2s ease-in; }
+    .menu a:hover {
+      padding: 0 30px 0 250px; }
 
 .spacer.menu {
   height: 12px; }

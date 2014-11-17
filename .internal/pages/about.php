@@ -1,3 +1,6 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
+import::APIHandlers();
+?>
 <div class="backgrounded spaced">
 	<div class="container">
 		<div class="spacer page"></div>
@@ -13,8 +16,8 @@
 		</p>
 		<div class="spacer menu"></div>
 		<ul class="menu">
-			<li><a href="#"><span>Resume</span></a></li>
-			<li><a href="#"><span>Site Changelog</span></a></li>
+			<li><a href="#">Resume</a></li>
+			<li><a href="#">Site Changelog</a></li>
 		</ul>
 		<div class="spacer page"></div>
 	</div>
@@ -33,5 +36,10 @@
 			<dt>Jan 18th, 2014</dt>
 			<dd>Something about this site changed</dd>
 		</dl>
+		<?php 
+		$api = new GithubRepoCommitsAPI();
+		$val = print_r($api->getCommits(), true);
+		
+		?>
 	</div>
 </div>
