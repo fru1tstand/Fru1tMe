@@ -1,12 +1,59 @@
+/****************************************************************Changelog*/
 .git-list {
 	dd {
-		font-style: italic;
+		border-bottom: 1px solid #999;
+		margin-bottom: 15px;
 	}
 	dt {
-		border-top: 1px solid #999;
 		font-weight: bold;
-		
 		padding-left: 20px;
 		padding: 10px;
 	}
+	blockquote {
+		padding: 4px 0 4px 10px;
+		border-left: 2px solid #333;
+		margin: 0 40px 10px 40px;
+		font-style: italic;
+	}
+}
+.git-linecounts {
+	margin-bottom: 10px;
+}
+.git-linecount {
+	display: inline-block;
+	padding-right: 7px;
+	&:before {
+		padding-right: 4px;
+	}
+}
+.git-additions {
+	@extend .git-linecount;
+	color: $theme-text-green;
+	&:before { content: '+'; }
+}
+.git-subtractions {
+	@extend .git-linecount;
+	color: $theme-text-red;
+	&:before { content: '-'; }
+}
+.git-delta {
+	@extend .git-linecount;
+	color: $theme-text-blue;
+	&:before { content: 'Δ'; }
+}
+.git-file {
+	padding: 10px;
+	margin: 20px;
+	width: 250px;
+	display: inline-block;
+	a.filename { margin-bottom: 10px; }
+}
+.git-file-status {
+	display: block;
+	&.changed { color: $theme-text-blue; &:before { content: "changed"; } }
+	&.added { color: $theme-text-green; &:before { content: "added"; } }
+	&.deleted { color: $theme-text-red; &:before { content: "deleted"; } }
+}
+.git-patch {
+	&:after { content: " bytes"; }
 }

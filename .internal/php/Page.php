@@ -8,6 +8,9 @@ class PAGE_ALIAS {
 	const ABOUT = "/about.php";
 	const CHANGELOG = "/about/changelog.php";
 }
+class NAV {
+	const ABOUT = "/about/_nav.php";
+}
 
 class Page {
 	const GET_BODY_ONLY = "bodyonly";
@@ -62,6 +65,17 @@ class Page {
 	 */
 	public static function getPageRequest() {
 		return self::getSafeGet(self::GET_PAGE);
+	}
+	
+	public static function includeNav($path) {
+		$refClass = new ReflectionClass("NAV");
+		foreach ($refClass->getConstants() as $constantValue) {
+			if ($constantValue == $path) {
+				include PATH_INTERNAL_PAGE . $path;
+				return;
+			}
+		}
+		
 	}
 }
 ?>

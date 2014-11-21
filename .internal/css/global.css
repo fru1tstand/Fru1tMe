@@ -1,8 +1,9 @@
+@charset "UTF-8";
 @CHARSET "UTF-8";
 /** Global vars */
 /** Nav vars */
 /*********************************************************Extendables*/
-.noselect, #global-console {
+.noselect, .menu, #global-console {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -65,13 +66,14 @@ p {
   margin-bottom: 2px; }
 
 .page-title {
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-size: 42px; }
   .page-title .accent {
     color: #F70; }
 
 a {
   text-decoration: none;
-  color: #0F0; }
+  color: #CCF; }
   a:hover {
     color: #F70; }
 
@@ -80,7 +82,7 @@ a {
   width: 0; }
 
 .spacer.page {
-  height: 20px; }
+  height: 50px; }
 
 .spacer.content {
   height: 20px; }
@@ -387,12 +389,68 @@ a {
 .spacer.home-intro-text {
   height: 10px; }
 
+/****************************************************************Changelog*/
 .git-list dd {
-  font-style: italic; }
+  border-bottom: 1px solid #999;
+  margin-bottom: 15px; }
 .git-list dt {
-  border-top: 1px solid #999;
   font-weight: bold;
   padding-left: 20px;
   padding: 10px; }
+.git-list blockquote {
+  padding: 4px 0 4px 10px;
+  border-left: 2px solid #333;
+  margin: 0 40px 10px 40px;
+  font-style: italic; }
+
+.git-linecounts {
+  margin-bottom: 10px; }
+
+.git-linecount, .git-additions, .git-subtractions, .git-delta {
+  display: inline-block;
+  padding-right: 7px; }
+  .git-linecount:before, .git-additions:before, .git-subtractions:before, .git-delta:before {
+    padding-right: 4px; }
+
+.git-additions {
+  color: #0F0; }
+  .git-additions:before {
+    content: '+'; }
+
+.git-subtractions {
+  color: #F00; }
+  .git-subtractions:before {
+    content: '-'; }
+
+.git-delta {
+  color: #99F; }
+  .git-delta:before {
+    content: 'Δ'; }
+
+.git-file {
+  padding: 10px;
+  margin: 20px;
+  width: 250px;
+  display: inline-block; }
+  .git-file a.filename {
+    margin-bottom: 10px; }
+
+.git-file-status {
+  display: block; }
+  .git-file-status.changed {
+    color: #99F; }
+    .git-file-status.changed:before {
+      content: "changed"; }
+  .git-file-status.added {
+    color: #0F0; }
+    .git-file-status.added:before {
+      content: "added"; }
+  .git-file-status.deleted {
+    color: #F00; }
+    .git-file-status.deleted:before {
+      content: "deleted"; }
+
+.git-patch:after {
+  content: " bytes"; }
 
 /*# sourceMappingURL=global.css.map */

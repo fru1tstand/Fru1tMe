@@ -68,11 +68,11 @@ abstract class APIHandler {
 		if (!$stmt->execute())
 			throw new Exception("SQL statement did not execute as planned: " . $stmt->error);
 		
-		if ($stmt->num_rows() > 1)
-			throw new UnexpectedValueException("Expected 0 or 1 result(s) back, but got " . $stmt->num_rows);
-		
-		//Did we come up with a result
 		$result = $stmt->get_result();
+		if ($result->num_rows > 1)
+			throw new UnexpectedValueException("Expected 0 or 1 result(s) back, but got " . $stmt->num_rows);
+
+		//Did we come up with a result
 		if ($result->num_rows == 1) {
 			$row = $result->fetch_assoc();
 			
@@ -87,7 +87,9 @@ abstract class APIHandler {
 			//Exit if data is still fresh
 			if ($row[APIHandler::COLUMN_EXPIRATION] > time())
 				return $this;
+		
 		}
+		$stmt->free_result();
 		$stmt->close();
 		
 		//We must fetch 

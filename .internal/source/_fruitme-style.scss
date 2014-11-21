@@ -23,13 +23,14 @@ p {
 }
 .page-title {
 	padding-bottom: 20px;
+	font-size: 42px;
 	.accent {
 		color: $theme-text-orange;
 	}
 }
 a {
 	text-decoration: none;
-	color: $theme-text-green;
+	color: $theme-text-link;
 	&:hover {
 		color: $theme-text-orange;
 	}
@@ -37,12 +38,13 @@ a {
 
 /****************************************************************Spaaaaace*/
 .spacer { width: 0; }
-.spacer.page { height: 20px; }
+.spacer.page { height: 50px; }
 .spacer.content { height: 20px; }
 
 /************************************************Fru1tme Stylessss**/
 $fm-link-height: 32px;
-.menu {
+.menu { 
+	@extend .noselect;
 	font-family: $menu-font-family;
 	list-style: none;
 	
