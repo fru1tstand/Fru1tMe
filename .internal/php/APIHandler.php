@@ -40,7 +40,8 @@ abstract class APIHandler {
 	
 	/**
 	 * Creates the API handler object by first checking the MySQL database for an entry, then
-	 * querying the remote API for a response and storing the result in the database.
+	 * querying the remote API for a response and storing the result in the database. In
+	 * either case, #parse is called passed the given result.
 	 * @param string $getUrl The API's GET url
 	 * @param string $name The corresponding database key name
 	 * @param int $expiry Time (seconds) from now that a new API call should be fresh for.
@@ -56,14 +57,14 @@ abstract class APIHandler {
 		$this->expires = -1;
 		$this->value = null;
 		
-		if (empty($name) || strlen($name) > APIHandler::COLUMN_NAME_MAXLEN) 
+		if (empty($name) || strlen($name) > self::COLUMN_NAME_MAXLEN) 
 			throw new InvalidArgumentException("Parameter 'name' is invalid, must be 0 to 64 characters long. Got: $name");
 		if (empty($getUrl))
 			throw new InvalidArgumentException("URL Cannot be empty");
 		
 		//Check database for entry first
 		$sql = SQL::getConnection();
-		$stmt = $sql->prepare(APIHandler::SQL_SELECT_API_CALL);
+		$stmt = $sql->prepare(self::SQL_SELECT_API_CALL);
 		$stmt->bind_param('s', $name);
 		if (!$stmt->execute())
 			throw new Exception("SQL statement did not execute as planned: " . $stmt->error);
@@ -77,15 +78,15 @@ abstract class APIHandler {
 			$row = $result->fetch_assoc();
 			
 			//Set the data if parsable
-			if ($this->parse($row[APIHandler::COLUMN_VALUE])) {
-				$this->id = $row[APIHandler::COLUMN_ID];
+			if ($this->parse($row[self::COLUMN_VALUE])) {
+				$this->id = $row[self::COLUMN_ID];
 				$this->name = $name;
-				$this->expires = $row[APIHandler::COLUMN_EXPIRATION];
-				$this->value = $row[APIHandler::COLUMN_VALUE];
+				$this->expires = $row[self::COLUMN_EXPIRATION];
+				$this->value = $row[self::COLUMN_VALUE];
 			}
 			
 			//Exit if data is still fresh
-			if ($row[APIHandler::COLUMN_EXPIRATION] > time())
+			if ($row[self::COLUMN_EXPIRATION] > time())
 				return $this;
 		
 		}
@@ -115,7 +116,7 @@ abstract class APIHandler {
 			if (empty($fetchValue)) {
 				if ($fetchAttempts > 0)//APIHandler::API_FETCH_FAIL_RETRY_ATTEMPTS)
 					throw new Exception("The API at " . $getUrl . " seems to be unresponsive");
-				sleep(APIHandler::API_FETCH_FAIL_RETRY_WAIT_TIME);
+				sleep(self::API_FETCH_FAIL_RETRY_WAIT_TIME);
 			}
 		}
 		
@@ -123,12 +124,12 @@ abstract class APIHandler {
 		if (!$this->parse($fetchValue))
 			throw new Exception("Failed to parse API response: " . $fetchValue);
 		$this->name = $name;
-		$this->expires = APIHandler::UNIX_EPOCH_MAX_VALUE;
+		$this->expires = self::UNIX_EPOCH_MAX_VALUE;
 		if ($expiry > -1) $this->expires = time() + $expiry;
 		$this->value = $fetchValue;
 		
 		//Store result in database and set id
-		$stmt = $sql->prepare(APIHandler::SQL_INSERT_API_RESULT);
+		$stmt = $sql->prepare(self::SQL_INSERT_API_RESULT);
 		$stmt->bind_param('sis', $this->name, $this->expires, $this->value);
 		if (!$stmt->execute())
 			throw new Exception("SQL statement did not execute as planned: " . $stmt->error);
@@ -136,6 +137,22 @@ abstract class APIHandler {
 			$this->id = $stmt->insert_id;
 		$stmt->close();
 		return $this;
+	}
+	
+	/**
+	 * Allows this object to be constructed from a cache or pre-loaded data
+	 * @param int $id
+	 * @param string $name
+	 * @param int $expires
+	 * @param string $value
+	 * @return boolean If the passed value parsed correctly
+	 */
+	protected function externalConstruct($id, $name, $expires, $value) {
+		$this->id = $id;
+		$this->name = $name;
+		$this->expires = $expires;
+		$this->value = $value;
+		return $this->parse($value);
 	}
 	
 	protected abstract function parse($value);

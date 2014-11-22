@@ -392,7 +392,7 @@ a {
 /****************************************************************Changelog*/
 .git-list dd {
   border-bottom: 1px solid #999;
-  margin-bottom: 15px; }
+  margin-bottom: 30px; }
 .git-list dt {
   font-weight: bold;
   padding-left: 20px;
@@ -429,11 +429,12 @@ a {
 
 .git-file {
   padding: 10px;
-  margin: 20px;
   width: 250px;
-  display: inline-block; }
-  .git-file a.filename {
-    margin-bottom: 10px; }
+  display: inline-block;
+  vertical-align: top; }
+  .git-file .sha {
+    font-size: 10px;
+    text-align: center; }
 
 .git-file-status {
   display: block; }
@@ -450,7 +451,9 @@ a {
     .git-file-status.deleted:before {
       content: "deleted"; }
 
+.git-patch:before {
+  content: "Δ "; }
 .git-patch:after {
-  content: " bytes"; }
+  content: " chars"; }
 
 /*# sourceMappingURL=global.css.map */

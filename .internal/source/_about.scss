@@ -2,7 +2,7 @@
 .git-list {
 	dd {
 		border-bottom: 1px solid #999;
-		margin-bottom: 15px;
+		margin-bottom: 30px;
 	}
 	dt {
 		font-weight: bold;
@@ -43,10 +43,13 @@
 }
 .git-file {
 	padding: 10px;
-	margin: 20px;
 	width: 250px;
 	display: inline-block;
-	a.filename { margin-bottom: 10px; }
+	vertical-align: top;
+	.sha {
+		font-size: 10px;
+		text-align: center;
+	}
 }
 .git-file-status {
 	display: block;
@@ -55,5 +58,6 @@
 	&.deleted { color: $theme-text-red; &:before { content: "deleted"; } }
 }
 .git-patch {
-	&:after { content: " bytes"; }
+	&:before { content: "Δ "; }
+	&:after { content: " chars"; }
 }
