@@ -24,8 +24,9 @@ p {
 .page-title {
 	padding-bottom: 20px;
 	font-size: 42px;
+	color: $theme-text-orange;
 	.accent {
-		color: $theme-text-orange;
+		color: $theme-text-white;
 	}
 }
 a {
@@ -34,6 +35,9 @@ a {
 	&:hover {
 		color: $theme-text-orange;
 	}
+}
+.clearfix {
+	clear: both;
 }
 
 /****************************************************************Spaaaaace*/

@@ -67,15 +67,19 @@ p {
 
 .page-title {
   padding-bottom: 20px;
-  font-size: 42px; }
+  font-size: 42px;
+  color: #F70; }
   .page-title .accent {
-    color: #F70; }
+    color: #DDD; }
 
 a {
   text-decoration: none;
   color: #CCF; }
   a:hover {
     color: #F70; }
+
+.clearfix {
+  clear: both; }
 
 /****************************************************************Spaaaaace*/
 .spacer {
@@ -404,40 +408,48 @@ a {
   font-style: italic; }
 
 .git-linecounts {
-  margin-bottom: 10px; }
+  float: left; }
+  .git-linecounts .git-linecount, .git-linecounts .git-additions, .git-linecounts .git-subtractions, .git-linecounts .git-delta {
+    display: inline-block;
+    padding-right: 7px; }
+    .git-linecounts .git-linecount:before, .git-linecounts .git-additions:before, .git-linecounts .git-subtractions:before, .git-linecounts .git-delta:before {
+      padding-right: 4px; }
+  .git-linecounts .git-additions {
+    color: #0F0; }
+    .git-linecounts .git-additions:before {
+      content: '+'; }
+  .git-linecounts .git-subtractions {
+    color: #F00; }
+    .git-linecounts .git-subtractions:before {
+      content: '-'; }
+  .git-linecounts .git-delta {
+    color: #99F; }
+    .git-linecounts .git-delta:before {
+      content: 'Δ'; }
 
-.git-linecount, .git-additions, .git-subtractions, .git-delta {
-  display: inline-block;
-  padding-right: 7px; }
-  .git-linecount:before, .git-additions:before, .git-subtractions:before, .git-delta:before {
-    padding-right: 4px; }
-
-.git-additions {
-  color: #0F0; }
-  .git-additions:before {
-    content: '+'; }
-
-.git-subtractions {
-  color: #F00; }
-  .git-subtractions:before {
-    content: '-'; }
-
-.git-delta {
-  color: #99F; }
-  .git-delta:before {
-    content: 'Δ'; }
+.git-files {
+  clear: both;
+  padding: 10px 0; }
 
 .git-file {
-  padding: 10px;
+  padding: 4px 10px 4px 10px;
+  margin: 6px 0 6px 0;
   width: 250px;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  font-size: 12px;
+  overflow: hidden;
+  border-bottom: 1px solid #222; }
   .git-file .sha {
-    font-size: 10px;
-    text-align: center; }
+    text-align: center;
+    font-size: 10px; }
+  .git-file .git-filename {
+    text-align: center;
+    margin-bottom: 10px; }
 
 .git-file-status {
-  display: block; }
+  display: block;
+  float: right; }
   .git-file-status.changed {
     color: #99F; }
     .git-file-status.changed:before {
