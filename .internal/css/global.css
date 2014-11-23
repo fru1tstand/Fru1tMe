@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@CHARSET "UTF-8";
 /** Global vars */
 /** Nav vars */
 /*********************************************************Extendables*/
@@ -66,11 +65,12 @@ p {
   margin-bottom: 2px; }
 
 .page-title {
-  padding-bottom: 20px;
-  font-size: 42px;
-  color: #F70; }
-  .page-title .accent {
-    color: #DDD; }
+  width: 100%; }
+  .page-title h1 {
+    font-size: 42px;
+    color: #F70; }
+    .page-title h1 .accent {
+      color: #DDD; }
 
 a {
   text-decoration: none;
@@ -94,7 +94,10 @@ a {
 /************************************************Fru1tme Stylessss**/
 .menu {
   font-family: Calibri, Optima, Arial, sans-serif;
-  list-style: none; }
+  list-style: none;
+  float: right;
+  text-align: right;
+  width: 500px; }
   .menu li {
     margin-bottom: 1px;
     height: 32px; }
@@ -106,15 +109,12 @@ a {
     font-size: 28px;
     color: #000;
     font-weight: bold;
-    padding: 0 10px 0 100px;
+    padding: 0 100px 0 10px;
     -webkit-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
     -moz-transition: padding 0.2s ease-in-out, margin 0.2s ease-in;
     transition: padding 0.2s ease-in-out, margin 0.2s ease-in; }
     .menu a:hover {
-      padding: 0 30px 0 250px; }
-
-.spacer.menu {
-  height: 12px; }
+      padding: 0 250px 0 30px; }
 
 /*********************************************************_console.scss*/
 .console {
@@ -394,18 +394,21 @@ a {
   height: 10px; }
 
 /****************************************************************Changelog*/
-.git-list dd {
-  border-bottom: 1px solid #999;
-  margin-bottom: 30px; }
-.git-list dt {
-  font-weight: bold;
-  padding-left: 20px;
-  padding: 10px; }
-.git-list blockquote {
-  padding: 4px 0 4px 10px;
-  border-left: 2px solid #333;
-  margin: 0 40px 10px 40px;
-  font-style: italic; }
+.git-list {
+  padding: 0;
+  margin: 0; }
+  .git-list dd {
+    border-left: 5px solid #F70;
+    padding-left: 15px;
+    margin-bottom: 30px; }
+  .git-list dt {
+    font-weight: bold;
+    padding-left: 20px;
+    padding: 10px; }
+  .git-list blockquote {
+    padding: 4px 0 4px 10px;
+    margin: 0 40px 0 40px;
+    font-style: italic; }
 
 .git-linecounts {
   float: left; }
@@ -464,8 +467,8 @@ a {
       content: "deleted"; }
 
 .git-patch:before {
-  content: "Δ "; }
+  content: 'Δ '; }
 .git-patch:after {
-  content: " chars"; }
+  content: ' chars'; }
 
 /*# sourceMappingURL=global.css.map */

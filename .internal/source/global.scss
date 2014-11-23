@@ -1,4 +1,4 @@
-@CHARSET "UTF-8";
+@charset "UTF-8";
 
 /** Global vars */
 $font-family: Optima,Calibri,Candara,Segoe,Segoe UI,Arial,sans-serif;
@@ -31,6 +31,10 @@ $nav-items-offset: 0;
 
 $nav-items-angle: pi() / ($nav-items-count - 1);
 $nav-items-start-angle: pi() / 2;
+
+$subnav-minwidth-collapse: 1500px;
+$subnav-width: 500px;
+$subnav-title-width: 700px;
 
 @import 'compass';
 @mixin anchor($top: null, $right:null, $bottom:null, $left:null) {
@@ -80,7 +84,6 @@ $nav-items-start-angle: pi() / 2;
 	&.spaced { padding: 10px 0; }
 }
 
-@import 'root';
 @import 'fruitme-style';
 
 @import 'console';

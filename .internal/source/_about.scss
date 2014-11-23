@@ -1,7 +1,10 @@
+@charset "UTF-8";
 /****************************************************************Changelog*/
 .git-list {
+	padding: 0; margin: 0;
 	dd {
-		border-bottom: 1px solid #999;
+		border-left: 5px solid $theme-text-orange;
+		padding-left: 15px;
 		margin-bottom: 30px;
 	}
 	dt {
@@ -11,8 +14,7 @@
 	}
 	blockquote {
 		padding: 4px 0 4px 10px;
-		border-left: 2px solid #333;
-		margin: 0 40px 10px 40px;
+		margin: 0 40px 0 40px;
 		font-style: italic;
 	}
 }
@@ -21,9 +23,7 @@
 	.git-linecount {
 		display: inline-block;
 		padding-right: 7px;
-		&:before {
-			padding-right: 4px;
-		}
+		&:before { padding-right: 4px; }
 	}
 	.git-additions {
 		@extend .git-linecount;
@@ -42,7 +42,7 @@
 	}
 }
 
-.git-files { 
+.git-files {
 	clear: both;
 	padding: 10px 0;
 }
@@ -72,6 +72,6 @@
 	&.deleted { color: $theme-text-red; &:before { content: "deleted"; } }
 }
 .git-patch {
-	&:before { content: "Δ "; }
-	&:after { content: " chars"; }
+	&:before { content: 'Δ '; }
+	&:after { content: ' chars'; }
 }

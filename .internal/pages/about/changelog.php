@@ -6,16 +6,20 @@ import::Page();
 <div class="backgrounded">
 	<div class="container">
 		<div class="spacer page"></div>
-		<h1 class="page-title">Changelog</h1>
-		<p>
-			Basically a
-			<a href="http://git-scm.com/book/en/v2/Getting-Started-Git-Basics" target="_blank">git</a>
-			dump of the entire website. Here you see my notes for each little
-			section of code I played around with for a period of time. All of 
-			the source code is available either by right clicking and "view source",
-			or a little neater presented on 
-			<a href="http://github.com/fru1tstand/Fru1tMe" target="_blank">Github</a>.
-		</p>
+		<?php page::includeNav(NAV::ABOUT); ?>
+		<div class="page-title with-subnav">
+			<h1>Changelog</h1>
+			<p>
+				Basically a
+				<a href="http://git-scm.com/book/en/v2/Getting-Started-Git-Basics" target="_blank">git</a>
+				dump of the entire website. Here you see my notes for each little
+				section of code I played around with for a period of time. All of 
+				the source code is available either by right clicking and "view source",
+				or a little neater presented on 
+				<a href="http://github.com/fru1tstand/Fru1tMe" target="_blank">Github</a>.
+			</p>
+		</div>
+		
 		<div class="spacer content"></div>
 		<dl class="git-list">
 			<?php

@@ -22,13 +22,16 @@ p {
 	margin-bottom: 2px;
 }
 .page-title {
-	padding-bottom: 20px;
-	font-size: 42px;
-	color: $theme-text-orange;
-	.accent {
-		color: $theme-text-white;
+	width: 100%;
+	h1 {
+		font-size: 42px;
+		color: $theme-text-orange;
+		.accent {
+			color: $theme-text-white;
+		}
 	}
 }
+
 a {
 	text-decoration: none;
 	color: $theme-text-link;
@@ -47,11 +50,13 @@ a {
 
 /************************************************Fru1tme Stylessss**/
 $fm-link-height: 32px;
-.menu { 
+.menu {
 	@extend .noselect;
 	font-family: $menu-font-family;
 	list-style: none;
-	
+	float: right;
+	text-align: right;
+	width: $subnav-width;
 	li {
 		margin-bottom: 1px;
 		height: $fm-link-height;
@@ -64,16 +69,10 @@ $fm-link-height: 32px;
 		font-size: 28px;
 		color: #000;
 		font-weight: bold;
-		padding: 0 10px 0 100px;
+		padding: 0 100px 0 10px;
 		@include transition(padding 0.2s ease-in-out,
 					margin 0.2s ease-in);
 		
-		&:hover {
-			padding: 0 30px 0 250px;
-		}
+		&:hover { padding: 0 250px 0 30px; }
 	}
-	
-}
-.spacer.menu {
-	height: 12px
 }
