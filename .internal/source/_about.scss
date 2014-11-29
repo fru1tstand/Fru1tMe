@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /****************************************************************Changelog*/
 .git-list {
 	padding: 0; margin: 0;
@@ -74,4 +75,65 @@
 .git-patch {
 	&:before { content: 'Δ '; }
 	&:after { content: ' chars'; }
+}
+
+/****************************************************************Resume*/
+$tab-distance: 28px;
+$resume-font-size: 16px;
+.indent-1 {
+	padding-left: $tab-distance;
+}
+.indent-2 {
+	padding-left: $tab-distance * 2;
+}
+@mixin beforeAfterContent($before, $after) {
+	&:before { content: $before; }
+	&:after { content: $after; }
+}
+.resume {
+	*:before { font-weight: normal; }
+	*:after { font-weight: normal; }
+	
+}
+%html-tag {
+	color: $theme-text-orange;
+	font-weight: bold;
+}
+.html-start-tag {
+	@include beforeAfterContent('<', '>');
+	@extend %html-tag;
+}
+.html-end-tag {
+	@include beforeAfterContent('</', '>');
+	@extend %html-tag;
+}
+%php-tag {
+	color: $theme-text-green;
+	font-weight: bold;
+}
+.php-start-tag {
+	@include beforeAfterContent('<?', '');
+	@extend %php-tag;
+}
+.php-end-tag {
+	@include beforeAfterContent('', '?>');
+	@extend %php-tag;
+}
+.php-var {
+	&:before {
+		content: '$';
+		color: #theme-text-indigo;
+	}
+	&:after {
+		content: ';';
+		color: #theme-text-indigo;
+	}
+	
+}
+.resume-company {
+	float: left;
+	width: 400px;
+}
+.resume-location {
+	float: left;
 }

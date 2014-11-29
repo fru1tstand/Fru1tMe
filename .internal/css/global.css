@@ -81,15 +81,21 @@ a {
 .clearfix {
   clear: both; }
 
-/****************************************************************Spaaaaace*/
+/****************************************************************Spaaaaacehr*/
 .spacer {
   width: 0; }
+  .spacer.page {
+    height: 50px; }
+  .spacer.content {
+    height: 20px; }
 
-.spacer.page {
-  height: 50px; }
-
-.spacer.content {
-  height: 20px; }
+.hr {
+  width: 100%;
+  border-bottom: 1px solid transparent; }
+  .hr.gray {
+    border-color: #999; }
+  .hr.dark-gray {
+    border-color: #333; }
 
 /************************************************Fru1tme Stylessss**/
 .menu {
@@ -115,6 +121,16 @@ a {
     transition: padding 0.2s ease-in-out, margin 0.2s ease-in; }
     .menu a:hover {
       padding: 0 250px 0 30px; }
+
+/****************************************************************Get wrecked*/
+.email {
+  font-weight: bold; }
+
+.email-at:before {
+  content: '\0040'; }
+
+.email-dot:before {
+  content: '\002e'; }
 
 /*********************************************************_console.scss*/
 .console {
@@ -470,5 +486,59 @@ a {
   content: 'Δ '; }
 .git-patch:after {
   content: ' chars'; }
+
+/****************************************************************Resume*/
+.indent-1 {
+  padding-left: 28px; }
+
+.indent-2 {
+  padding-left: 56px; }
+
+.resume *:before {
+  font-weight: normal; }
+.resume *:after {
+  font-weight: normal; }
+
+.html-start-tag, .html-end-tag {
+  color: #F70;
+  font-weight: bold; }
+
+.html-start-tag:before {
+  content: "<"; }
+.html-start-tag:after {
+  content: ">"; }
+
+.html-end-tag:before {
+  content: "</"; }
+.html-end-tag:after {
+  content: ">"; }
+
+.php-start-tag, .php-end-tag {
+  color: #0F0;
+  font-weight: bold; }
+
+.php-start-tag:before {
+  content: "<?"; }
+.php-start-tag:after {
+  content: ""; }
+
+.php-end-tag:before {
+  content: ""; }
+.php-end-tag:after {
+  content: "?>"; }
+
+.php-var:before {
+  content: '$';
+  color: #theme-text-indigo; }
+.php-var:after {
+  content: ';';
+  color: #theme-text-indigo; }
+
+.resume-company {
+  float: left;
+  width: 400px; }
+
+.resume-location {
+  float: left; }
 
 /*# sourceMappingURL=global.css.map */

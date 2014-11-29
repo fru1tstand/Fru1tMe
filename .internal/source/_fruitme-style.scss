@@ -43,10 +43,20 @@ a {
 	clear: both;
 }
 
-/****************************************************************Spaaaaace*/
-.spacer { width: 0; }
-.spacer.page { height: 50px; }
-.spacer.content { height: 20px; }
+/****************************************************************Spaaaaacehr*/
+.spacer {
+	width: 0;
+	
+	&.page { height: 50px; }
+	&.content { height: 20px; }
+}
+
+.hr {
+	width: 100%;
+	border-bottom: 1px solid transparent;
+	&.gray { border-color: #999; }
+	&.dark-gray { border-color: #333; }
+}
 
 /************************************************Fru1tme Stylessss**/
 $fm-link-height: 32px;
@@ -76,3 +86,10 @@ $fm-link-height: 32px;
 		&:hover { padding: 0 250px 0 30px; }
 	}
 }
+
+/****************************************************************Get wrecked*/
+.email {
+	font-weight: bold;
+}
+.email-at:before { content: '\0040'; }
+.email-dot:before { content: '\002e'; }

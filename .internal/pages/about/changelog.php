@@ -26,6 +26,7 @@ import::Page();
 			try {
 				$githubCommitsApi = new GithubRepoCommitsAPI();
 				foreach ($githubCommitsApi->getCommits() as $commitMap) {
+					$singleMap = null;
 					$singleCommitApi = new GithubRepoSingleCommitAPI(
 							$commitMap->get(GithubRepoCommitMap::SHA));
 					$singleMap = $singleCommitApi->getCommitMap();

@@ -7,6 +7,7 @@ class PAGE_ALIAS {
 	const MIDI = "/midi.php";
 	const ABOUT = "/about.php";
 	const CHANGELOG = "/about/changelog.php";
+	const RESUME = "/about/resume.php";
 }
 class NAV {
 	const ABOUT = "/about/_nav.php";
