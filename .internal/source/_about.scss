@@ -78,62 +78,57 @@
 }
 
 /****************************************************************Resume*/
-$tab-distance: 28px;
-$resume-font-size: 16px;
-.indent-1 {
-	padding-left: $tab-distance;
-}
-.indent-2 {
-	padding-left: $tab-distance * 2;
-}
-@mixin beforeAfterContent($before, $after) {
-	&:before { content: $before; }
-	&:after { content: $after; }
+$theme-text-resume: #999;
+$theme-text-resume-section: #FFF;
+$theme-text-boilerplate: #444;
+
+@mixin tagBeforeAfter($before, $after, $color) {
+	&:before { content: $before; color: $color; }
+	&:after { content: $after; color: $color; }
 }
 .resume {
-	*:before { font-weight: normal; }
-	*:after { font-weight: normal; }
-	
+	font-family: $font-family-contrast;
+	font-size: 14px;
+	*:before { font-weight: normal; font-style: normal; }
+	*:after { font-weight: normal; font-style: normal; }
 }
-%html-tag {
-	color: $theme-text-orange;
-	font-weight: bold;
-}
-.html-start-tag {
-	@include beforeAfterContent('<', '>');
-	@extend %html-tag;
-}
-.html-end-tag {
-	@include beforeAfterContent('</', '>');
-	@extend %html-tag;
-}
-%php-tag {
-	color: $theme-text-green;
-	font-weight: bold;
-}
-.php-start-tag {
-	@include beforeAfterContent('<?', '');
-	@extend %php-tag;
-}
-.php-end-tag {
-	@include beforeAfterContent('', '?>');
-	@extend %php-tag;
-}
-.php-var {
-	&:before {
-		content: '$';
-		color: #theme-text-indigo;
+
+/***HTML Tag*/
+.resume-section {
+	font-size: 24px;
+	&.start {
+		@include tagBeforeAfter('<', '>', $theme-text-boilerplate);
+		color: #EEE;
 	}
-	&:after {
-		content: ';';
-		color: #theme-text-indigo;
+	&.end {
+		@include tagBeforeAfter('</', '>', $theme-text-boilerplate);
+		color: $theme-text-boilerplate;
 	}
-	
 }
-.resume-company {
-	float: left;
-	width: 400px;
-}
-.resume-location {
-	float: left;
+
+.resume-job {
+	margin-top: 14px;
+	color: $theme-text-resume;
+	.company {
+/* 		@include tagBeforeAfter('<?', '', $theme-text-boilerplate); */
+		float: left;
+		width: 400px;
+		font-weight: bold;
+	}
+	.location {
+/* 		@include tagBeforeAfter('$_', ';', $theme-text-boilerplate); */
+		float: left;
+	}
+	.date {
+/* 		@include tagBeforeAfter('$_', '; ?>', $theme-text-boilerplate); */
+		float: right;
+	}
+	.position {
+/* 		@include tagBeforeAfter('$( ', ' );', $theme-text-boilerplate); */
+		clear: both;
+		font-style: italic;
+	}
+	ul {
+		margin: 12px 0 0 54px;
+	}
 }

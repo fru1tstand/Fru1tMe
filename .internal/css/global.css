@@ -31,6 +31,8 @@
   min-width: 1000px;
   width: 80%;
   margin: 0px auto; }
+  .container.maxed {
+    max-width: 1200px; }
 
 .backgrounded {
   background-color: rgba(0, 0, 0, 0.8);
@@ -78,6 +80,12 @@ a {
   a:hover {
     color: #F70; }
 
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
 .clearfix {
   clear: both; }
 
@@ -97,7 +105,7 @@ a {
   .hr.dark-gray {
     border-color: #333; }
 
-/************************************************Fru1tme Stylessss**/
+/************************************************Menu**/
 .menu {
   font-family: Calibri, Optima, Arial, sans-serif;
   list-style: none;
@@ -488,57 +496,55 @@ a {
   content: ' chars'; }
 
 /****************************************************************Resume*/
-.indent-1 {
-  padding-left: 28px; }
+.resume {
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+  font-size: 14px; }
+  .resume *:before {
+    font-weight: normal;
+    font-style: normal; }
+  .resume *:after {
+    font-weight: normal;
+    font-style: normal; }
 
-.indent-2 {
-  padding-left: 56px; }
+/***HTML Tag*/
+.resume-section {
+  font-size: 24px; }
+  .resume-section.start {
+    color: #EEE; }
+    .resume-section.start:before {
+      content: "<";
+      color: #444; }
+    .resume-section.start:after {
+      content: ">";
+      color: #444; }
+  .resume-section.end {
+    color: #444; }
+    .resume-section.end:before {
+      content: "</";
+      color: #444; }
+    .resume-section.end:after {
+      content: ">";
+      color: #444; }
 
-.resume *:before {
-  font-weight: normal; }
-.resume *:after {
-  font-weight: normal; }
-
-.html-start-tag, .html-end-tag {
-  color: #F70;
-  font-weight: bold; }
-
-.html-start-tag:before {
-  content: "<"; }
-.html-start-tag:after {
-  content: ">"; }
-
-.html-end-tag:before {
-  content: "</"; }
-.html-end-tag:after {
-  content: ">"; }
-
-.php-start-tag, .php-end-tag {
-  color: #0F0;
-  font-weight: bold; }
-
-.php-start-tag:before {
-  content: "<?"; }
-.php-start-tag:after {
-  content: ""; }
-
-.php-end-tag:before {
-  content: ""; }
-.php-end-tag:after {
-  content: "?>"; }
-
-.php-var:before {
-  content: '$';
-  color: #theme-text-indigo; }
-.php-var:after {
-  content: ';';
-  color: #theme-text-indigo; }
-
-.resume-company {
-  float: left;
-  width: 400px; }
-
-.resume-location {
-  float: left; }
+.resume-job {
+  margin-top: 14px;
+  color: #999; }
+  .resume-job .company {
+    /* 		@include tagBeforeAfter('<?', '', $theme-text-boilerplate); */
+    float: left;
+    width: 400px;
+    font-weight: bold; }
+  .resume-job .location {
+    /* 		@include tagBeforeAfter('$_', ';', $theme-text-boilerplate); */
+    float: left; }
+  .resume-job .date {
+    /* 		@include tagBeforeAfter('$_', '; ?>', $theme-text-boilerplate); */
+    float: right; }
+  .resume-job .position {
+    /* 		@include tagBeforeAfter('$( ', ' );', $theme-text-boilerplate); */
+    clear: both;
+    font-style: italic; }
+  .resume-job ul {
+    margin: 12px 0 0 54px; }
 
 /*# sourceMappingURL=global.css.map */

@@ -167,7 +167,8 @@
 	}
 	
 	deferExecution(function() {
-		navPeek(2000);
+		log("Was going to peek nav. But that's getting annoying in the dev builds");
+		//navPeek(2000);
 	});
 	window.onload = function() deferExecute();
 } (this, document));

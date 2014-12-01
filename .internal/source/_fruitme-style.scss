@@ -1,3 +1,39 @@
+/*********************************************************Extendables*/
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; 
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.fullscreen { 
+	@extend .page-minimums;
+	@include anchor(0);
+	position: fixed;
+}
+.fullscreen-child { 
+	@include anchor(0);
+	position: absolute;
+}
+.page-minimums {
+	min-width: $page-min-width;
+	min-height: $page-min-height;
+}
+.container {
+	min-width: $page-min-width;
+	width: 80%;
+	margin: 0px auto;
+	&.maxed {
+		max-width: $page-max-width;
+	}
+}
+.backgrounded { 
+	background-color: rgba(0, 0, 0, 0.8);
+	@include transition(background-color 0.1s linear);
+	&:hover { background-color: rgba(0, 0, 0, 1); }
+	&.spaced { padding: 10px 0; }
+}
+
 /****************************************************************Root*/
 body, html {
 	@extend .page-minimums;
@@ -39,9 +75,10 @@ a {
 		color: $theme-text-orange;
 	}
 }
-.clearfix {
-	clear: both;
-}
+
+.pull-right { float: right; }
+.pull-left { float: left; }
+.clearfix { clear: both; }
 
 /****************************************************************Spaaaaacehr*/
 .spacer {
@@ -58,7 +95,7 @@ a {
 	&.dark-gray { border-color: #333; }
 }
 
-/************************************************Fru1tme Stylessss**/
+/************************************************Menu**/
 $fm-link-height: 32px;
 .menu {
 	@extend .noselect;
@@ -82,14 +119,11 @@ $fm-link-height: 32px;
 		padding: 0 100px 0 10px;
 		@include transition(padding 0.2s ease-in-out,
 					margin 0.2s ease-in);
-		
 		&:hover { padding: 0 250px 0 30px; }
 	}
 }
 
 /****************************************************************Get wrecked*/
-.email {
-	font-weight: bold;
-}
+.email { font-weight: bold; }
 .email-at:before { content: '\0040'; }
 .email-dot:before { content: '\002e'; }
