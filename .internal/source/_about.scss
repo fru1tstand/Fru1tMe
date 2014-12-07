@@ -78,9 +78,10 @@
 }
 
 /****************************************************************Resume*/
-$theme-text-resume: #999;
-$theme-text-resume-section: #FFF;
-$theme-text-boilerplate: #444;
+$theme-text-resume-section: $theme-text-orange;
+$theme-text-resume-triple-pop: #999;
+$theme-text-resume-triple-other: #555;
+$theme-text-boilerplate: #530;
 
 @mixin tagBeforeAfter($before, $after, $color) {
 	&:before { content: $before; color: $color; }
@@ -88,7 +89,7 @@ $theme-text-boilerplate: #444;
 }
 .resume {
 	font-family: $font-family-contrast;
-	font-size: 14px;
+	font-size: 16px;
 	*:before { font-weight: normal; font-style: normal; }
 	*:after { font-weight: normal; font-style: normal; }
 }
@@ -98,37 +99,44 @@ $theme-text-boilerplate: #444;
 	font-size: 24px;
 	&.start {
 		@include tagBeforeAfter('<', '>', $theme-text-boilerplate);
-		color: #EEE;
+		color: $theme-text-resume-section;
+		clear: both;
 	}
 	&.end {
 		@include tagBeforeAfter('</', '>', $theme-text-boilerplate);
 		color: $theme-text-boilerplate;
+		float: right;
 	}
 }
 
-.resume-job {
-	margin-top: 14px;
-	color: $theme-text-resume;
-	.company {
-/* 		@include tagBeforeAfter('<?', '', $theme-text-boilerplate); */
+.resume-triple-list {
+	margin: 20px 0;
+	color: $theme-text-resume-triple-pop;
+	.title {
 		float: left;
 		width: 400px;
 		font-weight: bold;
 	}
 	.location {
-/* 		@include tagBeforeAfter('$_', ';', $theme-text-boilerplate); */
 		float: left;
 	}
 	.date {
-/* 		@include tagBeforeAfter('$_', '; ?>', $theme-text-boilerplate); */
 		float: right;
 	}
-	.position {
-/* 		@include tagBeforeAfter('$( ', ' );', $theme-text-boilerplate); */
+	.subtitle {
 		clear: both;
 		font-style: italic;
+		color: $theme-text-resume-triple-other;
 	}
-	ul {
-		margin: 12px 0 0 54px;
+}
+
+.resume-list, .resume-triple-list ul {
+	border-left: 2px solid $theme-text-orange;
+	padding: 3px 0 3px 20px;
+	margin: 15px 0 25px 34px;
+	color: $theme-text-resume-triple-other;
+	clear: both;
+	li {
+		margin-left: 15px;
 	}
 }

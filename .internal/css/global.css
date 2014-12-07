@@ -49,7 +49,7 @@ body, html {
   padding: 0;
   margin: 0;
   height: 100%;
-  color: #DDD;
+  color: #999;
   font-family: Optima, Calibri, Candara, Segoe, Segoe UI, Arial, sans-serif;
   font-size: 16px; }
 
@@ -66,17 +66,9 @@ h1, h2, h3, h4, h5, h6, p, .spacer, a, ul, ol, li {
 p {
   margin-bottom: 2px; }
 
-.page-title {
-  width: 100%; }
-  .page-title h1 {
-    font-size: 42px;
-    color: #F70; }
-    .page-title h1 .accent {
-      color: #DDD; }
-
 a {
   text-decoration: none;
-  color: #CCF; }
+  color: #99C; }
   a:hover {
     color: #F70; }
 
@@ -105,6 +97,15 @@ a {
   .hr.dark-gray {
     border-color: #333; }
 
+/**************************************************************PAGE*/
+.page-title {
+  width: 100%; }
+  .page-title h1 {
+    font-size: 42px;
+    color: #F70; }
+    .page-title h1 .accent {
+      color: #999; }
+
 /************************************************Menu**/
 .menu {
   font-family: Calibri, Optima, Arial, sans-serif;
@@ -116,7 +117,7 @@ a {
     margin-bottom: 1px;
     height: 32px; }
   .menu a {
-    background-color: #0F0;
+    background-color: #060;
     overflow: hidden;
     display: inline-block;
     height: 32px;
@@ -150,7 +151,7 @@ a {
   .console .blue {
     color: #99F; }
   .console .green {
-    color: #0F0; }
+    color: #0C0; }
 
 #global-console {
   cursor: default;
@@ -442,7 +443,7 @@ a {
     .git-linecounts .git-linecount:before, .git-linecounts .git-additions:before, .git-linecounts .git-subtractions:before, .git-linecounts .git-delta:before {
       padding-right: 4px; }
   .git-linecounts .git-additions {
-    color: #0F0; }
+    color: #0C0; }
     .git-linecounts .git-additions:before {
       content: '+'; }
   .git-linecounts .git-subtractions {
@@ -482,7 +483,7 @@ a {
     .git-file-status.changed:before {
       content: "changed"; }
   .git-file-status.added {
-    color: #0F0; }
+    color: #0C0; }
     .git-file-status.added:before {
       content: "added"; }
   .git-file-status.deleted {
@@ -498,7 +499,7 @@ a {
 /****************************************************************Resume*/
 .resume {
   font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 16px; }
   .resume *:before {
     font-weight: normal;
     font-style: normal; }
@@ -510,41 +511,47 @@ a {
 .resume-section {
   font-size: 24px; }
   .resume-section.start {
-    color: #EEE; }
+    color: #F70;
+    clear: both; }
     .resume-section.start:before {
       content: "<";
-      color: #444; }
+      color: #530; }
     .resume-section.start:after {
       content: ">";
-      color: #444; }
+      color: #530; }
   .resume-section.end {
-    color: #444; }
+    color: #530;
+    float: right; }
     .resume-section.end:before {
       content: "</";
-      color: #444; }
+      color: #530; }
     .resume-section.end:after {
       content: ">";
-      color: #444; }
+      color: #530; }
 
-.resume-job {
-  margin-top: 14px;
+.resume-triple-list {
+  margin: 20px 0;
   color: #999; }
-  .resume-job .company {
-    /* 		@include tagBeforeAfter('<?', '', $theme-text-boilerplate); */
+  .resume-triple-list .title {
     float: left;
     width: 400px;
     font-weight: bold; }
-  .resume-job .location {
-    /* 		@include tagBeforeAfter('$_', ';', $theme-text-boilerplate); */
+  .resume-triple-list .location {
     float: left; }
-  .resume-job .date {
-    /* 		@include tagBeforeAfter('$_', '; ?>', $theme-text-boilerplate); */
+  .resume-triple-list .date {
     float: right; }
-  .resume-job .position {
-    /* 		@include tagBeforeAfter('$( ', ' );', $theme-text-boilerplate); */
+  .resume-triple-list .subtitle {
     clear: both;
-    font-style: italic; }
-  .resume-job ul {
-    margin: 12px 0 0 54px; }
+    font-style: italic;
+    color: #555; }
+
+.resume-list, .resume-triple-list ul {
+  border-left: 2px solid #F70;
+  padding: 3px 0 3px 20px;
+  margin: 15px 0 25px 34px;
+  color: #555;
+  clear: both; }
+  .resume-list li, .resume-triple-list ul li {
+    margin-left: 15px; }
 
 /*# sourceMappingURL=global.css.map */
