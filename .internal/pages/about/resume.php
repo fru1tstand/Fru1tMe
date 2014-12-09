@@ -99,7 +99,7 @@ Sorry.">
 			<li>Self-taught programmer with a strong desire to expand knowledge</li>
 			<li>Aptitude for creative problem solving and abstract thinking</li>
 			<li>Well versed in a multitude of programming patterns and paradigms
-				with languages such as Java, PHP, and JavaScript</li>
+				with languages such as Java, C#, PHP, and JavaScript</li>
 			<li>Heavy experience in web development and relational databases
 				using HTML, CSS & SASS, JQuery, ASP.NET, MySQL, and T-SQL</li>
 			<li>Seasoned user of version control system GIT with knowledge of SVN
