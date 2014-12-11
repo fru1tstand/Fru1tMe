@@ -8,6 +8,7 @@ class PAGE_ALIAS {
 	const ABOUT = "/about.php";
 	const CHANGELOG = "/about/changelog.php";
 	const RESUME = "/about/resume.php";
+	const PROJECTS = "/projects.php";
 }
 class NAV {
 	const ABOUT = "/about/_nav.php";
