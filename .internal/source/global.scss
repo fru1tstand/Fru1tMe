@@ -5,6 +5,7 @@ $font-family: Optima,Calibri,Candara,Segoe,Segoe UI,Arial,sans-serif;
 $font-family-contrast: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
 $menu-font-family: Calibri,Optima,Arial,sans-serif;
 
+/*Global Colors*/
 $theme-text-white: #FFF;
 $theme-text-light-gray: #CCC;
 $theme-text-dark-gray: #444;
@@ -16,12 +17,25 @@ $theme-text-green: #0C0;
 $theme-text-orange: #F70;
 $theme-text-indigo: #339;
 
-
-$theme-text-link: #337;
+$theme-text-link: #557;
 $theme-text-tag: #555;
 $theme-text-console-default: #999;
 
-$theme-background-green: #060;
+$theme-background-green: #090;
+
+/*Fru1tme Styles*/
+$theme-text-default: $theme-text-gray;
+$theme-background-submenu: $theme-background-green;
+
+/*ABOUT.SCSS*/
+$theme-text-resume-section: $theme-text-orange;
+$theme-text-resume-triple-pop: $theme-text-gray;
+$theme-text-resume-triple-other: $theme-text-darkish-gray;
+$theme-text-boilerplate: #530;
+
+/* projects */
+$projects-border: $theme-text-orange;
+
 
 $page-min-height: 600px;
 $page-min-width: 1000px;
@@ -88,3 +102,5 @@ $subnav-title-width: 700px;
 @import 'navigation';
 @import 'home';
 @import 'about';
+@import 'tools';
+@import 'projects';

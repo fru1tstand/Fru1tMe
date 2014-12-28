@@ -87,3 +87,13 @@
 		}
 	}
 }
+
+#global-content {
+	/* Remember to change global.js's timeouit in animateOutContent */
+	@include transition(opacity 0.5s ease-in-out);
+	opacity: 1;
+	
+	&.fade-out {
+		opacity: 0;
+	}
+}

@@ -78,10 +78,7 @@
 }
 
 /****************************************************************Resume*/
-$theme-text-resume-section: $theme-text-orange;
-$theme-text-resume-triple-pop: #999;
-$theme-text-resume-triple-other: #555;
-$theme-text-boilerplate: #530;
+
 
 @mixin tagBeforeAfter($before, $after, $color) {
 	&:before { content: $before; color: $color; }

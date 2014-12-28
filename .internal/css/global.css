@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /** Global vars */
+/*Global Colors*/
+/*Fru1tme Styles*/
+/*ABOUT.SCSS*/
+/* projects */
 /** Nav vars */
 /*********************************************************Extendables*/
 .noselect, .menu, #global-console {
@@ -49,7 +53,7 @@ body, html {
   padding: 0;
   margin: 0;
   height: 100%;
-  color: #666;
+  color: #999;
   font-family: Optima, Calibri, Candara, Segoe, Segoe UI, Arial, sans-serif;
   font-size: 16px; }
 
@@ -68,9 +72,9 @@ p {
 
 a {
   text-decoration: none;
-  color: #337; }
+  color: #557; }
   a:hover {
-    color: #F70; }
+    color: #99F; }
 
 .pull-right {
   float: right; }
@@ -106,6 +110,14 @@ a {
     .page-title h1 .accent {
       color: #999; }
 
+.page-group {
+  color: #F70;
+  font-weight: bold;
+  margin-bottom: 15px; }
+  .page-group p {
+    font-weight: normal;
+    color: #999; }
+
 /************************************************Menu**/
 .menu {
   font-family: Calibri, Optima, Arial, sans-serif;
@@ -117,7 +129,7 @@ a {
     margin-bottom: 1px;
     height: 32px; }
   .menu a {
-    background-color: #060;
+    background-color: #090;
     overflow: hidden;
     display: inline-block;
     height: 32px;
@@ -410,6 +422,15 @@ a {
         right: 232.13203px; }
       #global-nav:hover .global-nav-item:nth-of-type(5), #global-nav.hover .global-nav-item:nth-of-type(5) {
         right: 20.0px; } }
+#global-content {
+  /* Remember to change global.js's timeouit in animateOutContent */
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1; }
+  #global-content.fade-out {
+    opacity: 0; }
+
 /******************************************_home.scss*/
 #home-render-window {
   width: 100%;
@@ -543,15 +564,73 @@ a {
   .resume-triple-list .subtitle {
     clear: both;
     font-style: italic;
-    color: #555; }
+    color: #666; }
 
 .resume-list, .resume-triple-list ul {
   border-left: 2px solid #F70;
   padding: 3px 0 3px 20px;
   margin: 15px 0 25px 34px;
-  color: #555;
+  color: #666;
   clear: both; }
   .resume-list li, .resume-triple-list ul li {
     margin-left: 15px; }
+
+/****************************************************************Tools*/
+.tools-list {
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  .tools-list tr {
+    border-bottom: 1px solid #030; }
+  .tools-list thead tr th:nth-child(1) {
+    width: 250px; }
+  .tools-list thead tr th:nth-child(3) {
+    width: 200px; }
+  .tools-list tbody tr {
+    cursor: pointer; }
+    .tools-list tbody tr td {
+      padding: 20px; }
+    .tools-list tbody tr:nth-child(even) {
+      background-color: #020; }
+    .tools-list tbody tr:hover {
+      background-color: #222; }
+
+/***thetime*/
+.thetime-banner {
+  font-size: 72px;
+  text-align: center;
+  font-weight: bold; }
+
+.thetime-sub {
+  text-align: center; }
+
+/****************************************************************project.scss*/
+.project {
+  border: 1px solid #F70;
+  border-radius: 10px;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px; }
+  .project h1.title {
+    margin-bottom: 8px;
+    color: #99F; }
+  .project p.about {
+    margin-bottom: 8px; }
+  .project ul {
+    margin-left: 30px; }
+  .project.large {
+    width: 710px;
+    /* 3/4 min width - 40 */
+    height: 335px; }
+  .project.medium {
+    width: 585px;
+    /* 1/2 min width - 40 */
+    height: 272.5px; }
+  .project.small {
+    width: 460px;
+    /* 1/4 min width - 40 */
+    height: 210px; }
 
 /*# sourceMappingURL=global.css.map */

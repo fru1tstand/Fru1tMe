@@ -53,7 +53,7 @@ if (Page::getBodyOnlyRequest()) {
 			<a href="/about" class="global-nav-item">About</a>
 			<a href="/projects" class="global-nav-item">Projects</a>
 			<a href="#" class="global-nav-item">Code</a>
-			<a href="#" class="global-nav-item">Tools</a>
+			<a href="/tools" class="global-nav-item">Tools</a>
 		</div>
 		
 		<div id="global-content">

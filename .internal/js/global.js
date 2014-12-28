@@ -127,8 +127,8 @@
 } (this, document));
 
 /**
- * Nav specific
- * Ajax
+ * Everything to do with the nav bar
+ * Ajax Loading
  */
 (function(window, document, undefined) {
 	function navForceOpen() {
@@ -146,9 +146,155 @@
 		setTimeout(navForceClose, duration);
 	}
 	
+	function rebindAllLinks() {
+		log("Rebinding all links to load asyncronously");
+		var aLog = log("Binding anchor tags: ");
+		var aNodeList = document.getElementsByTagName("a");
+		for (var i = 0; i < aNodeList.length; i++) {
+			aNodeList[i].onclick = onAClick;
+			aLog.innerHTML += aNodeList[i] + "; ";
+		}
+		
+		var otherLog = log("Binding all other noted tags: ");
+		var otherNodeList = document.getElementsByClassName("link");
+		for (var i = 0; i < otherNodeList.length; i++) {
+			otherNodeList[i].onclick = onLinkClick;
+			otherLog.innerHTML += otherNodeList[i] + "; ";
+		}
+	}
+	
+	function onAClick(e) {
+		log("Attempted to navigate to " + this.href);
+		
+		if (e.preventDefault)
+			e.preventDefault();
+		else
+			e.returnValue = false;
+		
+		navTo(this.href);
+		
+		return false;
+	}
+	function onLinkClick(e) {
+		log("Attempted to nav to " + this.dataset.href);
+		navTo(this.dataset.href);
+	}
+	
+	function navTo(url) {
+		if (typeof url !== 'string' || url.length < 1 || url == "#")
+			return;
+		
+		//Save hash states
+		var hash = null;
+		if (url.indexOf("#") != -1) {
+			hash = url.substring(url.indexOf("#"));
+			url = url.substring(0, url.indexOf("#"));
+			if (hash == "#")
+				hash = null;
+		}
+		
+		var navLog = log("Navigating to " + url + "... ");
+	
+		var xhr = new XMLHttpRequest(),
+			animationComplete = false,
+			loadComplete = false;
+		
+		//Prepare and send the XMLHttpRequest before animating
+		navLog.innerHTML += "Creating and sending XMLHttpRequest... "
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4)
+				return;
+			
+			if (xhr.status == 200) {
+				navLog.innerHTML += "HttpRequest responded normally, page load is complete... ";
+				
+				history.pushState({
+					content: xhr.responseText
+				}, "", url);
+				
+				loadComplete = true;
+				if (animationComplete && loadComplete)
+					animateInContent(xhr.responseText, hash, navLog);
+			} else {
+				navLog += "There was an error with the xhr; it returned response code " 
+						+ xhr.status 
+						+ ": "
+						+ xhr.statusText
+						+ "... ";
+				return false;
+			}
+		}
+		xhr.open('GET', url + "?bodyonly=true", true);
+		xhr.send();
+		
+		//Whilst that's running, do the animating
+		navLog.innerHTML += "Fading out content... "
+		//Fade out
+		animateOutContent(function() {
+			navLog.innerHTML += "Content faded, animation complete... ";
+			animationComplete = true;
+			if (animationComplete && loadComplete)
+				animateInContent(xhr.responseText, hash, navLog);
+		});
+	}
+	
+	function animateOutContent(callback) {
+		var gContent = document.getElementById("global-content");
+		gContent.classList.add("fade-out");
+		setTimeout(function() {
+			if (callback)
+				callback();
+		}, 500);
+	}
+	
+	function animateInContent(content, hash, navLog) {
+		var globalContent = document.getElementById("global-content");
+		
+		//check to see if the page provides a destroy method
+		navLog.innerHTML += "Safely destoying current page... ";
+		if (typeof pageDestroy !== 'undefined' && pageDestroy)
+			pageDestroy();
+		
+		globalContent.innerHTML = content;
+		globalContent.classList.remove("fade-out");
+		
+		navLog.innerHTML += "Rebinding links... ";
+		rebindAllLinks();
+		
+		if (hash == null) {
+			navLog.innerHTML += "No anchor found... ";
+		} else {
+			navLog.innerHTML += "Scrolling to provided anchor... ";
+			var aNode = document.querySelector('a[href="' + hash + '"]');
+			// >> See: http://stackoverflow.com/questions/2705583/how-to-simulate-a-click-with-javascript
+			if (aNode.fireEvent)
+				aNode.fireEvent('onclick');
+			else
+				aNode.dispatchEvent(document.createEvent('Events').initEvent('click', true, false));
+		}
+	}
+	
+	function onPopState(e) {
+		var popLog = log("Back button pressed... Fading out content... ");
+		animateOutContent(function() {
+			popLog.innerHTML += "Content faded, animation complete... ";
+			animateInContent(e.state.content, null, popLog);
+		});
+	}
+	
 	window.navForceOpen = navForceOpen;
 	window.navForceClose = navForceClose;
 	window.navPeek = navPeek;
+	window.rebindAllLinks = rebindAllLinks;
+	window.onpopstate = onPopState;
+	
+	//We gotta wait until the page loads to do these
+	deferExecution(function() {
+		history.pushState({
+			content: document.getElementById('global-content').innerHTML
+		}, "", location.toString());
+		rebindAllLinks();
+	});
 } (this, document));
 
 /**
@@ -170,5 +316,5 @@
 		log("Was going to peek nav. But that's getting annoying in the dev builds");
 		//navPeek(2000);
 	});
-	window.onload = function() deferExecute();
+	window.onload = deferExecute;
 } (this, document));
