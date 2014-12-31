@@ -33,4 +33,4 @@
 	</div>
 </div>
 
-<script src="/.internal/js/home.js"></script>
+<script src="/.site/js/home.js"></script>

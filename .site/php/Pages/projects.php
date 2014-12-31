@@ -1,4 +1,4 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
 
 ?>
 
@@ -35,7 +35,7 @@
 		<div class="project large">
 			<h1 class="title"><a href="#">MIDI Music</a></h1>
 			<p class="about">
-				A ruse to learn how to do simple video editing, this project stemmed from an intereest in expanding my current music library through others' suggestions.
+				A ruse to learn how to do simple video editing, this project stemmed from an interest in expanding my current music library through others' suggestions.
 			</p>
 			<div>Technologies:</div>
 			<ul>

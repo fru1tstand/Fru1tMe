@@ -1,4 +1,7 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
+
+define("PATH_PHP_PAGES", $_SERVER['DOCUMENT_ROOT'] . "/.site/php/pages");
+
 /**
  * "Enums"
  */
@@ -35,6 +38,9 @@ class NAV {
 	const ABOUT = "/about/_nav.php";
 }
 
+/**
+ * Contains helper methods for retrieving GET/POST data
+ */
 class Page {
 	const GET_BODY_ONLY = "bodyonly";
 	const GET_PAGE = "page";
@@ -88,10 +94,10 @@ class Page {
 		$refClass = new ReflectionClass($pageEnumClass);
 		$pageAlias = strtoupper($pageAlias);
 		if ($refClass->hasConstant($pageAlias)) 
-			return PATH_INTERNAL_PAGE . $refClass->getConstant($pageAlias);
+			return PATH_PHP_PAGES . $refClass->getConstant($pageAlias);
 		
 		//All else failed, return home
-		return PATH_INTERNAL_PAGE . $refClass->getConstant("HOME");
+		return PATH_PHP_PAGES . $refClass->getConstant("HOME");
 	}
 	
 	/**
@@ -122,7 +128,7 @@ class Page {
 		$refClass = new ReflectionClass("NAV");
 		foreach ($refClass->getConstants() as $constantValue) {
 			if ($constantValue == $path) {
-				include PATH_INTERNAL_PAGE . $path;
+				include PATH_PHP_PAGES . $path;
 				return;
 			}
 		}

@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
 
 /**
 CREATE TABLE `remote_api_calls` (
@@ -65,7 +65,14 @@ CREATE TABLE `remote_api_calls` (
    PRIMARY KEY (`id`,`name`),
    UNIQUE KEY `id_UNIQUE` (`id`),
    UNIQUE KEY `name_UNIQUE` (`name`)
- ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+ 
+ CREATE TABLE `fru1tme`.`global_settings` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `key` CHAR(128) NOT NULL,
+  `value` TEXT NULL,
+  PRIMARY KEY (`id`, `key`));
+
  */
 
 /**
@@ -75,6 +82,7 @@ class SQL {
 	const HOST = "localhost";
 	const DATABASE = "Fru1tMe";
 	const USERNAME = "root";
+	//Nice try, but connections are only allowed through localhost :)
 	private static $pw = "You're garbage m8.";
 	
 	/**
@@ -96,6 +104,9 @@ class SQL {
 		if (SQL::$connection->connect_error)
 			throw new mysqli_sql_exception("Failed to connect to database: " . SQL::$connection->connect_error);
 		return SQL::$connection;
+	}
+	
+	public static function newQueryBuilder() {
 	}
 }
 ?>

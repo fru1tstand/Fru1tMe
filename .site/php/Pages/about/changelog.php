@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
 import::APIHandlers();
 import::SQL();
 import::Page();

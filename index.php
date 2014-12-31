@@ -1,4 +1,4 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.internal/php/import.php';
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
 import::Page();
 
 if (Page::getBodyOnlyRequest()) {
@@ -12,8 +12,8 @@ if (Page::getBodyOnlyRequest()) {
 	<head>
 		<title>Fru1tMe</title>
 		<meta charset="UTF-8" />
-		<link href="/.internal/css/global.css" rel="stylesheet" type="text/css" />
-		<script src="/.internal/js/preload.js"></script>
+		<link href="/.site/css/global.css" rel="stylesheet" type="text/css" />
+		<script src="/.site/js/preload.js"></script>
 	</head>
 	
 	<body>
@@ -64,6 +64,6 @@ if (Page::getBodyOnlyRequest()) {
 			<div id="global-console" class="console"></div>
 		</div>
 		
-		<script src="/.internal/js/global.js"></script>
+		<script src="/.site/js/global.js"></script>
 	</body>
 </html>
