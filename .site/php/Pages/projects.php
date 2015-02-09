@@ -55,7 +55,7 @@
 		<div class="project large">
 			<h1 class="title">KodleeShare: Minecraft</h1>
 			<p class="about">
-				A sad but inevitable closure of what could only be described as the grandest ad-hoc community there was.
+				A sad but inevitable end of what could only be described as the grandest ad-hoc community there was.
 				With my co-host Carson Beck, we climbed the highest mountains, ran the lowest valleys, and swam the deepest rivers.
 				And we couldn't have done it without the people we met along the way.
 			</p>

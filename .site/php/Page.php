@@ -1,6 +1,6 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
 
-define("PATH_PHP_PAGES", $_SERVER['DOCUMENT_ROOT'] . "/.site/php/pages");
+define("PATH_PHP_PAGES", $_SERVER['DOCUMENT_ROOT'] . "/.site/php/Pages");
 
 /**
  * "Enums"
@@ -10,6 +10,7 @@ class PAGE_ENUM_CLASSES {
 	const ABOUT = "PAGE_ALIAS_ABOUT";
 	const TOOLS = "PAGE_ALIAS_TOOLS";
 	const ERRORS = "PAGE_ALIAS_ERRORS";
+	const CODE = "PAGE_ALIAS_CODE";
 }
 class PAGE_ALIAS_ROOT {
 	const HOME = "/home.php";
@@ -18,6 +19,7 @@ class PAGE_ALIAS_ROOT {
 	const PROJECTS = "/projects.php";
 	const TOOLS = "/tools.php";
 	const ERRORS = "/errors.php";
+	const CODE = "/code.php";
 }
 class PAGE_ALIAS_ABOUT {
 	const HOME = "/about/home.php";
@@ -28,6 +30,10 @@ class PAGE_ALIAS_TOOLS {
 	const HOME = "/tools/home.php";
 	const THETIME = "/tools/thetime.php";
 	const CSGO_BETTING = "/tools/csgo-betting.php";
+	const WORDHERO_CHEAT = "/tools/wordhero-cheat.php";
+}
+class PAGE_ALIAS_CODE {
+	const HOME = "/code/home.php";
 }
 class PAGE_ALIAS_ERRORS {
 	const HOME = PAGE_ALIAS_ROOT::HOME;
@@ -92,7 +98,7 @@ class Page {
 		
 		//Search constants first
 		$refClass = new ReflectionClass($pageEnumClass);
-		$pageAlias = strtoupper($pageAlias);
+		$pageAlias = str_replace("-", "_", strtoupper($pageAlias));
 		if ($refClass->hasConstant($pageAlias)) 
 			return PATH_PHP_PAGES . $refClass->getConstant($pageAlias);
 		

@@ -195,13 +195,14 @@
 		
 		var navLog = log("Navigating to " + url + "... ");
 	
-		var xhr = new XMLHttpRequest(),
+		var content = null,
 			animationComplete = false,
 			loadComplete = false;
 		
 		//Prepare and send the XMLHttpRequest before animating
-		navLog.innerHTML += "Creating and sending XMLHttpRequest... "
-		xhr.onreadystatechange = function() {
+		navLog.innerHTML += "Creating and sending XMLHttpRequest... ";
+		
+		load(url + "?bodyonly=true", function(xhr) {
 			if (xhr.readyState != 4)
 				return;
 			
@@ -212,6 +213,7 @@
 					content: xhr.responseText
 				}, "", url);
 				
+				content = xhr.responseText;
 				loadComplete = true;
 				if (animationComplete && loadComplete)
 					animateInContent(xhr.responseText, hash, navLog);
@@ -223,9 +225,7 @@
 						+ "... ";
 				return false;
 			}
-		}
-		xhr.open('GET', url + "?bodyonly=true", true);
-		xhr.send();
+		});
 		
 		//Whilst that's running, do the animating
 		navLog.innerHTML += "Fading out content... "
@@ -234,8 +234,17 @@
 			navLog.innerHTML += "Content faded, animation complete... ";
 			animationComplete = true;
 			if (animationComplete && loadComplete)
-				animateInContent(xhr.responseText, hash, navLog);
+				animateInContent(content, hash, navLog);
 		});
+	}
+	
+	function load(url, readystateCallback) {
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			readystateCallback(xhr);
+		};
+		xhr.open('GET', url, true);
+		xhr.send();
 	}
 	
 	function animateOutContent(callback) {
@@ -252,11 +261,16 @@
 		
 		//check to see if the page provides a destroy method
 		navLog.innerHTML += "Safely destoying current page... ";
-		if (typeof pageDestroy !== 'undefined' && pageDestroy)
-			pageDestroy();
+		if (typeof window.pageDestroy !== 'undefined' && window.pageDestroy)
+			window.pageDestroy();
+		window.pageDestroy = undefined;
 		
 		globalContent.innerHTML = content;
 		globalContent.classList.remove("fade-out");
+		
+		var jScripts = globalContent.getElementsByTagName("script");
+		for (var i = 0; i < jScripts.length; i++)
+			loadScript(jScripts[i].src);
 		
 		navLog.innerHTML += "Rebinding links... ";
 		rebindAllLinks();
@@ -274,6 +288,23 @@
 		}
 	}
 	
+	function loadScript(url) {
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState != 4)
+				return false;
+			
+			if (xhr.status != 200)
+				return false;
+			
+			var newScript = document.createElement("script");
+			newScript.text = xhr.responseText;
+			document.head.appendChild(newScript).parentNode.removeChild(newScript);
+		}
+		xhr.open('GET', url, true);
+		xhr.send();
+	}
+	
 	function onPopState(e) {
 		var popLog = log("Back button pressed... Fading out content... ");
 		animateOutContent(function() {
@@ -287,6 +318,7 @@
 	window.navPeek = navPeek;
 	window.rebindAllLinks = rebindAllLinks;
 	window.onpopstate = onPopState;
+	window.load = load;
 	
 	//We gotta wait until the page loads to do these
 	deferExecution(function() {

@@ -1,5 +1,5 @@
 (function(window, document, undefined) {
-	var batterySaver = false;
+	var batterySaver = true;
 	
 	var resizeLogElement = null,
 		resizeLogTimer = null;
@@ -20,6 +20,7 @@
 	var lastFrameTime = 0,
 		currentFrameTime = 0,
 		deltaFrameTime = 0,
+		isShuttingDown = false,
 		drawOffsetX = canvas.width / 2 - 300,
 		drawOffsetY = canvas.height / 2 - 200,
 		ballSpacing = ballSize * 2 + ballPadding;
@@ -77,6 +78,10 @@
 		}
 		
 		lastFrameTime = currentFrameTime;
+		
+		if (isShuttingDown)
+			return;
+		
 		if (batterySaver) {
 			setTimeout(drawFrame, 4000);
 		} else {
@@ -106,8 +111,6 @@
 			}
 			if (self.value < 0) self.value = 0;
 			if (self.value > 255) self.value = 255;
-			
-			
 		}
 		this.get = function() {
 			return self.value;
@@ -136,9 +139,15 @@
 		return (rnd == 0) ? .001 : rnd;
 	}
 	
+	function pageDestroy() {
+		isShuttingDown = true;
+	}
+	
 	deferExecution(function() {
 		lastFrameTime = Date.now();
 		drawFrame();
 	});
+	
+	window.pageDestroy = pageDestroy;
 	window.resize = resize;
 } (this, document));

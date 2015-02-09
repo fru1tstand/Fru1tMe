@@ -67,7 +67,7 @@ CREATE TABLE `remote_api_calls` (
    UNIQUE KEY `name_UNIQUE` (`name`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
  
- CREATE TABLE `fru1tme`.`global_settings` (
+ CREATE TABLE `global_settings` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `key` CHAR(128) NOT NULL,
   `value` TEXT NULL,
@@ -105,8 +105,13 @@ class SQL {
 			throw new mysqli_sql_exception("Failed to connect to database: " . SQL::$connection->connect_error);
 		return SQL::$connection;
 	}
-	
-	public static function newQueryBuilder() {
+	/**
+	 * I mean... It's hard to not understand what this does.
+	 * @return QueryBuilder
+	 */
+	public static function createQueryBuilder() {
+		self::getConnection();
+		return QueryBuilder::create(self::$connection);
 	}
 }
 ?>

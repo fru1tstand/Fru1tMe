@@ -32,6 +32,12 @@
 						those database developers out there].</td>
 					<td>Dec 13th, 2014</td>
 				</tr>
+				
+				<tr class="link" data-href="/tools/wordhero-cheat">
+					<td>/WordHero-Cheat</td>
+					<td>Who doesn't like cheating?</td>
+					<td>Jan 21st, 2015</td>
+				</tr>
 			</tbody>
 		</table>
 		
@@ -48,11 +54,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="link" data-href="/tools/csgo_betting">
-					<td>CS:GO Betting</td>
-					<td>Keeps track of bets n stuff</td>
-					<td>Nov ?th, 2014</td>
-				</tr>
+				
 			</tbody>
 		</table>
 	</div>

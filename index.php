@@ -49,10 +49,10 @@ if (Page::getBodyOnlyRequest()) {
 		
 		<div id="global-nav">
 			<div id="global-nav-toggle"></div>
-			<a href="/home" class="global-nav-item default-ajax-link">Home</a>
+			<a href="/home" class="global-nav-item">Home</a>
 			<a href="/about" class="global-nav-item">About</a>
 			<a href="/projects" class="global-nav-item">Projects</a>
-			<a href="#" class="global-nav-item">Code</a>
+			<a href="/code" class="global-nav-item">Code</a>
 			<a href="/tools" class="global-nav-item">Tools</a>
 		</div>
 		

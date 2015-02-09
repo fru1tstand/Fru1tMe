@@ -13,6 +13,7 @@
 			</p>
 		</div>
 		<div class="spacer content"></div>
+			<p>I believe there would be something about a splash screen for the about page.</p>
 		<div>
 			
 		</div>

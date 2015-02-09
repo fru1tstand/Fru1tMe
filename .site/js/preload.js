@@ -24,7 +24,7 @@
 	var hasExecuted = false;
 	function deferExecution(fn) {
 		if (hasExecuted) {
-			window.log("Deferral of " + fn + " was called, however execution already occured. Executing NOW.")
+			window.log("Ignoring deferral of " + fn)
 			fn();
 		} else {
 			window.log("Deferring execution of " + fn)
@@ -33,6 +33,7 @@
 	}
 	function execute() {
 		window.log("Executing deferred calls")
+		hasExecuted = true;
 		for (var i = 0; i < fnList.length; i++) {
 			fnList[i]();
 		}
