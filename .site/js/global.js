@@ -5,7 +5,6 @@
  * Just please leave it free and open so that others may learn and
  * make the world a better place :)
  * 
- * Copyleft Fru1tMe, 2014
  * Changelog available at https://github.com/fru1tstand/Fru1tMe
  */
 
@@ -147,20 +146,53 @@
 	}
 	
 	function rebindAllLinks() {
+		//Bind <a> tags
 		log("Rebinding all links to load asyncronously");
 		var aLog = log("Binding anchor tags: ");
 		var aNodeList = document.getElementsByTagName("a");
 		for (var i = 0; i < aNodeList.length; i++) {
+			if (aNodeList[i].classList.contains("link-external"))
+				return;
+			
+			//Set the ajax loading function onclick
 			aNodeList[i].onclick = onAClick;
+			
+			//Check if it's a menu tag, and if so, send it to do its proper things
+			if (aNodeList[i].attributes['data-link-text'])
+				setMenuExpandedText(aNodeList[i]);
+			
+			//Add to the log
 			aLog.innerHTML += aNodeList[i] + "; ";
 		}
 		
+		//Bind non <a> tags
 		var otherLog = log("Binding all other noted tags: ");
 		var otherNodeList = document.getElementsByClassName("link");
 		for (var i = 0; i < otherNodeList.length; i++) {
 			otherNodeList[i].onclick = onLinkClick;
 			otherLog.innerHTML += otherNodeList[i] + "; ";
 		}
+		
+		/********************************ADD-ONS*/
+		//Menu-specific things
+		var menuNodeList = document.getElementsByClassName('menu');
+		for (var i = 0; i < menuNodeList.length; i++) {
+			menuNodeList[i].onmouseout = function() {
+				//Reset the expanded text to nothing
+				this.getElementsByClassName('menu-text-expanded')[0].innerHTML = "";
+			}
+		}
+	}
+	
+	function setMenuExpandedText(aNode) {
+		aNode.onmouseover = function() {
+			//a->li->ul->div.menu->div.menu-text-expanded
+			this.parentNode
+					.parentNode
+					.parentNode
+					.getElementsByClassName('menu-text-expanded')[0]
+					.innerHTML = this.attributes['data-link-text'].value;
+		};
 	}
 	
 	function onAClick(e) {
@@ -345,8 +377,10 @@
 	}
 	
 	deferExecution(function() {
-		log("Was going to peek nav. But that's getting annoying in the dev builds");
-		//navPeek(2000);
+//		log("Was going to peek nav. But that's getting annoying in the dev builds");
+
+		log("Peeking nav");
+		navPeek(2000);
 	});
 	window.onload = deferExecute;
 } (this, document));

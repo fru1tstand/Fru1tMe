@@ -13,8 +13,8 @@ class Settings {
 	const DB_KEY_FACEBOOK_LOGIN_APP_ID = "facebook-login-appid";
 	const DB_KEY_FACEBOOK_LOGIN_APP_SECRET = "facebook-login-secret";
 	
-	const SESSION_KEY_FACEBOOK_SESSION = "facebook-session";
-	
+	const SESSION_KEY_FACEBOOK_SESSION_TOKEN = "facebook-session-token";
+
 	/**
 	 * Gets the value of the passed key from the database or false if 
 	 * @param string $key

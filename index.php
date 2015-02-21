@@ -1,5 +1,9 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
+import::Standard();
 import::Page();
+
+//We do this so that page scripts have an opportunity to send headers
+OutputBuffering::start();
 
 if (Page::getBodyOnlyRequest()) {
 	include(Page::getPageLocation(Page::getPageRequest()));
@@ -65,5 +69,10 @@ if (Page::getBodyOnlyRequest()) {
 		</div>
 		
 		<script src="/.site/js/global.js"></script>
+		<script src="/.site/js/goog_analytics.js"></script>
 	</body>
 </html>
+
+<?php 
+OutputBuffering::flush();
+?>

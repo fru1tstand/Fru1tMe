@@ -1,4 +1,20 @@
 /******************************************************_navigation.scss*/
+$nav-size-minimized: 50px;
+$nav-size-radius: 300px;
+$nav-toggle-padding-left: 100px;
+$nav-toggle-padding-right: 20px;
+
+$nav-size-toggle: 200px;
+$nav-size-item-width: 150px;
+$nav-size-item-height: 100px;
+$nav-gradient-offset: 200px;
+
+$nav-items-count: 5;
+$nav-items-offset: 0;
+
+$nav-items-angle: pi() / ($nav-items-count - 1);
+$nav-items-start-angle: pi() / 2;
+
 #global-nav {
 	border-bottom: 1px solid #333;
 	text-align: right;
@@ -32,7 +48,7 @@
 		border-radius: $nav-size-toggle / 2;
 		cursor: pointer;
 		overflow: visible;
-		background-color: #999;
+		background-color: $colorset-b-background;
 		@include transition(right 0.2s ease-in-out);
 	}
 	.global-nav-item {
@@ -63,8 +79,8 @@
 		z-index: 999999;
 		border: none;
 		background: transparent;
-		@include filter-gradient(rgba(0, 0, 0, 0.3), #222222, horizontal);
-		@include background-image(radial-gradient(circle at 100% 50%, #FFF 0%, rgba(0, 0, 0, 0) 85%));
+		@include filter-gradient(rgba(0, 0, 0, 0.3), rgba(119,111,131,1), horizontal);
+		@include background-image(radial-gradient(circle at 100% 50%, rgba(119,111,131,1) 0%, rgba(0, 0, 0, 0) 60%));
 		@include transition(width 0.2s ease-in-out 0.1s);
 		
 		&:hover, &.hover {
@@ -73,8 +89,8 @@
 				+ $nav-size-radius
 				+ $nav-size-item-width;
 			#global-nav-toggle {
-				background-color: #FFF;
 				right: - $nav-size-toggle / 2 + $nav-toggle-padding-right;
+				background-color: $colorset-b-text;
 			}
 			@for $i from 1 through $nav-items-count {
 				$nthChild: $i + $nav-items-offset;
@@ -95,5 +111,71 @@
 	
 	&.fade-out {
 		opacity: 0;
+	}
+}
+
+
+/************************************************Menu**/
+$menu-minwidth-collapse: 1500px;
+$menu-width: 500px;
+$menu-title-width: 700px;
+
+$menu-link-width: 50px;
+$menu-link-font-size: 28px;
+
+$menu-expanded-padding: 20px;
+$menu-expanded-height: 30px;
+
+.menu {
+	@extend .noselect;
+	font-family: $menu-font-family;
+	float: right;
+	text-align: right;
+	width: $menu-width;
+	
+	a, div.menu-text-expanded {
+		font-size: $menu-link-font-size;
+		background-color: $colorset-b-background;
+		color: $colorset-b-text;
+		display: inline-block;
+		font-size: $menu-link-font-size;
+		font-weight: bold;
+		overflow: hidden;
+	}
+	
+	a:hover {
+		color: $colorset-a-text;
+	}
+	
+	div.menu-text-expanded {
+		height: $menu-expanded-height;
+		line-height: $menu-expanded-height;
+		padding: 0;
+		margin: 5px 0;
+		width: 0%;
+		white-space: nowrap;
+		color: $colorset-a-text;
+		@include transition(width 0.1s ease-in-out,
+				padding 0.1s ease-in-out);
+	}
+	
+	ul {
+		list-style: none;
+	}
+	li {
+		display: inline-block;
+		vertical-align: top;
+		height: $menu-link-width;
+		a {
+			height: $menu-link-width;
+			line-height: $menu-link-width;
+			text-align: center;
+			width: $menu-link-width;
+		}
+	}
+	
+	&:hover div.menu-text-expanded {
+		width: $menu-width - ($menu-expanded-padding * 2);
+		padding: 0 $menu-expanded-padding;
 	}
 }

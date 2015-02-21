@@ -13,63 +13,79 @@
 		</div>
 		<div class="spacer content"></div>
 		
-		<div class="page-group">
-			<h1>Active</h1>
-			<p>Projects that are currently worked on and improved</p>
+		<div class="projects">
+			<div class="project-list">
+				<div class="page">
+					<h1>Active</h1>
+					<p>Projects that are currently worked on and improved</p>
+				</div>
+				<ul>
+					<li class="rollover" data-rollover="project-homework-thing">Homework Thing</li>
+				</ul>
+				<div class="page">
+					<h1>Legacy</h1>
+					<p>Projects that are still hosted, but not under active development</p>
+				</div>
+				<ul>
+					<li class="rollover" data-rollover="project-midi">KodleeShare: MIDI</li>
+				</ul>
+				<div class="page">
+					<h1>Retired</h1>
+					<p>All good things must come to an end. But we can at least admire them in a museum.</p>
+				</div>
+				<ul>
+					<li class="rollover" data-rollover="project-minecraft">KodleeShare: Minecraft</li>
+				</ul>
+			</div>
+			<div id="project-more" class="more">
+				<div id="project-homework-thing">
+					<h1>Homework Thing</h1>
+					<p>It's a useful task organizer. Good for homework too.</p>
+					<dl>
+						<dt>Bulk task management</dt>
+						<dd>I got tired of having to edit assignments for a single class one by one. Instead, you can edit them all at once with powerful editing and scheduling features.</dd>
+						
+						<dt>Reminders</dt>
+						<dd>Projects or large assignment aren't meant to be done on the last day, so why are they only shown on the due date? BAM. Now they're not. Set up customizably periodic reminders to get working on that project of yours.</dd>
+					
+						<dt>Progress Tracking & Game Features</dt>
+						<dd>Motivation motivation motivation. Homework can get boring. So lets gamify it. This system tracks progress of assignments and tasks and rewards with completion and experience points. Gain levels to unlock features and compete with friends.</dd>
+						
+						<dt>Completely Modular</dt>
+						<dd>Don't like a feature or two or three? Disable them! This system is designed with you in mind, and because you are unique in how you work, you decide what you want to see and use.</dd>
+					</dl>
+					<p>Uses: Dynamic Web Standards (PHP, HTML, SASSy CSS, JavaScript, MySQL), Facebook API (PHP)</p>
+					<a href="http://homework.fru1t.me/" class="link-external">Goto Homework Thing</a>
+				</div>
+				<div id="project-midi">
+					<h1>Kodleeshare: MIDI</h1>
+					<p>Music music music!</p>
+					<dl>
+						<dt>Search features</dt>
+						<dd>Search for your favorite artists and bands and be disappointed when you can't find them!</dd>
+						
+						<dt>Free with lyrics and video</dt>
+						<dd>Enjoy uh the music I guess</dd>
+					</dl>
+					<p>Uses: Dynamic Web Standards (PHP, HTML, CSS, JavaScript, MySQL), Video Editing Standards (Adobe Premiere Pro, Adobe After Effects)</p>
+					<a href="http://midi.fru1t.me/" class="link-external">Goto Kodleeshare: MIDI</a>
+				</div>
+				<div id="project-minecraft">
+					<h1>Kodleeshare: Minecraft</h1>
+					<p>A community of a lifetime</p>
+					<dl>
+						<dt>
+							A sad but inevitable end of what could only be described as the grandest ad-hoc community there was.
+							With my co-host Carson Beck, we climbed the highest mountains, ran the lowest valleys, and swam the deepest rivers.
+							And we couldn't have done it without the people we met along the way.
+						</dt>
+					</dl>
+					<p>Uses: Dynamic Web Standards (PHP, HTML, CSS, JavaScript, MySQL), Game Server Persistance (YAML, SQLite), Game Development (Java), Server Infrastructure and Security</p>
+				</div>
+			</div>
 		</div>
-		
-		<div class="project medium">
-			<h1 class="title">Adventures with GoPro</h1>
-		</div>
-		
-		<div class="project small">
-			<h1 class="title">Something else</h1>
-		</div>
-		
-		<div class="spacer content clearfix"></div>
-		
-		<div class="page-group">
-			<h1>Legacy</h1>
-			<p>Projects that are still hosted, but not under active development</p>
-		</div>
-		<div class="project large">
-			<h1 class="title"><a href="#">MIDI Music</a></h1>
-			<p class="about">
-				A ruse to learn how to do simple video editing, this project stemmed from an interest in expanding my current music library through others' suggestions.
-			</p>
-			<div>Technologies:</div>
-			<ul>
-				<li>Adobe Premiere Pro</li>
-				<li>Adobe After Effects</li>
-				<li>Relational Databases (MySQL)</li>
-				<li>Dynamic Web Pages (PHP/HTML/JavaScript)</li>
-			</ul>
-		</div>
-		
-		<div class="spacer content clearfix"></div>
-		
-		<div class="page-group">
-			<h1>Retired</h1>
-			<p>Projects that have made their mark in history, and deserve to be memorialized</p>
-		</div>
-		<div class="project large">
-			<h1 class="title">KodleeShare: Minecraft</h1>
-			<p class="about">
-				A sad but inevitable end of what could only be described as the grandest ad-hoc community there was.
-				With my co-host Carson Beck, we climbed the highest mountains, ran the lowest valleys, and swam the deepest rivers.
-				And we couldn't have done it without the people we met along the way.
-			</p>
-			<div>Technologies:</div>
-			<ul>
-				<li>Bukkit Development (Java/"YAML")</li>
-				<li>Relational Databases (MySQL/SQLite)</li>
-				<li>Dynamic Web Pages (PHP/HTML/JavaScript)</li>
-				<li>Server Infrastructure</li>
-				<li>Server Security</li>
-			</ul>
-		</div>
-		
-		
-		<div class="spacer page clearfix"></div>
+		<div class="clearfix"></div>
 	</div>
 </div>
+
+<script src="/.site/js/projects.js"></script>

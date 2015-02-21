@@ -28,9 +28,9 @@
 	}
 }
 .backgrounded { 
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: $colorset-a-background-opaque;
 	@include transition(background-color 0.1s linear);
-	&:hover { background-color: rgba(0, 0, 0, 1); }
+	&:hover { background-color: $colorset-a-background; }
 	&.spaced { padding: 10px 0; }
 }
 
@@ -39,7 +39,7 @@ body, html {
 	@extend .page-minimums;
 	padding: 0; margin: 0;
 	height: 100%;
-	color: $theme-text-default;
+	color: $colorset-a-text;
 	font-family: $font-family;
 	font-size: 16px;
 }
@@ -47,7 +47,7 @@ body, html {
 #background { 
 	@extend .fullscreen;
 	z-index: -1;
-	background-color: #000;
+	background-color: $colorset-default-background;
 	* { background: transparent; }
 }
 
@@ -60,9 +60,9 @@ p {
 
 a {
 	text-decoration: none;
-	color: $theme-text-link;
+	color: $colorset-a-text-link;
 	&:hover {
-		color: $theme-text-blue;
+		color: $colorset-a-text-accent;
 	}
 }
 
@@ -79,59 +79,20 @@ a {
 }
 
 .hr {
+	clear: both;
 	width: 100%;
 	border-bottom: 1px solid transparent;
-	&.gray { border-color: #999; }
-	&.dark-gray { border-color: #333; }
+	&.common-title { border-color: #333; }
 }
 
 /**************************************************************PAGE*/
+.page {
+	.accent, p { color: $colorset-a-text-accent; }
+}
 .page-title {
-	width: 100%;
+	@extend .page;
 	h1 {
 		font-size: 42px;
-		color: $theme-text-orange;
-		.accent {
-			color: $theme-text-gray;
-		}
-	}
-}
-
-.page-group {
-	color: $theme-text-orange;
-	font-weight: bold;
-	margin-bottom: 15px;
-	p {
-		font-weight: normal;
-		color: $theme-text-gray;
-	}
-}
-
-/************************************************Menu**/
-$fm-link-height: 32px;
-.menu {
-	@extend .noselect;
-	font-family: $menu-font-family;
-	list-style: none;
-	float: right;
-	text-align: right;
-	width: $subnav-width;
-	li {
-		margin-bottom: 1px;
-		height: $fm-link-height;
-	}
-	a {
-		background-color: $theme-background-submenu;
-		overflow: hidden;
-		display: inline-block;
-		height: $fm-link-height;
-		font-size: 28px;
-		color: #000;
-		font-weight: bold;
-		padding: 0 100px 0 10px;
-		@include transition(padding 0.2s ease-in-out,
-					margin 0.2s ease-in);
-		&:hover { padding: 0 250px 0 30px; }
 	}
 }
 
@@ -139,3 +100,5 @@ $fm-link-height: 32px;
 .email { font-weight: bold; }
 .email-at:before { content: '\0040'; }
 .email-dot:before { content: '\002e'; }
+
+@import 'navigation';

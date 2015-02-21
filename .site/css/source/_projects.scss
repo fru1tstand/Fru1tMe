@@ -1,34 +1,77 @@
 /****************************************************************project.scss*/
-.project {
-	border: 1px solid $projects-border;
-	border-radius: 10px;
-	float: left;
-	box-sizing: border-box;
-	padding: 10px;
-	margin: 10px;
+.projects {
+	margin-bottom: 20px;
 	
-	h1.title {
-		margin-bottom: 8px;
-		color: $theme-text-blue;
+	.project-list {
+		width: 50%;
+		float: left;
+		height: 100vh;
+		padding: 20px 0;
+		box-sizing: border-box;
+		overflow: auto;
 	}
-	p.about {
-		margin-bottom: 8px;
+	.page {
+		margin-bottom: 15px;
 	}
-	
 	ul {
-		margin-left: 30px;
+		margin-bottom: 30px;
+		list-style: none;
+		width: 100%;
+		overflow: auto;
+	}
+	li {
+		@extend .noselect;
+		font-size: 24px;
+		font-weight: bold;
+		width: 100%;
+		color: $colorset-c-text;
+		background-color: $colorset-c-background;
+		@include transition(color 0.1s ease-in-out,
+				background-color 0.1s ease-in-out);
+		padding: 5px 20px;
+		cursor: pointer;
+		box-sizing: border-box;
+		
+		&:hover {
+			color: $colorset-c-text-rollover;
+			background-color: $colorset-c-background-rollover;
+		}
 	}
 	
-	&.large {
-		width: $page-min-width * 12/16 - 40; /* 3/4 min width - 40 */
-		height: $page-min-width * 12/16 * 1/2 - 40 /* 9/16 min width - 40 */
+	.more {
+		box-sizing: border-box;
+		border-left: 1px solid $colorset-c-background-rollover;
+		width: 50%;
+		float: left;
+		padding: 20px;
+		height: 100vh;
+		overflow: auto;
+		
+		div {
+			display: none;
+		}
+		p {
+			color: $colorset-a-text-accent;
+		}
+		a {
+			display: block;
+			padding: 5px 0;
+			background-color: $colorset-b-text;
+			color: $colorset-b-background;
+			text-align: center;
+			font-weight: bold;
+			font-size: 26px;
+			margin-top: 20px;
+			&:hover {
+				color: $colorset-a-text;
+			}
+		}
 	}
-	&.medium {
-		width: $page-min-width * 10/16 - 40; /* 1/2 min width - 40 */
-		height: $page-min-width * 10/16 * 1/2 - 40 /* 3/8 min width - 40 */
+	dt {
+		font-weight: bold;
 	}
-	&.small {
-		width: $page-min-width * 8/16 - 40; /* 1/4 min width - 40 */
-		height: $page-min-width * 8/16 * 1/2 - 40 /* 3/16 min width - 40 */
+	dd {
+		margin: 0 0 10px 15px;
+		color: $colorset-a-text-accent;
 	}
 }

@@ -2,6 +2,11 @@
 import::APIHandlers();
 import::SQL();
 import::Page();
+import::Standard();
+
+//So much data is going to flow, rather let it go now. This page doesn't
+//require any headers anyway.
+OutputBuffering::flush();
 ?>
 <div class="backgrounded">
 	<div class="container">

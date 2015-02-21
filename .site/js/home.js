@@ -1,5 +1,5 @@
 (function(window, document, undefined) {
-	var batterySaver = true;
+	var batterySaver = false;
 	
 	var resizeLogElement = null,
 		resizeLogTimer = null;

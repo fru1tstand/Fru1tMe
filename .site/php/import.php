@@ -3,11 +3,18 @@
  * This file is used for magics/java style importing
  */
 
-//In production, this path needs to change to
-// "/var/www/websites"
-define("PATH_WEB_ROOT" , "/home/kodlee/workspaces/kodleeshare");
+//Desky
+// define("PATH_WEB_ROOT" , "E:/Work/Eclipse workspaces/Kodleeshare");
+// define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/Fru1tMe-Libraries/php");
 
-define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/Libraries/php");
+//Lappy
+// define("PATH_WEB_ROOT" , "/home/kodlee/workspaces/kodleeshare");
+// define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/Libraries/php");
+
+//Prod
+define("PATH_WEB_ROOT" , "/var/www/websites");
+define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/libraries/php");
+
 define("PATH_PHP", $_SERVER['DOCUMENT_ROOT'] . "/.site/php");
 
 class import {
@@ -33,12 +40,23 @@ class import {
 		import::Settings();
 		Session::start(Settings::SESSION_NAME);
 	}
+	/**
+	 * Imports the Facebook API
+	 */
 	public static function Facebook() {
 		require_once PATH_PHP_LIBRARIES . "/Facebook/FacebookSDKException.php";
 		require_once PATH_PHP_LIBRARIES . "/Facebook/FacebookRequestException.php";
 		require_once PATH_PHP_LIBRARIES . "/Facebook/FacebookSignedRequestFromInputHelper.php";
 		require_once PATH_PHP_LIBRARIES . "/Facebook/GraphObject.php";
-		self::requireFolder("/.libraries/Facebook");
+		self::requireFolder(PATH_PHP_LIBRARIES . "/Facebook");
+	}
+
+	/**
+	 * Imports the standard toolkit including
+	 * 		OutputBuffering
+	 */
+	public static function Standard() {
+		self::requireFolder(PATH_PHP_LIBRARIES . "/Standard");
 	}
 	
 	//Project Specific
@@ -47,14 +65,14 @@ class import {
 	}
 	public static function APIHandlers() {
 		import::APIHandler();
-		import::requireFolder("/APIHandlers");
+		import::requireFolder(PATH_PHP . "/APIHandlers");
 	}
 	public static function APIHandler() {
 		require_once PATH_PHP . "/APIHandler.php";
 	}
 	public static function JSONMaps() {
 		import::JSONMap();
-		import::requireFolder("/JSONMaps");
+		import::requireFolder(PATH_PHP . "/JSONMaps");
 	}
 	public static function JSONMap() {
 		require_once PATH_PHP . "/JsonMap.php";
@@ -67,7 +85,7 @@ class import {
 	}
 	
 	private static function requireFolder($folder) {
-		foreach (glob(PATH_PHP . $folder . "/*.php") as $file) {
+		foreach (glob($folder . "/*.php") as $file) {
 			require_once $file;
 		}
 	}

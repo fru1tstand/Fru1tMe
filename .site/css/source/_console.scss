@@ -1,14 +1,15 @@
 /*********************************************************_console.scss*/
 $console-entry-fadein: console-entry-fadein;
+$color-console-default: #999;
 
 .console {
 	font-size: 12px;
 	font-family: monospace;
-	color: $theme-text-console-default;
+	color: $color-console-default;
 	
-	.red { color: $theme-text-red; }
-	.blue { color: $theme-text-blue; }
-	.green { color: $theme-text-green; }
+	.red { color: #F00; }
+	.blue { color: #00F; }
+	.green { color: #0F0; }
 }
 #global-console {
 	@extend .fullscreen-child;
@@ -20,7 +21,7 @@ $console-entry-fadein: console-entry-fadein;
 	
 	
 	div { @include animation($console-entry-fadein 0.5s ease-in); }
-	> div:before { content: '> '; color: $theme-text-console-default; }
+	> div:before { content: '> '; color: $color-console-default; }
 	
 	&.anchor-windowed { border: 1px solid #0F0; }
 	&.anchor-lower-left { @extend .anchor-windowed; @include anchor(50%, 50%, 0, 0); }

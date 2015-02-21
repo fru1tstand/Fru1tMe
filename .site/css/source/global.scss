@@ -5,62 +5,28 @@ $font-family: Optima,Calibri,Candara,Segoe,Segoe UI,Arial,sans-serif;
 $font-family-contrast: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
 $menu-font-family: Calibri,Optima,Arial,sans-serif;
 
-/*Global Colors*/
-$theme-text-white: #FFF;
-$theme-text-light-gray: #CCC;
-$theme-text-dark-gray: #444;
-$theme-text-darkish-gray: #666;
-$theme-text-gray: #999;
-$theme-text-red: #F00;
-$theme-text-blue: #99F;
-$theme-text-green: #0C0;
-$theme-text-orange: #F70;
-$theme-text-indigo: #339;
+$colorset-default-background: #120203;
 
-$theme-text-link: #557;
-$theme-text-tag: #555;
-$theme-text-console-default: #999;
+$colorset-a-background: rgb(2, 2, 3);
+$colorset-a-background-opaque: rgba(2, 2, 3, 0.8);
+$colorset-a-text: rgba(255, 255, 255, 0.5);
+$colorset-a-text-accent: rgba(255, 255, 255, 0.3);
+$colorset-a-text-link: rgba(255, 255, 255, 0.7);
+$colorset-a-highlight: #4A9507;
 
-$theme-background-green: #090;
+$colorset-b-background: #776F83;
+$colorset-b-text: #1F1233;
 
-/*Fru1tme Styles*/
-$theme-text-default: $theme-text-gray;
-$theme-background-submenu: $theme-background-green;
-
-/*ABOUT.SCSS*/
-$theme-text-resume-section: $theme-text-orange;
-$theme-text-resume-triple-pop: $theme-text-gray;
-$theme-text-resume-triple-other: $theme-text-darkish-gray;
-$theme-text-boilerplate: #530;
-
-/* projects */
-$projects-border: $theme-text-orange;
+$colorset-c-background: #120203;
+$colorset-c-background-rollover: #9DAC8F;
+$colorset-c-text: #9DAC8F;
+$colorset-c-text-rollover: #120203;
 
 
 $page-min-height: 600px;
 $page-min-width: 1000px;
 $page-max-width: 1200px;
 
-/** Nav vars */
-$nav-size-minimized: 50px;
-$nav-size-radius: 300px;
-$nav-toggle-padding-left: 100px;
-$nav-toggle-padding-right: 20px;
-
-$nav-size-toggle: 200px;
-$nav-size-item-width: 150px;
-$nav-size-item-height: 100px;
-$nav-gradient-offset: 200px;
-
-$nav-items-count: 5;
-$nav-items-offset: 0;
-
-$nav-items-angle: pi() / ($nav-items-count - 1);
-$nav-items-start-angle: pi() / 2;
-
-$subnav-minwidth-collapse: 1500px;
-$subnav-width: 500px;
-$subnav-title-width: 700px;
 
 @import 'compass';
 @mixin anchor($top: null, $right:null, $bottom:null, $left:null) {
@@ -95,12 +61,13 @@ $subnav-title-width: 700px;
 	@keyframes #{$name} { @content; }
 }
 
-@import 'fruitme-style';
+@import 'template';
 
 @import 'console';
 @import 'nojs';
-@import 'navigation';
+
 @import 'home';
 @import 'about';
 @import 'tools';
 @import 'projects';
+@import 'login';

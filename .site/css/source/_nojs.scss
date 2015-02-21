@@ -1,18 +1,16 @@
 /**************************************************************_nojs.scss*/
 $media-height-tiny: 800px;
-$plug-color: #666;
 $nojs-fadeout: nojs-fadeout;
 
 #nojs {
 	@extend .fullscreen-child;
-	color: $theme-text-blue;
-	background-color: #EEE;
+	background-color: $colorset-default-background;
 	font-size: 0;
 	z-index: 9999999999;
 }
 
 /***************************************************************Graphics*/
-#nojs_graphic {
+#nojs_graphic {  
 	width: 40%;
 	text-align: right;
 	min-height: 100%;
@@ -26,27 +24,27 @@ $nojs-fadeout: nojs-fadeout;
 #nojs_plug_cord {
 	height: 200px;
 	width: 50px;
-	background-color: $plug-color;
+	background-color: $colorset-a-background;
 	@media (max-height: $media-height-tiny) { height: 100px; }
 }
 #nojs_plug_head {
 	height: 125px;
 	width: 250px;
 	border-radius: 125px 125px 0 0;
-	background-color: $plug-color;
+	background-color: $colorset-a-background;
 	margin-top: -10px;
 }
 .nojs_socket_prong {
 	height: 100px;
 	width: 50px;
-	background-color: $plug-color;
+	background-color: $colorset-a-background;
 	border-radius: 0 0 10px 10px;
 }
 #nojs_socket {
 	width: 250px;
 	height: 250px;
 	border-radius: 125px;
-	background-color: $plug-color;
+	background-color: $colorset-a-background;
 	margin-top: 100px;
 	@media (max-height: $media-height-tiny) { margin-top: 30px; }
 }
@@ -75,6 +73,6 @@ $nojs-fadeout: nojs-fadeout;
 	float: left;
 	> div {
 		margin-top: -217px; width: 500px;
-		> h1 { border-bottom: 3px solid $theme-text-blue; }
+		> h1 { border-bottom: 3px solid $colorset-a-highlight; }
 	}
 }

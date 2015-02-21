@@ -1,5 +1,6 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/import.php';
-import::Page();
+<?php
+require_once $_SERVER ['DOCUMENT_ROOT'] . '/.site/php/import.php';
+import::Page ();
 ?>
 <div class="backgrounded">
 	<div class="container">
@@ -18,7 +19,7 @@ Sorry.">
 					class="email-dot"></span>net
 			</p>
 		</div>
-		<div class="hr dark-gray"></div>
+		<div class="hr common-title"></div>
 		<div class="spacer content"></div>
 	</div>
 	<div class="container maxed resume">
@@ -99,13 +100,17 @@ Sorry.">
 			<li>Self-taught programmer with a strong desire to expand knowledge</li>
 			<li>Aptitude for creative problem solving and abstract thinking</li>
 			<li>Well versed in a multitude of programming patterns and paradigms
-				with languages such as Java, C#, PHP, and JavaScript</li>
-			<li>Heavy experience in web development and relational databases
-				using HTML, CSS & SASS, JQuery, ASP.NET, MySQL, and T-SQL</li>
+				with languages such as PHP, Java, JavaScript, C#, Visual Basic,
+				Delphi, and Python.</li>
+			<li>Deep understanding in dynamic web development including
+				mobile-first, desktop-first, and responsive designs using HTML,
+				SASS-y CSS, jQuery, and ASP.NET</li>
+			<li>Heavy experience with relational databases using MySQL and T-SQL</li>
 			<li>Seasoned user of version control system GIT with knowledge of SVN
 				and Vault</li>
 			<li>Familiar with large-scale, distributed systems, including
 				technologies such as Bigtable and MapReduce</li>
+			<li>A true linux fan who develops on Ubuntu and distributes on Debian</li>
 		</ul>
 		<div class="resume-section end">Skills</div>
 

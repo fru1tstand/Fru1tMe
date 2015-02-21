@@ -11,6 +11,7 @@ class PAGE_ENUM_CLASSES {
 	const TOOLS = "PAGE_ALIAS_TOOLS";
 	const ERRORS = "PAGE_ALIAS_ERRORS";
 	const CODE = "PAGE_ALIAS_CODE";
+	const LOGIN = "PAGE_ALIAS_LOGIN";
 }
 class PAGE_ALIAS_ROOT {
 	const HOME = "/home.php";
@@ -20,11 +21,14 @@ class PAGE_ALIAS_ROOT {
 	const TOOLS = "/tools.php";
 	const ERRORS = "/errors.php";
 	const CODE = "/code.php";
+	const LOGIN = "/login.php";
 }
 class PAGE_ALIAS_ABOUT {
 	const HOME = "/about/home.php";
 	const CHANGELOG = "/about/changelog.php";
 	const RESUME = "/about/resume.php";
+	const LEGAL = "/about/legal.php";
+	const PRIVACY = "/about/privacy.php";
 }
 class PAGE_ALIAS_TOOLS {
 	const HOME = "/tools/home.php";
@@ -39,6 +43,10 @@ class PAGE_ALIAS_ERRORS {
 	const HOME = PAGE_ALIAS_ROOT::HOME;
 	const UNAUTHORIZED = "/errors/401.php";
 }
+class PAGE_ALIAS_LOGIN {
+	const HOME = "/login/home.php";
+	const FACEBOOK = "/login/facebook.php";
+}
 
 class NAV {
 	const ABOUT = "/about/_nav.php";
@@ -52,6 +60,11 @@ class Page {
 	const GET_PAGE = "page";
 	const GET_OPTION_1 = "op1";
 	const GET_OPTION_2 = "op2";
+	const GET_OPTION_3 = "op3";
+	const GET_OPTION_4 = "op4";
+	const GET_OPTION_5 = "op5";
+	const GET_OPTION_6 = "op6";
+	
 	
 	/**
 	 * Checks to see if the index exists in GET and returns the value if one exists,
@@ -129,6 +142,39 @@ class Page {
 	public static function getOption2() {
 		return self::getSafeGet(self::GET_OPTION_2);
 	}
+	
+	/**
+	 * Returns option 3 from the URL if it exists, null otherwise
+	 * @return string|NULL
+	 */
+	public static function getOption3() {
+		return self::getSafeGet(self::GET_OPTION_3);
+	}
+
+	/**
+	 * Returns option 4 from the URL if it exists, null otherwise
+	 * @return string|NULL
+	 */
+	public static function getOption4() {
+		return self::getSafeGet(self::GET_OPTION_4);
+	}
+
+	/**
+	 * Returns option 5 from the URL if it exists, null otherwise
+	 * @return string|NULL
+	 */
+	public static function getOption5() {
+		return self::getSafeGet(self::GET_OPTION_5);
+	}
+
+	/**
+	 * Returns option 6 from the URL if it exists, null otherwise
+	 * @return string|NULL
+	 */
+	public static function getOption6() {
+		return self::getSafeGet(self::GET_OPTION_6);
+	}
+	
 	
 	public static function includeNav($path) {
 		$refClass = new ReflectionClass("NAV");

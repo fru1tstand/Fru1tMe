@@ -4,7 +4,7 @@
 .git-list {
 	padding: 0; margin: 0;
 	dd {
-		border-left: 5px solid $theme-text-orange;
+		border-left: 5px solid $colorset-a-highlight;
 		padding-left: 15px;
 		margin-bottom: 30px;
 	}
@@ -28,17 +28,17 @@
 	}
 	.git-additions {
 		@extend .git-linecount;
-		color: $theme-text-green;
+		color: $colorset-a-highlight;
 		&:before { content: '+'; }
 	}
 	.git-subtractions {
 		@extend .git-linecount;
-		color: $theme-text-red;
+		color: $colorset-b-background;
 		&:before { content: '-'; }
 	}
 	.git-delta {
 		@extend .git-linecount;
-		color: $theme-text-blue;
+		color: $colorset-c-text;
 		&:before { content: 'Δ'; }
 	}
 }
@@ -68,9 +68,9 @@
 .git-file-status {
 	display: block;
 	float: right;
-	&.changed { color: $theme-text-blue; &:before { content: "changed"; } }
-	&.added { color: $theme-text-green; &:before { content: "added"; } }
-	&.deleted { color: $theme-text-red; &:before { content: "deleted"; } }
+	&.changed { color: $colorset-c-text; &:before { content: "changed"; } }
+	&.added { color: $colorset-a-highlight; &:before { content: "added"; } }
+	&.deleted { color: $colorset-b-background; &:before { content: "deleted"; } }
 }
 .git-patch {
 	&:before { content: 'Δ '; }
@@ -95,20 +95,19 @@
 .resume-section {
 	font-size: 24px;
 	&.start {
-		@include tagBeforeAfter('<', '>', $theme-text-boilerplate);
-		color: $theme-text-resume-section;
+		@include tagBeforeAfter('<', '>', $colorset-a-text-accent);
+		color: $colorset-a-text;
 		clear: both;
 	}
 	&.end {
-		@include tagBeforeAfter('</', '>', $theme-text-boilerplate);
-		color: $theme-text-boilerplate;
+		@include tagBeforeAfter('</', '>', $colorset-a-text-accent);
+		color: $colorset-a-text-accent;
 		float: right;
 	}
 }
 
 .resume-triple-list {
 	margin: 20px 0;
-	color: $theme-text-resume-triple-pop;
 	.title {
 		float: left;
 		width: 400px;
@@ -123,17 +122,40 @@
 	.subtitle {
 		clear: both;
 		font-style: italic;
-		color: $theme-text-resume-triple-other;
+		color: $colorset-a-text-accent;
 	}
 }
 
 .resume-list, .resume-triple-list ul {
-	border-left: 2px solid $theme-text-orange;
+	border-left: 2px solid $colorset-a-highlight;
 	padding: 3px 0 3px 20px;
 	margin: 15px 0 25px 34px;
-	color: $theme-text-resume-triple-other;
 	clear: both;
 	li {
 		margin-left: 15px;
+	}
+}
+
+.privacy-policy, .legal-policy {
+	width: 1000px;
+	margin: 50px auto;
+	
+	h1 {
+		text-align: center;
+	}
+	
+	h2 {
+		margin-top: 35px;
+	}
+	
+	h3 {
+		margin-top: 50px;
+	}
+	
+	div {
+		margin: 10px 0 0 15px;
+		padding-left: 15px;
+		border-left: 1px solid $colorset-a-highlight;
+		text-indent: 25px;
 	}
 }
