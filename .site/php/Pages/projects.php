@@ -20,7 +20,7 @@
 					<p>Projects that are currently worked on and improved</p>
 				</div>
 				<ul>
-					<li class="rollover" data-rollover="project-homework-thing">Homework Thing</li>
+					<li class="rollover" data-rollover="project-stak">Stak</li>
 				</ul>
 				<div class="page">
 					<h1>Legacy</h1>
@@ -38,9 +38,9 @@
 				</ul>
 			</div>
 			<div id="project-more" class="more">
-				<div id="project-homework-thing">
-					<h1>Homework Thing</h1>
-					<p>It's a useful task organizer. Good for homework too.</p>
+				<div id="project-stak">
+					<h1>Stak</h1>
+					<p>("Stack") It's a useful task organizer. Good for homework too.</p>
 					<dl>
 						<dt>Bulk task management</dt>
 						<dd>I got tired of having to edit assignments for a single class one by one. Instead, you can edit them all at once with powerful editing and scheduling features.</dd>
@@ -48,9 +48,6 @@
 						<dt>Reminders</dt>
 						<dd>Projects or large assignment aren't meant to be done on the last day, so why are they only shown on the due date? BAM. Now they're not. Set up customizably periodic reminders to get working on that project of yours.</dd>
 					
-						<dt>Progress Tracking & Game Features</dt>
-						<dd>Motivation motivation motivation. Homework can get boring. So lets gamify it. This system tracks progress of assignments and tasks and rewards with completion and experience points. Gain levels to unlock features and compete with friends.</dd>
-						
 						<dt>Completely Modular</dt>
 						<dd>Don't like a feature or two or three? Disable them! This system is designed with you in mind, and because you are unique in how you work, you decide what you want to see and use.</dd>
 					</dl>
