@@ -3,18 +3,6 @@
  * This file is used for magics/java style importing
  */
 
-//Desky
-// define("PATH_WEB_ROOT" , "E:/Work/Eclipse workspaces/Kodleeshare");
-// define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/Fru1tMe-Libraries/php");
-
-//Lappy
-// define("PATH_WEB_ROOT" , "/home/kodlee/workspaces/kodleeshare");
-// define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/Libraries/php");
-
-//Prod
-define("PATH_WEB_ROOT" , "/var/www/websites");
-define("PATH_PHP_LIBRARIES", PATH_WEB_ROOT . "/libraries/php");
-
 define("PATH_PHP", $_SERVER['DOCUMENT_ROOT'] . "/.site/php");
 
 class import {
@@ -24,17 +12,17 @@ class import {
 	 */
 	public static function SQL() {
 		//Order matters. QueryBuilder relies on QueryResult.
-		require_once PATH_PHP_LIBRARIES . "/MySQL/QueryResult.php";
-		require_once PATH_PHP_LIBRARIES . "/MySQL/QueryBuilder.php";
-		require_once PATH_PHP . '/SQL.php';
+		require_once PATH_PHP . "/MySQL/QueryResult.php";
+		require_once PATH_PHP . "/MySQL/QueryBuilder.php";
+		require_once PATH_PHP . "/SQL.php";
 	}
 	/**
 	 * Imports the PageData libraries that include page requests through POST/GET
 	 * as well as web Session management. Sets up the session as well.
 	 */
 	public static function PageData() {
-		require_once PATH_PHP_LIBRARIES . "/PageData/Request.php";
-		require_once PATH_PHP_LIBRARIES . "/PageData/Session.php";
+		require_once PATH_PHP . "/PageData/Request.php";
+		require_once PATH_PHP . "/PageData/Session.php";
 		
 		//Start the session
 		import::Settings();
@@ -44,11 +32,11 @@ class import {
 	 * Imports the Facebook API
 	 */
 	public static function Facebook() {
-		require_once PATH_PHP_LIBRARIES . "/Facebook/FacebookSDKException.php";
-		require_once PATH_PHP_LIBRARIES . "/Facebook/FacebookRequestException.php";
-		require_once PATH_PHP_LIBRARIES . "/Facebook/FacebookSignedRequestFromInputHelper.php";
-		require_once PATH_PHP_LIBRARIES . "/Facebook/GraphObject.php";
-		self::requireFolder(PATH_PHP_LIBRARIES . "/Facebook");
+		require_once PATH_PHP . "/Facebook/FacebookSDKException.php";
+		require_once PATH_PHP . "/Facebook/FacebookRequestException.php";
+		require_once PATH_PHP . "/Facebook/FacebookSignedRequestFromInputHelper.php";
+		require_once PATH_PHP . "/Facebook/GraphObject.php";
+		self::requireFolder(PATH_PHP . "/Facebook");
 	}
 
 	/**
@@ -56,7 +44,7 @@ class import {
 	 * 		OutputBuffering
 	 */
 	public static function Standard() {
-		self::requireFolder(PATH_PHP_LIBRARIES . "/Standard");
+		self::requireFolder(PATH_PHP . "/Standard");
 	}
 	
 	//Project Specific

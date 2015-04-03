@@ -48,7 +48,7 @@
 			
 			<div class="stats">
 				<div>Words found: <span id="wh-words-found">0</span></div>
-				
+				<button type="button" id="wh-start-search">Search!</button>
 				<div id="wh-messages">
 					<h6>Messages (click to dismiss):</h6>
 				</div>

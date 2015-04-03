@@ -1,0 +1,6 @@
+Just a todo. Can't a programmer organize his thoughts?
+
+ .) Add code page with /projects layout and /about menu
+ .) Change /tools to /projects layout
+ .) Remove link to minecraft portal on midi.fru1t.me
+ .) Don't globalize Security/Login feature

@@ -20,17 +20,7 @@ CREATE TABLE `remote_api_calls` (
    `last_name` char(64) NOT NULL,
    PRIMARY KEY (`id`,`public_key`,`username`)
  ) ENGINE=InnoDB DEFAULT CHARSET=latin1
- 
- CREATE TABLE `remote_api_calls` (
-   `id` int(11) NOT NULL AUTO_INCREMENT,
-   `name` char(64) CHARACTER SET latin1 NOT NULL,
-   `expires` int(10) NOT NULL,
-   `value` longtext CHARACTER SET latin1,
-   PRIMARY KEY (`id`,`name`),
-   UNIQUE KEY `id_UNIQUE` (`id`),
-   UNIQUE KEY `name_UNIQUE` (`name`)
- ) ENGINE=InnoDB DEFAULT CHARSET=utf8
- 
+
  CREATE TABLE `global_settings` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `key` CHAR(128) NOT NULL,
@@ -45,15 +35,7 @@ CREATE TABLE `remote_api_calls` (
 class SQL {
 	const HOST = "localhost";
 	const DATABASE = "Fru1tMe";
-	
-	//DEVEL
-// 	const USERNAME = "root";
-	
-	//PROD
 	const USERNAME = "Fru1tMeWeb";
-	
-	
-	//Nice try, but connections are only allowed through localhost :)
 	private static $pw = "You're garbage m8.";
 	
 	/**

@@ -155,6 +155,6 @@
 	deferExecution(function() {
 		loadDictionary();
 		
-		document.getElementById('wh-words-found').onclick = findWords;
+		document.getElementById('wh-start-search').onclick = findWords;
 	});
 } (this, document));
