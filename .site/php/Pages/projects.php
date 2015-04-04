@@ -52,7 +52,7 @@
 						<dd>Don't like a feature or two or three? Disable them! This system is designed with you in mind, and because you are unique in how you work, you decide what you want to see and use.</dd>
 					</dl>
 					<p>Uses: Dynamic Web Standards (PHP, HTML, SASSy CSS, JavaScript, MySQL), Facebook API (PHP)</p>
-					<a href="http://homework.fru1t.me/" class="link-external">Goto Homework Thing</a>
+					<a href="http://homework.fru1t.me/" class="link-external">Goto Stak</a>
 				</div>
 				<div id="project-midi">
 					<h1>Kodleeshare: MIDI</h1>
