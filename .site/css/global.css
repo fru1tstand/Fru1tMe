@@ -383,7 +383,7 @@ a:hover {
 .console {
   font-size: 12px;
   font-family: monospace;
-  color: #999;
+  color: #555;
 }
 /* line 10, source/_console.scss */
 .console .red {
@@ -416,7 +416,7 @@ a:hover {
 /* line 24, source/_console.scss */
 #global-console > div:before {
   content: '> ';
-  color: #999;
+  color: #555;
 }
 /* line 26, source/_console.scss */
 #global-console.anchor-windowed, #global-console.anchor-lower-left, #global-console.anchor-lower-right, #global-console.anchor-upper-left, #global-console.anchor-upper-right {
@@ -455,48 +455,39 @@ a:hover {
 @-webkit-keyframes console-entry-fadein {
   0% {
     opacity: 0;
-    text-shadow: 0 0 rgba(255, 255, 255, 0);
     background-color: transparent;
   }
   50% {
     opacity: 1;
-    text-shadow: 0 0 white;
     background-color: #333;
   }
   100% {
-    text-shadow: 0 0 rgba(255, 255, 255, 0);
     background-color: transparent;
   }
 }
 @-moz-keyframes console-entry-fadein {
   0% {
     opacity: 0;
-    text-shadow: 0 0 rgba(255, 255, 255, 0);
     background-color: transparent;
   }
   50% {
     opacity: 1;
-    text-shadow: 0 0 white;
     background-color: #333;
   }
   100% {
-    text-shadow: 0 0 rgba(255, 255, 255, 0);
     background-color: transparent;
   }
 }
 @keyframes console-entry-fadein {
   0% {
     opacity: 0;
-    text-shadow: 0 0 rgba(255, 255, 255, 0);
     background-color: transparent;
   }
   50% {
     opacity: 1;
-    text-shadow: 0 0 white;
     background-color: #333;
   }
   100% {
-    text-shadow: 0 0 rgba(255, 255, 255, 0);
     background-color: transparent;
   }
 }
