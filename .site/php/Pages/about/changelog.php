@@ -7,6 +7,7 @@ import::Standard();
 //So much data is going to flow, rather let it go now. This page doesn't
 //require any headers anyway.
 OutputBuffering::flush();
+error_reporting(E_ALL);
 ?>
 <div class="backgrounded">
 	<div class="container">
@@ -18,19 +19,21 @@ OutputBuffering::flush();
 				Basically a
 				<a href="http://git-scm.com/book/en/v2/Getting-Started-Git-Basics" target="_blank">git</a>
 				dump of the entire website. Here you see my notes for each little
-				section of code I played around with for a period of time. All of 
+				section of code I played around with for a period of time. All of
 				the source code is available either by right clicking and "view source",
-				or a little neater presented on 
+				or a little neater presented on
 				<a href="http://github.com/fru1tstand/Fru1tMe" target="_blank">Github</a>.
 			</p>
 		</div>
-		
+
 		<div class="spacer content"></div>
 		<dl class="git-list">
 			<?php
 			try {
 				$githubCommitsApi = new GithubRepoCommitsAPI();
-				foreach ($githubCommitsApi->getCommits() as $commitMap) {
+				$commits = $githubCommitsApi->getCommits();
+				for ($i = 0; $i < 10 && $i < count($commits); $i++) {
+					$commitMap = $commits[$i];
 					$singleMap = null;
 					$singleCommitApi = new GithubRepoSingleCommitAPI(
 							$commitMap->get(GithubRepoCommitMap::SHA));
@@ -59,7 +62,7 @@ OutputBuffering::flush();
 								'</div><div class="git-filename">',
 								$fileMap->get(GithubRepoSingleCommitFileMap::FILENAME),
 								'</div>',
-								
+
 								'<div class="git-patch">',
 								number_format(strlen($fileMap->get(GithubRepoSingleCommitFileMap::PATCH))),
 								'</div>',
