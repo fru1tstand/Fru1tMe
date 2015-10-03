@@ -779,14 +779,19 @@ a:hover {
   font-style: normal;
 }
 
+/* line 93, source/_about.scss */
+.email-dm::before {
+  content: "\006b\006f\0064\006c\0065\0065";
+}
+
 /***HTML Tag*/
-/* line 94, source/_about.scss */
+/* line 99, source/_about.scss */
 .resume-section {
   font-size: 24px;
 }
-/* line 96, source/_about.scss */
+/* line 101, source/_about.scss */
 .resume-section.start {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   clear: both;
 }
 /* line 83, source/_about.scss */
@@ -799,7 +804,7 @@ a:hover {
   content: ">";
   color: rgba(255, 255, 255, 0.3);
 }
-/* line 101, source/_about.scss */
+/* line 106, source/_about.scss */
 .resume-section.end {
   color: rgba(255, 255, 255, 0.3);
   float: right;
@@ -815,61 +820,61 @@ a:hover {
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 108, source/_about.scss */
+/* line 113, source/_about.scss */
 .resume-triple-list {
   margin: 20px 0;
 }
-/* line 110, source/_about.scss */
+/* line 115, source/_about.scss */
 .resume-triple-list .title {
   float: left;
   width: 400px;
   font-weight: bold;
 }
-/* line 115, source/_about.scss */
+/* line 120, source/_about.scss */
 .resume-triple-list .location {
   float: left;
 }
-/* line 118, source/_about.scss */
+/* line 123, source/_about.scss */
 .resume-triple-list .date {
   float: right;
 }
-/* line 121, source/_about.scss */
+/* line 126, source/_about.scss */
 .resume-triple-list .subtitle {
   clear: both;
   font-style: italic;
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 128, source/_about.scss */
+/* line 133, source/_about.scss */
 .resume-list, .resume-triple-list ul {
   border-left: 2px solid #4A9507;
   padding: 3px 0 3px 20px;
   margin: 15px 0 25px 34px;
   clear: both;
 }
-/* line 133, source/_about.scss */
+/* line 138, source/_about.scss */
 .resume-list li, .resume-triple-list ul li {
   margin-left: 15px;
 }
 
-/* line 138, source/_about.scss */
+/* line 143, source/_about.scss */
 .privacy-policy, .legal-policy {
   width: 1000px;
   margin: 50px auto;
 }
-/* line 142, source/_about.scss */
+/* line 147, source/_about.scss */
 .privacy-policy h1, .legal-policy h1 {
   text-align: center;
 }
-/* line 146, source/_about.scss */
+/* line 151, source/_about.scss */
 .privacy-policy h2, .legal-policy h2 {
   margin-top: 35px;
 }
-/* line 150, source/_about.scss */
+/* line 155, source/_about.scss */
 .privacy-policy h3, .legal-policy h3 {
   margin-top: 50px;
 }
-/* line 154, source/_about.scss */
+/* line 159, source/_about.scss */
 .privacy-policy div, .legal-policy div {
   margin: 10px 0 0 15px;
   padding-left: 15px;
@@ -877,7 +882,7 @@ a:hover {
   text-indent: 25px;
 }
 
-/* line 162, source/_about.scss */
+/* line 167, source/_about.scss */
 .projects-spacer {
   height: 50px;
 }

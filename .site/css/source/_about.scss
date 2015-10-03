@@ -89,13 +89,18 @@
 	*:before { font-weight: normal; font-style: normal; }
 	*:after { font-weight: normal; font-style: normal; }
 }
+.email-dm {
+	&::before {
+		content: "\006b\006f\0064\006c\0065\0065";
+	}
+}
 
 /***HTML Tag*/
 .resume-section {
 	font-size: 24px;
 	&.start {
 		@include tagBeforeAfter('<', '>', $colorset-a-text-accent);
-		color: $colorset-a-text;
+		color: $colorset-a-text-link;
 		clear: both;
 	}
 	&.end {

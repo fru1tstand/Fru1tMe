@@ -8,15 +8,9 @@ import::Page ();
 		<?php page::includeNav(NAV::ABOUT); ?>
 		<div class="page-title">
 			<h1>Kodlee Yin</h1>
-			<p class="email"
-				title="WHAT IS THIS WITCHCRAFT?
-Well, in order to prevent robots from spamming my personal email, 
-I've added some trickery that prevents theese bots from realizing this is an email address. 
-
-Unfortunately this also prevent you from copying and pasting the text directly.
-Sorry.">
-				kodlee<span class="email-at"></span>kodleeshare<span
-					class="email-dot"></span>net
+			<p class="email">
+				<!-- A majority of scrapers don't run javascript -->
+				<script>document.write("kodlee");</script><span class="email-at"></span><span class="email-dm">share</span><span class="email-dot"></span>net
 			</p>
 		</div>
 		<div class="hr common-title"></div>
@@ -25,25 +19,26 @@ Sorry.">
 	<div class="container maxed resume">
 		<div class="resume-section start">Experience</div>
 		<div class="resume-triple-list">
-			<div class="title">Revenue Management Systems, Inc.</div>
-			<div class="location">Seattle, Washington</div>
-			<div class="date">Mar '14 - June '14 & Sept '14 - Present</div>
-			<div class="subtitle">Software Engineer</div>
+			<div class="title">Google</div>
+			<div class="location">Multiple Locations</div>
+			<div class="date">June - September, 2014 and 2015</div>
+			<div class="subtitle">Software Engineering Intern</div>
 			<ul>
-				<li>Built components to automate mundane processes</li>
-				<li>Collaborated and composed web-based internal tools and
-					dashboards</li>
-				<li>Developed modern, responsive, and dynamic web pages</li>
+				<li>Engineered Bigtable-based systems and implemented Map-Reduce jobs that improved site reliability</li>
+				<li>Collaborated with peers to create backend tools that interfaced with these databases for CSRs</li>
+				<li>Composed frontend features and constructed experiments to evaluate their performance</li>
+				<li>Added improvements to processes to severely improve code quality and maintainability</li>
 			</ul>
 		</div>
 		<div class="resume-triple-list">
-			<div class="title">Google</div>
-			<div class="location">Mountainview, California</div>
-			<div class="date">June '14 - Sept '14</div>
+			<div class="title">Revenue Management Systems, Inc.</div>
+			<div class="location">Seattle, Washington</div>
+			<div class="date">January 2014 - March 2015</div>
 			<div class="subtitle">Software Engineer</div>
 			<ul>
-				<li>Developed tools and utilities that enhanced usability and
-					reliability to internal systems</li>
+				<li>Built tools to automate mundane tasks</li>
+				<li>Co-produced a web-based dashboard that tracked database health</li>
+				<li>Developed a modern, responsive, mobile-first website</li>
 			</ul>
 		</div>
 		<div class="resume-triple-list">
@@ -52,26 +47,20 @@ Sorry.">
 			<div class="date">Sept '12 - July '13</div>
 			<div class="subtitle">Web Application Developer</div>
 			<ul>
-				<li>Created a dynamic web-based computer lab reservation system,
-					complete with ticketing support; used by a 4,000 student school
-					district</li>
+				<li>Created a dynamic web-based computer lab reservation system, complete with ticketing support; to be used by a 4,000 student school district</li>
 			</ul>
 		</div>
 		<div class="resume-triple-list">
 			<div class="title">Kodleeshare / Fru1tMe</div>
-			<div class="location">Home</div>
-			<div class="date">'10 - Present</div>
-			<div class="subtitle">Web Developer / Server Engineer / "All of the
-				above"</div>
+			<div class="location">Seattle, Washington</div>
+			<div class="date">'08 - Present</div>
+			<div class="subtitle">Web Developer / Server Engineer / "All of the above"</div>
 			<ul>
-				<li>Pioneering with experimental web technologies such as Web Audio
-					Engine and Canvas</li>
-				<li>Maintaining server hardware and infrastructure along with server
-					security</li>
-				<li>Used professional video editing tools such as Adobe Premiere Pro
-					and Adobe After Effects to create high quality videos</li>
-				<li>Supported and maintained multiple popular game servers with
-					large communities</li>
+				<li>Pioneering with experimental web technologies such as Canvas, WebAudio, and DOMApplications</li>
+				<li>Maintaining server hardware and infrastructure along with server security</li>
+				<li>Used professional video editing tools such as Adobe Premiere Pro and Adobe After Effects to create high quality videos</li>
+				<li>Supported and maintained multiple popular game servers with large communities</li>
+				<li><a href="/projects">See my open source projects here</a></li>
 			</ul>
 		</div>
 		<div class="resume-section end">Experience</div>
@@ -90,7 +79,7 @@ Sorry.">
 			<div class="date">Sept '06 - Sept '13</div>
 			<div class="subtitle">Eagle Scout</div>
 			<ul>
-				<li>Created several scripts to automate a CNC router</li>
+				<li>Created applications and scripts that converted legacy files to CNC machine readable formats</li>
 			</ul>
 		</div>
 		<div class="resume-section end">Education &amp; Achievements</div>
@@ -99,29 +88,19 @@ Sorry.">
 		<ul class="resume-list">
 			<li>Self-taught programmer with a strong desire to expand knowledge</li>
 			<li>Aptitude for creative problem solving and abstract thinking</li>
-			<li>Well versed in a multitude of programming patterns and paradigms
-				with languages such as PHP, Java, JavaScript, C#, Visual Basic,
-				Delphi, and Python.</li>
-			<li>Deep understanding in dynamic web development including
-				mobile-first, desktop-first, and responsive designs using HTML,
-				SASS-y CSS, jQuery, and ASP.NET</li>
-			<li>Heavy experience with relational databases using MySQL and T-SQL</li>
-			<li>Seasoned user of version control system GIT with knowledge of SVN
-				and Vault</li>
-			<li>Familiar with large-scale, distributed systems, including
-				technologies such as Bigtable and MapReduce</li>
+			<li>Well versed in a multitude of programming patterns and paradigms in PHP, Java, JavaScript, C#</li>
+			<li>Deep understanding in dynamic web development with responsive designs using HTML, SASS, CSS, and libraries such as jQuery (core, mobile, UI), and Closure</li>
+			<li>Heavy experience with relational databases using MySQL and MSSQL</li>
+			<li>Seasoned user of version control system Git with knowledge of SVN and Vault</li>
 			<li>A true linux fan who develops on Ubuntu and distributes on Debian</li>
 		</ul>
 		<div class="resume-section end">Skills</div>
 
 		<div class="resume-section start">Interests</div>
 		<ul class="resume-list">
-			<li>The outdoors - I love hiking, biking, camping, skiing, and
-				coordinated drowning (swimming as they call it).</li>
-			<li>Talking - Drama improv and public speaking are both a fun
-				passtimes of mine.</li>
-			<li>Cooking - I've managed to set cerial on fire which, I've been
-				told, takes a lot of skill to do.</li>
+			<li>Outdoors and Sports - I love hiking, backpacking, camping, biking, skiing, and playing ping pong</li>
+			<li>Public Speaking - I am no stranger to presentations, teaching, and drama improv</li>
+			<li>Cooking - I mean... I've caught cereal on fire before, which I've been told, takes a lot of skill to do...</li>
 		</ul>
 		<div class="resume-section end">Interests</div>
 
