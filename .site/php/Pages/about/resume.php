@@ -104,6 +104,11 @@ import::Page ();
 		</ul>
 		<div class="resume-section end">Interests</div>
 
+		<div class="clearfix"></div>
+		<div class="resume-download">
+			<a class="link-external" target="_blank" href="https://s3.amazonaws.com/ks_web/fru1t.me/about/KodleeYin-2015-10-01-PublicResume.pdf">Download as .pdf</a>
+			<a class="link-external" target="_blank" href="https://s3.amazonaws.com/ks_web/fru1t.me/about/KodleeYin-2015-10-01-PublicResume.docx">Download as .docx</a>
+		</div>
 	</div>
 	<div class="spacer page"></div>
 </div>

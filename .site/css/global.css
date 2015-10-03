@@ -887,6 +887,18 @@ a:hover {
   height: 50px;
 }
 
+/* line 172, source/_about.scss */
+.resume-download a {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: #333;
+  margin: 10px 5px;
+}
+/* line 178, source/_about.scss */
+.resume-download a:hover {
+  color: #FFF;
+}
+
 /****************************************************************Tools*/
 /* line 2, source/_tools.scss */
 .tools-list {
