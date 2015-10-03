@@ -1,8 +1,7 @@
-apache_custom.log
-apache_error.log
 .sass-cache/
 .externalToolBuilders/
 .settings/
 .buildpath
 .project
 build.xml
+.idea/

@@ -16,10 +16,11 @@ if (Page::getBodyOnlyRequest()) {
 	<head>
 		<title>Fru1tMe</title>
 		<meta charset="UTF-8" />
+		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 		<link href="/.site/css/global.css" rel="stylesheet" type="text/css" />
 		<script src="/.site/js/preload.js"></script>
 	</head>
-	
+
 	<body>
 		<noscript>
 		<div id="nojs">
@@ -50,7 +51,7 @@ if (Page::getBodyOnlyRequest()) {
 			</div>
 		</div>
 		</noscript>
-		
+
 		<div id="global-nav">
 			<div id="global-nav-toggle"></div>
 			<a href="/home" class="global-nav-item">Home</a>
@@ -59,20 +60,20 @@ if (Page::getBodyOnlyRequest()) {
 			<a href="/code" class="global-nav-item">Code</a>
 			<a href="/tools" class="global-nav-item">Tools</a>
 		</div>
-		
+
 		<div id="global-content">
 			<?php include(Page::getPageLocation(Page::getPageRequest())); ?>
 		</div>
-		
+
 		<div id="background">
 			<div id="global-console" class="console"></div>
 		</div>
-		
+
 		<script src="/.site/js/global.js"></script>
 		<script src="/.site/js/goog_analytics.js"></script>
 	</body>
 </html>
 
-<?php 
+<?php
 OutputBuffering::flush();
 ?>
