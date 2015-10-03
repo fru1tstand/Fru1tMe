@@ -10,7 +10,6 @@
 	}
 	dt {
 		font-weight: bold;
-		padding-left: 20px;
 		padding: 10px;
 	}
 	blockquote {
@@ -60,7 +59,7 @@
 		text-align: center;
 		font-size: 10px;
 	}
-	.git-filename { 
+	.git-filename {
 		text-align: center;
 		margin-bottom: 10px;
 	}
@@ -85,7 +84,7 @@
 	&:after { content: $after; color: $color; }
 }
 .resume {
-	font-family: $font-family-contrast;
+	//font-family: $font-family-contrast;
 	font-size: 16px;
 	*:before { font-weight: normal; font-style: normal; }
 	*:after { font-weight: normal; font-style: normal; }
@@ -139,23 +138,27 @@
 .privacy-policy, .legal-policy {
 	width: 1000px;
 	margin: 50px auto;
-	
+
 	h1 {
 		text-align: center;
 	}
-	
+
 	h2 {
 		margin-top: 35px;
 	}
-	
+
 	h3 {
 		margin-top: 50px;
 	}
-	
+
 	div {
 		margin: 10px 0 0 15px;
 		padding-left: 15px;
 		border-left: 1px solid $colorset-a-highlight;
 		text-indent: 25px;
 	}
+}
+
+.projects-spacer {
+	height: 50px;
 }

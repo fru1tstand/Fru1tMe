@@ -1,7 +1,7 @@
 /****************************************************************project.scss*/
 .projects {
 	margin-bottom: 20px;
-	
+
 	.project-list {
 		width: 50%;
 		float: left;
@@ -31,13 +31,13 @@
 		padding: 5px 20px;
 		cursor: pointer;
 		box-sizing: border-box;
-		
+
 		&:hover {
 			color: $colorset-c-text-rollover;
 			background-color: $colorset-c-background-rollover;
 		}
 	}
-	
+
 	.more {
 		box-sizing: border-box;
 		border-left: 1px solid $colorset-c-background-rollover;
@@ -46,12 +46,13 @@
 		padding: 20px;
 		height: 100vh;
 		overflow: auto;
-		
+
 		div {
 			display: none;
 		}
 		p {
-			color: $colorset-a-text-accent;
+			//color: $colorset-c-text;
+			margin-bottom: 40px;
 		}
 		a {
 			display: block;
@@ -71,7 +72,7 @@
 		font-weight: bold;
 	}
 	dd {
-		margin: 0 0 10px 15px;
-		color: $colorset-a-text-accent;
+		margin: 0 0 30px 15px;
+		color: $colorset-c-text;
 	}
 }

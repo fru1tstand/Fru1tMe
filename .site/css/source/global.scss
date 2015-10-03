@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /** Global vars */
-$font-family: Optima,Calibri,Candara,Segoe,Segoe UI,Arial,sans-serif;
+$font-family: Anrimo,Calibri,Candara,Segoe,Segoe UI,Arial,sans-serif;
 $font-family-contrast: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
-$menu-font-family: Calibri,Optima,Arial,sans-serif;
+$menu-font-family: Arnimo,Calibri,Optima,Arial,sans-serif;
 
 $colorset-default-background: #120203;
 
@@ -47,13 +47,13 @@ $page-max-width: 1200px;
 }
 @mixin animation($parameters) {
 	-webkit-animation: $parameters;
-	-moz-animation: $parameters; 
+	-moz-animation: $parameters;
 	animation: $parameters;
 }
 @mixin transition($params...) {
 	-webkit-transition: $params;
 	-moz-transition: $params;
-	transition: $params; 
+	transition: $params;
 }
 @mixin keyframe($name) {
 	@-webkit-keyframes #{$name} { @content; }
