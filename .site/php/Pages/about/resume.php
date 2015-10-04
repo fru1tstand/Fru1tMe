@@ -10,7 +10,7 @@ import::Page ();
 			<h1>Kodlee Yin</h1>
 			<p class="email">
 				<!-- A majority of scrapers don't run javascript -->
-				<script>document.write("kodlee");</script><span class="email-at"></span><span class="email-dm">share</span><span class="email-dot"></span>net
+				kodlee<span class="email-at"></span><span class="email-dm">share</span><span class="email-dot"></span>net | <a class="link-external" target="_blank" href="https://www.linkedin.com/pub/kodlee-yin/a4/a0a/82b">LinkedIn</a>
 			</p>
 		</div>
 		<div class="hr common-title"></div>

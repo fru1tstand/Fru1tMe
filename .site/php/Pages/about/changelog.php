@@ -7,7 +7,6 @@ import::Standard();
 //So much data is going to flow, rather let it go now. This page doesn't
 //require any headers anyway.
 OutputBuffering::flush();
-error_reporting(E_ALL);
 ?>
 <div class="backgrounded">
 	<div class="container">
