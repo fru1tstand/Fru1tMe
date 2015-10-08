@@ -1,0 +1,30 @@
+* {
+  font-family: Raleway, Palatino, serif; }
+
+body, html {
+  height: 100%;
+  background-color: #F2F2F2; }
+
+body, html,
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #436FE9; }
+  a:hover, a:active {
+    color: #778fe9; }
+  a.disabled {
+    color: #99B7C3;
+    cursor: default; }
+
+nav {
+  background-color: #E0E0E0;
+  height: 50px; }
+  nav:hover, nav.open {
+    height: 200px; }
+
+/*# sourceMappingURL=global.css.map */

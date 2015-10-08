@@ -1,0 +1,41 @@
+@import 'variables';
+
+* {
+	font-family: Raleway, Palatino, serif;
+}
+
+body, html {
+	height: 100%;
+	background-color: $body-background;
+}
+
+body, html,
+h1, h2, h3, h4, h5, h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+
+	&:link, &:visited {
+		color: $active-text;
+	}
+
+	&:hover, &:active {
+		color: $active-text-accent;
+	}
+
+	&.disabled {
+		color: $active-text-disabled;
+		cursor: default;
+	}
+}
+
+@import 'mobile/nav';
+
+// Mobile first
+@media(min-width: $device-mobile-cutoff) {
+
+}

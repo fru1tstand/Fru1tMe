@@ -1,0 +1,8 @@
+nav {
+	background-color: $nav-background;
+	height: 50px;
+
+	&:hover, &.open {
+		height: 200px;
+	}
+}
