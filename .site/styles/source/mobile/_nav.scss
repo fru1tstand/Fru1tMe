@@ -1,8 +1,122 @@
-nav {
-	background-color: $nav-background;
-	height: 50px;
+$nav-banner-height: 42px;
+$nav-menu-item-height: 42px;
+$content-padding: 14px;
+$nav-menu-item-cascade-delay: 0.05s;
 
-	&:hover, &.open {
-		height: 200px;
+nav {
+	width: 100%;
+	background-color: $body-background;
+
+	// Menu item styles
+
+	ul {
+		list-style: none;
+		position: fixed;
+		top: $nav-banner-height;
+		bottom: 0;
+		left: 100%;
+		right: -100%;
 	}
+
+	li {
+		margin-left: 0;
+		width: 100%;
+		transition-property: margin-left;
+		transition-timing-function: $ease-out;
+		transition-duration: $duration-action;
+		-webkit-transition-property: margin-left;
+		-webkit-transition-timing-function: $ease-out;
+		-webkit-transition-duration: $duration-action;
+	}
+	.controller:checked + ul > li {
+		margin-left: -100%;
+	}
+	@for $i from 1 through 20 {
+		li:nth-child(#{$i}) {
+			@include transition-delay($nav-menu-item-cascade-delay * ($i - 1));
+		}
+	}
+
+	li > label,
+	li > a:link,
+	li > a:visited {
+		display: block;
+		height: $nav-menu-item-height;
+		line-height: $nav-menu-item-height;
+		text-decoration: none;
+		color: $active-text;
+		padding-left: $content-padding;
+		border-bottom: 1px solid $nav-border-color;
+		font-size: 14px;
+		background-color: #FFFFFF;
+		cursor: pointer;
+		width: 100%;
+	}
+	li.nav-go-back ~ li {
+		> a:link,
+		> a:visited,
+		> label {
+			padding-left: $content-padding * 2;
+		}
+	}
+
+	li > label:hover,
+	li > a:hover,
+	li > a:active {
+		background-color: $nav-banner-background;
+		color: $body-background;
+	}
+}
+
+.nav-banner {
+	&::before {
+		content: 'Fru1tMe';
+		font-weight: bold;
+	}
+
+	background-color: $nav-banner-background;
+	color: $body-background;
+	font-size: 16px;
+	display: block;
+	overflow: hidden;
+	padding: 0 $content-padding;
+	height: $nav-banner-height;
+	line-height: $nav-banner-height;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	&.fixed {
+		position: fixed;
+	}
+}
+
+// Fixed nav behavior
+#nav-collapsed:checked + .nav-banner {
+	display: none;
+}
+#nav-collapsed:not(:checked) + .nav-banner {
+	display: block;
+}
+
+#nav-expanded + div {
+	position: fixed;
+	top: $nav-banner-height;
+	left: 0;
+	right: 0;
+	bottom: 100%;
+	overflow: auto;
+	z-index: 2;
+
+	@include transition(bottom $duration-action $ease-out);
+
+	li {
+		transition-timing-function: $ease-in;
+	}
+}
+
+#nav-expanded:checked + div {
+	bottom: 0;
+
+	@include transition(bottom $duration-action $ease-in);
 }

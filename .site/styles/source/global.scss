@@ -1,7 +1,9 @@
 @import 'variables';
+@import 'mixins';
 
 * {
 	font-family: Raleway, Palatino, serif;
+	box-sizing: border-box;
 }
 
 body, html {
@@ -11,6 +13,7 @@ body, html {
 
 body, html,
 h1, h2, h3, h4, h5, h6,
+ul, li,
 p {
 	margin: 0;
 	padding: 0;
@@ -33,9 +36,12 @@ a {
 	}
 }
 
+.controller {
+	display: none;
+}
+
 @import 'mobile/nav';
 
 // Mobile first
 @media(min-width: $device-mobile-cutoff) {
-
 }

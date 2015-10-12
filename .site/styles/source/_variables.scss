@@ -1,11 +1,20 @@
-// Screen modes
+// Sizings and layouts
 $device-mobile-cutoff: 760px;
 
 // Colors colors everywhere
-$body-background: #F2F2F2;
-$nav-background: #E0E0E0;
+$body-background: #EEE;
+$nav-banner-background: #778fe9;
+$nav-background: #FFFFFF;
+$nav-border-color: #E9E9E9;
 
 // Active for links, accent for hover
 $active-text: #436FE9;
 $active-text-accent: #778fe9;
 $active-text-disabled: #99B7C3;
+
+// Easing beziers
+$ease-out: cubic-bezier(.17,.84,.44,1);
+$ease-in: cubic-bezier(.9,.03,.69,.22);
+
+// Animation timings
+$duration-action: 0.3s;
