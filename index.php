@@ -27,6 +27,8 @@ if (Page::getBodyOnlyRequest()) {
 </head>
 
 <body>
+	<div id="global-header"></div>
+
 	<nav>
 		<form>
 			<!-- Static and scrolled banner -->
