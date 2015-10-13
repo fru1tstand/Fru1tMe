@@ -1,6 +1,6 @@
 <?php
 namespace fru1tme\html;
-use common\template\Template;
+use common\template\TemplateInterface;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/fru1tme/Setup.php';
 
@@ -8,25 +8,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/fru1tme/Setup.php';
  * Class Fru1tMeTemplate
  * Defines the Fru1tMe template.
  */
-class Fru1tMeTemplate extends Template {
+class Fru1tMeTemplate implements TemplateInterface {
 	const FIELD_HEADER = "header";
 	const FIELD_BODY = "body";
 	const FIELD_TITLE = "title";
 
-	/** @var $instance Fru1tMeTemplate */
-	private static $instance;
-
-	public static function getInstance() {
-		if (!isset(self::$instance)) {
-
-		}
+	public static function getFields() {
+		return [self::FIELD_BODY, self::FIELD_HEADER, self::FIELD_TITLE];
 	}
 
-	protected function getFields() {
-		// TODO: Implement getFields() method.
+	public static function getClass() {
+		return 'fru1tme\html\Fru1tMeTemplate';
 	}
 
-	protected function getRenderContents($fields) {
+	public static function getRenderContents($fields) {
 		return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
