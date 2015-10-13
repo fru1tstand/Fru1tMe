@@ -217,7 +217,7 @@ nav li > a:active {
 }
 /* line 72, ../source/mobile/_nav.scss */
 .nav-banner::before {
-  content: 'Fru1tMe';
+  content: 'Fru1tMe / ';
   font-weight: bold;
 }
 /* line 89, ../source/mobile/_nav.scss */
