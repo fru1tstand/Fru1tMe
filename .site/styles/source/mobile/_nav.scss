@@ -16,6 +16,7 @@ nav {
 		bottom: 0;
 		left: 100%;
 		right: -100%;
+		z-index: 99999999999;
 	}
 
 	li {
@@ -85,10 +86,8 @@ nav {
 	top: 0;
 	left: 0;
 	right: 0;
-
-	&.fixed {
-		position: fixed;
-	}
+	position: fixed;
+	z-index: 9999999999;
 }
 
 // Fixed nav behavior
@@ -106,7 +105,7 @@ nav {
 	right: 0;
 	bottom: 100%;
 	overflow: auto;
-	z-index: 2;
+	z-index: 99999999999;
 
 	@include transition(bottom $duration-action $ease-out);
 

@@ -9,12 +9,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/.site/php/fru1tme/Setup.php';
  * Defines the Fru1tMe template.
  */
 class Fru1tMeTemplate implements TemplateInterface {
-	const FIELD_HEADER = "header";
 	const FIELD_BODY = "body";
 	const FIELD_TITLE = "title";
 
 	public static function getFields() {
-		return [self::FIELD_BODY, self::FIELD_HEADER, self::FIELD_TITLE];
+		return [self::FIELD_BODY, self::FIELD_TITLE];
 	}
 
 	public static function getClass() {
@@ -37,8 +36,6 @@ class Fru1tMeTemplate implements TemplateInterface {
 </head>
 
 <body>
-	<div id="global-header">{$fields[Fru1tMeTemplate::FIELD_HEADER]}</div>
-
 	<nav>
 		<form>
 			<!-- Static and scrolled banner -->
@@ -95,6 +92,4 @@ class Fru1tMeTemplate implements TemplateInterface {
 </html>
 HTML;
 	}
-
-
 }

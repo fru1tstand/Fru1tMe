@@ -40,7 +40,15 @@ a {
 	display: none;
 }
 
+#global-content {
+	min-height: 100%;
+}
+
+
+
+@import 'parallax';
 @import 'mobile/nav';
+@import 'mobile/_home';
 
 // Mobile first
 @media(min-width: $device-mobile-cutoff) {

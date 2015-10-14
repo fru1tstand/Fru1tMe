@@ -1,0 +1,57 @@
+// Layer depth mixin
+
+$parallax-perspective: 1;
+@mixin parallax-depth($depth) {
+	transform: translateZ(#{$depth}px) scale((1 - $depth) / $parallax-perspective);
+}
+
+// Specifies a parallax layer, you shouldn't use this class.
+.parallax-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 100vh 0;
+
+	.middle {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+// Optional, if there are multiple parallax screens in a single page.
+.parallax-group {
+	position: relative;
+	height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+// Root parallax object. This specifies the screen for viewing the parallax content.
+.parallax {
+	perspective: #{$parallax-perspective}px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	@for $i from 0 through 10 {
+		.layer-#{$i} {
+			@extend .parallax-layer;
+			@include parallax-depth(-$i);
+		}
+
+		.group-#{$i + 1} {
+			@extend .parallax-group;
+			z-index: $i + 1;
+			background-color: $body-background;
+		}
+	}
+
+	.layer-frozen {
+		@extend .parallax-layer;
+		@include parallax-depth(100000000);
+	}
+}
+
