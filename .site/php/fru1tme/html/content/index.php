@@ -5,17 +5,14 @@ use fru1tme\html\Fru1tMeTemplate;
 
 $body = <<<HTML
 <div class="home parallax">
-	<div class="group-3">
-		<div class="layer-10">
-			<h1>Fru1tMe</h1>
-		</div>
-		<!--<div class="layer-frozen">-->
-			<!--<img src="https://s3.amazonaws.com/ks_web/fru1t.me/blurred-trees-bg.jpg" alt="" />-->
-		<!--</div>-->
-	</div>
-	<div class="group-1">
+	<div class="group-2 header">
 		<div class="layer-0">
-			<p class="centered">
+			<h1>Welcome</h1>
+		</div>
+	</div>
+	<div class="group-1 about">
+		<div class="layer--10 description">
+			<p>
 				This website is one giant experiment for me to play around with different
 				web technologies and such. Enjoy random tidbits of my attention span running
 				around different facets of the web and exploring their possibilities. Want to
@@ -24,11 +21,15 @@ $body = <<<HTML
 				from others.
 			</p>
 		</div>
-
-		<div class="layer-2">ffff</div>
+		<div class="layer-background">
+			<img src="https://s3.amazonaws.com/ks_web/fru1t.me/blurred-trees-bg.jpg" alt="" />
+		</div>
 	</div>
-
-
+	<div class="group-2 nav-pointer">
+		<p class="layer-0">
+			Tap the navigation bar to explore
+		</p>
+	</div>
 </div>
 HTML;
 

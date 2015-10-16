@@ -1,8 +1,8 @@
 // Layer depth mixin
 
-$parallax-perspective: 1;
+$parallax-perspective: 300;
 @mixin parallax-depth($depth) {
-	transform: translateZ(#{$depth}px) scale((1 - $depth) / $parallax-perspective);
+	transform: translateZ(#{$depth}px) scale(($parallax-perspective - $depth) / $parallax-perspective);
 }
 
 // Specifies a parallax layer, you shouldn't use this class.
@@ -27,6 +27,8 @@ $parallax-perspective: 1;
 	height: 100vh;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+
+	//transform: translate3d(700px, 0, -800px) rotateY(30deg);
 }
 
 // Root parallax object. This specifies the screen for viewing the parallax content.
@@ -36,22 +38,22 @@ $parallax-perspective: 1;
 	overflow-x: hidden;
 	overflow-y: auto;
 
-	@for $i from 0 through 10 {
+	@for $i from -10 through 10 {
 		.layer-#{$i} {
 			@extend .parallax-layer;
-			@include parallax-depth(-$i);
+			@include parallax-depth($i * 50);
+			z-index: 100 - $i;
 		}
 
 		.group-#{$i + 1} {
 			@extend .parallax-group;
 			z-index: $i + 1;
-			background-color: $body-background;
 		}
 	}
 
-	.layer-frozen {
-		@extend .parallax-layer;
-		@include parallax-depth(100000000);
+	.layer-background {
+		position: absolute;
+		@include parallax-depth(-9999);
 	}
 }
 

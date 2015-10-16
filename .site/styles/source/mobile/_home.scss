@@ -1,11 +1,43 @@
 .home {
-	section {
-		position: fixed;
+	.header {
+		background-color: $body-background;
+
+		h1 {
+			position: absolute;
+			top: 20%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-weight: bold;
+			color: #FFF;
+			text-shadow: -1px -1px 0 #999;
+			padding: 0;
+		}
 	}
-}
-#parallax-group-1 {
-	z-index: 1;
-}
-#parallax-group-2 {
-	z-index: 2;
+
+	.about {
+		height: 340vh;
+		.layer-background {
+			img {
+				height: 130vh;
+			}
+		}
+		.description {
+			p {
+				position: absolute;
+				top: 40%;
+				background-color: rgba(0, 0, 0, 0.7);
+				padding: $content-padding * 2 $content-padding;
+				color: $body-background;
+			}
+		}
+	}
+
+	.nav-pointer {
+		background-color: $body-background;
+
+		p {
+			padding: 0;
+		}
+	}
 }

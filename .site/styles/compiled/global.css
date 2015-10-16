@@ -1,348 +1,275 @@
-/* line 4, ../source/global.scss */
 * {
   font-family: Raleway, Palatino, serif;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 9, ../source/global.scss */
 body, html {
   height: 100%;
-  background-color: #EEE;
-}
+  background-color: #EEE; }
 
-/* line 14, ../source/global.scss */
 body, html,
 h1, h2, h3, h4, h5, h6,
 ul, li,
 p {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 22, ../source/global.scss */
 a {
-  text-decoration: none;
-}
-/* line 25, ../source/global.scss */
-a:link, a:visited {
-  color: #436FE9;
-}
-/* line 29, ../source/global.scss */
-a:hover, a:active {
-  color: #778fe9;
-}
-/* line 33, ../source/global.scss */
-a.disabled {
-  color: #99B7C3;
-  cursor: default;
-}
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #436FE9; }
+  a:hover, a:active {
+    color: #778fe9; }
+  a.disabled {
+    color: #99B7C3;
+    cursor: default; }
 
-/* line 39, ../source/global.scss */
 .controller {
-  display: none;
-}
+  display: none; }
 
-/* line 43, ../source/global.scss */
 #global-content {
-  min-height: 100%;
-}
+  min-height: 100%; }
 
-/* line 9, ../source/_parallax.scss */
-.parallax-layer, .parallax .layer-0, .parallax .layer-1, .parallax .layer-2, .parallax .layer-3, .parallax .layer-4, .parallax .layer-5, .parallax .layer-6, .parallax .layer-7, .parallax .layer-8, .parallax .layer-9, .parallax .layer-10, .parallax .layer-frozen {
+.container {
+  padding: 0 14px; }
+
+.parallax-layer, .parallax .layer--10, .parallax .layer--9, .parallax .layer--8, .parallax .layer--7, .parallax .layer--6, .parallax .layer--5, .parallax .layer--4, .parallax .layer--3, .parallax .layer--2, .parallax .layer--1, .parallax .layer-0, .parallax .layer-1, .parallax .layer-2, .parallax .layer-3, .parallax .layer-4, .parallax .layer-5, .parallax .layer-6, .parallax .layer-7, .parallax .layer-8, .parallax .layer-9, .parallax .layer-10 {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 100vh 0;
-}
-/* line 17, ../source/_parallax.scss */
-.parallax-layer .middle, .parallax .layer-0 .middle, .parallax .layer-1 .middle, .parallax .layer-2 .middle, .parallax .layer-3 .middle, .parallax .layer-4 .middle, .parallax .layer-5 .middle, .parallax .layer-6 .middle, .parallax .layer-7 .middle, .parallax .layer-8 .middle, .parallax .layer-9 .middle, .parallax .layer-10 .middle, .parallax .layer-frozen .middle {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-}
+  padding: 100vh 0; }
+  .parallax-layer .middle, .parallax .layer--10 .middle, .parallax .layer--9 .middle, .parallax .layer--8 .middle, .parallax .layer--7 .middle, .parallax .layer--6 .middle, .parallax .layer--5 .middle, .parallax .layer--4 .middle, .parallax .layer--3 .middle, .parallax .layer--2 .middle, .parallax .layer--1 .middle, .parallax .layer-0 .middle, .parallax .layer-1 .middle, .parallax .layer-2 .middle, .parallax .layer-3 .middle, .parallax .layer-4 .middle, .parallax .layer-5 .middle, .parallax .layer-6 .middle, .parallax .layer-7 .middle, .parallax .layer-8 .middle, .parallax .layer-9 .middle, .parallax .layer-10 .middle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); }
 
-/* line 25, ../source/_parallax.scss */
-.parallax-group, .parallax .group-1, .parallax .group-2, .parallax .group-3, .parallax .group-4, .parallax .group-5, .parallax .group-6, .parallax .group-7, .parallax .group-8, .parallax .group-9, .parallax .group-10, .parallax .group-11 {
+.parallax-group, .parallax .group--9, .parallax .group--8, .parallax .group--7, .parallax .group--6, .parallax .group--5, .parallax .group--4, .parallax .group--3, .parallax .group--2, .parallax .group--1, .parallax .group-0, .parallax .group-1, .parallax .group-2, .parallax .group-3, .parallax .group-4, .parallax .group-5, .parallax .group-6, .parallax .group-7, .parallax .group-8, .parallax .group-9, .parallax .group-10, .parallax .group-11 {
   position: relative;
   height: 100vh;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+  transform-style: preserve-3d; }
 
-/* line 33, ../source/_parallax.scss */
 .parallax {
-  perspective: 1px;
+  perspective: 300px;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-0 {
-  transform: translateZ(0px) scale(1);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-1 {
-  z-index: 1;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-1 {
-  transform: translateZ(-1px) scale(2);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-2 {
-  z-index: 2;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-2 {
-  transform: translateZ(-2px) scale(3);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-3 {
-  z-index: 3;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-3 {
-  transform: translateZ(-3px) scale(4);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-4 {
-  z-index: 4;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-4 {
-  transform: translateZ(-4px) scale(5);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-5 {
-  z-index: 5;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-5 {
-  transform: translateZ(-5px) scale(6);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-6 {
-  z-index: 6;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-6 {
-  transform: translateZ(-6px) scale(7);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-7 {
-  z-index: 7;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-7 {
-  transform: translateZ(-7px) scale(8);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-8 {
-  z-index: 8;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-8 {
-  transform: translateZ(-8px) scale(9);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-9 {
-  z-index: 9;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-9 {
-  transform: translateZ(-9px) scale(10);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-10 {
-  z-index: 10;
-  background-color: #EEE;
-}
-/* line 40, ../source/_parallax.scss */
-.parallax .layer-10 {
-  transform: translateZ(-10px) scale(11);
-}
-/* line 45, ../source/_parallax.scss */
-.parallax .group-11 {
-  z-index: 11;
-  background-color: #EEE;
-}
-/* line 52, ../source/_parallax.scss */
-.parallax .layer-frozen {
-  transform: translateZ(100000000px) scale(-99999999);
-}
+  overflow-y: auto; }
+  .parallax .layer--10 {
+    transform: translateZ(-500px) scale(2.66667);
+    z-index: 110; }
+  .parallax .group--9 {
+    z-index: -9; }
+  .parallax .layer--9 {
+    transform: translateZ(-450px) scale(2.5);
+    z-index: 109; }
+  .parallax .group--8 {
+    z-index: -8; }
+  .parallax .layer--8 {
+    transform: translateZ(-400px) scale(2.33333);
+    z-index: 108; }
+  .parallax .group--7 {
+    z-index: -7; }
+  .parallax .layer--7 {
+    transform: translateZ(-350px) scale(2.16667);
+    z-index: 107; }
+  .parallax .group--6 {
+    z-index: -6; }
+  .parallax .layer--6 {
+    transform: translateZ(-300px) scale(2);
+    z-index: 106; }
+  .parallax .group--5 {
+    z-index: -5; }
+  .parallax .layer--5 {
+    transform: translateZ(-250px) scale(1.83333);
+    z-index: 105; }
+  .parallax .group--4 {
+    z-index: -4; }
+  .parallax .layer--4 {
+    transform: translateZ(-200px) scale(1.66667);
+    z-index: 104; }
+  .parallax .group--3 {
+    z-index: -3; }
+  .parallax .layer--3 {
+    transform: translateZ(-150px) scale(1.5);
+    z-index: 103; }
+  .parallax .group--2 {
+    z-index: -2; }
+  .parallax .layer--2 {
+    transform: translateZ(-100px) scale(1.33333);
+    z-index: 102; }
+  .parallax .group--1 {
+    z-index: -1; }
+  .parallax .layer--1 {
+    transform: translateZ(-50px) scale(1.16667);
+    z-index: 101; }
+  .parallax .group-0 {
+    z-index: 0; }
+  .parallax .layer-0 {
+    transform: translateZ(0px) scale(1);
+    z-index: 100; }
+  .parallax .group-1 {
+    z-index: 1; }
+  .parallax .layer-1 {
+    transform: translateZ(50px) scale(0.83333);
+    z-index: 99; }
+  .parallax .group-2 {
+    z-index: 2; }
+  .parallax .layer-2 {
+    transform: translateZ(100px) scale(0.66667);
+    z-index: 98; }
+  .parallax .group-3 {
+    z-index: 3; }
+  .parallax .layer-3 {
+    transform: translateZ(150px) scale(0.5);
+    z-index: 97; }
+  .parallax .group-4 {
+    z-index: 4; }
+  .parallax .layer-4 {
+    transform: translateZ(200px) scale(0.33333);
+    z-index: 96; }
+  .parallax .group-5 {
+    z-index: 5; }
+  .parallax .layer-5 {
+    transform: translateZ(250px) scale(0.16667);
+    z-index: 95; }
+  .parallax .group-6 {
+    z-index: 6; }
+  .parallax .layer-6 {
+    transform: translateZ(300px) scale(0);
+    z-index: 94; }
+  .parallax .group-7 {
+    z-index: 7; }
+  .parallax .layer-7 {
+    transform: translateZ(350px) scale(-0.16667);
+    z-index: 93; }
+  .parallax .group-8 {
+    z-index: 8; }
+  .parallax .layer-8 {
+    transform: translateZ(400px) scale(-0.33333);
+    z-index: 92; }
+  .parallax .group-9 {
+    z-index: 9; }
+  .parallax .layer-9 {
+    transform: translateZ(450px) scale(-0.5);
+    z-index: 91; }
+  .parallax .group-10 {
+    z-index: 10; }
+  .parallax .layer-10 {
+    transform: translateZ(500px) scale(-0.66667);
+    z-index: 90; }
+  .parallax .group-11 {
+    z-index: 11; }
+  .parallax .layer-background {
+    position: absolute;
+    transform: translateZ(-9999px) scale(34.33); }
 
-/* line 6, ../source/mobile/_nav.scss */
 nav {
   width: 100%;
-  background-color: #EEE;
-}
-/* line 12, ../source/mobile/_nav.scss */
-nav ul {
-  list-style: none;
-  position: fixed;
-  top: 42px;
-  bottom: 0;
-  left: 100%;
-  right: -100%;
-  z-index: 99999999999;
-}
-/* line 22, ../source/mobile/_nav.scss */
-nav li {
-  margin-left: 0;
-  width: 100%;
-  transition-property: margin-left;
-  transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
-  transition-duration: 0.3s;
-  -webkit-transition-property: margin-left;
-  -webkit-transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
-  -webkit-transition-duration: 0.3s;
-}
-/* line 32, ../source/mobile/_nav.scss */
-nav .controller:checked + ul > li {
-  margin-left: -100%;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(1) {
-  transition-delay: 0s;
-  -webkit-transition-delay: 0s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(2) {
-  transition-delay: 0.05s;
-  -webkit-transition-delay: 0.05s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(3) {
-  transition-delay: 0.1s;
-  -webkit-transition-delay: 0.1s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(4) {
-  transition-delay: 0.15s;
-  -webkit-transition-delay: 0.15s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(5) {
-  transition-delay: 0.2s;
-  -webkit-transition-delay: 0.2s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(6) {
-  transition-delay: 0.25s;
-  -webkit-transition-delay: 0.25s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(7) {
-  transition-delay: 0.3s;
-  -webkit-transition-delay: 0.3s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(8) {
-  transition-delay: 0.35s;
-  -webkit-transition-delay: 0.35s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(9) {
-  transition-delay: 0.4s;
-  -webkit-transition-delay: 0.4s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(10) {
-  transition-delay: 0.45s;
-  -webkit-transition-delay: 0.45s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(11) {
-  transition-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(12) {
-  transition-delay: 0.55s;
-  -webkit-transition-delay: 0.55s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(13) {
-  transition-delay: 0.6s;
-  -webkit-transition-delay: 0.6s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(14) {
-  transition-delay: 0.65s;
-  -webkit-transition-delay: 0.65s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(15) {
-  transition-delay: 0.7s;
-  -webkit-transition-delay: 0.7s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(16) {
-  transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(17) {
-  transition-delay: 0.8s;
-  -webkit-transition-delay: 0.8s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(18) {
-  transition-delay: 0.85s;
-  -webkit-transition-delay: 0.85s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(19) {
-  transition-delay: 0.9s;
-  -webkit-transition-delay: 0.9s;
-}
-/* line 36, ../source/mobile/_nav.scss */
-nav li:nth-child(20) {
-  transition-delay: 0.95s;
-  -webkit-transition-delay: 0.95s;
-}
-/* line 41, ../source/mobile/_nav.scss */
-nav li > label,
-nav li > a:link,
-nav li > a:visited {
-  display: block;
-  height: 42px;
-  line-height: 42px;
-  text-decoration: none;
-  color: #436FE9;
-  padding-left: 14px;
-  border-bottom: 1px solid #E9E9E9;
-  font-size: 14px;
-  background-color: #FFFFFF;
-  cursor: pointer;
-  width: 100%;
-}
-/* line 57, ../source/mobile/_nav.scss */
-nav li.nav-go-back ~ li > a:link,
-nav li.nav-go-back ~ li > a:visited,
-nav li.nav-go-back ~ li > label {
-  padding-left: 28px;
-}
-/* line 64, ../source/mobile/_nav.scss */
-nav li > label:hover,
-nav li > a:hover,
-nav li > a:active {
-  background-color: #778fe9;
-  color: #EEE;
-}
+  background-color: #EEE; }
+  nav ul {
+    list-style: none;
+    position: fixed;
+    top: 42px;
+    bottom: 0;
+    left: 100%;
+    right: -100%;
+    z-index: 99999999999; }
+  nav li {
+    margin-left: 0;
+    width: 100%;
+    transition-property: margin-left;
+    transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+    transition-duration: 0.3s;
+    -webkit-transition-property: margin-left;
+    -webkit-transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+    -webkit-transition-duration: 0.3s; }
+  nav .controller:checked + ul > li {
+    margin-left: -100%; }
+  nav li:nth-child(1) {
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s; }
+  nav li:nth-child(2) {
+    transition-delay: 0.05s;
+    -webkit-transition-delay: 0.05s; }
+  nav li:nth-child(3) {
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s; }
+  nav li:nth-child(4) {
+    transition-delay: 0.15s;
+    -webkit-transition-delay: 0.15s; }
+  nav li:nth-child(5) {
+    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s; }
+  nav li:nth-child(6) {
+    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s; }
+  nav li:nth-child(7) {
+    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s; }
+  nav li:nth-child(8) {
+    transition-delay: 0.35s;
+    -webkit-transition-delay: 0.35s; }
+  nav li:nth-child(9) {
+    transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s; }
+  nav li:nth-child(10) {
+    transition-delay: 0.45s;
+    -webkit-transition-delay: 0.45s; }
+  nav li:nth-child(11) {
+    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s; }
+  nav li:nth-child(12) {
+    transition-delay: 0.55s;
+    -webkit-transition-delay: 0.55s; }
+  nav li:nth-child(13) {
+    transition-delay: 0.6s;
+    -webkit-transition-delay: 0.6s; }
+  nav li:nth-child(14) {
+    transition-delay: 0.65s;
+    -webkit-transition-delay: 0.65s; }
+  nav li:nth-child(15) {
+    transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s; }
+  nav li:nth-child(16) {
+    transition-delay: 0.75s;
+    -webkit-transition-delay: 0.75s; }
+  nav li:nth-child(17) {
+    transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s; }
+  nav li:nth-child(18) {
+    transition-delay: 0.85s;
+    -webkit-transition-delay: 0.85s; }
+  nav li:nth-child(19) {
+    transition-delay: 0.9s;
+    -webkit-transition-delay: 0.9s; }
+  nav li:nth-child(20) {
+    transition-delay: 0.95s;
+    -webkit-transition-delay: 0.95s; }
+  nav li > label,
+  nav li > a:link,
+  nav li > a:visited {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    text-decoration: none;
+    color: #436FE9;
+    padding-left: 14px;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    width: 100%; }
+  nav li.nav-go-back ~ li > a:link,
+  nav li.nav-go-back ~ li > a:visited,
+  nav li.nav-go-back ~ li > label {
+    padding-left: 28px; }
+  nav li > label:hover,
+  nav li > a:hover,
+  nav li > a:active {
+    background-color: #778fe9;
+    color: #EEE; }
 
-/* line 72, ../source/mobile/_nav.scss */
 .nav-banner {
   background-color: #778fe9;
   color: #EEE;
@@ -356,25 +283,17 @@ nav li > a:active {
   left: 0;
   right: 0;
   position: fixed;
-  z-index: 9999999999;
-}
-/* line 73, ../source/mobile/_nav.scss */
-.nav-banner::before {
-  content: 'Fru1tMe / ';
-  font-weight: bold;
-}
+  z-index: 9999999999; }
+  .nav-banner::before {
+    content: 'Fru1tMe / ';
+    font-weight: bold; }
 
-/* line 94, ../source/mobile/_nav.scss */
 #nav-collapsed:checked + .nav-banner {
-  display: none;
-}
+  display: none; }
 
-/* line 97, ../source/mobile/_nav.scss */
 #nav-collapsed:not(:checked) + .nav-banner {
-  display: block;
-}
+  display: block; }
 
-/* line 101, ../source/mobile/_nav.scss */
 #nav-expanded + div {
   position: fixed;
   top: 42px;
@@ -384,31 +303,40 @@ nav li > a:active {
   overflow: auto;
   z-index: 99999999999;
   transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
-  -webkit-transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
-}
-/* line 112, ../source/mobile/_nav.scss */
-#nav-expanded + div li {
-  transition-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22);
-}
+  -webkit-transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1); }
+  #nav-expanded + div li {
+    transition-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22); }
 
-/* line 117, ../source/mobile/_nav.scss */
 #nav-expanded:checked + div {
   bottom: 0;
   transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22);
-  -webkit-transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22);
-}
+  -webkit-transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22); }
 
-/* line 2, ../source/mobile/_home.scss */
-.home section {
-  position: fixed;
-}
+.home .header {
+  background-color: #EEE; }
+  .home .header h1 {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: -1px -1px 0 #999;
+    padding: 0; }
+.home .about {
+  height: 340vh; }
+  .home .about .layer-background img {
+    height: 130vh; }
+  .home .about .description p {
+    position: absolute;
+    top: 40%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 28px 14px;
+    color: #EEE; }
+.home .nav-pointer {
+  background-color: #EEE; }
+  .home .nav-pointer p {
+    padding: 0; }
 
-/* line 6, ../source/mobile/_home.scss */
-#parallax-group-1 {
-  z-index: 1;
-}
-
-/* line 9, ../source/mobile/_home.scss */
-#parallax-group-2 {
-  z-index: 2;
-}
+/*# sourceMappingURL=global.css.map */
