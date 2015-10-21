@@ -14,7 +14,7 @@
 	}
 	h1 {
 		position: absolute;
-		top: 40%;
+		top: 45%;
 		left: 0;
 		right: 0;
 		text-align: center;
@@ -31,21 +31,10 @@
 		> div {
 			color: $body-text-color-inverse;
 			background-color: $body-background-color-inverse;
+			padding-bottom: 40px;
 		}
 		h3 {
 			padding-top: 40px;
-		}
-
-		.absoluted {
-			position: absolute;
-			z-index: 200;
-			left: 0;
-			right: 0;
-			padding-bottom: 40px;
-		}
-		.copy {
-			opacity: 0;
-			padding-bottom: 40px;
 		}
 	}
 
@@ -58,64 +47,64 @@
 		}
 	}
 	.bz-php {
-		top: 70%;
+		top: 100%;
 		left: 30%;
 	}
 	.bz-mysql {
-		top: 80%;
+		top: 130%;
 		right: 10px;
 	}
 	.bz-js {
-		top: 80%;
+		top: 150%;
 		left: 10%;
 	}
 	.bz-delphi {
-		top: 200%;
+		top: 250%;
 		right: 25%;
 	}
 	.bz-java {
-		top: 65%;
+		top: 115%;
 		right: 30%;
 	}
 	.bz-html {
-		top: 65%;
+		top: 125%;
 		left: 10%;
 	}
 	.bz-cpp {
-		top: 180%;
+		top: 300%;
 		left: 18%;
 	}
 	.bz-cs {
-		top: 85%;
+		top: 185%;
 		right: 38%;
 	}
 	.bz-css {
-		top: 70%;
+		top: 120%;
 		right: 33%
 	}
 	.bz-python {
-		top: 120%;
+		top: 250%;
 		left: 22%;
 	}
 	.bz-en {
-		top: 80%;
+		top: 130%;
 		right: 50%;
 		border-bottom: 1px dotted #F00;
 	}
 	.bz-mssql {
-		top: 63%;
+		top: 103%;
 		left: 5%;
 	}
 	.bz-jq {
-		top: 82%;
+		top: 153%;
 		right: 41%;
 	}
 	.bz-btstrp {
-		top: 74%;
+		top: 137%;
 		left: 21%;
 	}
 	.bz-asp {
-		top: 77%;
+		top: 213%;
 		right: 17%;
 	}
 }

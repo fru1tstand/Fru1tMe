@@ -52,53 +52,27 @@ $body = <<<HTML
 	<div class="horizon"></div>
 	<div class="overlay">
 		<div>
-			<div class="absoluted">
-				<div class="container">
-					<h3>Where am I?</h3>
-					<p>
-						Welcome to Fru1tMe!
-						This small space contains a slew of things I've dumped from my brain onto
-						the internet. Feel free to look around and copy things that look neat or
-						interest you. Might I suggest taking a peek at the
-						<a href="#" class="inverse">projects</a> page?
-					</p>
+			<div class="container">
+				<h3>Where am I?</h3>
+				<p>
+					Welcome to Fru1tMe!
+					This small space contains a slew of things I've dumped from my brain onto
+					the internet. Feel free to look around and copy things that look neat or
+					interest you. Might I suggest taking a peek at the
+					<a href="#" class="inverse">projects</a> page?
+				</p>
 
-					<h3>Who are you?</h3>
-					<p>
-						My name's Kodlee Yin. I do the things on the internets, and that's about it.
-						Check out my résumé <a href="#" class="inverse">on this page</a>.
-					</p>
+				<h3>Who are you?</h3>
+				<p>
+					My name's Kodlee Yin. I do the things on the internets, and that's about it.
+					Check out my résumé <a href="#" class="inverse">on this page</a>.
+				</p>
 
-					<h3>How do I get around?</h3>
-					<p>
-						Click that light-blue thing at the top of the page. Heck, you can even open it
-						by <label for="nav-index" class="inverse">clicking here</label>.
-					</p>
-				</div>
-			</div>
-			<div class="copy">
-				<div class="container">
-					<h3>Where am I?</h3>
-					<p>
-						Welcome to Fru1tMe!
-						This small space contains a slew of things I've dumped from my brain onto
-						the internet. Feel free to look around and copy things that look neat or
-						interest you. Might I suggest taking a peek at the
-						<a href="#" class="inverse">projects</a> page?
-					</p>
-
-					<h3>Who are you?</h3>
-					<p>
-						My name's Kodlee Yin. I do the things on the internets, and that's about it.
-						Check out my résumé <a href="#" class="inverse">on this page</a>.
-					</p>
-
-					<h3>How do I get around?</h3>
-					<p>
-						Click that light-blue thing at the top of the page. Heck, you can even open it
-						by <label for="nav-index" class="inverse">clicking here</label>.
-					</p>
-				</div>
+				<h3>How do I get around?</h3>
+				<p>
+					Click that light-blue thing at the top of the page. Heck, you can even open it
+					by <label for="nav-index" class="inverse">clicking here</label>.
+				</p>
 			</div>
 		</div>
 	</div>

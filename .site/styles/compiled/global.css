@@ -74,97 +74,96 @@ a.inverse:hover, a.inverse:active, label.inverse:hover, label.inverse:active {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 100vh 0;
 }
 
-/* line 19, ../source/_parallax.scss */
+/* line 18, ../source/_parallax.scss */
 .parallax {
   perspective: 300px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--10 {
   transform: translateZ(-500px) scale(2.66667);
   z-index: 110;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--9 {
   transform: translateZ(-450px) scale(2.5);
   z-index: 109;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--8 {
   transform: translateZ(-400px) scale(2.33333);
   z-index: 108;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--7 {
   transform: translateZ(-350px) scale(2.16667);
   z-index: 107;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--6 {
   transform: translateZ(-300px) scale(2);
   z-index: 106;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--5 {
   transform: translateZ(-250px) scale(1.83333);
   z-index: 105;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--4 {
   transform: translateZ(-200px) scale(1.66667);
   z-index: 104;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--3 {
   transform: translateZ(-150px) scale(1.5);
   z-index: 103;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--2 {
   transform: translateZ(-100px) scale(1.33333);
   z-index: 102;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer--1 {
   transform: translateZ(-50px) scale(1.16667);
   z-index: 101;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-0 {
   transform: translateZ(0px) scale(1);
   z-index: 100;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-1 {
   transform: translateZ(50px) scale(0.83333);
   z-index: 99;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-2 {
   transform: translateZ(100px) scale(0.66667);
   z-index: 98;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-3 {
   transform: translateZ(150px) scale(0.5);
   z-index: 97;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-4 {
   transform: translateZ(200px) scale(0.33333);
   z-index: 96;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-5 {
   transform: translateZ(250px) scale(0.16667);
   z-index: 95;
 }
-/* line 26, ../source/_parallax.scss */
+/* line 25, ../source/_parallax.scss */
 .parallax .layer-6 {
   transform: translateZ(300px) scale(0);
   z-index: 94;
@@ -412,7 +411,7 @@ nav li > a:active {
 /* line 15, ../source/mobile/_home.scss */
 .home h1 {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 0;
   right: 0;
   text-align: center;
@@ -428,106 +427,94 @@ nav li > a:active {
 .home .overlay > div {
   color: #EEE;
   background-color: #2D2D2D;
+  padding-bottom: 40px;
 }
-/* line 35, ../source/mobile/_home.scss */
+/* line 36, ../source/mobile/_home.scss */
 .home .overlay h3 {
   padding-top: 40px;
 }
-/* line 39, ../source/mobile/_home.scss */
-.home .overlay .absoluted {
-  position: absolute;
-  z-index: 200;
-  left: 0;
-  right: 0;
-  padding-bottom: 40px;
-}
-/* line 46, ../source/mobile/_home.scss */
-.home .overlay .copy {
-  opacity: 0;
-  padding-bottom: 40px;
-}
-/* line 52, ../source/mobile/_home.scss */
+/* line 41, ../source/mobile/_home.scss */
 .home .bz {
   color: #000;
   font-size: 14px;
 }
-/* line 56, ../source/mobile/_home.scss */
+/* line 45, ../source/mobile/_home.scss */
 .home .bz > div {
   position: absolute;
 }
-/* line 60, ../source/mobile/_home.scss */
+/* line 49, ../source/mobile/_home.scss */
 .home .bz-php {
-  top: 70%;
+  top: 100%;
   left: 30%;
 }
-/* line 64, ../source/mobile/_home.scss */
+/* line 53, ../source/mobile/_home.scss */
 .home .bz-mysql {
-  top: 80%;
+  top: 130%;
   right: 10px;
 }
-/* line 68, ../source/mobile/_home.scss */
+/* line 57, ../source/mobile/_home.scss */
 .home .bz-js {
-  top: 80%;
+  top: 150%;
   left: 10%;
 }
-/* line 72, ../source/mobile/_home.scss */
+/* line 61, ../source/mobile/_home.scss */
 .home .bz-delphi {
-  top: 200%;
+  top: 250%;
   right: 25%;
 }
-/* line 76, ../source/mobile/_home.scss */
+/* line 65, ../source/mobile/_home.scss */
 .home .bz-java {
-  top: 65%;
+  top: 115%;
   right: 30%;
 }
-/* line 80, ../source/mobile/_home.scss */
+/* line 69, ../source/mobile/_home.scss */
 .home .bz-html {
-  top: 65%;
+  top: 125%;
   left: 10%;
 }
-/* line 84, ../source/mobile/_home.scss */
+/* line 73, ../source/mobile/_home.scss */
 .home .bz-cpp {
-  top: 180%;
+  top: 300%;
   left: 18%;
 }
-/* line 88, ../source/mobile/_home.scss */
+/* line 77, ../source/mobile/_home.scss */
 .home .bz-cs {
-  top: 85%;
+  top: 185%;
   right: 38%;
 }
-/* line 92, ../source/mobile/_home.scss */
+/* line 81, ../source/mobile/_home.scss */
 .home .bz-css {
-  top: 70%;
+  top: 120%;
   right: 33%;
 }
-/* line 96, ../source/mobile/_home.scss */
+/* line 85, ../source/mobile/_home.scss */
 .home .bz-python {
-  top: 120%;
+  top: 250%;
   left: 22%;
 }
-/* line 100, ../source/mobile/_home.scss */
+/* line 89, ../source/mobile/_home.scss */
 .home .bz-en {
-  top: 80%;
+  top: 130%;
   right: 50%;
   border-bottom: 1px dotted #F00;
 }
-/* line 105, ../source/mobile/_home.scss */
+/* line 94, ../source/mobile/_home.scss */
 .home .bz-mssql {
-  top: 63%;
+  top: 103%;
   left: 5%;
 }
-/* line 109, ../source/mobile/_home.scss */
+/* line 98, ../source/mobile/_home.scss */
 .home .bz-jq {
-  top: 82%;
+  top: 153%;
   right: 41%;
 }
-/* line 113, ../source/mobile/_home.scss */
+/* line 102, ../source/mobile/_home.scss */
 .home .bz-btstrp {
-  top: 74%;
+  top: 137%;
   left: 21%;
 }
-/* line 117, ../source/mobile/_home.scss */
+/* line 106, ../source/mobile/_home.scss */
 .home .bz-asp {
-  top: 77%;
+  top: 213%;
   right: 17%;
 }
