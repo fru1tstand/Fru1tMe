@@ -7,28 +7,12 @@ $parallax-perspective: 300;
 
 // Specifies a parallax layer, you shouldn't use this class.
 .parallax-layer {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	padding: 100vh 0;
-
-	.middle {
-		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%);
-	}
-}
-
-// Optional, if there are multiple parallax screens in a single page.
-.parallax-group {
-	position: relative;
-	height: 100vh;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-
-	//transform: translate3d(700px, 0, -800px) rotateY(30deg);
 }
 
 // Root parallax object. This specifies the screen for viewing the parallax content.
@@ -38,22 +22,12 @@ $parallax-perspective: 300;
 	overflow-x: hidden;
 	overflow-y: auto;
 
-	@for $i from -10 through 10 {
+	@for $i from -10 through 6 {
 		.layer-#{$i} {
 			@extend .parallax-layer;
 			@include parallax-depth($i * 50);
 			z-index: 100 - $i;
 		}
-
-		.group-#{$i + 1} {
-			@extend .parallax-group;
-			z-index: $i + 1;
-		}
-	}
-
-	.layer-background {
-		position: absolute;
-		@include parallax-depth(-9999);
 	}
 }
 

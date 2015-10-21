@@ -8,7 +8,7 @@
 
 body, html {
 	height: 100%;
-	background-color: $body-background;
+	background-color: $body-background-color;
 }
 
 body, html,
@@ -36,6 +36,17 @@ a {
 	}
 }
 
+a.inverse, label.inverse {
+	color: $active-text-color-inverse;
+	&:link, &:visited {
+		color: $active-text-color-inverse;
+	}
+
+	&:hover, &:active {
+		color: $active-text-accent-color-inverse;
+	}
+}
+
 .controller {
 	display: none;
 }
@@ -45,6 +56,8 @@ a {
 }
 
 .container {
+	max-width: 1000px;
+	margin: 0 auto;
 	padding: 0 $content-padding;
 }
 

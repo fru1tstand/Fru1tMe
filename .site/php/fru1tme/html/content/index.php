@@ -5,36 +5,109 @@ use fru1tme\html\Fru1tMeTemplate;
 
 $body = <<<HTML
 <div class="home parallax">
-	<div class="group-2 header">
-		<div class="layer-0">
-			<h1>Welcome</h1>
+
+	<div class="layer--10">
+		<h1>Fru1tMe</h1>
+	</div>
+
+	<div class="layer--6 bz">
+		<div class="bz-java"><span style="font-size: 200%">.</span>Java</div>
+	</div>
+	<div class="layer--5 bz">
+		<div class="bz-php">&lt;?php</div>
+	</div>
+	<div class="layer--4 bz">
+		<div class="bz-mysql">`MySQL`</div>
+		<div class="bz-mssql">[T-SQL]</div>
+	</div>
+	<div class="layer--3 bz">
+		<div class="bz-js">JavaScript();</div>
+		<div class="bz-jq">$(jQuery)</div>
+	</div>
+	<div class="layer--2 bz">
+		<div class="bz-html">&lt;html&gt;</div>
+		<div class="bz-btstrp">&quot;Bootstrap&quot;</div>
+	</div>
+	<div class="layer--1 bz">
+		<div class="bz-css">#CSS</div>
+	</div>
+	<div class="layer-1 bz">
+		<div class="bz-en">English</div>
+	</div>
+	<div class="layer-2 bz">
+		<div class="bz-cs"><span style="font-size: 150%">:</span>C#</div>
+		<div class="bz-asp">ASP.NET</div>
+	</div>
+	<div class="layer-3 bz">
+		<div class="bz-python">&rarr;Python</div>
+	</div>
+	<div class="layer-4 bz">
+		<div class="bz-cpp"><span style="font-size: 28px; vertical-align: middle; display: inline-block;">*</span>C++</div>
+	</div>
+	<div class="layer-5 bz">
+		<div class="bz-delphi">TDelphi</div>
+	</div>
+
+	<div class="parallax-push"></div>
+	<div class="horizon"></div>
+	<div class="overlay">
+		<div>
+			<div class="absoluted">
+				<div class="container">
+					<h3>Where am I?</h3>
+					<p>
+						Welcome to Fru1tMe!
+						This small space contains a slew of things I've dumped from my brain onto
+						the internet. Feel free to look around and copy things that look neat or
+						interest you. Might I suggest taking a peek at the
+						<a href="#" class="inverse">projects</a> page?
+					</p>
+
+					<h3>Who are you?</h3>
+					<p>
+						My name's Kodlee Yin. I do the things on the internets, and that's about it.
+						Check out my résumé <a href="#" class="inverse">on this page</a>.
+					</p>
+
+					<h3>How do I get around?</h3>
+					<p>
+						Click that light-blue thing at the top of the page. Heck, you can even open it
+						by <label for="nav-index" class="inverse">clicking here</label>.
+					</p>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="container">
+					<h3>Where am I?</h3>
+					<p>
+						Welcome to Fru1tMe!
+						This small space contains a slew of things I've dumped from my brain onto
+						the internet. Feel free to look around and copy things that look neat or
+						interest you. Might I suggest taking a peek at the
+						<a href="#" class="inverse">projects</a> page?
+					</p>
+
+					<h3>Who are you?</h3>
+					<p>
+						My name's Kodlee Yin. I do the things on the internets, and that's about it.
+						Check out my résumé <a href="#" class="inverse">on this page</a>.
+					</p>
+
+					<h3>How do I get around?</h3>
+					<p>
+						Click that light-blue thing at the top of the page. Heck, you can even open it
+						by <label for="nav-index" class="inverse">clicking here</label>.
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="group-1 about">
-		<div class="layer--10 description">
-			<p>
-				This website is one giant experiment for me to play around with different
-				web technologies and such. Enjoy random tidbits of my attention span running
-				around different facets of the web and exploring their possibilities. Want to
-				learn how I did something? Look through the source! I try my best to
-				document everything so that others may learn from me, just as I have learned
-				from others.
-			</p>
-		</div>
-		<div class="layer-background">
-			<img src="https://s3.amazonaws.com/ks_web/fru1t.me/blurred-trees-bg.jpg" alt="" />
-		</div>
-	</div>
-	<div class="group-2 nav-pointer">
-		<p class="layer-0">
-			Tap the navigation bar to explore
-		</p>
-	</div>
+
 </div>
 HTML;
 
 
-ContentPageBuilder::ofTemplate(Fru1tMeTemplate::getClass())
-	->setField(Fru1tMeTemplate::FIELD_TITLE, "Home")
-	->setField(Fru1tMeTemplate::FIELD_BODY, $body)
+ContentPageBuilder::of(Fru1tMeTemplate::getClass())
+	->set(Fru1tMeTemplate::FIELD_TITLE, "Home")
+	->set(Fru1tMeTemplate::FIELD_BODY, $body)
 	->register();

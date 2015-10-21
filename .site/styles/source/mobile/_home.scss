@@ -1,43 +1,121 @@
 .home {
-	.header {
-		background-color: $body-background;
+	background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -moz-linear-gradient(top, #539ba9 0%, #e8e7d3 100%); /* FF3.6+ */
+	background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#539ba9), color-stop(100%,#e8e7d3)); /* Chrome,Safari4+ */
+	background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -webkit-linear-gradient(top, #539ba9 0%,#e8e7d3 100%); /* Chrome10+,Safari5.1+ */
+	background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -o-linear-gradient(top, #539ba9 0%,#e8e7d3 100%); /* Opera 11.10+ */
+	background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -ms-linear-gradient(top, #539ba9 0%,#e8e7d3 100%); /* IE10+ */
+	background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, linear-gradient(to bottom, #539ba9 0%,#e8e7d3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#539ba9', endColorstr='#e8e7d3',GradientType=0 ); /* IE6-9 */
 
-		h1 {
+	.horizon {
+		background: transparent url("https://s3.amazonaws.com/ks_web/fru1t.me/horizon.png") repeat-x scroll bottom center;
+		height: 121px;
+		margin-bottom: -1px;
+	}
+	h1 {
+		position: absolute;
+		top: 40%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-weight: bold;
+		color: #FFF;
+		height: 20px;
+	}
+
+	.parallax-push {
+		height: 250vh;
+	}
+
+	.overlay {
+		> div {
+			color: $body-text-color-inverse;
+			background-color: $body-background-color-inverse;
+		}
+		h3 {
+			padding-top: 40px;
+		}
+
+		.absoluted {
 			position: absolute;
-			top: 20%;
+			z-index: 200;
 			left: 0;
 			right: 0;
-			text-align: center;
-			font-weight: bold;
-			color: #FFF;
-			text-shadow: -1px -1px 0 #999;
-			padding: 0;
+			padding-bottom: 40px;
+		}
+		.copy {
+			opacity: 0;
+			padding-bottom: 40px;
 		}
 	}
 
-	.about {
-		height: 340vh;
-		.layer-background {
-			img {
-				height: 130vh;
-			}
-		}
-		.description {
-			p {
-				position: absolute;
-				top: 40%;
-				background-color: rgba(0, 0, 0, 0.7);
-				padding: $content-padding * 2 $content-padding;
-				color: $body-background;
-			}
+	.bz {
+		color: #000;
+		font-size: 14px;
+		//z-index: -1;
+		> div {
+			position: absolute;
 		}
 	}
-
-	.nav-pointer {
-		background-color: $body-background;
-
-		p {
-			padding: 0;
-		}
+	.bz-php {
+		top: 70%;
+		left: 30%;
+	}
+	.bz-mysql {
+		top: 80%;
+		right: 10px;
+	}
+	.bz-js {
+		top: 80%;
+		left: 10%;
+	}
+	.bz-delphi {
+		top: 200%;
+		right: 25%;
+	}
+	.bz-java {
+		top: 65%;
+		right: 30%;
+	}
+	.bz-html {
+		top: 65%;
+		left: 10%;
+	}
+	.bz-cpp {
+		top: 180%;
+		left: 18%;
+	}
+	.bz-cs {
+		top: 85%;
+		right: 38%;
+	}
+	.bz-css {
+		top: 70%;
+		right: 33%
+	}
+	.bz-python {
+		top: 120%;
+		left: 22%;
+	}
+	.bz-en {
+		top: 80%;
+		right: 50%;
+		border-bottom: 1px dotted #F00;
+	}
+	.bz-mssql {
+		top: 63%;
+		left: 5%;
+	}
+	.bz-jq {
+		top: 82%;
+		right: 41%;
+	}
+	.bz-btstrp {
+		top: 74%;
+		left: 21%;
+	}
+	.bz-asp {
+		top: 77%;
+		right: 17%;
 	}
 }

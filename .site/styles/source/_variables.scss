@@ -1,9 +1,13 @@
 // Sizings and layouts
 $device-mobile-cutoff: 760px;
-$content-padding: 14px;
+$content-padding: 22px;
 
 // Colors colors everywhere
-$body-background: #EEE;
+$body-background-color: #EEE;
+$body-text-color: #2D2D2D;
+$body-background-color-inverse: $body-text-color;
+$body-text-color-inverse: $body-background-color;
+
 $body-text-blend: #999;
 $nav-banner-background: #778fe9;
 $nav-background: #FFFFFF;
@@ -13,6 +17,8 @@ $nav-border-color: #E9E9E9;
 $active-text: #436FE9;
 $active-text-accent: #778fe9;
 $active-text-disabled: #99B7C3;
+$active-text-color-inverse: $nav-banner-background;
+$active-text-accent-color-inverse: $active-text-disabled;
 
 // Easing beziers
 $ease-out: cubic-bezier(.17,.84,.44,1);
