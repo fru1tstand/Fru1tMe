@@ -53,7 +53,7 @@ $body = <<<HTML
 	<div class="overlay">
 		<div>
 			<div class="container">
-				<h3>Where am I?</h3>
+				<h3>What is this?</h3>
 				<p>
 					Welcome to Fru1tMe!
 					This small space contains a slew of things I've dumped from my brain onto
@@ -62,7 +62,7 @@ $body = <<<HTML
 					<a href="#" class="inverse">projects</a> page?
 				</p>
 
-				<h3>Who are you?</h3>
+				<h3>Who created it?</h3>
 				<p>
 					My name's Kodlee Yin. I do the things on the internets, and that's about it.
 					Check out my résumé <a href="#" class="inverse">on this page</a>.

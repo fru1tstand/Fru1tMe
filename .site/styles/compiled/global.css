@@ -1,335 +1,217 @@
-/* line 4, ../source/global.scss */
 * {
   font-family: Raleway, Palatino, serif;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-/* line 9, ../source/global.scss */
 body, html {
   height: 100%;
-  background-color: #EEE;
-}
+  background-color: #EEE; }
 
-/* line 14, ../source/global.scss */
 body, html,
 h1, h2, h3, h4, h5, h6,
-ul, li,
-p {
+ul, li, ol,
+p,
+fieldset, legend, input, button {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-/* line 22, ../source/global.scss */
 a {
-  text-decoration: none;
-}
-/* line 25, ../source/global.scss */
-a:link, a:visited {
-  color: #436FE9;
-}
-/* line 29, ../source/global.scss */
-a:hover, a:active {
-  color: #778fe9;
-}
-/* line 33, ../source/global.scss */
-a.disabled {
-  color: #99B7C3;
-  cursor: default;
-}
+  text-decoration: none; }
+  a:link, a:visited {
+    color: #436FE9; }
+  a:hover, a:active {
+    color: #778fe9; }
+  a.disabled {
+    color: #99B7C3;
+    cursor: default; }
 
-/* line 39, ../source/global.scss */
 a.inverse, label.inverse {
-  color: #778fe9;
-}
-/* line 41, ../source/global.scss */
-a.inverse:link, a.inverse:visited, label.inverse:link, label.inverse:visited {
-  color: #778fe9;
-}
-/* line 45, ../source/global.scss */
-a.inverse:hover, a.inverse:active, label.inverse:hover, label.inverse:active {
-  color: #99B7C3;
-}
+  color: #778fe9; }
+  a.inverse:link, a.inverse:visited, label.inverse:link, label.inverse:visited {
+    color: #778fe9; }
+  a.inverse:hover, a.inverse:active, label.inverse:hover, label.inverse:active {
+    color: #99B7C3; }
 
-/* line 50, ../source/global.scss */
 .controller {
-  display: none;
-}
+  display: none; }
 
-/* line 54, ../source/global.scss */
 #global-content {
-  min-height: 100%;
-}
+  min-height: 100%; }
 
-/* line 58, ../source/global.scss */
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 22px;
-}
+  padding: 0 22px; }
 
-/* line 9, ../source/_parallax.scss */
 .parallax-layer, .parallax .layer--10, .parallax .layer--9, .parallax .layer--8, .parallax .layer--7, .parallax .layer--6, .parallax .layer--5, .parallax .layer--4, .parallax .layer--3, .parallax .layer--2, .parallax .layer--1, .parallax .layer-0, .parallax .layer-1, .parallax .layer-2, .parallax .layer-3, .parallax .layer-4, .parallax .layer-5, .parallax .layer-6 {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-}
+  bottom: 0; }
 
-/* line 18, ../source/_parallax.scss */
 .parallax {
   perspective: 300px;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--10 {
-  transform: translateZ(-500px) scale(2.66667);
-  z-index: 110;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--9 {
-  transform: translateZ(-450px) scale(2.5);
-  z-index: 109;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--8 {
-  transform: translateZ(-400px) scale(2.33333);
-  z-index: 108;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--7 {
-  transform: translateZ(-350px) scale(2.16667);
-  z-index: 107;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--6 {
-  transform: translateZ(-300px) scale(2);
-  z-index: 106;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--5 {
-  transform: translateZ(-250px) scale(1.83333);
-  z-index: 105;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--4 {
-  transform: translateZ(-200px) scale(1.66667);
-  z-index: 104;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--3 {
-  transform: translateZ(-150px) scale(1.5);
-  z-index: 103;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--2 {
-  transform: translateZ(-100px) scale(1.33333);
-  z-index: 102;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer--1 {
-  transform: translateZ(-50px) scale(1.16667);
-  z-index: 101;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-0 {
-  transform: translateZ(0px) scale(1);
-  z-index: 100;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-1 {
-  transform: translateZ(50px) scale(0.83333);
-  z-index: 99;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-2 {
-  transform: translateZ(100px) scale(0.66667);
-  z-index: 98;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-3 {
-  transform: translateZ(150px) scale(0.5);
-  z-index: 97;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-4 {
-  transform: translateZ(200px) scale(0.33333);
-  z-index: 96;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-5 {
-  transform: translateZ(250px) scale(0.16667);
-  z-index: 95;
-}
-/* line 25, ../source/_parallax.scss */
-.parallax .layer-6 {
-  transform: translateZ(300px) scale(0);
-  z-index: 94;
-}
+  overflow-y: auto; }
+  .parallax .layer--10 {
+    transform: translateZ(-500px) scale(2.66667);
+    z-index: 110; }
+  .parallax .layer--9 {
+    transform: translateZ(-450px) scale(2.5);
+    z-index: 109; }
+  .parallax .layer--8 {
+    transform: translateZ(-400px) scale(2.33333);
+    z-index: 108; }
+  .parallax .layer--7 {
+    transform: translateZ(-350px) scale(2.16667);
+    z-index: 107; }
+  .parallax .layer--6 {
+    transform: translateZ(-300px) scale(2);
+    z-index: 106; }
+  .parallax .layer--5 {
+    transform: translateZ(-250px) scale(1.83333);
+    z-index: 105; }
+  .parallax .layer--4 {
+    transform: translateZ(-200px) scale(1.66667);
+    z-index: 104; }
+  .parallax .layer--3 {
+    transform: translateZ(-150px) scale(1.5);
+    z-index: 103; }
+  .parallax .layer--2 {
+    transform: translateZ(-100px) scale(1.33333);
+    z-index: 102; }
+  .parallax .layer--1 {
+    transform: translateZ(-50px) scale(1.16667);
+    z-index: 101; }
+  .parallax .layer-0 {
+    transform: translateZ(0px) scale(1);
+    z-index: 100; }
+  .parallax .layer-1 {
+    transform: translateZ(50px) scale(0.83333);
+    z-index: 99; }
+  .parallax .layer-2 {
+    transform: translateZ(100px) scale(0.66667);
+    z-index: 98; }
+  .parallax .layer-3 {
+    transform: translateZ(150px) scale(0.5);
+    z-index: 97; }
+  .parallax .layer-4 {
+    transform: translateZ(200px) scale(0.33333);
+    z-index: 96; }
+  .parallax .layer-5 {
+    transform: translateZ(250px) scale(0.16667);
+    z-index: 95; }
+  .parallax .layer-6 {
+    transform: translateZ(300px) scale(0);
+    z-index: 94; }
 
-/* line 5, ../source/mobile/_nav.scss */
 nav {
   width: 100%;
-  background-color: #EEE;
-}
-/* line 11, ../source/mobile/_nav.scss */
-nav ul {
-  list-style: none;
-  position: fixed;
-  top: 42px;
-  bottom: 0;
-  left: 100%;
-  right: -100%;
-  z-index: 99999999999;
-}
-/* line 21, ../source/mobile/_nav.scss */
-nav li {
-  margin-left: 0;
-  width: 100%;
-  transition-property: margin-left;
-  transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
-  transition-duration: 0.3s;
-  -webkit-transition-property: margin-left;
-  -webkit-transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
-  -webkit-transition-duration: 0.3s;
-}
-/* line 31, ../source/mobile/_nav.scss */
-nav .controller:checked + ul > li {
-  margin-left: -100%;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(1) {
-  transition-delay: 0s;
-  -webkit-transition-delay: 0s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(2) {
-  transition-delay: 0.05s;
-  -webkit-transition-delay: 0.05s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(3) {
-  transition-delay: 0.1s;
-  -webkit-transition-delay: 0.1s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(4) {
-  transition-delay: 0.15s;
-  -webkit-transition-delay: 0.15s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(5) {
-  transition-delay: 0.2s;
-  -webkit-transition-delay: 0.2s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(6) {
-  transition-delay: 0.25s;
-  -webkit-transition-delay: 0.25s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(7) {
-  transition-delay: 0.3s;
-  -webkit-transition-delay: 0.3s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(8) {
-  transition-delay: 0.35s;
-  -webkit-transition-delay: 0.35s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(9) {
-  transition-delay: 0.4s;
-  -webkit-transition-delay: 0.4s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(10) {
-  transition-delay: 0.45s;
-  -webkit-transition-delay: 0.45s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(11) {
-  transition-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(12) {
-  transition-delay: 0.55s;
-  -webkit-transition-delay: 0.55s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(13) {
-  transition-delay: 0.6s;
-  -webkit-transition-delay: 0.6s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(14) {
-  transition-delay: 0.65s;
-  -webkit-transition-delay: 0.65s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(15) {
-  transition-delay: 0.7s;
-  -webkit-transition-delay: 0.7s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(16) {
-  transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(17) {
-  transition-delay: 0.8s;
-  -webkit-transition-delay: 0.8s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(18) {
-  transition-delay: 0.85s;
-  -webkit-transition-delay: 0.85s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(19) {
-  transition-delay: 0.9s;
-  -webkit-transition-delay: 0.9s;
-}
-/* line 35, ../source/mobile/_nav.scss */
-nav li:nth-child(20) {
-  transition-delay: 0.95s;
-  -webkit-transition-delay: 0.95s;
-}
-/* line 40, ../source/mobile/_nav.scss */
-nav li > label,
-nav li > a:link,
-nav li > a:visited {
-  display: block;
-  height: 42px;
-  line-height: 42px;
-  text-decoration: none;
-  color: #436FE9;
-  padding-left: 22px;
-  border-bottom: 1px solid #E9E9E9;
-  font-size: 14px;
-  background-color: #FFFFFF;
-  cursor: pointer;
-  width: 100%;
-}
-/* line 56, ../source/mobile/_nav.scss */
-nav li.nav-go-back ~ li > a:link,
-nav li.nav-go-back ~ li > a:visited,
-nav li.nav-go-back ~ li > label {
-  padding-left: 44px;
-}
-/* line 63, ../source/mobile/_nav.scss */
-nav li > label:hover,
-nav li > a:hover,
-nav li > a:active {
-  background-color: #778fe9;
-  color: #EEE;
-}
+  background-color: #EEE; }
+  nav ul {
+    list-style: none;
+    position: fixed;
+    top: 42px;
+    bottom: 0;
+    left: 100%;
+    right: -100%;
+    z-index: 99999999999; }
+  nav li {
+    margin-left: 0;
+    width: 100%;
+    transition-property: margin-left;
+    transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+    transition-duration: 0.3s;
+    -webkit-transition-property: margin-left;
+    -webkit-transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+    -webkit-transition-duration: 0.3s; }
+  nav .controller:checked + ul > li {
+    margin-left: -100%; }
+  nav li:nth-child(1) {
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s; }
+  nav li:nth-child(2) {
+    transition-delay: 0.05s;
+    -webkit-transition-delay: 0.05s; }
+  nav li:nth-child(3) {
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s; }
+  nav li:nth-child(4) {
+    transition-delay: 0.15s;
+    -webkit-transition-delay: 0.15s; }
+  nav li:nth-child(5) {
+    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s; }
+  nav li:nth-child(6) {
+    transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s; }
+  nav li:nth-child(7) {
+    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s; }
+  nav li:nth-child(8) {
+    transition-delay: 0.35s;
+    -webkit-transition-delay: 0.35s; }
+  nav li:nth-child(9) {
+    transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s; }
+  nav li:nth-child(10) {
+    transition-delay: 0.45s;
+    -webkit-transition-delay: 0.45s; }
+  nav li:nth-child(11) {
+    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s; }
+  nav li:nth-child(12) {
+    transition-delay: 0.55s;
+    -webkit-transition-delay: 0.55s; }
+  nav li:nth-child(13) {
+    transition-delay: 0.6s;
+    -webkit-transition-delay: 0.6s; }
+  nav li:nth-child(14) {
+    transition-delay: 0.65s;
+    -webkit-transition-delay: 0.65s; }
+  nav li:nth-child(15) {
+    transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s; }
+  nav li:nth-child(16) {
+    transition-delay: 0.75s;
+    -webkit-transition-delay: 0.75s; }
+  nav li:nth-child(17) {
+    transition-delay: 0.8s;
+    -webkit-transition-delay: 0.8s; }
+  nav li:nth-child(18) {
+    transition-delay: 0.85s;
+    -webkit-transition-delay: 0.85s; }
+  nav li:nth-child(19) {
+    transition-delay: 0.9s;
+    -webkit-transition-delay: 0.9s; }
+  nav li:nth-child(20) {
+    transition-delay: 0.95s;
+    -webkit-transition-delay: 0.95s; }
+  nav li > label,
+  nav li > a:link,
+  nav li > a:visited {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    text-decoration: none;
+    color: #436FE9;
+    padding-left: 22px;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    width: 100%; }
+  nav li.nav-go-back ~ li > a:link,
+  nav li.nav-go-back ~ li > a:visited,
+  nav li.nav-go-back ~ li > label {
+    padding-left: 44px; }
+  nav li > label:hover,
+  nav li > a:hover,
+  nav li > a:active {
+    background-color: #778fe9;
+    color: #EEE; }
 
-/* line 71, ../source/mobile/_nav.scss */
 .nav-banner {
   background-color: #778fe9;
   color: #EEE;
@@ -343,25 +225,17 @@ nav li > a:active {
   left: 0;
   right: 0;
   position: fixed;
-  z-index: 9999999999;
-}
-/* line 72, ../source/mobile/_nav.scss */
-.nav-banner::before {
-  content: 'Fru1tMe / ';
-  font-weight: bold;
-}
+  z-index: 9999999999; }
+  .nav-banner::before {
+    content: 'Fru1tMe / ';
+    font-weight: bold; }
 
-/* line 93, ../source/mobile/_nav.scss */
 #nav-collapsed:checked + .nav-banner {
-  display: none;
-}
+  display: none; }
 
-/* line 96, ../source/mobile/_nav.scss */
 #nav-collapsed:not(:checked) + .nav-banner {
-  display: block;
-}
+  display: block; }
 
-/* line 100, ../source/mobile/_nav.scss */
 #nav-expanded + div {
   position: fixed;
   top: 42px;
@@ -371,21 +245,15 @@ nav li > a:active {
   overflow: auto;
   z-index: 99999999999;
   transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
-  -webkit-transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
-}
-/* line 111, ../source/mobile/_nav.scss */
-#nav-expanded + div li {
-  transition-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22);
-}
+  -webkit-transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1); }
+  #nav-expanded + div li {
+    transition-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22); }
 
-/* line 116, ../source/mobile/_nav.scss */
 #nav-expanded:checked + div {
   bottom: 0;
   transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22);
-  -webkit-transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22);
-}
+  -webkit-transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22); }
 
-/* line 1, ../source/mobile/_home.scss */
 .home {
   background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -moz-linear-gradient(top, #539ba9 0%, #e8e7d3 100%);
   /* FF3.6+ */
@@ -400,121 +268,134 @@ nav li > a:active {
   background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, linear-gradient(to bottom, #539ba9 0%, #e8e7d3 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#539ba9', endColorstr='#e8e7d3',GradientType=0 );
-  /* IE6-9 */
-}
-/* line 10, ../source/mobile/_home.scss */
-.home .horizon {
-  background: transparent url("https://s3.amazonaws.com/ks_web/fru1t.me/horizon.png") repeat-x scroll bottom center;
-  height: 121px;
-  margin-bottom: -1px;
-}
-/* line 15, ../source/mobile/_home.scss */
-.home h1 {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-weight: bold;
-  color: #FFF;
-  height: 20px;
-}
-/* line 26, ../source/mobile/_home.scss */
-.home .parallax-push {
-  height: 250vh;
-}
-/* line 31, ../source/mobile/_home.scss */
-.home .overlay > div {
-  color: #EEE;
-  background-color: #2D2D2D;
-  padding-bottom: 40px;
-}
-/* line 36, ../source/mobile/_home.scss */
-.home .overlay h3 {
-  padding-top: 40px;
-}
-/* line 41, ../source/mobile/_home.scss */
-.home .bz {
-  color: #000;
-  font-size: 14px;
-}
-/* line 45, ../source/mobile/_home.scss */
-.home .bz > div {
-  position: absolute;
-}
-/* line 49, ../source/mobile/_home.scss */
-.home .bz-php {
-  top: 100%;
-  left: 30%;
-}
-/* line 53, ../source/mobile/_home.scss */
-.home .bz-mysql {
-  top: 130%;
-  right: 10px;
-}
-/* line 57, ../source/mobile/_home.scss */
-.home .bz-js {
-  top: 150%;
-  left: 10%;
-}
-/* line 61, ../source/mobile/_home.scss */
-.home .bz-delphi {
-  top: 250%;
-  right: 25%;
-}
-/* line 65, ../source/mobile/_home.scss */
-.home .bz-java {
-  top: 115%;
-  right: 30%;
-}
-/* line 69, ../source/mobile/_home.scss */
-.home .bz-html {
-  top: 125%;
-  left: 10%;
-}
-/* line 73, ../source/mobile/_home.scss */
-.home .bz-cpp {
-  top: 300%;
-  left: 18%;
-}
-/* line 77, ../source/mobile/_home.scss */
-.home .bz-cs {
-  top: 185%;
-  right: 38%;
-}
-/* line 81, ../source/mobile/_home.scss */
-.home .bz-css {
-  top: 120%;
-  right: 33%;
-}
-/* line 85, ../source/mobile/_home.scss */
-.home .bz-python {
-  top: 250%;
-  left: 22%;
-}
-/* line 89, ../source/mobile/_home.scss */
-.home .bz-en {
-  top: 130%;
-  right: 50%;
-  border-bottom: 1px dotted #F00;
-}
-/* line 94, ../source/mobile/_home.scss */
-.home .bz-mssql {
-  top: 103%;
-  left: 5%;
-}
-/* line 98, ../source/mobile/_home.scss */
-.home .bz-jq {
-  top: 153%;
-  right: 41%;
-}
-/* line 102, ../source/mobile/_home.scss */
-.home .bz-btstrp {
-  top: 137%;
-  left: 21%;
-}
-/* line 106, ../source/mobile/_home.scss */
-.home .bz-asp {
-  top: 213%;
-  right: 17%;
-}
+  /* IE6-9 */ }
+  .home .horizon {
+    background: transparent url("https://s3.amazonaws.com/ks_web/fru1t.me/horizon.png") repeat-x scroll bottom center;
+    height: 121px;
+    margin-bottom: -1px; }
+  .home h1 {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    height: 20px; }
+  .home .parallax-push {
+    height: 250vh; }
+  .home .overlay > div {
+    color: #EEE;
+    background-color: #2D2D2D;
+    padding-bottom: 40px; }
+  .home .overlay h3 {
+    padding-top: 40px; }
+  .home .bz {
+    color: #000;
+    font-size: 14px; }
+    .home .bz > div {
+      position: absolute; }
+  .home .bz-php {
+    top: 100%;
+    left: 30%; }
+  .home .bz-mysql {
+    top: 130%;
+    right: 10px; }
+  .home .bz-js {
+    top: 150%;
+    left: 10%; }
+  .home .bz-delphi {
+    top: 720%;
+    right: 25%; }
+  .home .bz-java {
+    top: 115%;
+    right: 30%; }
+  .home .bz-html {
+    top: 146%;
+    left: 10%; }
+  .home .bz-cpp {
+    top: 420%;
+    left: 18%; }
+  .home .bz-cs {
+    top: 185%;
+    right: 38%; }
+  .home .bz-css {
+    top: 120%;
+    right: 33%; }
+  .home .bz-python {
+    top: 330%;
+    left: 22%; }
+  .home .bz-en {
+    top: 130%;
+    right: 50%;
+    border-bottom: 1px dotted #F00; }
+  .home .bz-mssql {
+    top: 103%;
+    left: 5%; }
+  .home .bz-jq {
+    top: 121%;
+    right: 41%; }
+  .home .bz-btstrp {
+    top: 137%;
+    left: 21%; }
+  .home .bz-asp {
+    top: 213%;
+    right: 17%; }
+
+.resume {
+  padding-top: 42px;
+  color: #2D2D2D; }
+  .resume .re-title {
+    color: #778fe9;
+    padding-top: 44px;
+    text-align: center; }
+    .resume .re-title h1 {
+      margin-bottom: -10px; }
+    .resume .re-title p {
+      font-style: italic; }
+  .resume fieldset {
+    margin-top: 44px;
+    border: none;
+    border-top: 1px solid #A9A9A9; }
+    .resume fieldset legend {
+      margin-left: 17px;
+      padding: 0 5px;
+      color: #778fe9; }
+  .resume .k-at::before {
+    content: 'kod'; }
+  .resume .k-at::after {
+    content: 'ee@'; }
+  .resume .kshare::before {
+    content: 'kodle'; }
+  .resume .kshare::after {
+    content: 'are'; }
+
+.card {
+  background-color: #F6F6F6;
+  margin: 22px 11px 0;
+  padding: 11px;
+  box-shadow: 3px 3px 1px -1px #CCC; }
+  .card .title {
+    font-size: 19px;
+    font-weight: bold; }
+  .card .subtitle {
+    color: #A9A9A9;
+    font-size: 0; }
+    .card .subtitle > div {
+      display: inline-block;
+      width: 50%;
+      font-size: 10px; }
+      .card .subtitle > div:nth-child(2) {
+        text-align: right; }
+      .card .subtitle > div:nth-child(3) {
+        width: 100%; }
+  .card .list {
+    font-size: 12px;
+    padding-left: 10px; }
+    .card .list ul {
+      list-style: none; }
+    .card .list li {
+      text-indent: -10px;
+      padding-top: 8px; }
+
+/*# sourceMappingURL=global.css.map */

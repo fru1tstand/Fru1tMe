@@ -49,18 +49,11 @@ class Fru1tMeTemplate implements TemplateInterface {
 
 			<input type="radio" class="controller" name="nav-state" id="nav-index" />
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><label for="nav-about">About</label></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/resume">Résumé</a></li>
 				<li><label for="nav-projects">Projects</label></li>
 				<li><label for="nav-code">Code</label></li>
 				<li><label for="nav-tools">Tools</label></li>
-			</ul>
-
-			<input type="radio" class="controller" name="nav-state" id="nav-about" />
-			<ul>
-				<li class="nav-go-back"><label for="nav-index">About</label></li>
-				<li><a href="#">Me</a></li>
-				<li><a href="#">Resume</a></li>
 			</ul>
 
 			<input type="radio" class="controller" name="nav-state" id="nav-projects" />
