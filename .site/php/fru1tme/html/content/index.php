@@ -65,7 +65,8 @@ $body = <<<HTML
 				<h3>Who created it?</h3>
 				<p>
 					My name's Kodlee Yin. I do the things on the internets, and that's about it.
-					Check out my résumé <a href="#" class="inverse">on this page</a>.
+					Check out <a href="/resume" class="inverse">my résumé</a> and feel free
+					to shoot me an email about, well, anything, really.
 				</p>
 
 				<h3>How do I get around?</h3>

@@ -1,5 +1,5 @@
 .resume {
-	padding-top: $nav-banner-height;
+	padding: $nav-banner-height 0;
 	color: $body-text-color;
 
 	.re-title {
@@ -44,7 +44,7 @@
 }
 
 .card {
-	background-color: #F6F6F6;
+	background-color: $body-card-background-color;
 	margin: $content-padding $content-padding/2 0;
 	padding: $content-padding/2;
 	box-shadow: 3px 3px 1px -1px #CCC;
@@ -55,22 +55,19 @@
 	}
 	.subtitle {
 		color: $body-text-blend;
-		font-size: 0;
-		> div {
-			display: inline-block;
-			width: 50%;
-			font-size: 10px;
+		font-size: 14px;
 
-			&:nth-child(2) {
-				text-align: right;
-			}
-			&:nth-child(3) {
-				width: 100%;
-			}
+		.position {
+			display: inline-block;
+		}
+		.location {
+			float: right;
+		}
+		.dates {
+			clear: both;
 		}
 	}
 	.list {
-		font-size: 12px;
 		padding-left: 10px;
 		ul {
 			list-style: none;
@@ -79,5 +76,33 @@
 			text-indent: -10px;
 			padding-top: 8px;
 		}
+	}
+}
+.re-list {
+	list-style: none;
+	color: $body-text-soft-color;
+	padding-top: $content-padding;
+
+	&.inline {
+		padding-top: 0;
+	}
+
+	li, a:link, a:visited {
+		display: block;
+		padding: 8px $content-padding/2 8px $content-padding/2 + 10px;
+		text-indent: -10px;
+		background-color: $body-card-background-color;
+		box-shadow: 3px 3px 1px -1px #CCC;
+		margin: 5px $content-padding/2 0;
+	}
+
+	a:hover, a:active {
+		color: $nav-background;
+		background-color: $nav-banner-background;
+	}
+
+	i {
+		float: right;
+		margin-top: 1px;
 	}
 }

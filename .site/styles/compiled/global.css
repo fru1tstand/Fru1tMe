@@ -40,7 +40,10 @@ a.inverse, label.inverse {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 22px; }
+  padding: 0 22px;
+  display: block; }
+  .container.nopadding {
+    padding: 0; }
 
 .parallax-layer, .parallax .layer--10, .parallax .layer--9, .parallax .layer--8, .parallax .layer--7, .parallax .layer--6, .parallax .layer--5, .parallax .layer--4, .parallax .layer--3, .parallax .layer--2, .parallax .layer--1, .parallax .layer-0, .parallax .layer-1, .parallax .layer-2, .parallax .layer-3, .parallax .layer-4, .parallax .layer-5, .parallax .layer-6 {
   position: fixed;
@@ -343,7 +346,7 @@ nav {
     right: 17%; }
 
 .resume {
-  padding-top: 42px;
+  padding: 42px 0;
   color: #2D2D2D; }
   .resume .re-title {
     color: #778fe9;
@@ -380,22 +383,39 @@ nav {
     font-weight: bold; }
   .card .subtitle {
     color: #A9A9A9;
-    font-size: 0; }
-    .card .subtitle > div {
-      display: inline-block;
-      width: 50%;
-      font-size: 10px; }
-      .card .subtitle > div:nth-child(2) {
-        text-align: right; }
-      .card .subtitle > div:nth-child(3) {
-        width: 100%; }
+    font-size: 14px; }
+    .card .subtitle .position {
+      display: inline-block; }
+    .card .subtitle .location {
+      float: right; }
+    .card .subtitle .dates {
+      clear: both; }
   .card .list {
-    font-size: 12px;
     padding-left: 10px; }
     .card .list ul {
       list-style: none; }
     .card .list li {
       text-indent: -10px;
       padding-top: 8px; }
+
+.re-list {
+  list-style: none;
+  color: #3F3F3F;
+  padding-top: 22px; }
+  .re-list.inline {
+    padding-top: 0; }
+  .re-list li, .re-list a:link, .re-list a:visited {
+    display: block;
+    padding: 8px 11px 8px 21px;
+    text-indent: -10px;
+    background-color: #F6F6F6;
+    box-shadow: 3px 3px 1px -1px #CCC;
+    margin: 5px 11px 0; }
+  .re-list a:hover, .re-list a:active {
+    color: #FFFFFF;
+    background-color: #778fe9; }
+  .re-list i {
+    float: right;
+    margin-top: 1px; }
 
 /*# sourceMappingURL=global.css.map */

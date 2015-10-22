@@ -28,10 +28,9 @@ class Fru1tMeTemplate implements TemplateInterface {
 	<title>Fru1tMe</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600'
-		  rel='stylesheet'
-		  type='text/css'>
-	<link href="/.site/styles/compiled/global.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>
+	<link rel="stylesheet" href="/.site/styles/compiled/global.css" />
 	<script src="/.site/js/preload.js"></script>
 </head>
 
