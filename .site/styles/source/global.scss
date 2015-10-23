@@ -1,74 +1,7 @@
 @import 'variables';
 @import 'mixins';
-
-* {
-	font-family: Raleway, Palatino, serif;
-	box-sizing: border-box;
-}
-
-body, html {
-	height: 100%;
-	background-color: $body-background-color;
-}
-
-body, html,
-h1, h2, h3, h4, h5, h6,
-ul, li, ol,
-p,
-fieldset, legend, input, button {
-	margin: 0;
-	padding: 0;
-}
-
-a {
-	text-decoration: none;
-
-	&:link, &:visited {
-		color: $active-text;
-	}
-
-	&:hover, &:active {
-		color: $active-text-accent;
-	}
-
-	&.disabled {
-		color: $active-text-disabled;
-		cursor: default;
-	}
-}
-
-a.inverse, label.inverse {
-	color: $active-text-color-inverse;
-	&:link, &:visited {
-		color: $active-text-color-inverse;
-	}
-
-	&:hover, &:active {
-		color: $active-text-accent-color-inverse;
-	}
-}
-
-.controller {
-	display: none;
-}
-
-#global-content {
-	min-height: 100%;
-}
-
-.container {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 0 $content-padding;
-	display: block;
-
-	&.nopadding {
-		padding: 0;
-	}
-}
-
-
 @import 'parallax';
+@import 'template';
 @import 'mobile/nav';
 @import 'mobile/_home';
 @import 'mobile/resume';

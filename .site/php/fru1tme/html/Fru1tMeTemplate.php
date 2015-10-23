@@ -57,8 +57,8 @@ class Fru1tMeTemplate implements TemplateInterface {
 
 			<input type="radio" class="controller" name="nav-state" id="nav-projects" />
 			<ul>
-				<li class="nav-go-back"><label for="nav-index">Projects</label></li>
-				<li><a href="#">- Overview -</a></li>
+				<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>
+				<li><a href="/projects">- Overview -</a></li>
 				<li><a href="#">DictionaryWorm</a></li>
 				<li><a href="#">Fru1tMe</a></li>
 				<li><a href="#">Stak</a></li>

@@ -4,9 +4,9 @@ use common\template\ContentPageBuilder;
 use fru1tme\html\Fru1tMeTemplate;
 
 $body = <<<HTML
-<div class="resume">
+<div class="resume nav-push">
 	<div class="container">
-		<div class="re-title">
+		<div class="page-header">
 			<h1>Kodlee Yin</h1>
 			<p><i class="k-at">l</i><i class="kshare">esh</i>.net</p>
 		</div>
@@ -14,9 +14,9 @@ $body = <<<HTML
 
 	<fieldset><legend>Connect</legend></fieldset>
 	<div class="container nopadding">
-		<div class="re-list">
-			<a target="_blank" href="https://www.linkedin.com/pub/kodlee-yin/a4/a0a/82b">LinkedIn<i class="fa fa-linkedin"></i></a>
-			<a target="_blank" href="https://github.com/fru1tstand">GitHub<i class="fa fa-github"></i></a>
+		<div class="card-list">
+			<a target="_blank" href="https://www.linkedin.com/pub/kodlee-yin/a4/a0a/82b">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a target="_blank" href="https://github.com/fru1tstand">GitHub <i class="fa fa-github"></i></a>
 		</div>
 	</div>
 
@@ -41,7 +41,7 @@ $body = <<<HTML
 				</ul>
 			</div>
 		</div>
-		<div class="re-list inline">
+		<div class="card-list inline">
 			<a href="/projects">Click here to view my projects</a>
 		</div>
 
@@ -124,7 +124,7 @@ $body = <<<HTML
 
 	<fieldset><legend>Skills</legend></fieldset>
 	<div class="container nopadding">
-		<ul class="re-list">
+		<ul class="card-list">
 			<li>Self-taught programmer with a strong desire to expand knowledge</li>
 			<li>Aptitude for creative problem solving and abstract thinking</li>
 			<li>Well versed in a multitude of programming patterns and paradigms in PHP, Java, JavaScript, C#</li>
@@ -137,7 +137,7 @@ $body = <<<HTML
 
 	<fieldset><legend>Interests</legend></fieldset>
 	<div class="container nopadding">
-		<ul class="re-list">
+		<ul class="card-list">
 			<li>Outdoors and Sports - I love hiking, backpacking, camping, biking, skiing, and playing ping pong</li>
 			<li>Public Speaking - I am no stranger to presentations, teaching, and drama improv</li>
 			<li>Cooking - I mean... I've caught cereal on fire before, which I've been told, takes a lot of skill to do...</li>
@@ -146,9 +146,9 @@ $body = <<<HTML
 
 	<fieldset><legend>Download</legend></fieldset>
 	<div class="container nopadding">
-		<div class="re-list">
-			<a target="_blank" href="https://s3.amazonaws.com/ks_web/fru1t.me/about/KodleeYin-2015-10-01-PublicResume.pdf">As .pdf<i class="fa fa-file-pdf-o"></i></a>
-			<a target="_blank" href="https://s3.amazonaws.com/ks_web/fru1t.me/about/KodleeYin-2015-10-01-PublicResume.docx">As .docx<i class="fa fa-file-word-o"></i></a>
+		<div class="card-list">
+			<a target="_blank" href="https://s3.amazonaws.com/ks_web/fru1t.me/about/KodleeYin-2015-10-01-PublicResume.pdf">As .pdf <i class="fa fa-file-pdf-o"></i></a>
+			<a target="_blank" href="https://s3.amazonaws.com/ks_web/fru1t.me/about/KodleeYin-2015-10-01-PublicResume.docx">As .docx <i class="fa fa-file-word-o"></i></a>
 		</div>
 	</div>
 </div>

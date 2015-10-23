@@ -1,29 +1,5 @@
 .resume {
-	padding: $nav-banner-height 0;
 	color: $body-text-color;
-
-	.re-title {
-		color: $nav-banner-background;
-		padding-top: $content-padding * 2;
-		text-align: center;
-		h1 {
-			margin-bottom: -10px;
-		}
-		p {
-			font-style: italic;
-		}
-	}
-
-	fieldset {
-		margin-top: $content-padding * 2;
-		border: none;
-		border-top: 1px solid $body-text-blend;
-		legend {
-			margin-left: $content-padding - 5px;
-			padding: 0 5px;
-			color: $nav-banner-background;
-		}
-	}
 
 	.k-at {
 		&::before {
@@ -40,69 +16,5 @@
 		&::after {
 			content: 'are';
 		}
-	}
-}
-
-.card {
-	background-color: $body-card-background-color;
-	margin: $content-padding $content-padding/2 0;
-	padding: $content-padding/2;
-	box-shadow: 3px 3px 1px -1px #CCC;
-
-	.title {
-		font-size: 19px;
-		font-weight: bold;
-	}
-	.subtitle {
-		color: $body-text-blend;
-		font-size: 14px;
-
-		.position {
-			display: inline-block;
-		}
-		.location {
-			float: right;
-		}
-		.dates {
-			clear: both;
-		}
-	}
-	.list {
-		padding-left: 10px;
-		ul {
-			list-style: none;
-		}
-		li {
-			text-indent: -10px;
-			padding-top: 8px;
-		}
-	}
-}
-.re-list {
-	list-style: none;
-	color: $body-text-soft-color;
-	padding-top: $content-padding;
-
-	&.inline {
-		padding-top: 0;
-	}
-
-	li, a:link, a:visited {
-		display: block;
-		padding: 8px $content-padding/2 8px $content-padding/2 + 10px;
-		text-indent: -10px;
-		background-color: $body-card-background-color;
-		box-shadow: 3px 3px 1px -1px #CCC;
-		margin: 5px $content-padding/2 0;
-	}
-
-	a:hover, a:active {
-		color: $nav-background;
-		background-color: $nav-banner-background;
-	}
-
-	i {
-		float: right;
-		margin-top: 1px;
 	}
 }
