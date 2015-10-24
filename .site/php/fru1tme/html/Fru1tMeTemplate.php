@@ -39,11 +39,7 @@ class Fru1tMeTemplate implements TemplateInterface {
 		<form>
 			<!-- Static and scrolled banner -->
 			<label for="nav-index" class="nav-banner">{$fields[Fru1tMeTemplate::FIELD_TITLE]}</label>
-			<input type="radio"
-				   class="controller"
-				   name="nav-state"
-				   id="nav-collapsed"
-				   checked="checked" />
+			<input type="radio" class="controller" name="nav-state" id="nav-collapsed" checked="checked" />
 			<label for="nav-collapsed" class="nav-banner fixed">{$fields[Fru1tMeTemplate::FIELD_TITLE]}</label>
 
 			<input type="radio" class="controller" name="nav-state" id="nav-index" />
@@ -53,6 +49,7 @@ class Fru1tMeTemplate implements TemplateInterface {
 				<li><label for="nav-projects">Projects</label></li>
 				<li><label for="nav-code">Code</label></li>
 				<li><label for="nav-tools">Tools</label></li>
+				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 
 			<input type="radio" class="controller" name="nav-state" id="nav-projects" />
@@ -66,11 +63,13 @@ class Fru1tMeTemplate implements TemplateInterface {
 				<li><a href="#">KodleeShare: MIDI</a></li>
 				<li><a href="#">RuneScape Scripting</a></li>
 				<li><a href="#">KodleeShare: Minecraft</a></li>
+				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 
 			<input type="radio" class="controller" name="nav-state" id="nav-code">
 			<ul>
 				<li class="nav-go-back"><label for="nav-index">Code</label></li>
+				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 		</form>
 	</nav>

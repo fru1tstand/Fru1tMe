@@ -292,6 +292,12 @@ nav {
   nav li > a:active {
     background-color: #778fe9;
     color: #EEE; }
+  nav li.nav-close,
+  nav li.nav-close > label,
+  nav li.nav-close > label:hover {
+    height: 100vh;
+    background-color: transparent;
+    font-size: 0; }
 
 .nav-banner {
   background-color: #778fe9;
