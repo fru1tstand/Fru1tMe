@@ -129,6 +129,8 @@ a.inverse, label.inverse {
   .card .title {
     font-size: 19px;
     font-weight: bold; }
+    .card .title > a {
+      display: block; }
   .card .subtitle {
     color: #A9A9A9;
     font-size: 14px; }
@@ -140,6 +142,8 @@ a.inverse, label.inverse {
       float: right; }
     .card .subtitle .dates {
       clear: both; }
+    .card .subtitle .tags::before {
+      content: 'Tags: '; }
   .card .list {
     clear: both;
     padding-left: 10px; }
@@ -186,6 +190,11 @@ fieldset {
 .comment {
   font-size: 14px;
   color: #A9A9A9; }
+
+.anchor {
+  font-size: 0;
+  height: 0;
+  width: 0; }
 
 nav {
   width: 100%;

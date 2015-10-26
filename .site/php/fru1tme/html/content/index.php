@@ -58,8 +58,10 @@ $body = <<<HTML
 					Welcome to Fru1tMe!
 					This small space contains a slew of things I've dumped from my brain onto
 					the internet. Feel free to look around and copy things that look neat or
-					interest you. Might I suggest taking a peek at the
-					<a href="#" class="inverse">projects</a> page?
+					interest you. Take a peek at the
+					<a href="/projects" class="inverse">projects</a> page. Or if you're more of a
+					hands-on type of person, check out the <a href="/code" class="inverse">code</a>
+					section.
 				</p>
 
 				<h3>Who created it?</h3>

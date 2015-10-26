@@ -91,6 +91,9 @@ a.inverse, label.inverse {
 	.title {
 		font-size: 19px;
 		font-weight: bold;
+		> a {
+			display: block;
+		}
 	}
 	.subtitle {
 		color: $body-text-blend;
@@ -106,6 +109,9 @@ a.inverse, label.inverse {
 		}
 		.dates {
 			clear: both;
+		}
+		.tags::before {
+			content: 'Tags: ';
 		}
 	}
 	.list {
@@ -171,4 +177,10 @@ fieldset {
 .comment {
 	font-size: 14px;
 	color: $body-text-blend;
+}
+
+.anchor {
+	font-size: 0;
+	height: 0;
+	width: 0;
 }

@@ -12,6 +12,7 @@ $body = <<<HTML
 		</div>
 	</div>
 
+	<div class="anchor" id="anchor-projects-active"></div>
 	<fieldset><legend>Active</legend></fieldset>
 	<div class="container">
 		<p class="comment">Things under development or up-to-date</p>
@@ -54,6 +55,7 @@ $body = <<<HTML
 		</div>
 	</div>
 
+	<div class="anchor" id="anchor-projects-legacy"></div>
 	<fieldset><legend>Legacy</legend></fieldset>
 	<div class="container">
 		<p class="comment">Little and (may be) Broken. But still good. Yeah. Still good.</p>
@@ -113,6 +115,7 @@ $body = <<<HTML
 		</div>
 	</div>
 
+	<div class="anchor" id="anchor-projects-retired"></div>
 	<fieldset><legend>Retired</legend></fieldset>
 	<div class="container">
 		<p class="comment">Offline or otherwise scrapped projects</p>

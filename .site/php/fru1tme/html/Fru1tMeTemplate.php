@@ -52,17 +52,22 @@ class Fru1tMeTemplate implements TemplateInterface {
 				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 
-			<input type="radio" class="controller" name="nav-state" id="nav-projects" />
+			<input type="radio" class="controller" name="nav-state" id="nav-projects">
 			<ul>
 				<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>
-				<li><a href="/projects">- Overview -</a></li>
-				<li><a href="#">DictionaryWorm</a></li>
-				<li><a href="#">Fru1tMe</a></li>
-				<li><a href="#">Stak</a></li>
-				<li><a href="#">Info 200 Poster Project</a></li>
-				<li><a href="#">KodleeShare: MIDI</a></li>
-				<li><a href="#">RuneScape Scripting</a></li>
-				<li><a href="#">KodleeShare: Minecraft</a></li>
+				<li><a href="/projects">All</a></li>
+				<li><a href="/projects#anchor-projects-active">Active</a></li>
+				<li><a href="/projects#anchor-projects-legacy">Legacy</a></li>
+				<li><a href="/projects#anchor-projects-retired">Retired</a></li>
+				<li class="nav-close"><label for="nav-collapsed"></label></li>
+			</ul>
+
+			<input type="radio" class="controller" name="nav-state" id="nav-code">
+			<ul>
+				<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>
+				<li><a href="/code">All</a></li>
+				<li><a href="/code#anchor-code-java">Java</a></li>
+				<li><a href="/code#anchor-code-web">Web</a></li>
 				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 
