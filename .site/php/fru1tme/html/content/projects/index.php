@@ -113,6 +113,24 @@ $body = <<<HTML
 			<a href="http://midi.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="/projects/kshare-midi">Read more <i class="fa fa-list"></i></a>
 		</div>
+
+		<div class="card">
+			<div class="title">Visual Music Project</div>
+			<div class="subtitle">
+				<div class="platforms">Web</div>
+				<div class="status">On-hold</div>
+			</div>
+			<div class="list">
+				<ul>
+					<li>A modular, customizable web-based, audio spectrum analyzer.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="card-list inline">
+			<a href="http://vmp.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
+			<a href="/project/vmp">Read more <i class="fa fa-list"></i></a>
+			<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">Source <i class="fa fa-github"></i></a>
+		</div>
 	</div>
 
 	<div class="anchor" id="anchor-projects-retired"></div>

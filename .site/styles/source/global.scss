@@ -5,6 +5,7 @@
 @import 'mobile/nav';
 @import 'mobile/_home';
 @import 'mobile/resume';
+@import 'mobile/projects';
 
 // Mobile first
 @media(min-width: $device-mobile-cutoff) {

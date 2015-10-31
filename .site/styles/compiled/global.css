@@ -449,4 +449,11 @@ nav {
   .resume .kshare::after {
     content: 'are'; }
 
+.project-header {
+  height: 75vh; }
+
+#dictionary-worm {
+  background: transparent url(https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.png) no-repeat fixed top center;
+  background-size: cover; }
+
 /*# sourceMappingURL=global.css.map */

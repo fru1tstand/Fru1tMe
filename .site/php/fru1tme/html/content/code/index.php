@@ -45,11 +45,20 @@ $body = <<<HTML
 	</div>
 	<div class="container nopadding">
 		<div class="card">
-			<div class="title">Reactive HTML</div>
+			<div class="title">JS-Less Reactive HTML</div>
 			<div class="subtitle">
 				<div class="dates">June 2015</div>
 				<div class="tags">nojs</div>
 			</div>
+			<div class="list">
+				<ul>
+					<li>Visiting some uncommon CSS selectors to produce pretty neat effects
+						without JavaScript.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="card-list inline">
+			<a href="/code/jsless-reactive-html">Read more <i class="fa fa-list"></i></a>
 		</div>
 	</div>
 </div>

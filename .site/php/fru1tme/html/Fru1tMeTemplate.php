@@ -48,7 +48,6 @@ class Fru1tMeTemplate implements TemplateInterface {
 				<li><a href="/resume">Résumé</a></li>
 				<li><label for="nav-projects">Projects</label></li>
 				<li><label for="nav-code">Code</label></li>
-				<li><label for="nav-tools">Tools</label></li>
 				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 
@@ -68,12 +67,6 @@ class Fru1tMeTemplate implements TemplateInterface {
 				<li><a href="/code">All</a></li>
 				<li><a href="/code#anchor-code-java">Java</a></li>
 				<li><a href="/code#anchor-code-web">Web</a></li>
-				<li class="nav-close"><label for="nav-collapsed"></label></li>
-			</ul>
-
-			<input type="radio" class="controller" name="nav-state" id="nav-code">
-			<ul>
-				<li class="nav-go-back"><label for="nav-index">Code</label></li>
 				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 		</form>

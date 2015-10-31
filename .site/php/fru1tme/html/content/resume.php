@@ -42,7 +42,8 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="/projects">Click here to view my projects</a>
+			<a href="/projects">View Projects <i class="fa fa-code-fork"></i></a>
+			<a href="/code">View How-Tos <i class="fa fa-map-signs"></i></a>
 		</div>
 
 		<div class="card">
