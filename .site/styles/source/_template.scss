@@ -140,10 +140,16 @@ a.inverse, label.inverse {
 	li {
 		display: block;
 	}
-	a {
+	> a {
 		display: block;
+
+		&:hover, &:active {
+			color: $nav-background;
+			background-color: $nav-banner-background;
+		}
 	}
-	li, a:link, a:visited {
+	li,
+	> a:link, > a:visited {
 		padding: 8px $content-padding/2 8px $content-padding/2 + 10px;
 		text-indent: -10px;
 		background-color: $body-card-background-color;
@@ -152,14 +158,13 @@ a.inverse, label.inverse {
 		font-size: 16px;
 	}
 
-	a:hover, a:active {
-		color: $nav-background;
-		background-color: $nav-banner-background;
-	}
-
 	i {
 		float: right;
 		margin-top: 1px;
+	}
+
+	.title {
+		font-weight: bold;
 	}
 }
 
@@ -171,6 +176,28 @@ fieldset {
 		margin-left: $content-padding - 5px;
 		padding: 0 5px;
 		color: $nav-banner-background;
+	}
+}
+
+.rolladex {
+	margin-top: $content-padding * 2;
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: visible;
+	height: 500px;
+	text-align: center;
+	font-size: 0;
+	white-space: nowrap;
+
+	> img {
+		display: inline-block;
+		margin-right: $content-padding;
+		height: 490px;
+		box-shadow: 6px 6px 3px 0 #BBB;
+
+		&:nth-child(1) {
+			margin-left: $content-padding;
+		}
 	}
 }
 

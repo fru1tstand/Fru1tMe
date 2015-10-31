@@ -162,21 +162,24 @@ a.inverse, label.inverse {
     padding-top: 0; }
   .card-list li {
     display: block; }
-  .card-list a {
+  .card-list > a {
     display: block; }
-  .card-list li, .card-list a:link, .card-list a:visited {
+    .card-list > a:hover, .card-list > a:active {
+      color: #FFFFFF;
+      background-color: #778fe9; }
+  .card-list li,
+  .card-list > a:link, .card-list > a:visited {
     padding: 8px 11px 8px 21px;
     text-indent: -10px;
     background-color: #F6F6F6;
     box-shadow: 3px 3px 1px -1px #CCC;
     margin: 5px 11px 0;
     font-size: 16px; }
-  .card-list a:hover, .card-list a:active {
-    color: #FFFFFF;
-    background-color: #778fe9; }
   .card-list i {
     float: right;
     margin-top: 1px; }
+  .card-list .title {
+    font-weight: bold; }
 
 fieldset {
   margin-top: 44px;
@@ -186,6 +189,23 @@ fieldset {
     margin-left: 17px;
     padding: 0 5px;
     color: #778fe9; }
+
+.rolladex {
+  margin-top: 44px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  height: 500px;
+  text-align: center;
+  font-size: 0;
+  white-space: nowrap; }
+  .rolladex > img {
+    display: inline-block;
+    margin-right: 22px;
+    height: 490px;
+    box-shadow: 6px 6px 3px 0 #BBB; }
+    .rolladex > img:nth-child(1) {
+      margin-left: 22px; }
 
 .comment {
   font-size: 14px;
@@ -448,12 +468,5 @@ nav {
     content: 'kodle'; }
   .resume .kshare::after {
     content: 'are'; }
-
-.project-header {
-  height: 75vh; }
-
-#dictionary-worm {
-  background: transparent url(https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.png) no-repeat fixed top center;
-  background-size: cover; }
 
 /*# sourceMappingURL=global.css.map */
