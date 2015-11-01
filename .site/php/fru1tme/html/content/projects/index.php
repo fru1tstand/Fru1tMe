@@ -74,8 +74,8 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
 			<a href="/projects/stak">Read more <i class="fa fa-list"></i></a>
+			<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
 			<a href="https://github.com/fru1tstand/Fru1tMe-Stak" target="_blank">Source <i class="fa fa-github"></i></a>
 		</div>
 
@@ -92,8 +92,8 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="http://info.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="/projects/i200-poster-project">Read more <i class="fa fa-list"></i></a>
+			<a href="http://info.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="https://github.com/fru1tstand/Info200-Poster-Project" target="_blank">Source <i class="fa fa-github"></i></a>
 		</div>
 
@@ -110,8 +110,8 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="http://midi.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="/projects/kshare-midi">Read more <i class="fa fa-list"></i></a>
+			<a href="http://midi.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 		</div>
 
 		<div class="card">
@@ -127,8 +127,8 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="http://vmp.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="/project/vmp">Read more <i class="fa fa-list"></i></a>
+			<a href="http://vmp.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">Source <i class="fa fa-github"></i></a>
 		</div>
 	</div>

@@ -14,9 +14,7 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.png" alt="Dictionary Worm ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.png" alt="Dictionary Worm ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.png" alt="Dictionary Worm ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.gif" alt="Dictionary Worm ScreenShot 1" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
