@@ -71,6 +71,9 @@ $body = <<<HTML
 					class="fa fa-github"></i></a>
 		</div>
 	</div>
+	<div class="card-list">
+		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+	</div>
 </div>
 HTML;
 

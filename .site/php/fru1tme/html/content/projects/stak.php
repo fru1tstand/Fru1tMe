@@ -89,6 +89,9 @@ $body = <<<HTML
 		<a href="https://github.com/fru1tstand/Fru1tMe-Stak" target="_blank">GitHub <i class="fa fa-github"></i></a>
 		<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
 	</div>
+	<div class="card-list">
+		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+	</div>
 </div>
 HTML;
 

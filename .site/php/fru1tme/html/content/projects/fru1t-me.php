@@ -69,6 +69,9 @@ $body = <<<HTML
 	<div class="card-list">
 		<a href="https://github.com/fru1tstand/Fru1tMe" target="_blank">GitHub <i class="fa fa-github"></i></a>
 	</div>
+	<div class="card-list">
+		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+	</div>
 </div>
 HTML;
 
