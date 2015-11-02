@@ -93,32 +93,10 @@ nav {
 	z-index: 9999999999;
 }
 
-// Fixed nav behavior
+// Display close nav banner when nav is open
 #nav-collapsed:checked + .nav-banner {
 	display: none;
 }
 #nav-collapsed:not(:checked) + .nav-banner {
 	display: block;
-}
-
-#nav-expanded + div {
-	position: fixed;
-	top: $nav-banner-height;
-	left: 0;
-	right: 0;
-	bottom: 100%;
-	overflow: auto;
-	z-index: 99999999999;
-
-	@include transition(bottom $duration-action $ease-out);
-
-	li {
-		transition-timing-function: $ease-in;
-	}
-}
-
-#nav-expanded:checked + div {
-	bottom: 0;
-
-	@include transition(bottom $duration-action $ease-in);
 }

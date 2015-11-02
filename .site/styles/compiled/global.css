@@ -102,24 +102,22 @@ a.inverse, label.inverse {
   min-height: 100%; }
 
 .container {
-  max-width: 1000px;
   margin: 0 auto;
   padding: 0 22px;
   display: block; }
   .container.nopadding {
     padding: 0; }
 
-.nav-push {
-  padding: 42px 0; }
+.page-header h1 {
+  margin-bottom: -4px;
+  color: #778fe9; }
+.page-header p {
+  font-style: italic;
+  color: #3F3F3F; }
 
-.page-header {
-  padding-top: 44px; }
-  .page-header h1 {
-    margin-bottom: -4px;
-    color: #778fe9; }
-  .page-header p {
-    font-style: italic;
-    color: #3F3F3F; }
+.nav-push {
+  padding-top: 86px;
+  padding-bottom: 44px; }
 
 .card {
   background-color: #F6F6F6;
@@ -352,24 +350,6 @@ nav {
 #nav-collapsed:not(:checked) + .nav-banner {
   display: block; }
 
-#nav-expanded + div {
-  position: fixed;
-  top: 42px;
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  overflow: auto;
-  z-index: 99999999999;
-  transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
-  -webkit-transition: bottom 0.3s cubic-bezier(0.17, 0.84, 0.44, 1); }
-  #nav-expanded + div li {
-    transition-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22); }
-
-#nav-expanded:checked + div {
-  bottom: 0;
-  transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22);
-  -webkit-transition: bottom 0.3s cubic-bezier(0.9, 0.03, 0.69, 0.22); }
-
 .home {
   background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -moz-linear-gradient(top, #539ba9 0%, #e8e7d3 100%);
   /* FF3.6+ */
@@ -477,5 +457,50 @@ nav {
     content: 'kodle'; }
   .resume .kshare::after {
     content: 'are'; }
+
+@media (min-width: 760px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px; }
+    nav ul {
+      left: 0;
+      right: auto;
+      width: 400px; }
+    nav .controller:checked + ul > li {
+      margin-left: 0; }
+    nav li > label,
+    nav li > a:link,
+    nav li > a:visited {
+      background-color: #EEE; }
+    nav li > label:hover,
+    nav li > a:hover,
+    nav li > a:active {
+      color: #EEE;
+      background-color: #778fe9; }
+
+  .nav-banner {
+    top: 0;
+    left: 0;
+    width: 400px;
+    position: fixed;
+    z-index: 9999999999; }
+
+  #global-content {
+    padding-left: 400px; }
+
+  .nav-push {
+    padding-top: 44px; }
+
+  .card-list li, .card-list a:link, .card-list a:visited {
+    display: inline-block;
+    width: 453px;
+    vertical-align: top; }
+
+  .card-container {
+    display: inline-block;
+    width: 475px;
+    vertical-align: top; } }
 
 /*# sourceMappingURL=global.css.map */

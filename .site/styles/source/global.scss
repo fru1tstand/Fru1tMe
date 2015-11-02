@@ -9,4 +9,6 @@
 
 // Mobile first
 @media(min-width: $device-mobile-cutoff) {
+	@import 'desktop/nav';
+	@import 'desktop/template';
 }

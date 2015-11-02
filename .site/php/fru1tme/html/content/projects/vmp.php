@@ -61,7 +61,7 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">GitHub <i class="fa fa-globe"></i></a>
+			<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">GitHub <i class="fa fa-github"></i></a>
 			<a href="http://vmp.fru1t.me/" target="_blank">Live Site <i class="fa fa-globe"></i></a>
 		</div>
 		<div class="card-list">

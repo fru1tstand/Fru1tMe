@@ -1,0 +1,35 @@
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: $desktop-navbar-width;
+
+	ul {
+		left: 0;
+		right: auto;
+		width: $desktop-navbar-width;
+	}
+	.controller:checked + ul > li {
+		margin-left: 0;
+	}
+
+	li > label,
+	li > a:link,
+	li > a:visited {
+		background-color: $body-background-color;
+	}
+
+	li > label:hover,
+	li > a:hover,
+	li > a:active {
+		color: $body-background-color;
+		background-color: $nav-banner-background;
+	}
+}
+.nav-banner {
+	top: 0;
+	left: 0;
+	width: $desktop-navbar-width;
+	position: fixed;
+	z-index: 9999999999;
+}

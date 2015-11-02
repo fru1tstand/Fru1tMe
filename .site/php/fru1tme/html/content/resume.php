@@ -22,103 +22,114 @@ $body = <<<HTML
 
 	<fieldset><legend>Experience</legend></fieldset>
 	<div class="container nopadding">
-		<div class="card">
-			<div class="title">KodleeShare / Fru1tMe</div>
-			<div class="subtitle">
-				<div class="position">Web Developer</div>
-				<div class="location">Seattle, Washington</div>
-				<div class="dates">2008 - Present</div>
+		<div class="card-container">
+			<div class="card">
+				<div class="title">KodleeShare / Fru1tMe</div>
+				<div class="subtitle">
+					<div class="position">Web Developer</div>
+					<div class="location">Seattle, Washington</div>
+					<div class="dates">2008 - Present</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Pioneering with experimental web technologies such as Canvas, WebAudio,
+							and DOMApplications</li>
+						<li>Maintaining server hardware and infrastructure along with server security</li>
+						<li>Used professional video editing tools such as Adobe Premiere Pro and Adobe
+							After Effects to create high quality videos</li>
+						<li>Supported and maintained multiple popular game servers with large
+							communities</li>
+					</ul>
+				</div>
 			</div>
-			<div class="list">
-				<ul>
-					<li>Pioneering with experimental web technologies such as Canvas, WebAudio,
-						and DOMApplications</li>
-					<li>Maintaining server hardware and infrastructure along with server security</li>
-					<li>Used professional video editing tools such as Adobe Premiere Pro and Adobe
-						After Effects to create high quality videos</li>
-					<li>Supported and maintained multiple popular game servers with large
-						communities</li>
-				</ul>
-			</div>
-		</div>
-		<div class="card-list inline">
-			<a href="/projects">View Projects <i class="fa fa-code-fork"></i></a>
-			<a href="/code">View How-Tos <i class="fa fa-map-signs"></i></a>
-		</div>
-
-		<div class="card">
-			<div class="title">Google</div>
-			<div class="subtitle">
-				<div class="position">Software Engineer Intern</div>
-				<div class="location">Multiple Locations</div>
-				<div class="dates">June - September, 2014 and 2015</div>
-			</div>
-			<div class="list">
-				<ul>
-					<li>Engineered Bigtable-based systems and implemented Map-Reduce jobs that
-						improved site reliability</li>
-					<li>Collaborated with peers to create backend tools that interfaced with these
-						databases for CSRs</li>
-					<li>Composed frontend features and constructed experiments to evaluate their
-						performance</li>
-					<li>Added improvements to processes to severely improve code quality and
-						maintainability</li>
-				</ul>
+			<div class="card-list inline">
+				<a href="/projects">View Projects <i class="fa fa-code-fork"></i></a>
+				<a href="/code">View How-Tos <i class="fa fa-map-signs"></i></a>
 			</div>
 		</div>
-		<div class="card">
-			<div class="title">Revenue Management Systems, Inc.</div>
-			<div class="subtitle">
-				<div class="position">Software Engineer</div>
-				<div class="location">Seattle, Washington</div>
-				<div class="dates">January 2014 - March 2015</div>
-			</div>
-			<div class="list">
-				<ul>
-					<li>Built tools and scripts to automate mundane tasks</li>
-					<li>Co-produced web-based dashboard, tracking database health</li>
-					<li>Developed modern, responsive, mobile-first web pages</li>
-				</ul>
+		<div class="card-container">
+			<div class="card">
+				<div class="title">Google</div>
+				<div class="subtitle">
+					<div class="position">Software Engineer Intern</div>
+					<div class="location">Multiple Locations</div>
+					<div class="dates">June - September, 2014 and 2015</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Engineered Bigtable-based systems and implemented Map-Reduce jobs that
+							improved site reliability</li>
+						<li>Collaborated with peers to create backend tools that interfaced with these
+							databases for CSRs</li>
+						<li>Composed frontend features and constructed experiments to evaluate their
+							performance</li>
+						<li>Added improvements to processes to severely improve code quality and
+							maintainability</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="card">
-			<div class="title">Mercer Island School District</div>
-			<div class="subtitle">
-				<div class="position">Web Developer</div>
-				<div class="location">Mercer Island, Washington</div>
-				<div class="dates">September 2012 - July 2013</div>
+		<div class="card-container">
+			<div class="card">
+				<div class="title">Revenue Management Systems, Inc.</div>
+				<div class="subtitle">
+					<div class="position">Software Engineer</div>
+					<div class="location">Seattle, Washington</div>
+					<div class="dates">January 2014 - March 2015</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Built tools and scripts to automate mundane tasks</li>
+						<li>Co-produced web-based dashboard, tracking database health</li>
+						<li>Developed modern, responsive, mobile-first web pages</li>
+					</ul>
+				</div>
 			</div>
-			<div class="list">
-				<ul>
-					<li>Created a dynamic web-based computer lab reservation system, complete with
-						ticketing support; to be used by a 4,000 student school district</li>
-				</ul>
+		</div>
+		<div class="card-container">
+			<div class="card">
+				<div class="title">Mercer Island School District</div>
+				<div class="subtitle">
+					<div class="position">Web Developer</div>
+					<div class="location">Mercer Island, Washington</div>
+					<div class="dates">September 2012 - July 2013</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Created a dynamic web-based computer lab reservation system, complete with
+							ticketing support; to be used by a 4,000 student school district</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<fieldset><legend>Education and Achievements</legend></fieldset>
 	<div class="container nopadding">
-		<div class="card">
-			<div class="title">University of Washington</div>
-			<div class="subtitle">
-				<div>Computer Science and Informatics (WiP)</div>
-				<div>Seattle, Washington</div>
-				<div>September 2013 - June 2017</div>
+		<div class="card-container">
+			<div class="card">
+				<div class="title">University of Washington</div>
+				<div class="subtitle">
+					<div>Computer Science and Informatics (WiP)</div>
+					<div>Seattle, Washington</div>
+					<div>September 2013 - June 2017</div>
+				</div>
 			</div>
 		</div>
-		<div class="card">
-			<div class="title">Boy Scouts of America</div>
-			<div class="subtitle">
-				<div class="position">Eagle Scout</div>
-				<div class="location">Mercer Island, Washington</div>
-				<div class="dates">September 2013 - June 2017</div>
-			</div>
-			<div class="list">
-				<ul>
-					<li>Scripted automation tools that converted deprecated legacy files to CNC machine
-						readable formats</li>
-				</ul>
+		<div class="card-container">
+			<div class="card">
+				<div class="title">Boy Scouts of America</div>
+				<div class="subtitle">
+					<div class="position">Eagle Scout</div>
+					<div class="location">Mercer Island, Washington</div>
+					<div class="dates">September 2013 - June 2017</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Scripted automation tools that converted deprecated legacy files to CNC machine
+							readable formats</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -139,9 +150,20 @@ $body = <<<HTML
 	<fieldset><legend>Interests</legend></fieldset>
 	<div class="container nopadding">
 		<ul class="card-list">
-			<li>Outdoors and Sports - I love hiking, backpacking, camping, biking, skiing, and playing ping pong</li>
-			<li>Public Speaking - I am no stranger to presentations, teaching, and drama improv</li>
-			<li>Cooking - I mean... I've caught cereal on fire before, which I've been told, takes a lot of skill to do...</li>
+			<li>
+				<div class="title">Outdoors and Sports</div>
+				<div>I love hiking, backpacking, camping, biking, skiing, and playing
+					table tennis.</div>
+			</li>
+			<li>
+				<div class="title">Public Speaking</div>
+				<div>I am no stranger to presentations, teaching, and drama improv</div>
+			</li>
+			<li>
+				<div class="title">Cooking</div>
+				<div>I mean... I've caught cereal on fire before, which I've been told, takes a
+				lot of skill to do...</div>
+			</li>
 		</ul>
 	</div>
 

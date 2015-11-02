@@ -56,7 +56,6 @@ a.inverse, label.inverse {
 }
 
 .container {
-	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 $content-padding;
 	display: block;
@@ -66,12 +65,7 @@ a.inverse, label.inverse {
 	}
 }
 
-.nav-push {
-	padding: $nav-banner-height 0;
-}
-
 .page-header {
-	padding-top: $content-padding * 2;
 	h1 {
 		margin-bottom: -4px;
 		color: $nav-banner-background;
@@ -80,6 +74,11 @@ a.inverse, label.inverse {
 		font-style: italic;
 		color: $body-text-soft-color;
 	}
+}
+
+.nav-push {
+	padding-top: $content-padding * 2 + $nav-banner-height;
+	padding-bottom: $content-padding * 2;
 }
 
 .card {
