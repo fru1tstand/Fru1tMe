@@ -170,7 +170,7 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="/projects/minecraft">Read more <i class="fa fa-list"></i></a>
+			<a href="/projects/kshare-minecraft">Read more <i class="fa fa-list"></i></a>
 		</div>
 	</div>
 </div>

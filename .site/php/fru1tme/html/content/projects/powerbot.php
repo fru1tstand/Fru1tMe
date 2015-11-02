@@ -93,6 +93,6 @@ HTML;
 
 
 ContentPageBuilder::of(Fru1tMeTemplate::getClass())
-		->set(Fru1tMeTemplate::FIELD_TITLE, "Project / Info 200 Project Poster")
+		->set(Fru1tMeTemplate::FIELD_TITLE, "Project / Powerbot Scripting")
 		->set(Fru1tMeTemplate::FIELD_BODY, $body)
 		->register();
