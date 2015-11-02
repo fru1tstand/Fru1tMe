@@ -27,8 +27,8 @@
 		height: 250vh;
 
 		// What??? Why??? See below for details
-		animation-duration: 5s;
-		animation-name: firefox-fix;
+		-moz-animation-duration: 5s;
+		-moz-animation-name: firefox-fix;
 	}
 
 	.overlay {

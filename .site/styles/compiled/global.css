@@ -400,8 +400,8 @@ nav {
     height: 20px; }
   .home .parallax-push {
     height: 250vh;
-    animation-duration: 5s;
-    animation-name: firefox-fix; }
+    -moz-animation-duration: 5s;
+    -moz-animation-name: firefox-fix; }
   .home .overlay > div {
     color: #EEE;
     background-color: #2D2D2D;
