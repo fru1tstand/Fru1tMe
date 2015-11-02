@@ -25,6 +25,10 @@
 
 	.parallax-push {
 		height: 250vh;
+
+		// What??? Why??? See below for details
+		animation-duration: 5s;
+		animation-name: firefox-fix;
 	}
 
 	.overlay {
@@ -107,4 +111,20 @@
 		top: 213%;
 		right: 17%;
 	}
+}
+
+// Oh firefox.
+// How I wish everything worked.
+// At least you're not Internet Explorer.
+// Firefox, unfortunately, has a rendering bug with transformX and Scale which produces
+// a height that is severely larger than intended. This is a
+// problem as it will scroll past the bottom of the page, displaying blank space.
+// I found that by forcing a redraw when the page is loaded fixes the issue. To make this redraw
+// as subtle as possible, I added 1px of padding to a push element on the page over the course of
+// <insert animation-duration>. This effectively causes firefox to redraw the elements and calculate
+// the correct heights for all elements.
+@keyframes firefox-fix {
+	0% { padding-top: 1px; }
+	50% { padding-top: 0; }
+	100% { padding-top: 1px; }
 }

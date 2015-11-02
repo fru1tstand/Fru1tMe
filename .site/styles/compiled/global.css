@@ -399,7 +399,9 @@ nav {
     color: #FFF;
     height: 20px; }
   .home .parallax-push {
-    height: 250vh; }
+    height: 250vh;
+    animation-duration: 5s;
+    animation-name: firefox-fix; }
   .home .overlay > div {
     color: #EEE;
     background-color: #2D2D2D;
@@ -458,6 +460,13 @@ nav {
     top: 213%;
     right: 17%; }
 
+@keyframes firefox-fix {
+  0% {
+    padding-top: 1px; }
+  50% {
+    padding-top: 0; }
+  100% {
+    padding-top: 1px; } }
 .resume {
   color: #2D2D2D; }
   .resume .k-at::before {
