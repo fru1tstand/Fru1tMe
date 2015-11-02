@@ -192,9 +192,20 @@ fieldset {
 	> img {
 		display: inline-block;
 		margin-right: $content-padding;
-		height: 490px;
+		max-height: 490px;
+		max-width: 100vw;
 		box-shadow: 6px 6px 3px 0 #BBB;
+		vertical-align: middle;
 
+		&::before {
+			content: ' ';
+			height: 490px;
+			width: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		// Fencepost margin
 		&:nth-child(1) {
 			margin-left: $content-padding;
 		}
