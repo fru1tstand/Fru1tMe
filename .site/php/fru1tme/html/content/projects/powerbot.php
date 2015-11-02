@@ -84,9 +84,9 @@ $body = <<<HTML
 			<a href="https://github.com/fru1tstand/Powerbot" target="_blank">GitHub (newer) <i class="fa fa-github"></i></a>
 			<a href="https://github.com/fru1tstand/RSBot" target="_blank">GitHub (older) <i class="fa fa-github"></i></a>
 		</div>
-	</div>
-	<div class="card-list">
-		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		<div class="card-list">
+			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		</div>
 	</div>
 </div>
 HTML;

@@ -84,8 +84,10 @@ $body = <<<HTML
 	</div>
 
 	<fieldset><legend>Links</legend></fieldset>
-	<div class="card-list">
-		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+	<div class="container nopadding">
+		<div class="card-list">
+			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		</div>
 	</div>
 </div>
 HTML;

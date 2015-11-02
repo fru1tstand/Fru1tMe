@@ -127,7 +127,7 @@ $body = <<<HTML
 			</div>
 		</div>
 		<div class="card-list inline">
-			<a href="/project/vmp">Read more <i class="fa fa-list"></i></a>
+			<a href="/projects/vmp">Read more <i class="fa fa-list"></i></a>
 			<a href="http://vmp.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">Source <i class="fa fa-github"></i></a>
 		</div>

@@ -70,9 +70,9 @@ $body = <<<HTML
 			<a href="https://github.com/fru1tstand/DictionaryWorm" target="_blank">GitHub <i
 					class="fa fa-github"></i></a>
 		</div>
-	</div>
-	<div class="card-list">
-		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		<div class="card-list">
+			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		</div>
 	</div>
 </div>
 HTML;

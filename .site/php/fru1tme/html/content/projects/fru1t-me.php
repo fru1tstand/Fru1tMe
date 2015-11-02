@@ -66,11 +66,13 @@ $body = <<<HTML
 
 
 	<fieldset><legend>Links</legend></fieldset>
-	<div class="card-list">
-		<a href="https://github.com/fru1tstand/Fru1tMe" target="_blank">GitHub <i class="fa fa-github"></i></a>
-	</div>
-	<div class="card-list">
-		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+	<div class="container nopadding">
+		<div class="card-list">
+			<a href="https://github.com/fru1tstand/Fru1tMe" target="_blank">GitHub <i class="fa fa-github"></i></a>
+		</div>
+		<div class="card-list">
+			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		</div>
 	</div>
 </div>
 HTML;

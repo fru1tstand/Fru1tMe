@@ -77,9 +77,9 @@ $body = <<<HTML
 			<a href="https://github.com/fru1tstand/Info200-Poster-Project" target="_blank">GitHub <i class="fa fa-github"></i></a>
 			<a href="http://info.fru1t.me/">Live Site <i class="fa fa-globe"></i></a>
 		</div>
-	</div>
-	<div class="card-list">
-		<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		<div class="card-list">
+			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>
+		</div>
 	</div>
 </div>
 HTML;
