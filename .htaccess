@@ -2,4 +2,5 @@ RewriteEngine On
 
 RewriteRule ^\.site/.+ - [L,NC]
 
+RewriteRule ^(midi.+index.+)$ http://midi.fru1t.me/$1
 RewriteRule ^([^?.]+)(\?.+)?$ /index.php?page=$1 [L,QSA]
