@@ -137,25 +137,21 @@ a.inverse, label.inverse {
 		padding-top: 0;
 	}
 
-	li {
-		display: block;
-	}
-	> a {
-		display: block;
-
-		&:hover, &:active {
-			color: $nav-background;
-			background-color: $nav-banner-background;
-		}
-	}
 	li,
-	> a:link, > a:visited {
+	> a:link,
+	> a:visited {
 		padding: 8px $content-padding/2 8px $content-padding/2 + 10px;
 		text-indent: -10px;
 		background-color: $body-card-background-color;
 		box-shadow: 3px 3px 1px -1px #CCC;
 		margin: 5px $content-padding/2 0;
 		font-size: 16px;
+		display: block;
+	}
+	> a:hover,
+	> a:active {
+		color: $nav-background;
+		background-color: $nav-banner-background;
 	}
 
 	i {

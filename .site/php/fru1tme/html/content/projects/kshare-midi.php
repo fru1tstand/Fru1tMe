@@ -84,7 +84,8 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="http://kodleeshare.net/">Live Site <i class="fa fa-globe"></i></a>
+			<a href="http://kodleeshare.net/" target="_blank">Live Site <i class="fa fa-globe"></i></a>
+			<a href="https://www.youtube.com/user/Fru1TStanD" target="_blank">YouTube <i class="fa fa-youtube-play"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

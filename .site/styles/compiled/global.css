@@ -160,21 +160,20 @@ a.inverse, label.inverse {
   font-size: 0; }
   .card-list.inline {
     padding-top: 0; }
-  .card-list li {
-    display: block; }
-  .card-list > a {
-    display: block; }
-    .card-list > a:hover, .card-list > a:active {
-      color: #FFFFFF;
-      background-color: #778fe9; }
   .card-list li,
-  .card-list > a:link, .card-list > a:visited {
+  .card-list > a:link,
+  .card-list > a:visited {
     padding: 8px 11px 8px 21px;
     text-indent: -10px;
     background-color: #F6F6F6;
     box-shadow: 3px 3px 1px -1px #CCC;
     margin: 5px 11px 0;
-    font-size: 16px; }
+    font-size: 16px;
+    display: block; }
+  .card-list > a:hover,
+  .card-list > a:active {
+    color: #FFFFFF;
+    background-color: #778fe9; }
   .card-list i {
     float: right;
     margin-top: 1px; }
