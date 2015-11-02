@@ -42,9 +42,6 @@ $body = <<<HTML
 				glory of a site. I was at the height of my interest for video editing and music,
 				and I concluded that a dynamic website would be the perfect way to store everything
 				and get some experience with relational databases.</li>
-
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">Search Features</div>
 				<div>Don't even ask how this is implemented. But it works (sorta). Playing around

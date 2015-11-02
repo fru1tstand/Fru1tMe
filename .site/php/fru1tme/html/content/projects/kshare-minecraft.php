@@ -44,9 +44,6 @@ $body = <<<HTML
 				ad-hoc community there existed. With my co-host Carson Beck, we climbed the highest
 				mountains, ran the lowest valleys, and swam the deepest rivers. And we couldn't
 				have done it without the people we met along the way. </li>
-
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">What was it?</div>
 				<div>Kodleeshare's Minecraft server was a community-driven game community that

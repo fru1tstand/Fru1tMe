@@ -43,9 +43,6 @@ $body = <<<HTML
 				The mock includes internationalization (i18n), allowing to change the language
 				between 5 different presets. The mock also allows for customization of the color
 				theme, provided by Bootswatch.</li>
-
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">Why we are here</div>
 				<div>Students and staff at the University of Washington often run into the issue
