@@ -31,7 +31,6 @@ class Fru1tMeTemplate implements TemplateInterface {
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>
 	<link rel="stylesheet" href="/.site/styles/compiled/global.css" />
-	<script src="/.site/js/preload.js"></script>
 </head>
 
 <body>
@@ -46,36 +45,37 @@ class Fru1tMeTemplate implements TemplateInterface {
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/resume">Résumé</a></li>
-				<li><label for="nav-projects">Projects</label></li>
-				<li><label for="nav-code">Code</label></li>
+				<li><a href="/projects">Projects</a></li>
+				<li><a href="/code">Code</a></li>
+				<!--<li><label for="nav-projects">Projects</label></li>-->
+				<!--<li><label for="nav-code">Code</label></li>-->
 				<li class="nav-close"><label for="nav-collapsed"></label></li>
 			</ul>
 
-			<input type="radio" class="controller" name="nav-state" id="nav-projects">
-			<ul>
-				<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>
-				<li><a href="/projects">All</a></li>
-				<li><a href="/projects#anchor-projects-active">Active</a></li>
-				<li><a href="/projects#anchor-projects-legacy">Legacy</a></li>
-				<li><a href="/projects#anchor-projects-retired">Retired</a></li>
-				<li class="nav-close"><label for="nav-collapsed"></label></li>
-			</ul>
+			<!--<input type="radio" class="controller" name="nav-state" id="nav-projects">-->
+			<!--<ul>-->
+				<!--<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>-->
+				<!--<li><a href="/projects">All</a></li>-->
+				<!--<li><a href="/projects#anchor-projects-active">Active</a></li>-->
+				<!--<li><a href="/projects#anchor-projects-legacy">Legacy</a></li>-->
+				<!--<li><a href="/projects#anchor-projects-retired">Retired</a></li>-->
+				<!--<li class="nav-close"><label for="nav-collapsed"></label></li>-->
+			<!--</ul>-->
 
-			<input type="radio" class="controller" name="nav-state" id="nav-code">
-			<ul>
-				<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>
-				<li><a href="/code">All</a></li>
-				<li><a href="/code#anchor-code-java">Java</a></li>
-				<li><a href="/code#anchor-code-web">Web</a></li>
-				<li class="nav-close"><label for="nav-collapsed"></label></li>
-			</ul>
+			<!--<input type="radio" class="controller" name="nav-state" id="nav-code">-->
+			<!--<ul>-->
+				<!--<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>-->
+				<!--<li><a href="/code">All</a></li>-->
+				<!--<li><a href="/code#anchor-code-java">Java</a></li>-->
+				<!--<li><a href="/code#anchor-code-web">Web</a></li>-->
+				<!--<li class="nav-close"><label for="nav-collapsed"></label></li>-->
+			<!--</ul>-->
 		</form>
 	</nav>
 
 
 	<div id="global-content">{$fields[Fru1tMeTemplate::FIELD_BODY]}</div>
 
-	<script src="/.site/php/Pages/_resource/global_js.php"></script>
 	<script src="/.site/js/goog_analytics.js"></script>
 </body>
 </html>
