@@ -2,6 +2,7 @@ RewriteEngine On
 
 RewriteRule ^\.internal\/.+ - [L,NC]
 
+RewriteRule ^(midi.+index.+)$ http://midi.fru1t.me/$1
 RewriteRule ^([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)($|\/) /index.php?page=$1&op1=$2&op2=$3&op3=$4&op4=$5&op5=$6&op6=$7 [L,QSA]
 RewriteRule ^([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)($|\/) /index.php?page=$1&op1=$2&op2=$3&op3=$4&op4=$5&op5=$6 [L,QSA]
 RewriteRule ^([^.]+)/([^.]+)/([^.]+)/([^.]+)/([^.]+)($|\/) /index.php?page=$1&op1=$2&op2=$3&op3=$4&op4=$5 [L,QSA]
