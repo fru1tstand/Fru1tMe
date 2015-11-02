@@ -39,6 +39,10 @@ $body = <<<HTML
 				multiplier, the more points you gain. Game modes include the classic
 				"burning tiles", timed, limited moves, and zen mode. Enjoy an entertaining game,
 				while flexing your diction. </li>
+			<li>This project is geared toward mobile devices in an effort to start shifting my
+				focus onto native app development. Playing with various cross-compiling
+				libraries such as LibGDX, Phonegap, and others, I hope to learn the limitations
+				of these systems versus native development.</li>
 		</ul>
 	</div>
 
@@ -59,11 +63,19 @@ $body = <<<HTML
 			</li>
 		</ul>
 	</div>
+
+	<fieldset><legend>Links</legend></fieldset>
+	<div class="container nopadding">
+		<div class="card-list">
+			<a href="https://github.com/fru1tstand/DictionaryWorm" target="_blank">GitHub <i
+					class="fa fa-github"></i></a>
+		</div>
+	</div>
 </div>
 HTML;
 
 
 ContentPageBuilder::of(Fru1tMeTemplate::getClass())
-		->set(Fru1tMeTemplate::FIELD_TITLE, "Projects Overview")
+		->set(Fru1tMeTemplate::FIELD_TITLE, "Project / Dictionary Worm")
 		->set(Fru1tMeTemplate::FIELD_BODY, $body)
 		->register();
