@@ -46,8 +46,6 @@ $body = <<<HTML
 				programming, and not because the game made you program. It was because I got bored
 				of it. The nostalgia while making this page... oh... Brings back some really sweet
 				memories.</li>
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">What is it?</div>
 				<div>RuneScape was (still is?) a java-based MMORPG game that has an open-ended play
