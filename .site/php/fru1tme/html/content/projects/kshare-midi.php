@@ -13,11 +13,16 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-0.gif" alt="KodleeShare MIDI ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-1.gif" alt="KodleeShare MIDI ScreenShot 2" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-2.gif" alt="KodleeShare MIDI ScreenShot 3" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-3.gif" alt="KodleeShare MIDI ScreenShot 4" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-4.gif" alt="KodleeShare MIDI ScreenShot 5" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-0.gif"
+			 alt="KodleeShare MIDI ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-1.gif"
+			 alt="KodleeShare MIDI ScreenShot 2" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-2.gif"
+			 alt="KodleeShare MIDI ScreenShot 3" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-3.gif"
+			 alt="KodleeShare MIDI ScreenShot 4" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/ks-midi-ss-4.gif"
+			 alt="KodleeShare MIDI ScreenShot 5" />
 
 	</div>
 
@@ -42,9 +47,6 @@ $body = <<<HTML
 				glory of a site. I was at the height of my interest for video editing and music,
 				and I concluded that a dynamic website would be the perfect way to store everything
 				and get some experience with relational databases.</li>
-
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">Search Features</div>
 				<div>Don't even ask how this is implemented. But it works (sorta). Playing around
@@ -84,8 +86,10 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="http://kodleeshare.net/" target="_blank">Live Site <i class="fa fa-globe"></i></a>
-			<a href="https://www.youtube.com/user/Fru1TStanD" target="_blank">YouTube <i class="fa fa-youtube-play"></i></a>
+			<a href="http://kodleeshare.net/"
+			   target="_blank">Live Site <i class="fa fa-globe"></i></a>
+			<a href="https://www.youtube.com/user/Fru1TStanD"
+			   target="_blank">YouTube <i class="fa fa-youtube-play"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

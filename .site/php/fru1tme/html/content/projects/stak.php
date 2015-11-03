@@ -13,8 +13,10 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/stak-ss-1.gif" alt="Stak ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/stak-ss-2.gif" alt="Stak ScreenShot 2" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/stak-ss-1.gif"
+			 alt="Stak ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/stak-ss-2.gif"
+			 alt="Stak ScreenShot 2" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
@@ -83,12 +85,13 @@ $body = <<<HTML
 		</ul>
 	</div>
 
-
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="https://github.com/fru1tstand/Fru1tMe-Stak" target="_blank">GitHub <i class="fa fa-github"></i></a>
-			<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
+			<a href="https://github.com/fru1tstand/Fru1tMe-Stak"
+			   target="_blank">GitHub <i class="fa fa-github"></i></a>
+			<a href="http://stak.fru1t.me/"
+			   target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

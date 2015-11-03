@@ -14,10 +14,14 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-1.gif" alt="Fru1tMe ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-2.gif" alt="Fru1tMe ScreenShot 2" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-3.gif" alt="Fru1tMe ScreenShot 3" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-4.gif" alt="Fru1tMe ScreenShot 4" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-1.gif"
+			 alt="Fru1tMe ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-2.gif"
+			 alt="Fru1tMe ScreenShot 2" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-3.gif"
+			 alt="Fru1tMe ScreenShot 3" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/fru1tme-ss-4.gif"
+			 alt="Fru1tMe ScreenShot 4" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
@@ -68,7 +72,8 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="https://github.com/fru1tstand/Fru1tMe" target="_blank">GitHub <i class="fa fa-github"></i></a>
+			<a href="https://github.com/fru1tstand/Fru1tMe"
+			   target="_blank">GitHub <i class="fa fa-github"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

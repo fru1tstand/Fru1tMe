@@ -13,9 +13,12 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/i200-poster-ss-1.gif" alt="Poster Project ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/i200-poster-ss-2.gif" alt="Poster Project ScreenShot 2" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/i200-poster-ss-3.gif" alt="Poster Project ScreenShot 3" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/i200-poster-ss-1.gif"
+			 alt="Poster Project ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/i200-poster-ss-2.gif"
+			 alt="Poster Project ScreenShot 2" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/i200-poster-ss-3.gif"
+			 alt="Poster Project ScreenShot 3" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
@@ -43,9 +46,6 @@ $body = <<<HTML
 				The mock includes internationalization (i18n), allowing to change the language
 				between 5 different presets. The mock also allows for customization of the color
 				theme, provided by Bootswatch.</li>
-
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">Why we are here</div>
 				<div>Students and staff at the University of Washington often run into the issue
@@ -65,7 +65,8 @@ $body = <<<HTML
 				<div class="subtitle">Layout, and animations + transitions.</div>
 			</li>
 			<li>
-				<div class="title"><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></div>
+				<div class="title"><a href="http://getbootstrap.com/" target="_blank">
+					Twitter Bootstrap</a></div>
 				<div>Templating framework.</div>
 			</li>
 		</ul>
@@ -74,8 +75,10 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="https://github.com/fru1tstand/Info200-Poster-Project" target="_blank">GitHub <i class="fa fa-github"></i></a>
-			<a href="http://info.fru1t.me/">Live Site <i class="fa fa-globe"></i></a>
+			<a href="https://github.com/fru1tstand/Info200-Poster-Project"
+			   target="_blank">GitHub <i class="fa fa-github"></i></a>
+			<a href="http://info.fru1t.me/"
+			   target="_blank">Live Site <i class="fa fa-globe"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

@@ -13,10 +13,14 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-1.gif" alt="VMP ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-2.gif" alt="VMP ScreenShot 2" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-3.gif" alt="VMP ScreenShot 3" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-4.gif" alt="VMP ScreenShot 4" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-1.gif"
+			 alt="VMP ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-2.gif"
+			 alt="VMP ScreenShot 2" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-3.gif"
+			 alt="VMP ScreenShot 3" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/vmp-ss-4.gif"
+			 alt="VMP ScreenShot 4" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
@@ -61,8 +65,10 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">GitHub <i class="fa fa-github"></i></a>
-			<a href="http://vmp.fru1t.me/" target="_blank">Live Site <i class="fa fa-globe"></i></a>
+			<a href="https://github.com/fru1tstand/ks-vmp"
+			   target="_blank">GitHub <i class="fa fa-github"></i></a>
+			<a href="http://vmp.fru1t.me/"
+			   target="_blank">Live Site <i class="fa fa-globe"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

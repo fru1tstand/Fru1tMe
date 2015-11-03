@@ -13,14 +13,22 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-5.gif" alt="Minecraft ScreenShot 5" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-3.gif" alt="Minecraft ScreenShot 3" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-4.gif" alt="Minecraft ScreenShot 4" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-6.gif" alt="Minecraft ScreenShot 6" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-7.gif" alt="Minecraft ScreenShot 7" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-8.gif" alt="Minecraft ScreenShot 8" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-1.gif" alt="Minecraft ScreenShot 1" />
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-2.gif" alt="Minecraft ScreenShot 2" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-5.gif"
+			 alt="Minecraft ScreenShot 5" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-3.gif"
+			 alt="Minecraft ScreenShot 3" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-4.gif"
+			 alt="Minecraft ScreenShot 4" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-6.gif"
+			 alt="Minecraft ScreenShot 6" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-7.gif"
+			 alt="Minecraft ScreenShot 7" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-8.gif"
+			 alt="Minecraft ScreenShot 8" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-1.gif"
+			 alt="Minecraft ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/mc-ss-2.gif"
+			 alt="Minecraft ScreenShot 2" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
@@ -44,9 +52,6 @@ $body = <<<HTML
 				ad-hoc community there existed. With my co-host Carson Beck, we climbed the highest
 				mountains, ran the lowest valleys, and swam the deepest rivers. And we couldn't
 				have done it without the people we met along the way. </li>
-
-		</ul>
-		<ul class="card-list">
 			<li>
 				<div class="title">What was it?</div>
 				<div>Kodleeshare's Minecraft server was a community-driven game community that
@@ -94,6 +99,6 @@ HTML;
 
 
 ContentPageBuilder::of(Fru1tMeTemplate::getClass())
-		->set(Fru1tMeTemplate::FIELD_TITLE, "Project / KodleeShare: MIDI")
+		->set(Fru1tMeTemplate::FIELD_TITLE, "Project / KodleeShare: Minecraft")
 		->set(Fru1tMeTemplate::FIELD_BODY, $body)
 		->register();

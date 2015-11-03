@@ -14,7 +14,8 @@ $body = <<<HTML
 	</div>
 
 	<div class="rolladex">
-		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.gif" alt="Dictionary Worm ScreenShot 1" />
+		<img src="https://s3.amazonaws.com/ks_web/fru1t.me/projects/dictonary-worm-ss-1.gif"
+		     alt="Dictionary Worm ScreenShot 1" />
 	</div>
 
 	<fieldset><legend>Meta</legend></fieldset>
@@ -22,7 +23,8 @@ $body = <<<HTML
 		<ul class="card-list">
 			<li>
 				<div class="title">Status</div>
-				<div class="subtitle">Work in Progress - Core concepts complete, building gameplay modes</div>
+				<div class="subtitle">Work in Progress - Core concepts complete, building gameplay
+					modes</div>
 			</li>
 			<li>
 				<div class="title">Platforms</div>
@@ -67,8 +69,8 @@ $body = <<<HTML
 	<fieldset><legend>Links</legend></fieldset>
 	<div class="container nopadding">
 		<div class="card-list">
-			<a href="https://github.com/fru1tstand/DictionaryWorm" target="_blank">GitHub <i
-					class="fa fa-github"></i></a>
+			<a href="https://github.com/fru1tstand/DictionaryWorm"
+			   target="_blank">GitHub <i class="fa fa-github"></i></a>
 		</div>
 		<div class="card-list">
 			<a href="/projects">Back to Projects <i class="fa fa-arrow-left"></i></a>

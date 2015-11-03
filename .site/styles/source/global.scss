@@ -7,8 +7,8 @@
 @import 'mobile/resume';
 @import 'mobile/projects';
 
-// Mobile first
-@media(min-width: $device-mobile-cutoff) {
+@media(min-width: $device-desktop-min-width) {
 	@import 'desktop/nav';
 	@import 'desktop/template';
+	@import 'desktop/home';
 }

@@ -505,6 +505,10 @@ nav {
     vertical-align: top; }
 
   .container {
-    max-width: none; } }
+    max-width: none; }
+
+  .home-container {
+    max-width: 600px;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=global.css.map */
