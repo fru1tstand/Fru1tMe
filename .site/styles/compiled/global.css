@@ -104,7 +104,8 @@ a.inverse, label.inverse {
 .container {
   margin: 0 auto;
   padding: 0 22px;
-  display: block; }
+  display: block;
+  max-width: 500px; }
   .container.nopadding {
     padding: 0; }
 
@@ -458,7 +459,7 @@ nav {
   .resume .kshare::after {
     content: 'are'; }
 
-@media (min-width: 760px) {
+@media (min-width: 900px) {
   nav {
     position: fixed;
     top: 0;
@@ -501,6 +502,9 @@ nav {
   .card-container {
     display: inline-block;
     width: 475px;
-    vertical-align: top; } }
+    vertical-align: top; }
+
+  .container {
+    max-width: none; } }
 
 /*# sourceMappingURL=global.css.map */

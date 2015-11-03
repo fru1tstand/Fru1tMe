@@ -59,6 +59,7 @@ a.inverse, label.inverse {
 	margin: 0 auto;
 	padding: 0 $content-padding;
 	display: block;
+	max-width: 500px;
 
 	&.nopadding {
 		padding: 0;
