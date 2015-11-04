@@ -4,7 +4,7 @@ use common\template\ContentPageBuilder;
 use fru1tme\html\Fru1tMeTemplate;
 
 $body = <<<HTML
-<div class="code nav-push">
+<div class="code-tld nav-push">
 	<div class="container">
 		<div class="page-header">
 			<h1>Code</h1>
@@ -12,7 +12,6 @@ $body = <<<HTML
 		</div>
 	</div>
 
-	<div class="anchor" id="anchor-code-java"></div>
 	<fieldset><legend>Java</legend></fieldset>
 	<div class="container">
 		<p class="comment">This one's pretty straightforward. Anything to do with Java.</p>
@@ -35,12 +34,10 @@ $body = <<<HTML
 			</div>
 			<div class="card-list inline">
 				<a href="/code/slick">Read more <i class="fa fa-list"></i></a>
-				<a href="https://github.com/fru1tstand/Powerbot/blob/master/src/me/fru1t/slick/Slick.java" target="_blank">Source <i class="fa fa-github"></i></a>
 			</div>
 		</div>
 	</div>
 
-	<div class="anchor" id="anchor-code-web"></div>
 	<fieldset><legend>Web</legend></fieldset>
 	<div class="container">
 		<div class="comment">PHP, HTML, CSS, and JavaScript related things</div>
@@ -70,6 +67,6 @@ HTML;
 
 
 ContentPageBuilder::of(Fru1tMeTemplate::getClass())
-		->set(Fru1tMeTemplate::FIELD_TITLE, "Home")
+		->set(Fru1tMeTemplate::FIELD_TITLE, "Code")
 		->set(Fru1tMeTemplate::FIELD_BODY, $body)
 		->register();

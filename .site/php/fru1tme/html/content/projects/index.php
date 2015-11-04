@@ -58,7 +58,6 @@ $body = <<<HTML
 		</div>
 	</div>
 
-	<div class="anchor" id="anchor-projects-legacy"></div>
 	<fieldset><legend>Legacy</legend></fieldset>
 	<div class="container">
 		<p class="comment">Little and (may be) Broken. But still good. Yeah. Still good.</p>
@@ -66,21 +65,40 @@ $body = <<<HTML
 	<div class="container nopadding">
 		<div class="card-container">
 			<div class="card">
-				<div class="title">Stak</div>
+				<div class="title">SLICK</div>
 				<div class="subtitle">
-					<div class="platforms">Web (Desktop Only)</div>
+					<div class="platforms">Java</div>
 					<div class="status">On-hold</div>
 				</div>
 				<div class="list">
 					<ul>
-						<li>"Stack" The task organizer.</li>
+						<li>a Simple Lightweight dependency InjeCtion frameworK.</li>
 					</ul>
 				</div>
 			</div>
 			<div class="card-list inline">
-				<a href="/projects/stak">Read more <i class="fa fa-list"></i></a>
-				<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
-				<a href="https://github.com/fru1tstand/Fru1tMe-Stak" target="_blank">Source <i class="fa fa-github"></i></a>
+				<a href="/projects/slick">Read more <i class="fa fa-list"></i></a>
+				<a href="https://github.com/fru1tstand/Powerbot/blob/master/src/me/fru1t/slick/Slick.java" target="_blank">Source <i class="fa fa-github"></i></a>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card">
+				<div class="title">Visual Music Project</div>
+				<div class="subtitle">
+					<div class="platforms">Web</div>
+					<div class="status">On-hold</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>A modular, customizable web-based, audio spectrum analyzer.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card-list inline">
+				<a href="/projects/vmp">Read more <i class="fa fa-list"></i></a>
+				<a href="http://vmp.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
+				<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">Source <i class="fa fa-github"></i></a>
 			</div>
 		</div>
 
@@ -106,6 +124,26 @@ $body = <<<HTML
 
 		<div class="card-container">
 			<div class="card">
+				<div class="title">Stak</div>
+				<div class="subtitle">
+					<div class="platforms">Web (Desktop Only)</div>
+					<div class="status">On-hold</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>"Stack" The task organizer.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card-list inline">
+				<a href="/projects/stak">Read more <i class="fa fa-list"></i></a>
+				<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
+				<a href="https://github.com/fru1tstand/Fru1tMe-Stak" target="_blank">Source <i class="fa fa-github"></i></a>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card">
 				<div class="title">KodleeShare: MIDI</div>
 				<div class="subtitle">
 					<div class="platforms">Web (Desktop Only), Video</div>
@@ -122,30 +160,8 @@ $body = <<<HTML
 				<a href="http://midi.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			</div>
 		</div>
-
-
-		<div class="card-container">
-			<div class="card">
-				<div class="title">Visual Music Project</div>
-				<div class="subtitle">
-					<div class="platforms">Web</div>
-					<div class="status">On-hold</div>
-				</div>
-				<div class="list">
-					<ul>
-						<li>A modular, customizable web-based, audio spectrum analyzer.</li>
-					</ul>
-				</div>
-			</div>
-			<div class="card-list inline">
-				<a href="/projects/vmp">Read more <i class="fa fa-list"></i></a>
-				<a href="http://vmp.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
-				<a href="https://github.com/fru1tstand/ks-vmp" target="_blank">Source <i class="fa fa-github"></i></a>
-			</div>
-		</div>
 	</div>
 
-	<div class="anchor" id="anchor-projects-retired"></div>
 	<fieldset><legend>Retired</legend></fieldset>
 	<div class="container">
 		<p class="comment">Offline or otherwise scrapped projects</p>
@@ -194,6 +210,6 @@ HTML;
 
 
 ContentPageBuilder::of(Fru1tMeTemplate::getClass())
-		->set(Fru1tMeTemplate::FIELD_TITLE, "Projects Overview")
+		->set(Fru1tMeTemplate::FIELD_TITLE, "Projects")
 		->set(Fru1tMeTemplate::FIELD_BODY, $body)
 		->register();

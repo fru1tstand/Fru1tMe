@@ -95,9 +95,6 @@ a.inverse, label.inverse {
   a.inverse:hover, a.inverse:active, label.inverse:hover, label.inverse:active {
     color: #99B7C3; }
 
-.controller {
-  display: none; }
-
 #global-content {
   min-height: 100%; }
 
@@ -108,6 +105,9 @@ a.inverse, label.inverse {
   max-width: 500px; }
   .container.nopadding {
     padding: 0; }
+
+.controller {
+  display: none; }
 
 .page-header h1 {
   margin-bottom: -4px;
@@ -179,6 +179,9 @@ a.inverse, label.inverse {
   .card-list .title {
     font-weight: bold; }
 
+.content-push {
+  height: 44px; }
+
 fieldset {
   margin-top: 44px;
   border: none;
@@ -210,10 +213,9 @@ fieldset {
   font-size: 14px;
   color: #A9A9A9; }
 
-.anchor {
-  font-size: 0;
-  height: 0;
-  width: 0; }
+.code {
+  background-color: #E6E6E6;
+  font-family: monospaced, monospace; }
 
 nav {
   width: 100%;

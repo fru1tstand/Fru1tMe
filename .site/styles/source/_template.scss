@@ -1,5 +1,6 @@
 // This file contains all globally available classes n stuff.
 
+//** Basic apply-everwhere rules
 * {
 	font-family: Raleway, Palatino, serif;
 	box-sizing: border-box;
@@ -47,14 +48,11 @@ a.inverse, label.inverse {
 	}
 }
 
-.controller {
-	display: none;
-}
-
 #global-content {
 	min-height: 100%;
 }
 
+//** Flow control classes
 .container {
 	margin: 0 auto;
 	padding: 0 $content-padding;
@@ -66,8 +64,14 @@ a.inverse, label.inverse {
 	}
 }
 
+.controller {
+	display: none;
+}
+
+//** Global styles
 .page-header {
 	h1 {
+		// Brings the subtitle <p> closer due to un-removable font spacing
 		margin-bottom: -4px;
 		color: $nav-banner-background;
 	}
@@ -76,12 +80,10 @@ a.inverse, label.inverse {
 		color: $body-text-soft-color;
 	}
 }
-
 .nav-push {
 	padding-top: $content-padding * 2 + $nav-banner-height;
 	padding-bottom: $content-padding * 2;
 }
-
 .card {
 	background-color: $body-card-background-color;
 	margin: $content-padding $content-padding/2 0;
@@ -126,7 +128,6 @@ a.inverse, label.inverse {
 		}
 	}
 }
-
 .card-list {
 	list-style: none;
 	color: $body-text-soft-color;
@@ -163,7 +164,9 @@ a.inverse, label.inverse {
 		font-weight: bold;
 	}
 }
-
+.content-push {
+	height: $content-padding * 2;
+}
 fieldset {
 	margin-top: $content-padding * 2;
 	border: none;
@@ -174,7 +177,6 @@ fieldset {
 		color: $nav-banner-background;
 	}
 }
-
 .rolladex {
 	margin-top: $content-padding * 2;
 	width: 100%;
@@ -198,14 +200,11 @@ fieldset {
 		}
 	}
 }
-
 .comment {
 	font-size: 14px;
 	color: $body-text-blend;
 }
-
-.anchor {
-	font-size: 0;
-	height: 0;
-	width: 0;
+.code {
+	background-color: $code-background-color;
+	font-family: monospaced, monospace;
 }
