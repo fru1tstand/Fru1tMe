@@ -1,5 +1,9 @@
-// Layer depth mixin
+// This file contains classes pertaining to parallax scrolling objects. It was heavily inspired by
+// Kieth Clark with his awesome Pure CSS Parallax Websites article. Check it out here:
+// http://keithclark.co.uk/articles/pure-css-parallax-websites/
 
+
+// Layer depth mixin
 $parallax-perspective: 300;
 @mixin parallax-depth($depth) {
 	transform: translateZ(#{$depth}px) scale(($parallax-perspective - $depth) / $parallax-perspective);
@@ -29,4 +33,3 @@ $parallax-perspective: 300;
 		}
 	}
 }
-
