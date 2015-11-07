@@ -310,9 +310,7 @@ nav {
   background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, -ms-linear-gradient(top, #539ba9 0%, #e8e7d3 100%);
   /* IE10+ */
   background: url("https://s3.amazonaws.com/ks_web/fru1t.me/bg-noise.png") repeat, linear-gradient(to bottom, #539ba9 0%, #e8e7d3 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#539ba9', endColorstr='#e8e7d3',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
   .home .horizon {
     background: transparent url("https://s3.amazonaws.com/ks_web/fru1t.me/horizon.png") repeat-x scroll bottom center;
     height: 121px;
