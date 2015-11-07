@@ -1,17 +1,20 @@
-nav {
-	width: 100%;
-	background-color: $body-background-color;
+// Mobile nav rules
 
-	// Menu item styles
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	overflow: visible;
+	z-index: 99999999999;
 
 	ul {
 		list-style: none;
-		position: fixed;
-		top: $nav-banner-height;
-		bottom: 0;
+		width: 100%;
+		position: absolute;
 		left: 100%;
 		right: -100%;
-		z-index: 99999999999;
 	}
 
 	li {
@@ -23,42 +26,36 @@ nav {
 		-webkit-transition-property: margin-left;
 		-webkit-transition-timing-function: $ease-out;
 		-webkit-transition-duration: $duration-action;
-	}
-	.controller:checked + ul > li {
-		margin-left: -100%;
-	}
-	@for $i from 1 through 20 {
-		li:nth-child(#{$i}) {
-			@include transition-delay($nav-menu-item-cascade-delay * ($i - 1));
+
+		// Stagger delay for style points
+		@for $i from 1 through $nav-max-menu-items {
+			&:nth-child(#{$i}) {
+				@include transition-delay($nav-menu-item-cascade-delay * ($i - 1));
+			}
 		}
 	}
 
-	li > label,
-	li > a:link,
-	li > a:visited {
+	.controller:checked + ul li {
+		margin-left: -100%;
+	}
+
+	label,
+	a:link, a:visited {
 		display: block;
-		height: $nav-menu-item-height;
-		line-height: $nav-menu-item-height;
+		height: $nav-banner-height;
+		line-height: $nav-banner-height;
 		text-decoration: none;
 		color: $active-text;
-		padding-left: $content-padding;
+		padding: 0 $content-padding;
 		border-bottom: 1px solid $nav-border-color;
 		font-size: 14px;
 		background-color: #FFFFFF;
-		cursor: pointer;
 		width: 100%;
-	}
-	li.nav-go-back ~ li {
-		> a:link,
-		> a:visited,
-		> label {
-			padding-left: $content-padding * 2;
-		}
+		overflow: hidden;
 	}
 
-	li > label:hover,
-	li > a:hover,
-	li > a:active {
+	label:hover,
+	a:hover, a:active {
 		background-color: $nav-banner-background;
 		color: $body-background-color;
 	}
@@ -78,25 +75,19 @@ nav {
 		font-weight: bold;
 	}
 
+	border: none;
 	background-color: $nav-banner-background;
 	color: $body-background-color;
 	font-size: 16px;
-	display: block;
-	overflow: hidden;
-	padding: 0 $content-padding;
-	height: $nav-banner-height;
-	line-height: $nav-banner-height;
-	top: 0;
-	left: 0;
-	right: 0;
-	position: fixed;
-	z-index: 9999999999;
+	cursor: pointer;
 }
 
 // Display close nav banner when nav is open
-#nav-collapsed:checked + .nav-banner {
-	display: none;
+#nav-state-closed:checked {
+	~ #nav-closed-banner { display: block; }
+	~ #nav-open-banner { display: none; }
 }
-#nav-collapsed:not(:checked) + .nav-banner {
-	display: block;
+#nav-state-closed:not(:checked) {
+	~ #nav-closed-banner { display: none; }
+	~ #nav-open-banner { display: block; }
 }

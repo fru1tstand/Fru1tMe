@@ -1,7 +1,6 @@
+// Desktop navigation rules
+
 nav {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: $desktop-navbar-width;
 
 	ul {
@@ -27,9 +26,6 @@ nav {
 	}
 }
 .nav-banner {
-	top: 0;
-	left: 0;
 	width: $desktop-navbar-width;
-	position: fixed;
-	z-index: 9999999999;
+	cursor: default;
 }

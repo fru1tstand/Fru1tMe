@@ -37,42 +37,20 @@ class Fru1tMeTemplate implements TemplateInterface {
 	<nav>
 		<form>
 			<!-- Static and scrolled banner -->
-			<label for="nav-index" class="nav-banner">{$fields[Fru1tMeTemplate::FIELD_TITLE]}</label>
-			<input type="radio" class="controller" name="nav-state" id="nav-collapsed" checked="checked" />
-			<label for="nav-collapsed" class="nav-banner fixed">{$fields[Fru1tMeTemplate::FIELD_TITLE]}</label>
+			<input type="radio" class="controller" name="nav-state" id="nav-state-closed" checked="checked" />
+			<label for="nav-state-index" class="nav-banner" id="nav-closed-banner">{$fields[Fru1tMeTemplate::FIELD_TITLE]}</label>
+			<label for="nav-state-closed" class="nav-banner" id="nav-open-banner">{$fields[Fru1tMeTemplate::FIELD_TITLE]}</label>
 
-			<input type="radio" class="controller" name="nav-state" id="nav-index" />
+			<input type="radio" class="controller" name="nav-state" id="nav-state-index" />
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/resume">Résumé</a></li>
 				<li><a href="/projects">Projects</a></li>
 				<li><a href="/code">Code</a></li>
-				<!--<li><label for="nav-projects">Projects</label></li>-->
-				<!--<li><label for="nav-code">Code</label></li>-->
-				<li class="nav-close"><label for="nav-collapsed"></label></li>
+				<li class="nav-close"><label for="nav-state-closed"></label></li>
 			</ul>
-
-			<!--<input type="radio" class="controller" name="nav-state" id="nav-projects">-->
-			<!--<ul>-->
-				<!--<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>-->
-				<!--<li><a href="/projects">All</a></li>-->
-				<!--<li><a href="/projects#anchor-projects-active">Active</a></li>-->
-				<!--<li><a href="/projects#anchor-projects-legacy">Legacy</a></li>-->
-				<!--<li><a href="/projects#anchor-projects-retired">Retired</a></li>-->
-				<!--<li class="nav-close"><label for="nav-collapsed"></label></li>-->
-			<!--</ul>-->
-
-			<!--<input type="radio" class="controller" name="nav-state" id="nav-code">-->
-			<!--<ul>-->
-				<!--<li class="nav-go-back"><label for="nav-index">Go Back | Projects</label></li>-->
-				<!--<li><a href="/code">All</a></li>-->
-				<!--<li><a href="/code#anchor-code-java">Java</a></li>-->
-				<!--<li><a href="/code#anchor-code-web">Web</a></li>-->
-				<!--<li class="nav-close"><label for="nav-collapsed"></label></li>-->
-			<!--</ul>-->
 		</form>
 	</nav>
-
 
 	<div id="global-content">{$fields[Fru1tMeTemplate::FIELD_BODY]}</div>
 
