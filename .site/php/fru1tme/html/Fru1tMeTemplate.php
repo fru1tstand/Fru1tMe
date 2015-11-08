@@ -28,6 +28,7 @@ class Fru1tMeTemplate implements TemplateInterface {
 	<title>Fru1tMe</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://s3.amazonaws.com/ks_web/fru1t.me/favicon.ico" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,600'>
 	<link rel="stylesheet" href="/.site/styles/compiled/global.css" />
