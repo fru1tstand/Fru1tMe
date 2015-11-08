@@ -58,6 +58,51 @@ $body = <<<HTML
 		</div>
 	</div>
 
+	<fieldset><legend>Complete</legend></fieldset>
+	<div class="container">
+		<p class="comment">On-display artifacts</p>
+	</div>
+	<div class="container nopadding">
+		<div class="card-container">
+			<div class="card">
+				<div class="title">Info 200 Poster Project</div>
+				<div class="subtitle">
+					<div class="platforms">Web (Mobile Friendly)</div>
+					<div class="status">Complete</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Intellectual foundations' final poster project prototype.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card-list inline">
+				<a href="/projects/i200-poster-project">Read more <i class="fa fa-list"></i></a>
+				<a href="http://info.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
+				<a href="https://github.com/fru1tstand/Info200-Poster-Project" target="_blank">Source <i class="fa fa-github"></i></a>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card">
+				<div class="title">KodleeShare: MIDI</div>
+				<div class="subtitle">
+					<div class="platforms">Web (Desktop Only), Video</div>
+					<div class="status">Complete</div>
+				</div>
+				<div class="list">
+					<ul>
+						<li>Free MIDI music for all.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="card-list inline">
+				<a href="/projects/kshare-midi">Read more <i class="fa fa-list"></i></a>
+				<a href="http://midi.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
+			</div>
+		</div>
+	</div>
+
 	<fieldset><legend>Legacy</legend></fieldset>
 	<div class="container">
 		<p class="comment">Little and (may be) Broken. But still good. Yeah. Still good.</p>
@@ -104,26 +149,6 @@ $body = <<<HTML
 
 		<div class="card-container">
 			<div class="card">
-				<div class="title">Info 200 Poster Project</div>
-				<div class="subtitle">
-					<div class="platforms">Web (Mobile Friendly)</div>
-					<div class="status">Complete</div>
-				</div>
-				<div class="list">
-					<ul>
-						<li>Intellectual foundations' final poster project prototype.</li>
-					</ul>
-				</div>
-			</div>
-			<div class="card-list inline">
-				<a href="/projects/i200-poster-project">Read more <i class="fa fa-list"></i></a>
-				<a href="http://info.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
-				<a href="https://github.com/fru1tstand/Info200-Poster-Project" target="_blank">Source <i class="fa fa-github"></i></a>
-			</div>
-		</div>
-
-		<div class="card-container">
-			<div class="card">
 				<div class="title">Stak</div>
 				<div class="subtitle">
 					<div class="platforms">Web (Desktop Only)</div>
@@ -139,25 +164,6 @@ $body = <<<HTML
 				<a href="/projects/stak">Read more <i class="fa fa-list"></i></a>
 				<a href="http://stak.fru1t.me/" target="_blank">Prototype <i class="fa fa-paper-plane"></i></a>
 				<a href="https://github.com/fru1tstand/Fru1tMe-Stak" target="_blank">Source <i class="fa fa-github"></i></a>
-			</div>
-		</div>
-
-		<div class="card-container">
-			<div class="card">
-				<div class="title">KodleeShare: MIDI</div>
-				<div class="subtitle">
-					<div class="platforms">Web (Desktop Only), Video</div>
-					<div class="status">Complete</div>
-				</div>
-				<div class="list">
-					<ul>
-						<li>Free MIDI music for all.</li>
-					</ul>
-				</div>
-			</div>
-			<div class="card-list inline">
-				<a href="/projects/kshare-midi">Read more <i class="fa fa-list"></i></a>
-				<a href="http://midi.fru1t.me/" target="_blank">Site <i class="fa fa-globe"></i></a>
 			</div>
 		</div>
 	</div>
