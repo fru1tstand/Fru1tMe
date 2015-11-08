@@ -80,6 +80,7 @@ nav {
 	color: $body-background-color;
 	font-size: 16px;
 	cursor: pointer;
+	white-space: nowrap;
 }
 
 // Display close nav banner when nav is open

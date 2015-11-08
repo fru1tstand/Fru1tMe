@@ -79,10 +79,10 @@ $body = <<<HTML
 					<p>
 						If you're on mobile, click that light-blue thing at the top of the page.
 						Heck, you can even open it
-						by <label for="nav-index" class="inverse">clicking here</label> or
-						<label for="nav-index" class="inverse">here</label>. Or maybe even
-						<label for="nav-index" class="inverse">here</label>. Options are always
-						nice :) <br />
+						by <label for="nav-state-index" class="inverse">clicking here</label> or
+						<label for="nav-state-index" class="inverse">here</label>. Or maybe even
+						<label for="nav-state-index" class="inverse">here</label>.
+						Options are always nice :) <br />
 						Otherwise, on desktop, just click those links on the left.
 					</p>
 				</div>
