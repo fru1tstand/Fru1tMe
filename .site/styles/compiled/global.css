@@ -178,6 +178,8 @@ a.inverse, label.inverse {
     margin-top: 1px; }
   .card-list .title {
     font-weight: bold; }
+    .card-list .title a {
+      text-indent: 0; }
 
 .content-push {
   height: 44px; }

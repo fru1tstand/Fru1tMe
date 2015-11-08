@@ -162,6 +162,9 @@ a.inverse, label.inverse {
 
 	.title {
 		font-weight: bold;
+		a {
+			text-indent: 0;
+		}
 	}
 }
 .content-push {
