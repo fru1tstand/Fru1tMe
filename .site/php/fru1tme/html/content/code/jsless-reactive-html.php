@@ -18,6 +18,11 @@ $body = <<<HTML
 		<div class="comment">Article in progress...</div>
 	</div>
 
+	<div class="container nopadding">
+		<div class="card-list">
+			<a href="/code">Back to Code <i class="fa fa-arrow-left"></i></a>
+		</div>
+	</div>
 </div>
 HTML;
 
