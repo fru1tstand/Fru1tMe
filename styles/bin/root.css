@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6,
+body, html,
+table, tr, th, td, tfoot, thead, tbody,
+p,
+ul, ol, li, dd, dl {
+  padding: 0;
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: Arimo, sans-serif;
+  background-color: #f3f3f3; }
+
+a {
+  text-decoration: none;
+  display: inline-block; }
+  a:link, a:visited {
+    color: #2196F3; }
+  a:hover, a:active {
+    color: #1976D2; }
+
+.middle-aligner {
+  display: inline-block;
+  vertical-align: middle; }
+
+.middle-aligner {
+  height: 100%; }
+
+.home {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2; }
+  .home .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 154px;
+    height: 154px;
+    color: #FFF;
+    overflow: visible;
+    margin: 0 0 -12px -12px; }
+  .home .links {
+    list-style: none;
+    margin: 28px 0 0 28px; }
+    .home .links li {
+      display: inline-block; }
+      .home .links li::before {
+        content: '/';
+        color: #BBDEFB;
+        padding: 0 8px; }
+      .home .links li:first-child::before {
+        content: '';
+        padding: 0; }
+
+.home-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,edf8ff+64,ccebff+100 */
+  background: #f0f9ff;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #f0f9ff 0%, #edf8ff 64%, #ccebff 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #f0f9ff 0%, #edf8ff 64%, #ccebff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #f0f9ff 0%, #edf8ff 64%, #ccebff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#ccebff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  animation: 10s ease-in-out 0s infinite alternate home-background-animation; }
+
+@keyframes home-background-animation {
+  to {
+    opacity: 1; }
+  from {
+    opacity: 0; } }
+
+/*# sourceMappingURL=root.css.map */

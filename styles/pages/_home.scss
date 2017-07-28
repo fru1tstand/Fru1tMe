@@ -1,0 +1,80 @@
+// Styles for the home page only.
+
+
+.home {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+
+	.title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-size: 154px;
+		height: 154px;
+		color: #FFF;
+		overflow: visible;
+		margin: 0 0 -12px -12px;
+	}
+
+
+	.links {
+		list-style: none;
+		margin: $content-spacing 0 0 $content-spacing;
+
+		li {
+			display: inline-block;
+
+			&::before {
+				content: '/';
+				color: $blue-100;
+				padding: 0 8px;
+			}
+
+			&:first-child::before {
+				content: '';
+				padding: 0;
+			}
+		}
+	}
+}
+
+.home-background {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	opacity: 0;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,edf8ff+64,ccebff+100 */
+	background: #f0f9ff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #f0f9ff 0%, #edf8ff 64%, #ccebff 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #f0f9ff 0%,#edf8ff 64%,#ccebff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #f0f9ff 0%,#edf8ff 64%,#ccebff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#ccebff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	animation: 10s ease-in-out 0s infinite alternate home-background-animation;
+}
+
+.home-footer-gradient {
+
+}
+
+.home-footer {
+
+}
+
+@keyframes home-background-animation {
+	to {
+		opacity: 1;
+	}
+	from {
+		opacity: 0;
+	}
+}

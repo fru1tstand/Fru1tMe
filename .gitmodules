@@ -1,3 +1,4 @@
-[submodule ".site/php/common"]
-	path = .site/php/common
-	url = git@github.com:fru1tstand/Fru1tMe-Common-Php.git
+[submodule "php/me/fru1t/common"]
+	path = php/me/fru1t/common
+	url = git@github.com:fru1tstand/php-commons.git
+	branch = master

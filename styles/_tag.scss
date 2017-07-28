@@ -1,0 +1,37 @@
+// Styles for root tags. These are always applied first hierarchically.
+
+* {
+	box-sizing: border-box;
+}
+
+// Apply padding and margin to things that I want only.
+h1, h2, h3, h4, h5, h6,
+body, html,
+table, tr, th, td, tfoot, thead, tbody,
+p,
+ul, ol, li, dd, dl {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Arimo, sans-serif;
+	background-color: $background-color;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+
+	&:link, &:visited {
+		color: $link-color;
+	}
+
+	&:hover, &:active {
+		color: $link-color-active;
+	}
+}

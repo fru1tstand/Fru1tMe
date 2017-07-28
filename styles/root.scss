@@ -1,0 +1,9 @@
+// Entrypoint for all styles on the fru1tme core page.
+
+// Globals
+@import 'variables';
+@import 'tag';
+@import 'layout';
+
+// Page-specific
+@import 'pages/home';
