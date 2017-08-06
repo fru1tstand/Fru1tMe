@@ -1,5 +1,6 @@
 // Layout styles
 
+// Aligners
 .middle-aligner,
 %middle-aligned {
 	display: inline-block;
@@ -8,4 +9,16 @@
 
 .middle-aligner {
 	height: 100%;
+}
+
+// Containers
+.page-push {
+	padding-top: $content-spacing;
+}
+
+.container {
+
+	&.padded {
+		padding: 0 $content-spacing;
+	}
 }

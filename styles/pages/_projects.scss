@@ -1,0 +1,181 @@
+// Styles relating to the projects page
+
+$timeline-line-color: #4367d3;
+$timeline-line-color-active: #68c4ff;
+
+$timeline-dot-color: #00be01;
+$timeline-dot-color-active: #07ff00;
+$timeline-dot-size: 10px;
+$timeline-dot-content-spacing: 14px;
+$timeline-dot-top-offset: 4px;
+
+$timeline-date-width: 150px;
+$timeline-date-spacing: 14px;
+
+input[name="timeline"] {
+	display: none;
+
+	&:checked + .element {
+		border-color: $timeline-line-color-active;
+
+		&::before {
+			background-color: $timeline-dot-color-active;
+		}
+	}
+}
+
+.timeline {
+	max-width: 800px;
+	padding-left: $timeline-date-width;
+	display: block;
+
+	.date {
+		font-style: italic;
+		margin-left: -$timeline-date-width
+				- $timeline-dot-size
+				- $timeline-dot-content-spacing
+				- $timeline-date-spacing;
+		width: $timeline-date-width;
+		text-align: right;
+		height: 0;
+		overflow: visible;
+
+		// TODO: Transform from right side of element.
+		//transform: rotate(-20deg);
+
+		.running {
+			font-size: 12px;
+			color: #777;
+		}
+	}
+
+	.element {
+		display: block;
+		padding-left: $timeline-dot-size
+				+ $timeline-dot-content-spacing
+				- ($timeline-dot-size / 2);
+		margin-left: $timeline-dot-size / 2;
+		border-left: 1px solid $timeline-line-color;
+		cursor: pointer;
+		padding-bottom: $content-spacing;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		&::before {
+			display: block;
+			width: $timeline-dot-size;
+			height: $timeline-dot-size;
+			border-radius: $timeline-dot-size / 2;
+			background-color: $timeline-dot-color;
+			content: '';
+
+			margin-left: -$timeline-dot-size - $timeline-dot-content-spacing;
+			margin-bottom: -$timeline-dot-size - $timeline-dot-top-offset;
+		}
+
+		&:hover {
+			border-color: $timeline-line-color-active;
+
+			&::before {
+				background-color: $timeline-dot-color-active;
+			}
+		}
+	}
+
+	.title {
+		font-weight: bold;
+	}
+
+	.tech {
+		color: #999;
+		font-size: 12px;
+
+		> div {
+			display: inline-block;
+
+			&::before {
+				content: ' - ';
+			}
+
+			&:first-child::before {
+				content: '';
+			}
+		}
+	}
+
+	.description {
+		padding: 8px 0;
+	}
+}
+
+.project-wrapper {
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	text-align: right;
+	padding: $content-spacing;
+	cursor: pointer;
+}
+
+.project {
+	display: inline-block;
+	text-align: left;
+	background-color: $background-color;
+	width: 800px;
+	max-width: 100%;
+
+	box-shadow: 0 0 2px 1px #111, 3px 3px 2px 1px #040404;
+
+	padding: $content-spacing;
+
+	.title {
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	.date {
+		font-size: 14px;
+
+		> span {
+			font-size: 10px;
+		}
+	}
+
+	.details {
+		font-size: 14px;
+		margin-top: 10px;
+
+		> div {
+			display: inline-block;
+			min-width: 200px;
+			padding-right: 50px;
+		}
+	}
+
+	.hr {
+		height: 1px;
+		background-color: #1d375a;
+		margin: 10px 0;
+	}
+
+	.description {
+		p {
+			text-indent: 16px;
+			margin-top: 8px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+#timeline-default:checked + .project-wrapper {
+	display: none;
+}
