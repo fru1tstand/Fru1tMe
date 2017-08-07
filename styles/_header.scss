@@ -1,0 +1,35 @@
+// Styles for the header
+
+$header-background-color: $orange-500;
+$header-link-horizontal-spacing: 22px;
+
+.global-header {
+  @extend %layer-1;
+  @extend .title;
+
+  padding: 0 $content-spacing;
+  background-color: $header-background-color;
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .logo {
+    padding-right: $header-link-horizontal-spacing;
+    color: $background-color;
+    font-weight: bold;
+  }
+
+  a {
+    display: inline-block;
+    padding: 16px $header-link-horizontal-spacing;
+
+    &, &:link, &:visited {
+      color: $background-color;
+    }
+    &:hover, &:active {
+      color: $grey-300;
+    }
+  }
+}

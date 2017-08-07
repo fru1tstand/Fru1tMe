@@ -31,6 +31,14 @@ class EmptyPage extends Template {
 	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="global-header">
+    <ul>
+      <li><span class="logo">Fru1tMe</span></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="#">StalkMe</a></li>
+    </ul>
+  </header>
 	{$fields[self::FIELD_BODY]}
 </body>
 </html>
