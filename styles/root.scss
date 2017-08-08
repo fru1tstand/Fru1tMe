@@ -1,9 +1,11 @@
 // Entrypoint for all styles on the fru1tme core page.
 
 // Globals
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto');
 @import 'variables';
 @import 'tag';
 @import 'layout';
+@import 'header';
 
 // Page-specific
 @import 'pages/home';

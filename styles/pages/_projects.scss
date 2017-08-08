@@ -1,181 +1,221 @@
 // Styles relating to the projects page
 
-$timeline-line-color: #4367d3;
-$timeline-line-color-active: #68c4ff;
-
-$timeline-dot-color: #00be01;
-$timeline-dot-color-active: #07ff00;
+$timeline-line-color: $orange-900;
+$timeline-dot-color: $orange-500;
 $timeline-dot-size: 10px;
 $timeline-dot-content-spacing: 14px;
-$timeline-dot-top-offset: 4px;
+$timeline-dot-top-offset: 6px;
 
-$timeline-date-width: 150px;
+$timeline-date-width: 200px;
 $timeline-date-spacing: 14px;
 
-input[name="timeline"] {
-	display: none;
-
-	&:checked + .element {
-		border-color: $timeline-line-color-active;
-
-		&::before {
-			background-color: $timeline-dot-color-active;
-		}
-	}
-}
+$timeline-block-text-max-width: 600px;
 
 .timeline {
-	max-width: 800px;
-	padding-left: $timeline-date-width;
-	display: block;
+  padding-left: $timeline-date-width;
+  display: block;
 
-	.date {
-		font-style: italic;
-		margin-left: -$timeline-date-width
+  .date {
+    font-style: italic;
+    margin-left: -$timeline-date-width
 				- $timeline-dot-size
 				- $timeline-dot-content-spacing
 				- $timeline-date-spacing;
-		width: $timeline-date-width;
-		text-align: right;
-		height: 0;
-		overflow: visible;
+    width: $timeline-date-width;
+    text-align: right;
+    height: 0;
+    overflow: visible;
+    font-size: 14px;
 
-		// TODO: Transform from right side of element.
-		//transform: rotate(-20deg);
+    transform: rotate(15deg);
+    transform-origin: 100% 50% 0;
 
-		.running {
-			font-size: 12px;
-			color: #777;
-		}
-	}
+    .time-span {
+      font-size: 11px;
+      color: $grey-500;
+    }
 
-	.element {
-		display: block;
-		padding-left: $timeline-dot-size
+    span {
+      white-space: nowrap;
+      display: inline-block;
+    }
+  }
+
+  .element {
+    padding-left: $timeline-dot-size
 				+ $timeline-dot-content-spacing
 				- ($timeline-dot-size / 2);
-		margin-left: $timeline-dot-size / 2;
-		border-left: 1px solid $timeline-line-color;
-		cursor: pointer;
-		padding-bottom: $content-spacing;
+    margin-left: $timeline-dot-size / 2;
+    border-left: 1px solid $timeline-line-color;
+    padding-bottom: $content-spacing;
 
-		&:last-child {
-			padding-bottom: 0;
-		}
+    &:last-child {
+      padding-bottom: 8px;
+    }
 
-		&::before {
-			display: block;
-			width: $timeline-dot-size;
-			height: $timeline-dot-size;
-			border-radius: $timeline-dot-size / 2;
-			background-color: $timeline-dot-color;
-			content: '';
+    // Timeline dot
+    &::before {
+      display: block;
+      width: $timeline-dot-size;
+      height: $timeline-dot-size;
+      border-radius: $timeline-dot-size / 2;
+      background-color: $timeline-dot-color;
+      content: '';
 
-			margin-left: -$timeline-dot-size - $timeline-dot-content-spacing;
-			margin-bottom: -$timeline-dot-size - $timeline-dot-top-offset;
-		}
+      // "removing" the dot from the flow.
+      margin-left: -$timeline-dot-size - $timeline-dot-content-spacing;
+      margin-bottom: -$timeline-dot-size - $timeline-dot-top-offset;
+    }
 
-		&:hover {
-			border-color: $timeline-line-color-active;
+  }
 
-			&::before {
-				background-color: $timeline-dot-color-active;
-			}
-		}
-	}
+  .permalink {
+    display: inline-block;
+    font-size: 11px;
+    opacity: 0.2;
+    transition: opacity $time-responsive $default-ease;
+  }
 
-	.title {
-		font-weight: bold;
-	}
+  .title {
+    font-weight: bold;
+    color: $grey-900;
 
-	.tech {
-		color: #999;
-		font-size: 12px;
+    &:hover .permalink {
+      opacity: 0.6;
+    }
+  }
 
-		> div {
-			display: inline-block;
+  .tech {
+    color: $grey-500;
+    font-size: 12px;
 
-			&::before {
-				content: ' - ';
-			}
+    > div {
+      display: inline-block;
 
-			&:first-child::before {
-				content: '';
-			}
-		}
-	}
+      &::before {
+        content: ' - ';
+      }
 
-	.description {
-		padding: 8px 0;
-	}
-}
+      &:first-child::before {
+        content: '';
+      }
+    }
+  }
 
-.project-wrapper {
-	display: block;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.6);
-	text-align: right;
-	padding: $content-spacing;
-	cursor: pointer;
-}
+  .description {
+    padding-top: 8px;
+    max-width: $timeline-block-text-max-width;
+  }
 
-.project {
-	display: inline-block;
-	text-align: left;
-	background-color: $background-color;
-	width: 800px;
-	max-width: 100%;
+  .more {
+    display: none;
+    margin-top: 16px;
+  }
 
-	box-shadow: 0 0 2px 1px #111, 3px 3px 2px 1px #040404;
+  label {
+    cursor: pointer;
+    display: block;
 
-	padding: $content-spacing;
+    &:hover {
+      .collapse-arrow {
+        opacity: 1;
+      }
+    }
+  }
 
-	.title {
-		font-size: 32px;
-		font-weight: bold;
-	}
+  .collapse-arrow {
+    width: $timeline-block-text-max-width;
+    padding-top: 16px;
+    text-align: center;
+    opacity: 0.2;
+    transition: opacity $time-responsive $default-ease;
+  }
 
-	.date {
-		font-size: 14px;
+  .controller {
+    &:checked + .element {
+      .more {
+        display: block;
+      }
 
-		> span {
-			font-size: 10px;
-		}
-	}
+      .fa-angle-down {
+        display: none;
+      }
+    }
+  }
 
-	.details {
-		font-size: 14px;
-		margin-top: 10px;
+  .image-list {
+    white-space: nowrap;
+    overflow: auto;
+    padding: 0 16px;
 
-		> div {
-			display: inline-block;
-			min-width: 200px;
-			padding-right: 50px;
-		}
-	}
+    li {
+      display: inline-block;
+      list-style: none;
+      vertical-align: middle;
+      margin: 16px 16px;
 
-	.hr {
-		height: 1px;
-		background-color: #1d375a;
-		margin: 10px 0;
-	}
+      &:first-child {
+        margin-left: 0;
+      }
 
-	.description {
-		p {
-			text-indent: 16px;
-			margin-top: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
 
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-	}
-}
+      img {
 
-#timeline-default:checked + .project-wrapper {
-	display: none;
+        @extend %layer-2;
+      }
+    }
+  }
+
+  .long-description {
+    max-width: $timeline-block-text-max-width;
+    margin-top: 32px;
+
+    p {
+      text-indent: 16px;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    div {
+      @extend .title;
+      display: inline-block;
+      font-weight: normal;
+      background-color: $orange-500;
+      color: $grey-50;
+      padding: 0 16px;
+
+      + p {
+        text-indent: 0;
+      }
+    }
+  }
+
+  .links {
+    margin-top: 32px;
+
+    a {
+      &, &:link, &:visited {
+        @extend %layer-1;
+        padding: 8px 16px;
+        transition: box-shadow $time-responsive $default-ease;
+        color: $orange-500;
+        margin-right: 16px;
+      }
+
+      &:hover, &:visited {
+        @extend %layer-2;
+      }
+    }
+
+    i {
+      padding-left: 32px;
+      font-size: 12px;
+    }
+  }
 }

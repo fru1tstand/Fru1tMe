@@ -1,7 +1,7 @@
 // Styles for root tags. These are always applied first hierarchically.
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 // Apply padding and margin to things that I want only.
@@ -10,29 +10,22 @@ body, html,
 table, tr, th, td, tfoot, thead, tbody,
 p,
 ul, ol, li, dd, dl {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 html, body {
-	height: 100%;
+  min-height: 100%;
 }
 
 body {
-	font-family: Arimo, sans-serif;
-	background-color: $background-color;
-	color: $color;
+  font-family: Roboto, sans-serif;
+  background-color: $background-color;
+  color: $color;
+  padding: $content-spacing 0;
 }
 
 a {
-	text-decoration: none;
-	display: inline-block;
-
-	&:link, &:visited {
-		color: $link-color;
-	}
-
-	&:hover, &:active {
-		color: $link-color-active;
-	}
+  text-decoration: none;
+  display: inline-block;
 }

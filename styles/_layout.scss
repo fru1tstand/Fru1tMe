@@ -3,22 +3,31 @@
 // Aligners
 .middle-aligner,
 %middle-aligned {
-	display: inline-block;
-	vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .middle-aligner {
-	height: 100%;
+  height: 100%;
 }
 
 // Containers
 .page-push {
-	padding-top: $content-spacing;
+  padding-top: $content-spacing;
 }
 
 .container {
 
-	&.padded {
-		padding: 0 $content-spacing;
-	}
+  &.padded {
+    padding: 0 $content-spacing;
+  }
+}
+
+.controller {
+  display: none;
+}
+
+// Titles
+.title {
+  font-family: "Open Sans", sans-serif;
 }

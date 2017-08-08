@@ -15,46 +15,68 @@ class Project {
 	}
 
 	/** @var string */
-	private $dateSpan;
-	/** @var string */
 	private $dateRunning;
+  /** @var string */
+	private $dateBegin;
+  /** @var string */
+	private $dateEnd;
 	/** @var string */
 	private $title;
 	/** @var string */
-	private $languages;
-	/** @var string */
-	private $frameworks;
+	private $tech;
 	/** @var string */
 	private $shortDescription;
 	/** @var string */
 	private $longDescription;
+  /** @var string */
+	private $images;
+  /** @var string */
+	private $links;
 
 	/** Use #create */
 	private function __construct() {
-		$this->dateSpan = "";
 		$this->dateRunning = "";
 		$this->title = "";
-		$this->languages = "";
-		$this->frameworks = "";
+		$this->tech = "";
 		$this->shortDescription = "";
 		$this->longDescription = "";
+		$this->dateBegin = "";
+		$this->dateEnd = "";
+		$this->images = "";
+		$this->links = "";
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getDateSpan(): string {
-		return $this->dateSpan;
-	}
+  /**
+   * @return string
+   */
+  public function getDateBegin(): string {
+    return $this->dateBegin;
+  }
 
-	/**
-	 * @param string $dateSpan
-	 * @return Project
-	 */
-	public function setDateSpan(string $dateSpan): Project {
-		$this->dateSpan = $dateSpan;
-		return $this;
-	}
+  /**
+   * @param string $dateBegin
+   * @return Project
+   */
+  public function setDateBegin(string $dateBegin): Project {
+    $this->dateBegin = $dateBegin;
+    return $this;
+  }
+
+  /**
+   * @return string
+   */
+  public function getDateEnd(): string {
+    return $this->dateEnd;
+  }
+
+  /**
+   * @param string $dateEnd
+   * @return Project
+   */
+  public function setDateEnd(string $dateEnd): Project {
+    $this->dateEnd = $dateEnd;
+    return $this;
+  }
 
 	/**
 	 * @return string
@@ -91,38 +113,6 @@ class Project {
 	/**
 	 * @return string
 	 */
-	public function getLanguages(): string {
-		return $this->languages;
-	}
-
-	/**
-	 * @param string $languages
-	 * @return Project
-	 */
-	public function setLanguages(string $languages): Project {
-		$this->languages = $languages;
-		return $this;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getFrameworks(): string {
-		return $this->frameworks;
-	}
-
-	/**
-	 * @param string $frameworks
-	 * @return Project
-	 */
-	public function setFrameworks(string $frameworks): Project {
-		$this->frameworks = $frameworks;
-		return $this;
-	}
-
-	/**
-	 * @return string
-	 */
 	public function getShortDescription(): string {
 		return $this->shortDescription;
 	}
@@ -151,4 +141,53 @@ class Project {
 		$this->longDescription = $longDescription;
 		return $this;
 	}
+
+  /**
+   * @return string
+   */
+  public function getTech(): string {
+    return $this->tech;
+  }
+
+  /**
+   * @param string $tech
+   * @return Project
+   */
+  public function setTech(string $tech): Project {
+    $this->tech = $tech;
+    return $this;
+  }
+
+  /**
+   * @return string
+   */
+  public function getImages(): string {
+    return $this->images;
+  }
+
+  /**
+   * @param string $images
+   * @return Project
+   */
+  public function setImages(string $images): Project {
+    $this->images = $images;
+    return $this;
+  }
+
+  /**
+   * @return string
+   */
+  public function getLinks(): string {
+    return $this->links;
+  }
+
+  /**
+   * @param string $links
+   * @return Project
+   */
+  public function setLinks(string $links): Project {
+    $this->links = $links;
+    return $this;
+  }
+
 }
