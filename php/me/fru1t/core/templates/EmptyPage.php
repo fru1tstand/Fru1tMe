@@ -9,7 +9,7 @@ use me\fru1t\common\template\TemplateField;
  * A blank page for the fru1tme core website.
  */
 class EmptyPage extends Template {
-	const FIELD_HTML_TITLE = "html-title";
+	const FIELD_TITLE = "html-title";
 	const FIELD_BODY       = "body";
 
 	/**
@@ -24,7 +24,7 @@ class EmptyPage extends Template {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Fru1tMe - {$fields[self::FIELD_HTML_TITLE]}</title>
+	<title>Fru1tMe - {$fields[self::FIELD_TITLE]}</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	
@@ -32,14 +32,6 @@ class EmptyPage extends Template {
 	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="global-header">
-    <ul>
-      <li><span class="logo">Fru1tMe</span></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="#">StalkMe</a></li>
-    </ul>
-  </header>
 	{$fields[self::FIELD_BODY]}
 </body>
 </html>
@@ -52,6 +44,6 @@ HTML;
 	 * @return TemplateField[]
 	 */
 	static function getTemplateFields_internal(): array {
-		return TemplateField::createFrom(self::FIELD_HTML_TITLE, self::FIELD_BODY);
+		return TemplateField::createFrom(self::FIELD_TITLE, self::FIELD_BODY);
 	}
 }

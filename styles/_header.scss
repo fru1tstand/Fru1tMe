@@ -1,5 +1,6 @@
 // Styles for the header
 
+$header-height: 54px;
 $header-background-color: $orange-500;
 $header-link-horizontal-spacing: 22px;
 
@@ -14,6 +15,7 @@ $header-link-horizontal-spacing: 22px;
   padding: 0 $content-spacing;
   background-color: $header-background-color;
   z-index: 1000;
+  height: $header-height;
 
   li {
     list-style: none;
@@ -28,7 +30,8 @@ $header-link-horizontal-spacing: 22px;
 
   a {
     display: inline-block;
-    padding: 16px $header-link-horizontal-spacing;
+    padding: 0 $header-link-horizontal-spacing;
+    line-height: $header-height;
 
     &, &:link, &:visited {
       color: $background-color;
@@ -37,4 +40,8 @@ $header-link-horizontal-spacing: 22px;
       color: $grey-300;
     }
   }
+}
+
+.header-push {
+  height: $header-height;
 }

@@ -1,1 +1,30 @@
 // Styles for the home page only.
+.home {
+  height: 100%;
+  background-color: $orange-500;
+
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    color: $grey-50;
+  }
+
+  .links {
+    a {
+      &, &:link, &:visited {
+        @extend %layer-1;
+        padding: 8px 32px;
+        transition: box-shadow $time-responsive $default-ease;
+        color: $grey-50;
+        margin-right: 16px;
+        margin-bottom: 8px;
+        background-color: $orange-900;
+        border-radius: 2px;
+      }
+
+      &:hover, &:visited {
+        @extend %layer-2;
+      }
+    }
+  }
+}

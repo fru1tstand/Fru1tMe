@@ -2,7 +2,7 @@
 namespace me\fru1t\core\content;
 
 use me\fru1t\core\Project;
-use me\fru1t\core\templates\EmptyPage;
+use me\fru1t\core\templates\HeaderPage;
 use me\fru1t\core\templates\projects\TimelineElement;
 
 /** @var Project[] $projects */
@@ -557,6 +557,8 @@ $body = <<<HTML
 	<div class="timeline">$projectsHtml</div>
 </div>
 
+<div class="page-push"></div>
+
 <script>
   (function() {
     let elements = document.querySelectorAll('.timeline > .controller');
@@ -574,7 +576,7 @@ $body = <<<HTML
 </script>
 HTML;
 
-EmptyPage::start()
-	->with(EmptyPage::FIELD_HTML_TITLE, "Projects")
-	->with(EmptyPage::FIELD_BODY, $body)
+HeaderPage::start()
+	->with(HeaderPage::FIELD_TITLE, "Projects")
+	->with(HeaderPage::FIELD_BODY, $body)
 	->render();
