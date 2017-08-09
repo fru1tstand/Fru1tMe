@@ -43,24 +43,28 @@ class TimelineElement extends Template {
     $imagesArray = json_decode($fields[self::FIELD_IMAGES]);
     $imagesHtml = "";
     if ($imagesArray != null) {
+      $imagesHtml .= "<ul class=\"image-list\">";
       foreach ($imagesArray as $image) {
-        $imagesHtml .= "<li><img src='$image' alt='a cool image of this thing' /></li>";
+        $imagesHtml .= "<li><a href='$image' target='_blank'><img src='https://s3.amazonaws.com/ks_web/fru1t.me/projects/placeholder.gif' data-src='$image' alt='a cool image of this thing' /></a></li>";
       }
+      $imagesHtml .= "</ul>";
     }
 
     $linksArray = json_decode($fields[self::FIELD_LINKS]);
     $linksHtml = "";
     if ($linksArray != null) {
+      $linksHtml .= "<div class=\"links\">";
       for ($i = 0; $i < count($linksArray); $i += 2) {
         $linksHtml .= "<a href='" . $linksArray[$i + 1] . "' target='_blank'>" . $linksArray[$i]
             . " <i class='fa fa-external-link'></i></a>";
       }
+      $linksHtml .= "</div>";
     }
 
 		$sanitizedTitle = preg_replace("/[^a-zA-Z0-9]/", "-", $fields[self::FIELD_TITLE]);
 
 		return <<<HTML
-<input type="checkbox" class="controller" id="timeline-{$fields[self::FIELD_ELEMENT_ID]}" checked />
+<input type="checkbox" class="controller" id="timeline-{$fields[self::FIELD_ELEMENT_ID]}" />
 <div class="element" id="$sanitizedTitle">
   <div class="date">
     <div><span>{$fields[self::FIELD_DATE_BEGIN]}</span> - <span>{$fields[self::FIELD_DATE_END]}</span></div>
@@ -75,9 +79,9 @@ class TimelineElement extends Template {
 	</label>
 	
 	<div class="more">
-	  <ul class="image-list">$imagesHtml</ul>
+	  $imagesHtml
 	  <div class="long-description">{$fields[self::FIELD_LONG_DESCRIPTION]}</div>
-	  <div class="links">$linksHtml</div>
+	  $linksHtml
 	  <label for="timeline-{$fields[self::FIELD_ELEMENT_ID]}"><i class="collapse-arrow fa fa-angle-up"></i></label>
   </div>
 </div>
