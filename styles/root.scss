@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 // Entrypoint for all styles on the fru1tme core page.
 
 // Globals
@@ -10,3 +12,4 @@
 // Page-specific
 @import 'pages/home';
 @import 'pages/projects';
+@import 'pages/resume';

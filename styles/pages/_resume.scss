@@ -1,0 +1,142 @@
+@charset "utf-8";
+// Styles for the resume page
+.resume {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section-title {
+    @extend .title;
+    font-weight: bold;
+    color: $grey-500;
+    margin-top: 48px;
+  }
+
+  .entry {
+    margin-top: 24px;
+
+    &:first-child {
+      margin-top: 8px;
+    }
+
+    .entry-head {
+      display: flex;
+    }
+
+    .entity {
+      flex: 0 0 35%;
+      padding-right: 18px;
+      font-weight: bold;
+    }
+
+    .location {
+      flex: 0 0 25%;
+      padding-right: 18px;
+    }
+
+    .date {
+      text-align: right;
+      flex: 1 1 auto;
+    }
+
+    .title {
+      font-style: italic;
+      font-size: 14px;
+    }
+  }
+
+  a {
+    &, &:link, &:visited {
+      text-indent: 0;
+      color: $orange-500;
+    }
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    &.red {
+      color: $google-red;
+    }
+
+    &.green {
+      color: $google-green;
+    }
+
+    &.blue {
+      color: $google-blue;
+    }
+  }
+
+  ul {
+    margin-top: 2px;
+    list-style: none;
+  }
+
+  $resume-dot-width: 46px;
+  li {
+    text-indent: -$resume-dot-width;
+    margin-left: $resume-dot-width;
+
+    &::before {
+      content: '●';
+      padding: 0 18px;
+    }
+
+    &.red::before {
+      color: $google-red;
+    }
+
+    &.green::before {
+      color: $google-green;
+    }
+
+    &.blue::before {
+      color: $google-blue;
+    }
+  }
+}
+
+.resume-header {
+  .name {
+    font-size: 36px;
+    margin-left: -2px;
+  }
+
+  .email {
+    margin-top: -8px;
+    color: $grey-500;
+
+    &::before {
+      content: 'kodl';
+    }
+
+    &::after {
+      content: '1t.me';
+    }
+  }
+}
+
+.connect,
+.download {
+  a {
+    &, &:link, &:visited {
+      @extend %layer-1;
+      padding: 8px 16px;
+      transition: box-shadow $time-responsive $default-ease;
+      color: $orange-500;
+      background-color: #fff;
+      border-radius: 2px;
+      margin: 2px 8px 2px 0;
+    }
+
+    &:hover, &:visited {
+      @extend %layer-2;
+      text-decoration: none;
+    }
+  }
+
+  i {
+    margin-left: 16px;
+  }
+}

@@ -1,8 +1,14 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto");
-.global-header, .home .links a, .home .links a:link, .home .links a:visited, .timeline .links a, .timeline .links a:link, .timeline .links a:visited {
+.global-header, .home .links a, .home .links a:link, .home .links a:visited, .timeline .links a, .timeline .links a:link, .timeline .links a:visited, .connect a, .connect a:link, .connect a:visited,
+.download a,
+.download a:link,
+.download a:visited {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
-.home .links a:hover, .home .links a:visited, .timeline .image-list li img, .timeline .links a:hover, .timeline .links a:visited {
+.home .links a:hover, .home .links a:visited, .timeline .image-list li img, .timeline .links a:hover, .timeline .links a:visited, .connect a:hover, .connect a:visited,
+.download a:hover,
+.download a:visited {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 * {
@@ -46,7 +52,7 @@ a {
 .controller {
   display: none; }
 
-.title, .global-header, .timeline .long-description .subtitle {
+.title, .global-header, .timeline .long-description .subtitle, .resume .section-title {
   font-family: "Open Sans", sans-serif; }
 
 .global-header {
@@ -80,7 +86,7 @@ a {
 .home {
   height: 100%;
   background-color: #ff9800; }
-  .home .title, .home .global-header, .home .timeline .long-description .subtitle, .timeline .long-description .home .subtitle {
+  .home .title, .home .global-header, .home .timeline .long-description .subtitle, .timeline .long-description .home .subtitle, .home .resume .section-title, .resume .home .section-title {
     font-size: 48px;
     font-weight: bold;
     color: #fafafa; }
@@ -133,10 +139,10 @@ a {
     font-size: 11px;
     opacity: 0.2;
     transition: opacity 175ms cubic-bezier(0.4, 0, 0.2, 1); }
-  .timeline .title, .timeline .global-header, .timeline .long-description .subtitle {
+  .timeline .title, .timeline .global-header, .timeline .long-description .subtitle, .timeline .resume .section-title, .resume .timeline .section-title {
     font-weight: bold;
     color: #212121; }
-    .timeline .title:hover .permalink, .timeline .global-header:hover .permalink, .timeline .long-description .subtitle:hover .permalink {
+    .timeline .title:hover .permalink, .timeline .global-header:hover .permalink, .timeline .long-description .subtitle:hover .permalink, .timeline .resume .section-title:hover .permalink, .resume .timeline .section-title:hover .permalink {
       opacity: 0.6; }
   .timeline .tech {
     color: #9e9e9e;
@@ -224,5 +230,87 @@ a {
     .timeline .links i {
       padding-left: 16px;
       font-size: 12px; }
+
+.resume {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .resume .section-title {
+    font-weight: bold;
+    color: #9e9e9e;
+    margin-top: 48px; }
+  .resume .entry {
+    margin-top: 24px; }
+    .resume .entry:first-child {
+      margin-top: 8px; }
+    .resume .entry .entry-head {
+      display: flex; }
+    .resume .entry .entity {
+      flex: 0 0 35%;
+      padding-right: 18px;
+      font-weight: bold; }
+    .resume .entry .location {
+      flex: 0 0 25%;
+      padding-right: 18px; }
+    .resume .entry .date {
+      text-align: right;
+      flex: 1 1 auto; }
+    .resume .entry .title, .resume .entry .global-header, .resume .entry .timeline .long-description .subtitle, .timeline .long-description .resume .entry .subtitle, .resume .entry .section-title {
+      font-style: italic;
+      font-size: 14px; }
+  .resume a, .resume a:link, .resume a:visited {
+    text-indent: 0;
+    color: #ff9800; }
+  .resume a:hover, .resume a:active {
+    text-decoration: underline; }
+  .resume span.red {
+    color: #db3236; }
+  .resume span.green {
+    color: #3cba54; }
+  .resume span.blue {
+    color: #4885ed; }
+  .resume ul {
+    margin-top: 2px;
+    list-style: none; }
+  .resume li {
+    text-indent: -46px;
+    margin-left: 46px; }
+    .resume li::before {
+      content: '●';
+      padding: 0 18px; }
+    .resume li.red::before {
+      color: #db3236; }
+    .resume li.green::before {
+      color: #3cba54; }
+    .resume li.blue::before {
+      color: #4885ed; }
+
+.resume-header .name {
+  font-size: 36px;
+  margin-left: -2px; }
+.resume-header .email {
+  margin-top: -8px;
+  color: #9e9e9e; }
+  .resume-header .email::before {
+    content: 'kodl'; }
+  .resume-header .email::after {
+    content: '1t.me'; }
+
+.connect a, .connect a:link, .connect a:visited,
+.download a,
+.download a:link,
+.download a:visited {
+  padding: 8px 16px;
+  transition: box-shadow 175ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #ff9800;
+  background-color: #fff;
+  border-radius: 2px;
+  margin: 2px 8px 2px 0; }
+.connect a:hover, .connect a:visited,
+.download a:hover,
+.download a:visited {
+  text-decoration: none; }
+.connect i,
+.download i {
+  margin-left: 16px; }
 
 /*# sourceMappingURL=root.css.map */

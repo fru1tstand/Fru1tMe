@@ -351,8 +351,8 @@ $projects = [
         ])),
 
     Project::create()
-        ->setDateBegin("2011")
-        ->setDateEnd("June 2013")
+        ->setDateBegin("September 2012")
+        ->setDateEnd("July 2013")
         ->setDateRunning("~1.5 years")
 
         ->setTitle("Mercer Island High School Computer Reservation System")
@@ -463,9 +463,9 @@ $projects = [
         ])),
 
     Project::create()
-        ->setDateBegin("September 2010")
+        ->setDateBegin("September 2008")
         ->setDateEnd("August 2017")
-        ->setDateRunning("~7 years, on and off")
+        ->setDateRunning("~9 years, on and off")
 
         ->setTitle("My Personal Website")
         ->setTech(json_encode(["PHP, HTML, SASSy CSS, JavaScript"]))
