@@ -27,6 +27,23 @@ $projects = [
 //        ])),
 
     Project::create()
+        ->setDateBegin("August 2017")
+        ->setDateEnd("Present")
+        ->setDateRunning("work in progress")
+
+        ->setTitle("WordDropper")
+        ->setTech(json_encode(["Android, Java", "Project Lombok, jUnit 4, Mockito, Google Truth"]))
+        ->setImages(json_encode([
+        ]))
+        ->setShortDescription("A fun Android word game similar to the PopCap game called BookWorm.")
+        ->setLongDescription(""
+            . "<div>More information to come :)</div>"
+        )
+        ->setLinks(json_encode([
+            "GitHub", "https://github.com/fru1tstand/word-dropper"
+        ])),
+
+    Project::create()
         ->setDateBegin("June 2017")
         ->setDateEnd("Present")
         ->setDateRunning("work in progress")
@@ -56,7 +73,7 @@ $projects = [
         )
         ->setLinks(json_encode([
             "Video Test Run in Half-Life 2: Update", "https://www.youtube.com/watch?v=2f_jawXKgE0",
-            "GitHub", "https://github.com/fru1tstand/stream-tools",
+            "GitHub", "https://github.com/fru1tstand/stream-tools"
         ])),
 
     Project::create()
@@ -65,7 +82,7 @@ $projects = [
         ->setDateRunning("6 months")
 
         ->setTitle("ExceptionNull")
-        ->setTech(json_encode(["Java, HTML, SASSy CSS", "Spring, Spring Boot, Pebble, Tomcat"]))
+        ->setTech(json_encode(["Java, HTML, SASSy CSS", "Spring, Pebble, Project Lombok, jUnit 4, Mockito, Google Truth", "Tomcat"]))
         ->setImages(json_encode([
             "https://s3.amazonaws.com/ks_web/fru1t.me/projects/enull-1.gif",
             "https://s3.amazonaws.com/ks_web/fru1t.me/projects/enull-2.gif",
