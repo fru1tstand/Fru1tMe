@@ -576,8 +576,11 @@ $body = <<<HTML
 
 <div class="page-push"></div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script>
   (function() {
+    // Defer loading until the controller is clicked
     let elements = document.querySelectorAll('.timeline > .controller');
     for (let i = 0; i < elements.length; i++) {
       elements[i].addEventListener('change', function() {
@@ -589,6 +592,74 @@ $body = <<<HTML
         }
       });
     }
+
+    // Timeline fade in
+    //   Fetch from live list
+    let liveTimelineElements = document.querySelectorAll('.element');
+    let timelineElements = [];
+    for (let i = 0; i < liveTimelineElements.length; i++) {
+      timelineElements.push(liveTimelineElements[i]);
+    }
+
+    //   Hide elements that aren't already scrolled past
+    Object.keys(timelineElements).forEach(function(i) {
+      // Have we already scrolled past it?
+      if (timelineElements[i].getBoundingClientRect().top < 0) {
+        delete timelineElements[i];
+        return;
+      }
+      
+      // If not, hide it
+      timelineElements[i].style.opacity = 0;
+    });
+
+    //   On scroll, show ones that are near the bottom
+    window.onscroll = function() {
+      let delay = 0;
+      Object.keys(timelineElements).forEach(function(i) {
+        if (timelineElements[i].getBoundingClientRect().top < document.body.offsetHeight / 10 * 9) {
+          let el = timelineElements[i];
+          setTimeout(function() {
+            $(el).animate({ 'opacity': 1}, 500, 'easeInOutCubic');
+          }, delay);
+
+          // If there are multiple to be shown, delay them
+          delay += 150;
+          delete timelineElements[i];
+        }
+      });
+    };
+    window.onscroll();
+
+    // Mouse dragging
+    //  disable image dragging
+    let imgEls = document.getElementsByTagName('img');
+    for (let i = 0; i < imgEls.length; i++) {
+      imgEls[i].addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+      });
+    }
+
+    let imgListEls = document.getElementsByClassName('image-list');
+    let cursorXStart = 0;
+    let draggedWindow = null;
+    for (let i = 0; i < imgListEls.length; i++) {
+      imgListEls[i].addEventListener('mousedown', function(e) {
+        draggedWindow = this;
+        cursorXStart = e.pageX;
+      })
+    }
+
+    window.addEventListener('mousemove', function(e) {
+      if (draggedWindow !== null) {
+        draggedWindow.scrollLeft = draggedWindow.scrollLeft + (cursorXStart - e.pageX);
+        cursorXStart = e.pageX;
+      }
+    });
+    window.addEventListener('mouseup', function() {
+      draggedWindow = null;
+    });
   } ());
 </script>
 HTML;

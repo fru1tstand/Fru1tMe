@@ -48,6 +48,10 @@ $timeline-block-text-max-width: 600px;
     margin-left: $timeline-dot-size / 2;
     border-left: 1px solid $timeline-line-color;
     padding-bottom: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     &:last-child {
       padding-bottom: 8px;

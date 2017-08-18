@@ -122,7 +122,11 @@ a {
     padding-left: 19px;
     margin-left: 5px;
     border-left: 1px solid #e65100;
-    padding-bottom: 28px; }
+    padding-bottom: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     .timeline .element:last-child {
       padding-bottom: 8px; }
     .timeline .element::before {
