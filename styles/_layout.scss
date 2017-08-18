@@ -14,12 +14,20 @@
 // Containers
 .page-push {
   padding-top: $content-spacing;
+
+  @media (max-width: $media-break-small) {
+    padding-top: $mobile-content-spacing + 18px;
+  }
 }
 
 .container {
 
   &.padded {
     padding: 0 $content-spacing;
+
+    @media (max-width: $media-break-small) {
+      padding: 0 $mobile-content-spacing;
+    }
   }
 }
 

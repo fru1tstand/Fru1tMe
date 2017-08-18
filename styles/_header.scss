@@ -4,6 +4,9 @@ $header-height: 54px;
 $header-background-color: $orange-500;
 $header-link-horizontal-spacing: 22px;
 
+$mobile-header-link-horizontal-spacing: 10px;
+$mobile-header-height: 46px;
+
 .global-header {
   @extend %layer-1;
   @extend .title;
@@ -17,6 +20,12 @@ $header-link-horizontal-spacing: 22px;
   z-index: 1000;
   height: $header-height;
 
+  @media (max-width: $media-break-small) {
+    padding: 0 $mobile-content-spacing;
+    height: $mobile-header-height;
+    font-size: 15px;
+  }
+
   li {
     list-style: none;
     display: inline-block;
@@ -26,12 +35,21 @@ $header-link-horizontal-spacing: 22px;
     padding-right: $header-link-horizontal-spacing;
     color: $background-color;
     font-weight: bold;
+
+    @media (max-width: $media-break-small) {
+      padding-right: $mobile-header-link-horizontal-spacing;
+    }
   }
 
   a {
     display: inline-block;
     padding: 0 $header-link-horizontal-spacing;
     line-height: $header-height;
+
+    @media (max-width: $media-break-small) {
+      padding: 0 $mobile-header-link-horizontal-spacing;
+      line-height: $mobile-header-height;
+    }
 
     &, &:link, &:visited {
       color: $background-color;
@@ -44,4 +62,8 @@ $header-link-horizontal-spacing: 22px;
 
 .header-push {
   height: $header-height;
+
+  @media (max-width: $media-break-small) {
+    height: $mobile-header-height;
+  }
 }

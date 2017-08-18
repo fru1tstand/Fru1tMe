@@ -28,7 +28,7 @@ $body = <<<HTML
       <div class="entry-head">
         <div class="entity">Google</div>
         <div class="location">Kirkland, Washington</div>
-        <div class="date">September, '17 - Present</div>
+        <div class="date">September '17 - Present</div>
       </div>
       <div class="title">Software Engineer</div>
       <ul class="responsibilities">
@@ -40,7 +40,7 @@ $body = <<<HTML
       <div class="entry-head">
         <div class="entity">Google</div>
         <div class="location">Multiple Locations</div>
-        <div class="date">June - September <span class="green">'14</span>, <span class="blue">'15</span>, and <span class="red">'16</span></div>
+        <div class="date">June - September <span class="green">'14</span>, <span class="blue">'15</span>, <span class="red">'16</span></div>
       </div>
       <div class="title">Software Engineering Intern</div>
       <ul class="responsibilities">

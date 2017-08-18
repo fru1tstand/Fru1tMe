@@ -41,6 +41,7 @@
     .title {
       font-style: italic;
       font-size: 14px;
+      clear: both;
     }
   }
 
@@ -71,9 +72,14 @@
   ul {
     margin-top: 2px;
     list-style: none;
+
+    @media (max-width: $media-break-small) {
+      margin-top: 8px;
+    }
   }
 
   $resume-dot-width: 46px;
+  $mobile-resume-dot-width: 24px;
   li {
     text-indent: -$resume-dot-width;
     margin-left: $resume-dot-width;
@@ -81,6 +87,17 @@
     &::before {
       content: '●';
       padding: 0 18px;
+    }
+
+    @media (max-width: $media-break-small) {
+      text-indent: -$mobile-resume-dot-width;
+      margin-left: $mobile-resume-dot-width;
+      margin-top: 2px;
+
+      &::before {
+        content: '+';
+        padding: 0 7px;
+      }
     }
 
     &.red::before {
@@ -93,6 +110,35 @@
 
     &.blue::before {
       color: $google-blue;
+    }
+  }
+
+  @media (max-width: $media-break-small) {
+    .entry {
+      .entry-head {
+        display: block;
+      }
+
+      .location {
+        float: left;
+        font-size: 14px;
+      }
+
+      .date {
+        text-align: left;
+        float: right;
+        font-size: 14px;
+      }
+
+      .title {
+        color: $grey-500;
+      }
+    }
+  }
+
+  .achievements {
+    a {
+      display: inline;
     }
   }
 }

@@ -15,6 +15,10 @@ $timeline-block-text-max-width: 600px;
   padding-left: $timeline-date-width;
   display: block;
 
+  @media (max-width: $media-break-small) {
+    padding-left: $mobile-content-spacing;
+  }
+
   .date {
     font-style: italic;
     margin-left: -$timeline-date-width
@@ -29,6 +33,14 @@ $timeline-block-text-max-width: 600px;
 
     transform: rotate(15deg);
     transform-origin: 100% 50% 0;
+
+    @media (max-width: $media-break-small) {
+      margin-left: 0;
+      height: auto;
+      text-align: left;
+      transform: none;
+      margin-bottom: 12px;
+    }
 
     .time-span {
       font-size: 11px;
@@ -71,6 +83,10 @@ $timeline-block-text-max-width: 600px;
       margin-bottom: -$timeline-dot-size - $timeline-dot-top-offset;
     }
 
+
+    @media (max-width: $media-break-small) {
+      padding-bottom: 40px;
+    }
   }
 
   .permalink {
@@ -133,6 +149,11 @@ $timeline-block-text-max-width: 600px;
     text-align: center;
     opacity: 0.3;
     transition: opacity $time-responsive $default-ease;
+
+
+    @media (max-width: $media-break-small) {
+      width: 100%;
+    }
   }
 
   .controller {
